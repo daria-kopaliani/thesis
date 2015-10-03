@@ -1,0 +1,10 @@
+\documentclass[ngerman]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{cmap}
+
+\begin{document}
+
+За місяць це має стати моєю диссертацією.
+
+\end{document}
