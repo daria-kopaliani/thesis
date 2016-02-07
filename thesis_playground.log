@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  7 FEB 2016 12:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  8 JAN 2016 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**thesis.tex
-(./thesis.tex
+**thesis_playground.tex
+(./thesis_playground.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (./vakthesis.cls
@@ -270,6 +270,40 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen137
 \SOUL@ulht=\dimen138
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/layout.sty
+Package: layout 2014/10/28 v1.2c Show layout parameters
+\oneinch=\count112
+\cnt@paperwidth=\count113
+\cnt@paperheight=\count114
+\cnt@hoffset=\count115
+\cnt@voffset=\count116
+\cnt@textheight=\count117
+\cnt@textwidth=\count118
+\cnt@topmargin=\count119
+\cnt@oddsidemargin=\count120
+\cnt@evensidemargin=\count121
+\cnt@headheight=\count122
+\cnt@headsep=\count123
+\cnt@marginparsep=\count124
+\cnt@marginparwidth=\count125
+\cnt@marginparpush=\count126
+\cnt@footskip=\count127
+\fheight=\count128
+\ref@top=\count129
+\ref@hoffset=\count130
+\ref@voffset=\count131
+\ref@head=\count132
+\ref@body=\count133
+\ref@foot=\count134
+\ref@margin=\count135
+\ref@marginwidth=\count136
+\ref@marginpar=\count137
+\Interval=\count138
+\ExtraYPos=\count139
+\PositionX=\count140
+\PositionY=\count141
+\ArrowLength=\count142
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
@@ -355,12 +389,9 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)) (./thesis.aux
-
-LaTeX Warning: Label `ch:evolvingClusteringSystem' multiply defined.
-
-)
-\openout1 = `thesis.aux'.
+))
+(./thesis_playground.aux)
+\openout1 = `thesis_playground.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
@@ -378,23 +409,24 @@ LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 67.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 67.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count112
+\scratchcounter=\count143
 \scratchdimen=\dimen139
 \scratchbox=\box28
-\nofMPsegments=\count113
-\nofMParguments=\count114
+\nofMPsegments=\count144
+\nofMParguments=\count145
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count115
+\MPscratchCnt=\count146
 \MPscratchDim=\dimen140
-\MPnumerator=\count116
-\makeMPintoPDFobject=\count117
+\MPnumerator=\count147
+\makeMPintoPDFobject=\count148
 \everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -475,309 +507,48 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 File: speciality.20070212N70 (vakthesis)
-[1
-
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./thesis.toc)
-\tf@toc=\write3
-\openout3 = `thesis.toc'.
-
- [2
-
-]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 1.
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-Overfull \hbox (1.98187pt too wide) in paragraph at lines 96--97
-[]\T2A/cmr/m/n/14.4 Мабуть най-бiльш вi-до-мою ре-а-лi-за-цi-№ю цьо-го пiд-хо-д
-у № каскадно-кореляцiйi
- []
 
-[3
-
-] [4]
-Overfull \hbox (50.22371pt too wide) in paragraph at lines 116--118
-\T2A/cmr/m/n/14.4 ого ка-ска-ду ма-ти-муть $[][]$ до-да-тко-вих вхi-дних си-гна
--лiв: $[][][]\OML/cmm/m/it/14.4 ; [][][]; [][][]$\T2A/cmr/m/n/14.4 .
- []
-
-[5] [6] [7] [8] [9]
-Overfull \hbox (0.1621pt too wide) in paragraph at lines 301--302
-[]\T2A/cmr/m/n/14.4 Тобто не-лi-нiй-нiй си-напс фа-кти-чно № си-сте-мою ви-сно-
-ву-ва-н-ня Така i-Су ено
- []
-
-[10] [11] [12]
-Overfull \hbox (7.28288pt too wide) in paragraph at lines 448--449
-\T2A/cmr/m/n/14.4 екс-по-нен-цiй-но зва-же-ний ре-ку-рен-тний ме-тод най-мен-ши
-х ква-дра-тiв (EWRLSM),
- []
-
-[13] [14] [15] [16] [17] [18] [19]
+]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 2.
-[20
+<MIMONFNNetwork.jpg, id=9, 392.46625pt x 482.80376pt>
+File: MIMONFNNetwork.jpg Graphic file (type jpg)
+ <use MIMONFNNetwork.jpg>
+Package pdftex.def Info: MIMONFNNetwork.jpg used on input line 103.
+(pdftex.def)             Requested size: 284.52756pt x 350.04218pt.
+
+[2
+
+] <MIMONFN.jpg, id=13, 811.03pt x 984.67876pt>
+File: MIMONFN.jpg Graphic file (type jpg)
+ <use MIMONFN.jpg>
+Package pdftex.def Info: MIMONFN.jpg used on input line 119.
+(pdftex.def)             Requested size: 284.52756pt x 345.45407pt.
+ [3 <./MIMONFNNetwork.jpg>] [4 <./MIMONFN.jpg>] (./thesis_playground.bbl [5]) [
+6
 
 ]
-{\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 3.
-[21
-
-] [22] [23] [24] [25]
-Overfull \hbox (12.59999pt too wide) in paragraph at lines 734--737
-\T2A/cmr/m/n/14.4 де мi-ру не-чi-ткоЁ по-дi-бно-стi $\OML/cmm/m/it/14.4 N[][]$ 
-\T2A/cmr/m/n/14.4 мо-жна зна-йти за будь-яким ви-ра-зом []. 
- []
-
-[26] [27]
-Overfull \hbox (16.25555pt too wide) in paragraph at lines 790--791
-[]\T2A/cmr/m/n/14.4 що при $\OML/cmm/m/it/14.4 ^^L \OT1/cmr/m/n/14.4 = 2$ \T2A/
-cmr/m/n/14.4 збi-га-№-ться з ал-го-ри-тмом не-чi-тких с-середнiх Без-де-ка (FCM
-) [[]]
- []
-
-[28] [29] [30] [31] [32] [33] (./thesis.bbl [34]
-Underfull \hbox (badness 10000) in paragraph at lines 24--31
-[]\OT1/cmr/m/n/14.4 Adaptive Clus-ter-ing for Mul-ti-ple Evolv-ing Streams / Bi
--
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--31
-\OT1/cmr/m/n/14.4 Ru Dai, Jen-Wei Huang, Mi-Yen Yeh, Ming-Syan Chen //
- []
-
-
-Underfull \hbox (badness 2393) in paragraph at lines 24--31
-\OT1/cmr/m/n/14.4 IEEE Trans. Knowl. Data Eng. []  2006. []  Vol. 18, no. 9. []
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--31
-\OT1/cmr/m/n/14.4 P. 1166--1180. []  URL: \OT1/cmr/m/n/12 http://dx.doi.org/10.
-1109/TKDE.2006.137;
- []
-
-
-Underfull \hbox (badness 2213) in paragraph at lines 41--48
-[]\OT1/cmr/m/n/14.4 Angelov Pla-men P., Lughofer Ed-win. Data-driven evolv-ing 
-fuzzy
- []
-
-
-Underfull \hbox (badness 1490) in paragraph at lines 41--48
-\OT1/cmr/m/n/14.4 sys-tems us-ing eTS and FLEX-FIS: com-par-a-tive anal-y-sis /
-/ Int. J.
- []
-
-
-Underfull \hbox (badness 1776) in paragraph at lines 41--48
-\OT1/cmr/m/n/14.4 Gen-eral Sys-tems. []  2008. []  Vol. 37, no. 1. []  P. 45--6
-7. []  URL:
- []
-
-[35
-
-]
-Underfull \hbox (badness 7273) in paragraph at lines 144--151
-[]\OT1/cmr/m/n/14.4 Bodyanskiy Yev-geniy, Vik-torov Yev-gen. 110 9 -- In-tel-li
--gent
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--151
-\OT1/cmr/m/n/14.4 Pro-cess-ing THE CAS-CADE NEO-FUZZY AR-CHI-TEC-TURE
- []
-
-
-Underfull \hbox (badness 4391) in paragraph at lines 144--151
-\OT1/cmr/m/n/14.4 AND ITS ON-LINE LEARN-ING AL-GO-RITHM. []  2013. []  URL:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--162
-[]\OT1/cmr/m/n/14.4 Bodyanskiy Yev-geniy, Vik-torov Yev-gen, Pliss Iryna. In-te
-r-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--162
-\OT1/cmr/m/n/14.4 na-tional Book Se-ries "In-for-ma-tion Sci-ence and Com-put-i
-ng "
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--162
-\OT1/cmr/m/n/14.4 25 THE CAS-CADE GROW-ING NEU-RAL NET-WORK US-ING
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--162
-\OT1/cmr/m/n/14.4 QUADRATIC NEU-RONS AND ITS LEARN-ING AL-GO-RITHMS
- []
-
-
-Underfull \hbox (badness 5036) in paragraph at lines 154--162
-\OT1/cmr/m/n/14.4 FOR ON-LINE IN-FOR-MA-TION PRO-CESS-ING. []  2013. []  URL:
- []
-
-[36]
-Underfull \hbox (badness 2970) in paragraph at lines 199--205
-[]\OT1/cmr/m/n/14.4 Chung Fu-Lai, Lee Tong. Fuzzy com-pet-i-tive learn-ing // N
-eu-
- []
-
-
-Underfull \hbox (badness 3148) in paragraph at lines 199--205
-\OT1/cmr/m/n/14.4 ral Net-works. []  1994. []  Vol. 7, no. 3. []  P. 539--551. 
-[]  URL:
- []
-
-[37]
-Underfull \hbox (badness 1264) in paragraph at lines 245--252
-\OT1/cmr/m/n/14.4 Im-age Recog-ni-tion / Frank H^^?opp-ner, Frank Kla-wonn, Rud
-olf Kruse,
- []
-
-[38]
-Underfull \hbox (badness 2012) in paragraph at lines 362--369
-[]\OT1/cmr/m/n/14.4 Leng Gang, Prasad Gir-i-jesh, McGin-nity T. Mar-tin. An on-
-line
- []
-
-
-Underfull \hbox (badness 1789) in paragraph at lines 362--369
-\OT1/cmr/m/n/14.4 al-go-rithm for cre-at-ing self-organizing fuzzy neu-ral net-
-works // Neu-
- []
-
-
-Underfull \hbox (badness 1137) in paragraph at lines 362--369
-\OT1/cmr/m/n/14.4 ral Net-works. []  2004. []  Vol. 17, no. 10. []  P. 1477--14
-93. []  URL:
- []
-
-
-Underfull \hbox (badness 3590) in paragraph at lines 371--377
-[]\OT1/cmr/m/n/14.4 Liu Ying-Ho. Stream min-ing on uni-vari-ate un-cer-tain dat
-a //
- []
-
-
-Underfull \hbox (badness 1990) in paragraph at lines 371--377
-\OT1/cmr/m/n/14.4 Appl. In-tell. []  2013. []  Vol. 39, no. 2. []  P. 315--344.
- []  URL:
- []
-
-
-Underfull \hbox (badness 1609) in paragraph at lines 383--390
-[]\OT1/cmr/m/n/14.4 Lughofer Ed-win. FLEX-FIS: A Ro-bust In-cre-men-tal Learn-i
-ng Ap-
- []
-
-
-Underfull \hbox (badness 1178) in paragraph at lines 383--390
-\OT1/cmr/m/n/14.4 proach for Evolv-ing Takagi-Sugeno Fuzzy Mod-els // IEEE T. F
-uzzy
- []
-
-
-Underfull \hbox (badness 4967) in paragraph at lines 383--390
-\OT1/cmr/m/n/14.4 Sys-tems. []  2008. []  Vol. 16, no. 6. []  P. 1393--1410. []
-  URL:
- []
-
-[39]
-Underfull \hbox (badness 1365) in paragraph at lines 405--409
-[]\OT1/cmr/m/n/14.4 Miki T., (Japan) T. Ya-makawa. Ana-log Im-ple-men-ta-tion o
-f Neo-
- []
-
-
-Underfull \hbox (badness 3088) in paragraph at lines 442--449
-[]\OT1/cmr/m/n/14.4 Park Dong C., Dagher Is-sam. Gra-di-ent Based Fuzzy c[]mean
-s
- []
-
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 487--495
-[]\OT1/cmr/m/n/14.4 Smoothly dis-tributed fuzzy C-means: a new self-organizing
- []
-
-
-Underfull \hbox (badness 1721) in paragraph at lines 487--495
-\OT1/cmr/m/n/14.4 map / R. D. Pas-cual Mar-qui, A. D. Pas-cual Mon-tano, K. Koc
-hi,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 487--495
-\OT1/cmr/m/n/14.4 P. 2395--2402. []  URL: \OT1/cmr/m/n/12 http://www.sciencedir
-ect.com/science/article/B6V14-
- []
-
-
-Underfull \hbox (badness 1028) in paragraph at lines 498--505
-[]\OT1/cmr/m/n/14.4 Tsao E. C. K., Bezdek J. C., Pal N. R. Fuzzy Ko-ho-nen clus
--ter-
- []
-
-
-Underfull \hbox (badness 1867) in paragraph at lines 498--505
-\OT1/cmr/m/n/14.4 ing net-works // Pat-tern Recog-ni-tion. []  1994. []  Vol. 2
-7, no. 5. []
- []
-
-
-Underfull \hbox (badness 1902) in paragraph at lines 515--527
-\OT1/cmr/m/n/14.4 tive Noise Can-cel-la-tion For Multi-Sensory Sig-nals. []  20
-01. []  URL:
- []
-
-[41]
-Underfull \hbox (badness 3209) in paragraph at lines 576--583
-[]\OT1/cmr/m/n/14.4 Wu Yi. Net-work Big Data: A Lit-er-a-ture Sur-vey on Stream
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 576--583
-\OT1/cmr/m/n/14.4 Data Min-ing. []  2014. []  Vol. 9. []  P. 2427--2434. []  UR
-L:
- []
-
-) [42] (./thesis.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+(./thesis_playground.aux) ) 
 Here is how much of TeX's memory you used:
- 5740 strings out of 493089
- 79799 string characters out of 6134842
- 165015 words of memory out of 5000000
- 9108 multiletter control sequences out of 15000+600000
- 14685 words of font info for 34 fonts, out of 8000000 for 9000
+ 5531 strings out of 493089
+ 76685 string characters out of 6134842
+ 157819 words of memory out of 5000000
+ 8908 multiletter control sequences out of 15000+600000
+ 6677 words of font info for 19 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 276i,18n,31p,1443b,645s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
-}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on thesis.pdf (42 pages, 303478 bytes).
+ 276i,6n,31p,894b,241s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/
+cm-super/cm-super-t2a.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+cm-super/sfbx1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm
+-super/sfrm1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-s
+uper/sfrm1440.pfb>
+Output written on thesis_playground.pdf (6 pages, 229338 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
+ 62 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

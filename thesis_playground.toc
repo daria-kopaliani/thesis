@@ -1,0 +1,6 @@
+\select@language {ukrainian}
+\contentsline {chapter}{\numberline {{\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl }\nobreakspace 1}TODO}{4}
+\contentsline {section}{\numberline {1.1}\IeC {\CYRO }\IeC {\cyrp }\IeC {\cyrt }\IeC {\cyri }\IeC {\cyrm }\IeC {\cyrii }\IeC {\cyrz }\IeC {\cyra }\IeC {\cyrc }\IeC {\cyrii }\IeC {\cyrya } \IeC {\cyrp }\IeC {\cyru }\IeC {\cyrl }\IeC {\cyru } \IeC {\cyrn }\IeC {\cyre }\IeC {\cyro }-\IeC {\cyrf }\IeC {\cyra }\IeC {\cyrz }\IeC {\cyrz }\IeC {\cyrii } \IeC {\cyrn }\IeC {\cyre }\IeC {\cyrishrt }\IeC {\cyrr }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrii }\IeC {\cyrv }}{4}
+\contentsline {chapter}{{\Ukrainian \CYRS \cyrp \cyri \cyrs \cyro \cyrk \ \cyrv \cyri \cyrk \cyro \cyrr \cyri \cyrs \cyrt \cyra \cyrn \cyri \cyrh \ \cyrd \cyrzh \cyre \cyrr \cyre \cyrl }}{5}
+\select@language {english}
+\select@language {ukrainian}
