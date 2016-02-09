@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  7 FEB 2016 12:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  9 FEB 2016 17:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -478,13 +478,19 @@ File: speciality.20070212N70 (vakthesis)
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./thesis.toc)
+(./thesis.toc
+Overfull \hbox (4.06572pt too wide) in paragraph at lines 9--9
+ [][] []\T2A/cmr/m/n/14.4 Багатовимiрна ево-лю-цiй-на ка-ска-дна си-сте-ма, по-
+бу-до-ва-на на нео- 
+ []
+
+[2
+
+])
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [2
-
-]
+ [3]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 1.
 
 Overfull \hbox (1.98187pt too wide) in paragraph at lines 96--97
@@ -492,42 +498,48 @@ Overfull \hbox (1.98187pt too wide) in paragraph at lines 96--97
 у № каскадно-кореляцiйi
  []
 
-[3
+[4
 
-] [4] [5] [6] [7] [8] [9]
+] [5] [6] [7] [8] [9] [10]
 Overfull \hbox (0.1621pt too wide) in paragraph at lines 301--302
 []\T2A/cmr/m/n/14.4 Тобто не-лi-нiй-нiй си-напс фа-кти-чно № си-сте-мою ви-сно-
 ву-ва-н-ня Така i-Су ено
  []
 
-[10] [11] [12]
+[11] [12] [13]
 Overfull \hbox (7.28288pt too wide) in paragraph at lines 448--449
 \T2A/cmr/m/n/14.4 екс-по-нен-цiй-но зва-же-ний ре-ку-рен-тний ме-тод най-мен-ши
 х ква-дра-тiв (EWRLSM),
  []
 
-[13] [14] [15] [16] [17] [18] [19]
-{\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 2.
-[20
+[14]
+Overfull \hbox (14.923pt too wide) in paragraph at lines 450--451
+[]\T2A/cmr/m/n/14.4 При ви-ко-ри-стан-нi кри-те-рiю на-вча-няя з []ре[]-[]гу[]-
+[]лю[]-[]ю[]-[]чим[] [][][]па[]-[]ра[]-[]ме[]-[]тром (momentum
+ []
 
-]
-{\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 3.
+[15] [16] [17] [18] [19] [20]
+{\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 2.
 [21
 
-] [22] [23] [24] [25]
-Overfull \hbox (12.59999pt too wide) in paragraph at lines 734--737
+] [22] [23] [24]
+{\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 3.
+[25
+
+] [26] [27] [28] [29]
+Overfull \hbox (12.59999pt too wide) in paragraph at lines 826--829
 \T2A/cmr/m/n/14.4 де мi-ру не-чi-ткоЁ по-дi-бно-стi $\OML/cmm/m/it/14.4 N[][]$ 
 \T2A/cmr/m/n/14.4 мо-жна зна-йти за будь-яким ви-ра-зом []. 
  []
 
-[26] [27]
-Overfull \hbox (16.25555pt too wide) in paragraph at lines 790--791
+[30] [31]
+Overfull \hbox (16.25555pt too wide) in paragraph at lines 882--883
 []\T2A/cmr/m/n/14.4 що при $\OML/cmm/m/it/14.4 ^^L \OT1/cmr/m/n/14.4 = 2$ \T2A/
 cmr/m/n/14.4 збi-га-№-ться з ал-го-ри-тмом не-чi-тких с-середнiх Без-де-ка (FCM
 ) [[]]
  []
 
-[28] [29] [30] [31] [32] [33] (./thesis.bbl [34]
+[32] [33] [34] [35] [36] [37] (./thesis.bbl [38]
 Underfull \hbox (badness 10000) in paragraph at lines 24--31
 []\OT1/cmr/m/n/14.4 Adaptive Clus-ter-ing for Mul-ti-ple Evolv-ing Streams / Bi
 -
@@ -568,7 +580,7 @@ Underfull \hbox (badness 1776) in paragraph at lines 41--48
 7. []  URL:
  []
 
-[35
+[39
 
 ]
 Underfull \hbox (badness 7273) in paragraph at lines 144--151
@@ -613,7 +625,7 @@ Underfull \hbox (badness 5036) in paragraph at lines 154--162
 \OT1/cmr/m/n/14.4 FOR ON-LINE IN-FOR-MA-TION PRO-CESS-ING. []  2013. []  URL:
  []
 
-[36]
+[40]
 Underfull \hbox (badness 2970) in paragraph at lines 199--205
 []\OT1/cmr/m/n/14.4 Chung Fu-Lai, Lee Tong. Fuzzy com-pet-i-tive learn-ing // N
 eu-
@@ -625,13 +637,13 @@ Underfull \hbox (badness 3148) in paragraph at lines 199--205
 []  URL:
  []
 
-[37]
+[41]
 Underfull \hbox (badness 1264) in paragraph at lines 245--252
 \OT1/cmr/m/n/14.4 Im-age Recog-ni-tion / Frank H^^?opp-ner, Frank Kla-wonn, Rud
 olf Kruse,
  []
 
-[38]
+[42]
 Underfull \hbox (badness 2012) in paragraph at lines 362--369
 []\OT1/cmr/m/n/14.4 Leng Gang, Prasad Gir-i-jesh, McGin-nity T. Mar-tin. An on-
 line
@@ -679,7 +691,7 @@ Underfull \hbox (badness 4967) in paragraph at lines 383--390
   URL:
  []
 
-[39]
+[43]
 Underfull \hbox (badness 1365) in paragraph at lines 405--409
 []\OT1/cmr/m/n/14.4 Miki T., (Japan) T. Ya-makawa. Ana-log Im-ple-men-ta-tion o
 f Neo-
@@ -691,7 +703,7 @@ Underfull \hbox (badness 3088) in paragraph at lines 442--449
 s
  []
 
-[40]
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 487--495
 []\OT1/cmr/m/n/14.4 Smoothly dis-tributed fuzzy C-means: a new self-organizing
  []
@@ -726,7 +738,7 @@ Underfull \hbox (badness 1902) in paragraph at lines 515--527
 01. []  URL:
  []
 
-[41]
+[45]
 Underfull \hbox (badness 3209) in paragraph at lines 576--583
 []\OT1/cmr/m/n/14.4 Wu Yi. Net-work Big Data: A Lit-er-a-ture Sur-vey on Stream
 
@@ -738,7 +750,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 576--583
 L:
  []
 
-) [42] (./thesis.aux)
+) [46] (./thesis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -750,7 +762,7 @@ Here is how much of TeX's memory you used:
  9108 multiletter control sequences out of 15000+600000
  14685 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 276i,18n,31p,1443b,645s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 276i,18n,31p,1984b,645s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -768,10 +780,10 @@ e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2015
 /texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on thesis.pdf (42 pages, 303704 bytes).
+Output written on thesis.pdf (46 pages, 315089 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
+ 219 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

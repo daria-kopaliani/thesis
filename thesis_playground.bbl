@@ -12,9 +12,4 @@
 \cyrdash\hskip.2em\ignorespaces}
 \providecommand{\natexlab}[1]{#1}
 
-\bibitem[Bezdek(1981)]{ref21}\selectlanguageifdefined{english}
-\BibEmph{Bezdek~J.C.} Pattern recognition with fuzzy objective function
-  algorithms. \BibDash
-\newblock Kluwer Academic Publishers, 1981.
-
 \end{thebibliography}

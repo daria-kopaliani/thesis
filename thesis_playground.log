@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  8 JAN 2016 11:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  9 FEB 2016 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -270,40 +270,6 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen137
 \SOUL@ulht=\dimen138
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/layout.sty
-Package: layout 2014/10/28 v1.2c Show layout parameters
-\oneinch=\count112
-\cnt@paperwidth=\count113
-\cnt@paperheight=\count114
-\cnt@hoffset=\count115
-\cnt@voffset=\count116
-\cnt@textheight=\count117
-\cnt@textwidth=\count118
-\cnt@topmargin=\count119
-\cnt@oddsidemargin=\count120
-\cnt@evensidemargin=\count121
-\cnt@headheight=\count122
-\cnt@headsep=\count123
-\cnt@marginparsep=\count124
-\cnt@marginparwidth=\count125
-\cnt@marginparpush=\count126
-\cnt@footskip=\count127
-\fheight=\count128
-\ref@top=\count129
-\ref@hoffset=\count130
-\ref@voffset=\count131
-\ref@head=\count132
-\ref@body=\count133
-\ref@foot=\count134
-\ref@margin=\count135
-\ref@marginwidth=\count136
-\ref@marginpar=\count137
-\Interval=\count138
-\ExtraYPos=\count139
-\PositionX=\count140
-\PositionY=\count141
-\ArrowLength=\count142
-)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
@@ -417,16 +383,16 @@ LaTeX Font Info:    ... okay on input line 67.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count143
+\scratchcounter=\count112
 \scratchdimen=\dimen139
 \scratchbox=\box28
-\nofMPsegments=\count144
-\nofMParguments=\count145
+\nofMPsegments=\count113
+\nofMParguments=\count114
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count146
+\MPscratchCnt=\count115
 \MPscratchDim=\dimen140
-\MPnumerator=\count147
-\makeMPintoPDFobject=\count148
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
 \everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -507,48 +473,58 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 File: speciality.20070212N70 (vakthesis)
+[1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./thesis_playground.toc
+Overfull \hbox (4.06572pt too wide) in paragraph at lines 3--3
+ [][] []\T2A/cmr/m/n/14.4 Багатовимiрна ево-лю-цiй-на ка-ска-дна си-сте-ма, по-
+бу-до-ва-на на нео- 
+ []
+
+)
+\tf@toc=\write3
+\openout3 = `thesis_playground.toc'.
+
+ [2
+
+]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 1.
-[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[3
 
+] [4] [5] (./thesis_playground.bbl [6]
 
-]
-{\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 2.
-<MIMONFNNetwork.jpg, id=9, 392.46625pt x 482.80376pt>
-File: MIMONFNNetwork.jpg Graphic file (type jpg)
- <use MIMONFNNetwork.jpg>
-Package pdftex.def Info: MIMONFNNetwork.jpg used on input line 103.
-(pdftex.def)             Requested size: 284.52756pt x 350.04218pt.
+Package natbib Warning: Empty `thebibliography' environment on input line 15.
 
-[2
+) [7
 
-] <MIMONFN.jpg, id=13, 811.03pt x 984.67876pt>
-File: MIMONFN.jpg Graphic file (type jpg)
- <use MIMONFN.jpg>
-Package pdftex.def Info: MIMONFN.jpg used on input line 119.
-(pdftex.def)             Requested size: 284.52756pt x 345.45407pt.
- [3 <./MIMONFNNetwork.jpg>] [4 <./MIMONFN.jpg>] (./thesis_playground.bbl [5]) [
-6
-
-]
-(./thesis_playground.aux) ) 
+] (./thesis_playground.aux) ) 
 Here is how much of TeX's memory you used:
- 5531 strings out of 493089
- 76685 string characters out of 6134842
- 157819 words of memory out of 5000000
- 8908 multiletter control sequences out of 15000+600000
- 6677 words of font info for 19 fonts, out of 8000000 for 9000
+ 5462 strings out of 493089
+ 75787 string characters out of 6134842
+ 161455 words of memory out of 5000000
+ 8833 multiletter control sequences out of 15000+600000
+ 13345 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 276i,6n,31p,894b,241s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/
-cm-super/cm-super-t2a.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
-cm-super/sfbx1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm
--super/sfrm1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-s
-uper/sfrm1440.pfb>
-Output written on thesis_playground.pdf (6 pages, 229338 bytes).
+ 276i,18n,31p,1995b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvip
+s/cm-super/cm-super-t2a.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-s
+uper/sfbx1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-sup
+er/sfcc1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super
+/sfrm1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/s
+frm1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfx
+c1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfxc1
+728.pfb>
+Output written on thesis_playground.pdf (7 pages, 150755 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 77 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
