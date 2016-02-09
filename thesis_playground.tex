@@ -99,50 +99,49 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Багатовимірна каскадна нейро-мережа, що еволюціонує}
 \label{ch:evolvingClusteringSystem}
-Задача прогнозування багатовимірних часових рядів доволі часто виникає у багатьох технічних, медико-біологічних та інших дослідженнях, де якість прийнятих рішень істотно залежить від точності синтезован
-\hl{.......}
+\section{Багатовимірна каскадна система, що еволюціонує, побудована на нео-фаззі нейронах}
+\label{sec:MIMOEvolvingCascadedSystemBuiltOnNFNs}
+....
+\section{Багатовимірна каскадна система, що еволюціонує, побудована на багатовимірних нео-фаззі нейронах}
+\label{sec:MIMOEvolvingCascadedSystemBuiltOnMNFNs}
 
-\subsection{Оптимізація вихідних сигналів пулу нео-фаззі нейронів багатовимірної каскадної системи, що еволюціонує}
-Вихідні сигнали нейронів пулу кожного каскаду пропонується об'єднати узагальнюючим нейроном $GN_d^{[m]}$, що його було введено у \hl{???} розділі.
-Таким чином, у кожному каскаді системи маємо $g$ $GN_d^{[m]}$ елементів, що узагальнюють вихідні сигнали нейронів пулу для кожного елементу вихідного вектору:
-
-\begin{equation}
-\hat{y}_d^{*[m]}\left(k\right)=\left(\hat{y}_{d1}^{[m]}\left(k\right),\hat{y}_{d2}^{[m]}\left(k\right),\dots,\hat{y}_{dq}^{[m]}\left(k\right)\right)^T;
-\end{equation}
-\medskip
-
-Нагадаймо, точність вихідного сигналу узагальнюючих елементів має бути не меншою від точності будь-якого сингналу, що узагальнюється (подається на вхід до $GN_d^{[m]}$).
-Рекурента форма метод навчання <<на плаваючому вікні>> елементів $GN_d^{[m]}$ кожного каскаду має вигляд
-
-\begin{equation}\label{eq:GeneralizedOutputRecurrent}
-\begin{cases}
-\begin{aligned}
-\tilde{P}_d^{[m]}\left(k+1\right)=&P_d^{[m]}\left(k\right)-\frac{P_d^{[m]}\left(k\right)\hat{y}_d^{[m]}\left(k+1\right)\hat{y}_d^{[m]T}\left(k+1\right)P_d^{[m]}\left(k\right)}{1+\hat{y}_d^{[m]T}\left(k+1\right)P_d^{[m]}\left(k\right)\hat{y}_d^{[m]}\left(k+1\right)},\\
-P_d^{[m]}\left(k+1\right)=&\tilde{P}_d^{[m]}\left(k+1\right)+\\
-&\frac{\tilde{P}_d^{[m]}\left(k+1\right)\hat{y}_d\left(k-s+1\right)\hat{y}_d^{[m]T}\left(k-s+1\right)\tilde{P}_d^{[m]}\left(k+1\right)}{1-\hat{y}_d^{[m]T}\left(k-s+1\right)\tilde{P}_d^{[m]}\left(k+1\right)\hat{y}_d^{[m]}\left(k-s+1\right)},\\
-\hat{y}_d^{*[m]}\left(k+1\right)=&\frac{\hat{y}_d^{[m]T}\left(k+1\right)P_d^{[m]}\left(k+1\right)E}{E^TP_d^{[m]}\left(k+1\right)E},
-\end{aligned}
-\end{cases}
-\end{equation}
-\medskip
-
-а у випадку, коли $s=1$:
+Архітектура багатовимірної каскадної системи, яка ґрунтується на звичайних нео-фаззі нейронах, що її описано у \ref{sec:MIMOEvolvingCascadedSystemBuiltOnNFNs} є надмірною, адже вектор вхідних сигналів $x\left(k\right)$ (для першого каскаду) подається на однотипні нелінійні синапси $NS_{di}^{[1]j}$ нео-фаззі нейронів, кожен з яких на виході генерує сигнал $\hat{y}_d^{[1]j}\left(k\right),d=1,2,\dots,g$. У результаті компоненти вихідного вектора 
 
 \begin{equation}
-\begin{aligned}
-\hat{y}_d^{[m]}\left(k+1\right)&=\frac{\hat{y}_d^{[m]T}\left(k+1\right)\hat{y}_d^{[m]}\left(k+1\right)}{E^T\hat{y}_d^{[m]}\left(k+1\right)}\\
-&=\frac{\left\|\hat{y}_d^{[m]}\left(k+1\right)\right\|^2}{E^T\hat{y}_d^{[m]}\left(k+1\right)}\\
-&=\frac{\sum\limits_{j=1}^q{\left(\hat{y}_d^{[m]}\left(k+1\right)\right)^2}}{\sum\limits_{j=1}^q{\hat{y}_d^{[m]}\left(k+1\right)}}.
-\end{aligned}
+\hat{y}^{[1]j}\left(k\right)=\left(\hat{y}_1^{[1]j}\left(k\right), \hat{y}_2^{[1]j}\left(k\right),\dots,\hat{y}_g^{[1]j}\left(k\right)\right)^{T}
 \end{equation}
 \medskip
 
+обчислюються незалежно один від одного, хоча $\mu_{1il}\left(x_i\left(k\right)\right)=\mu_{2il}\left(x_i\left(k\right)\right)=\mu_{jil}\left(x_i\left(k\right)\right)=\mu_{nil}\left(x_i\left(k\right)\right)$. Уникнути цього можна, якщо ввести до розгляду багатовимірний нео-фаззі нейрон, що є модифікацією систем, запропонованих у \hl{[??,??]}.
 
+\subsection{Багатовимірний нео-фаззі нейрон}
 
+Вузлами багатовимірного нео-фаззі нейрону є складені нелінійні синапси $MNS_i^{[1]j}$, кожен з яких має $h$ функцій належності $\mu_{li}^{[1]j}$ та $gh$ настроюваних синаптичних вагових коефіцієнтів, але тільки $hn$ функцій належності, що в $g$ разів менше, ніж у випадку, коли каскад сформований із звичайних нео-фаззі нейронів.\\
 
+Введемо надалі до розгляду $\left(hn \times 1\right)$ - вектор функцій належності
 
+\begin{equation}
+\mu^{[1]j}\left(k\right)=\left(\mu_{11}^{[1]j}\left(x_1\left(k\right)\right),\mu_{21}^{[1]j}\left(x_1\left(k\right)\right),\dots,\mu_{h1}^{[1]j}\left(x_1\left(k\right)\right),\dots,\mu_{hn}^{[1]j}\left(x_n\left(k\right)\right)\right)^{T}
+\end{equation}
+\medskip
 
+та $\left(g \times hn\right)$ - матрицю синаптичних вагових коефіцієнтів
 
+\begin{equation}
+W^{[1]j}=\left(
+\begin{matrix}    w_{111}^{[1]j}&w_{112}^{[1]j}&\dots&w_{1li}^{[1]j}&\dots&w_{1hn}^{[1]j}\\
+ w_{211}^{[1]j}&w_{212}^{[1]j}&\dots&w_{2li}^{[1]j}&\dots&w_{2hn}^{[1]j}\\ 
+    \vdots&\vdots&&\vdots&&\vdots\\    w_{g11}^{[1]j}&w_{g12}^{[1]j}&\dots&w_{gli}^{[1]j}&\dots&w_{ghn}^{[1]j}\\
+\end{matrix}
+\right),
+\end{equation}
+\medskip
+
+і запишемо сигнал на виході $MN_j^{[1]}$ у $k$-й момент часу у вигляді
+
+\begin{equation}
+\hat{y}^{[1]j}\left(k\right)=W^{[1]j}\mu^{[1]j}\left(k\right).
+\end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
