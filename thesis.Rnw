@@ -729,7 +729,7 @@ w_{d}^{[m]j}=\biggl(&w_{d11}^{[m]j},\dots,w_{dh1}^{[m]j},w_{d12}^{[m]j},\dots,w_
 
 Для навчання нео-фаззі нейронів може бути використаний будь-який з методів адаптивної ідентифікації, що ми пропонували використовувати для навчання вузлів одновимірної нео-фаззі системи у першому розділі. Так корегувати вагові кофіцієнти можна за допомгою експоненційно зваженого рекурентного методу найменших квадратів:
 
-\begin{equation}
+\begin{equation}\label{eq:ExpWeightedRecurrentLeastSquaresLearning}
 \begin{cases}
 w_d^{[m]j}\left(k+1\right)=w_d^{[m]j}\left(k\right)+\\
 \frac{
@@ -748,7 +748,7 @@ $0<\alpha \leq 1$ -- фактор забування;
 
 або градієнтний метод навчання, що, як зазначалося, відрізняється як згладжувальними, так і слідкуючими властивостями:
 
-\begin{equation}
+\begin{equation}\label{eq:GradientLearning}
 \begin{aligned}
 \begin{cases}
 w_d^{[m]j}\left(k+1\right)&=w_d^{[m]j}\left(k\right)+\frac{y^d\left(k+1\right)-\left(w_d^{[m]j}\left(k\right)\right)^{T}\mu_d^{[m]j}\left(k+1\right)
@@ -759,7 +759,7 @@ r_d^{[m]j}\left(k+1\right)&=\alpha r_d^{[m]j}+\left\|\mu_d^{[m]j}\left(k+1\right
 \end{equation}
 \medskip
 
-\subsection{Оптимізація вихідних сигналів пулу нео-фаззі нейронів багатовимірної каскадної системи, що еволюціонує}
+\subsection{Метод визначення поточно оптимальних вихідних сигналів пулу нео-фаззі нейронів багатовимірної каскадної системи, що еволюціонує}
 Вихідні сигнали нейронів пулу кожного каскаду пропонується об'єднати узагальнюючим нейроном $GN_d^{[m]}$, що його було введено у \hl{???} розділі.
 Таким чином, у кожному каскаді системи маємо $g$ $GN_d^{[m]}$ елементів, що узагальнюють вихідні сигнали нейронів пулу для кожного елементу вихідного вектору:
 
@@ -834,6 +834,45 @@ W^{[1]j}=\left(
 \begin{equation}
 \hat{y}^{[1]j}\left(k\right)=W^{[1]j}\mu^{[1]j}\left(k\right).
 \end{equation}
+\medskip
+
+Навчаняя багатовимірного нео-фаззі нейрону можна реалізувати за допомогою матричної модифікації експоненційно-зваженого рекурентного методу найменших квадратів \eqref{eq:ExpWeightedRecurrentLeastSquaresLearning} у формі
+
+\begin{equation}
+\begin{aligned}
+\begin{cases}
+W^{[1]j}\left(k+1\right)&=W^{[1]j}\left(k\right)+\\
+&\frac{\left(y\left(k+1\right)-W^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)\right)
+\left(\mu^{[1]j}\left(k+1\right)\right)^{T}P^{[1]j}\left(k\right)}{\alpha+\left(\mu^{[1]j\left(k+1\right)}\right)^{T}P^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)
+},\\
+P^{[1]j}\left(k+1\right)&=\frac{1}{\alpha}\left(P^{[1]j}\left(k\right)-\frac{P^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)\left(\mu^{[1]j}\left(k+1\right)\right)^{T}P^{[1]j}\left(k\right)
+}{\alpha+\left(\mu^{[1]j}\left(k+1\right)\right)^{T}P^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)
+}\right),\\
+&0 < \alpha \leq 1
+\end{cases}
+\end{aligned}
+\end{equation}
+\medskip
+
+або багатовимірного варіанту методу \eqref{eq:GradientLearning}
+
+\begin{equation}
+\begin{aligned}
+\begin{cases}
+W^{[1]j}\left(k+1\right)&= W^{[1]j}\left(k\right) + \frac{y\left(k+1\right)-W^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)}{r^{[1]j}\left(k+1\right)}\\
+&\times\left(\mu^{[1]j}\left(k+1\right)\right)^{T},\\
+r^{[1]j}\left(k+1\right)&=\alpha r^{[1]j}\left(k\right)+\left\|\mu^{[1]j}\left(k+1\right)\right\|^{2},\\
+&0 \leq \alpha \leq 1,
+\end{cases}
+\end{aligned}
+\end{equation}
+\medskip
+
+де $y\left(k+1\right)=\left(y^{1}\left(k+1\right),y^{2}\left(k+1\right),\dots, y^{g}\left(k+1\right)\right)^{T}$.
+
+
+Аналогічним чином проводиться навчання інших каскадів, при цьому вектор функцій належності $m$-го каскаду $\mu^{[m]j}\left(k+1\right)$ збільшує свою розмірність на $\left(m-1\right)g$ компоненти, що їх утворили виходи попередніх каскадів.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1104,8 +1143,6 @@ TODO:рис
 
 
 
-	\bibliographystyle{ugost2008ns}
-	\bibliography{references}
-	
-	
+\bibliographystyle{ugost2008ns}
+\bibliography{references}	
 \end{document}

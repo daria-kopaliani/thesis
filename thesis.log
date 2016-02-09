@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  9 FEB 2016 20:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  9 FEB 2016 21:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -529,24 +529,24 @@ Overfull \hbox (12.74342pt too wide) detected at line 792
 LaTeX Warning: Reference `sec:MIMOEvolvingCascadedSystemBuiltOnNFNs' on page 27
  undefined on input line 850.
 
-[27] [28]
+[27] [28] [29]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 3.
-[29
+[30
 
-] [30] [31] [32] [33]
-Overfull \hbox (12.59999pt too wide) in paragraph at lines 967--970
+] [31] [32] [33] [34]
+Overfull \hbox (12.59999pt too wide) in paragraph at lines 1006--1009
 \T2A/cmr/m/n/14.4 де мi-ру не-чi-ткоЁ по-дi-бно-стi $\OML/cmm/m/it/14.4 N[][]$ 
 \T2A/cmr/m/n/14.4 мо-жна зна-йти за будь-яким ви-ра-зом []. 
  []
 
-[34] [35]
-Overfull \hbox (16.25555pt too wide) in paragraph at lines 1023--1024
+[35] [36]
+Overfull \hbox (16.25555pt too wide) in paragraph at lines 1062--1063
 []\T2A/cmr/m/n/14.4 що при $\OML/cmm/m/it/14.4 ^^L \OT1/cmr/m/n/14.4 = 2$ \T2A/
 cmr/m/n/14.4 збi-га-№-ться з ал-го-ри-тмом не-чi-тких с-середнiх Без-де-ка (FCM
 ) [[]]
  []
 
-[36] [37] [38] [39] [40] [41] (./thesis.bbl [42]
+[37] [38] [39] [40] [41] [42] (./thesis.bbl [43]
 Underfull \hbox (badness 10000) in paragraph at lines 24--31
 []\OT1/cmr/m/n/14.4 Adaptive Clus-ter-ing for Mul-ti-ple Evolv-ing Streams / Bi
 -
@@ -587,7 +587,7 @@ Underfull \hbox (badness 1776) in paragraph at lines 41--48
 7. []  URL:
  []
 
-[43
+[44
 
 ]
 Underfull \hbox (badness 7273) in paragraph at lines 144--151
@@ -632,7 +632,7 @@ Underfull \hbox (badness 5036) in paragraph at lines 154--162
 \OT1/cmr/m/n/14.4 FOR ON-LINE IN-FOR-MA-TION PRO-CESS-ING. []  2013. []  URL:
  []
 
-[44]
+[45]
 Underfull \hbox (badness 2970) in paragraph at lines 199--205
 []\OT1/cmr/m/n/14.4 Chung Fu-Lai, Lee Tong. Fuzzy com-pet-i-tive learn-ing // N
 eu-
@@ -644,13 +644,13 @@ Underfull \hbox (badness 3148) in paragraph at lines 199--205
 []  URL:
  []
 
-[45]
+[46]
 Underfull \hbox (badness 1264) in paragraph at lines 245--252
 \OT1/cmr/m/n/14.4 Im-age Recog-ni-tion / Frank H^^?opp-ner, Frank Kla-wonn, Rud
 olf Kruse,
  []
 
-[46]
+[47]
 Underfull \hbox (badness 2012) in paragraph at lines 362--369
 []\OT1/cmr/m/n/14.4 Leng Gang, Prasad Gir-i-jesh, McGin-nity T. Mar-tin. An on-
 line
@@ -698,7 +698,7 @@ Underfull \hbox (badness 4967) in paragraph at lines 383--390
   URL:
  []
 
-[47]
+[48]
 Underfull \hbox (badness 1365) in paragraph at lines 405--409
 []\OT1/cmr/m/n/14.4 Miki T., (Japan) T. Ya-makawa. Ana-log Im-ple-men-ta-tion o
 f Neo-
@@ -710,7 +710,7 @@ Underfull \hbox (badness 3088) in paragraph at lines 442--449
 s
  []
 
-[48]
+[49]
 Underfull \hbox (badness 10000) in paragraph at lines 487--495
 []\OT1/cmr/m/n/14.4 Smoothly dis-tributed fuzzy C-means: a new self-organizing
  []
@@ -745,7 +745,7 @@ Underfull \hbox (badness 1902) in paragraph at lines 515--527
 01. []  URL:
  []
 
-[49]
+[50]
 Underfull \hbox (badness 3209) in paragraph at lines 576--583
 []\OT1/cmr/m/n/14.4 Wu Yi. Net-work Big Data: A Lit-er-a-ture Sur-vey on Stream
 
@@ -757,7 +757,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 576--583
 L:
  []
 
-) [50] (./thesis.aux)
+) [51] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -766,13 +766,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5744 strings out of 493089
- 79959 string characters out of 6134842
- 233354 words of memory out of 5000000
- 9112 multiletter control sequences out of 15000+600000
+ 5746 strings out of 493089
+ 80025 string characters out of 6134842
+ 233378 words of memory out of 5000000
+ 9114 multiletter control sequences out of 15000+600000
  14685 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 276i,18n,31p,1965b,1083s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 276i,20n,31p,1965b,1083s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -790,10 +790,10 @@ e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2015
 /texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on thesis.pdf (50 pages, 336522 bytes).
+Output written on thesis.pdf (51 pages, 338484 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
+ 235 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

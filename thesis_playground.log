@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  9 FEB 2016 20:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  9 FEB 2016 20:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -484,11 +484,6 @@ File: speciality.20070212N70 (vakthesis)
 
 ]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-
- []
-
 [3
 
 ] (./thesis_playground.bbl [4]
@@ -500,12 +495,12 @@ Package natbib Warning: Empty `thebibliography' environment on input line 15.
 ] (./thesis_playground.aux) ) 
 Here is how much of TeX's memory you used:
  5460 strings out of 493089
- 75831 string characters out of 6134842
- 156475 words of memory out of 5000000
+ 75825 string characters out of 6134842
+ 157477 words of memory out of 5000000
  8833 multiletter control sequences out of 15000+600000
  11742 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 276i,9n,31p,1213b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 276i,20n,31p,1213b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvip
 s/cm-super/cm-super-t2a.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
@@ -520,7 +515,7 @@ er/sfcc1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super
 frm1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfx
 c1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfxc1
 728.pfb>
-Output written on thesis_playground.pdf (5 pages, 135934 bytes).
+Output written on thesis_playground.pdf (5 pages, 134554 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream

@@ -98,55 +98,56 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Багатовимірна каскадна нейро-мережа, що еволюціонує}
-\label{ch:evolvingClusteringSystem}
-\section{Багатовимірна каскадна система, що еволюціонує, побудована на нео-фаззі нейронах}
-\label{sec:MIMOEvolvingCascadedSystemBuiltOnNFNs}
-....
 \section{Багатовимірна каскадна система, що еволюціонує, побудована на багатовимірних нео-фаззі нейронах}
 \label{sec:MIMOEvolvingCascadedSystemBuiltOnMNFNs}
 
-Архітектура багатовимірної каскадної системи, яка ґрунтується на звичайних нео-фаззі нейронах, що її описано у \ref{sec:MIMOEvolvingCascadedSystemBuiltOnNFNs} є надмірною, адже вектор вхідних сигналів $x\left(k\right)$ (для першого каскаду) подається на однотипні нелінійні синапси $NS_{di}^{[1]j}$ нео-фаззі нейронів, кожен з яких на виході генерує сигнал $\hat{y}_d^{[1]j}\left(k\right),d=1,2,\dots,g$. У результаті компоненти вихідного вектора 
+Архітектура багатовимірної каскадної системи...
+\begin{equation}\label{eq:ExpWeightedRecurrentLeastSquaresLearning}
+x=1
+\end{equation}
+
+\begin{equation}\label{eq:GradientLearning}
+x=2
+\end{equation}
+
+......
+Навчаняя багатовимірного нео-фаззі нейрону можна реалізувати за допомогою матричної модифікації експоненційно-зваженого рекурентного методу найменших квадратів \eqref{eq:ExpWeightedRecurrentLeastSquaresLearning} у формі
 
 \begin{equation}
-\hat{y}^{[1]j}\left(k\right)=\left(\hat{y}_1^{[1]j}\left(k\right), \hat{y}_2^{[1]j}\left(k\right),\dots,\hat{y}_g^{[1]j}\left(k\right)\right)^{T}
+\begin{aligned}
+\begin{cases}
+W^{[1]j}\left(k+1\right)&=W^{[1]j}\left(k\right)+\\
+&\frac{\left(y\left(k+1\right)-W^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)\right)
+\left(\mu^{[1]j}\left(k+1\right)\right)^{T}P^{[1]j}\left(k\right)}{\alpha+\left(\mu^{[1]j\left(k+1\right)}\right)^{T}P^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)
+},\\
+P^{[1]j}\left(k+1\right)&=\frac{1}{\alpha}\left(P^{[1]j}\left(k\right)-\frac{P^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)\left(\mu^{[1]j}\left(k+1\right)\right)^{T}P^{[1]j}\left(k\right)
+}{\alpha+\left(\mu^{[1]j}\left(k+1\right)\right)^{T}P^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)
+}\right),\\
+&0 < \alpha \leq 1
+\end{cases}
+\end{aligned}
 \end{equation}
-\medskip
 
-обчислюються незалежно один від одного, хоча $\mu_{1il}\left(x_i\left(k\right)\right)=\mu_{2il}\left(x_i\left(k\right)\right)=\mu_{jil}\left(x_i\left(k\right)\right)=\mu_{nil}\left(x_i\left(k\right)\right)$. Уникнути цього можна, якщо ввести до розгляду багатовимірний нео-фаззі нейрон, що є модифікацією систем, запропонованих у \hl{[??,??]}.
-
-\subsection{Багатовимірний нео-фаззі нейрон}
-
-Вузлами багатовимірного нео-фаззі нейрону є складені нелінійні синапси $MNS_i^{[1]j}$, кожен з яких має $h$ функцій належності $\mu_{li}^{[1]j}$ та $gh$ настроюваних синаптичних вагових коефіцієнтів, але тільки $hn$ функцій належності, що в $g$ разів менше, ніж у випадку, коли каскад сформований із звичайних нео-фаззі нейронів.\\
-
-Введемо надалі до розгляду $\left(hn \times 1\right)$ - вектор функцій належності
+або багатовимірного варіанту методу \eqref{eq:GradientLearning}
 
 \begin{equation}
-\mu^{[1]j}\left(k\right)=\left(\mu_{11}^{[1]j}\left(x_1\left(k\right)\right),\mu_{21}^{[1]j}\left(x_1\left(k\right)\right),\dots,\mu_{h1}^{[1]j}\left(x_1\left(k\right)\right),\dots,\mu_{hn}^{[1]j}\left(x_n\left(k\right)\right)\right)^{T}
+\begin{aligned}
+\begin{cases}
+W^{[1]j}\left(k+1\right)&= W^{[1]j}\left(k\right) + \frac{y\left(k+1\right)-W^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)}{r^{[1]j}\left(k+1\right)}\\
+&\times\left(\mu^{[1]j}\left(k+1\right)\right)^{T},\\
+r^{[1]j}\left(k+1\right)&=\alpha r^{[1]j}\left(k\right)+\left\|\mu^{[1]j}\left(k+1\right)\right\|^{2},\\
+&0 \leq \alpha \leq 1,
+\end{cases}
+\end{aligned}
 \end{equation}
-\medskip
 
-та $\left(g \times hn\right)$ - матрицю синаптичних вагових коефіцієнтів
+де $y\left(k+1\right)=\left(y^{1}\left(k+1\right),y^{2}\left(k+1\right),\dots, y^{g}\left(k+1\right)\right)^{T}$.\\
+Аналогічним чином проводиться навчання інших каскадів, при цьому вектор вункцій належності $m$-го каскаду $\mu^{[mm]j}\left(k+1\right)$ збільшує свою розмірність на $\left(m-1\right)g$ компоненти, що їх утворили виходи попередніх каскадів.
 
-\begin{equation}
-W^{[1]j}=\left(
-\begin{matrix}    w_{111}^{[1]j}&w_{112}^{[1]j}&\dots&w_{1li}^{[1]j}&\dots&w_{1hn}^{[1]j}\\
- w_{211}^{[1]j}&w_{212}^{[1]j}&\dots&w_{2li}^{[1]j}&\dots&w_{2hn}^{[1]j}\\ 
-    \vdots&\vdots&&\vdots&&\vdots\\    w_{g11}^{[1]j}&w_{g12}^{[1]j}&\dots&w_{gli}^{[1]j}&\dots&w_{ghn}^{[1]j}\\
-\end{matrix}
-\right),
-\end{equation}
-\medskip
-
-і запишемо сигнал на виході $MN_j^{[1]}$ у $k$-й момент часу у вигляді
-
-\begin{equation}
-\hat{y}^{[1]j}\left(k\right)=W^{[1]j}\mu^{[1]j}\left(k\right).
-\end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{ugost2008ns}
-\bibliography{references1}
-	
+\bibliography{references}	
 \end{document}
