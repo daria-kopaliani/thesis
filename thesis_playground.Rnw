@@ -51,48 +51,109 @@
 \section{Багатовимірна каскадна система, що еволюціонує, побудована на багатовимірних нео-фаззі нейронах}
 \label{sec:MIMOEvolvingCascadedSystemBuiltOnMNFNs}
 
-Архітектура багатовимірної каскадної системи...
-\begin{equation}\label{eq:ExpWeightedRecurrentLeastSquaresLearning}
-x=1
-\end{equation}
+\subsection{Метод визначення поточно оптимального вихідного сигналу пулу багатовимірних нео-фаззі нейронів каскадної системи, що еволюціонує}
 
-\begin{equation}\label{eq:GradientLearning}
-x=2
-\end{equation}
+У цьому підрозділі буде запропоновано узагальнюючий нейрон $GMN^{[m]}$ та рекурентний метод його навчання, щоб він об'єднував усі вихідні сигнали нейронів $MN{[m]}$ пулу каскаду у сигнал
 
-......
-Навчаняя багатовимірного нео-фаззі нейрону можна реалізувати за допомогою матричної модифікації експоненційно-зваженого рекурентного методу найменших квадратів \eqref{eq:ExpWeightedRecurrentLeastSquaresLearning} у формі
+\begin{equation}
+\hat{y}^{*[m]}\left(k\right)=\left(\hat{y}_1^{*[m]}\left(k\right), \hat{y}_2^{*[m]}\left(k\right),\dots, \hat{y}_g^{*[m]}\left(k\right)\right)^{T},
+\end{equation}
+\medskip
+
+з точністю не меншою від точності будь-якого з сигналів $\hat{y}_j^{[m]}\left(k\right)$.
+
+
+Розв'язати це завдання можна, знову скориставший апаратом невизначених множників Лагранжа та адаптивного багатовимірного узагальненого прогнозування% \cite{refU}.
+
+Введемо до розгляду вихідний сигнал нейрону $GMN^{[m]}$ у вигляді
+
+\begin{equation}
+\hat{y}^{*[m]}\left(k\right)=\sum\limits_{j=1}^{q}{c_j^{[m]}\hat{y}_j^{[m]}\left(k\right)}=\hat{y}^{[m]}\left(k\right)c^{[m]},
+\end{equation}
+\medskip
+
+де $\hat{y}^{[m]}\left(k\right)=\left(\hat{y}_1^{[m]}\left(k\right), \hat{y}_2^{[m]}\left(k\right),\dots,\hat{y}_q^{[m]}\left(k\right)\right)^{T}$-- $\left(g \times q\right)$-матриця
+
+$c^{[m]}$-- $\left(q \times 1\right)$-вектор коефіцієнтів узагальнення, що відповідають умовам незміщенності
+
+\begin{equation}
+\sum\limits_{j=1}^{q}{c_j^{[m]}}=E^{T}c^{[m]}=1,
+\end{equation}
+\medskip
+
+
+$E=\left(1,1,\dots,1\right)^{T}$-- вектор, утворений одиницями.
+
+
+Введемо критерій навчання
 
 \begin{equation}
 \begin{aligned}
-\begin{cases}
-W^{[1]j}\left(k+1\right)&=W^{[1]j}\left(k\right)+\\
-&\frac{\left(y\left(k+1\right)-W^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)\right)
-\left(\mu^{[1]j}\left(k+1\right)\right)^{T}P^{[1]j}\left(k\right)}{\alpha+\left(\mu^{[1]j\left(k+1\right)}\right)^{T}P^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)
-},\\
-P^{[1]j}\left(k+1\right)&=\frac{1}{\alpha}\left(P^{[1]j}\left(k\right)-\frac{P^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)\left(\mu^{[1]j}\left(k+1\right)\right)^{T}P^{[1]j}\left(k\right)
-}{\alpha+\left(\mu^{[1]j}\left(k+1\right)\right)^{T}P^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)
-}\right),\\
-&0 < \alpha \leq 1
-\end{cases}
+E^{[m]}\left(k\right)&=\sum\limits_{\tau=1}^k\left\|y\left(\tau\right)-\hat{y}^{[m]}\left(\tau\right)c^{[m]}\right\|^2\\
+&=Tr\left(\left(Y\left(k\right)-\hat{Y}^{[m]}\left(k\right)I\otimes c^{[m]}\right)^{T}\left(Y\left(k\right)-\hat{Y}^{[m]}\left(k\right)I \otimes c^{[m]}\right)\right)
 \end{aligned}
 \end{equation}
+\medskip
 
-або багатовимірного варіанту методу \eqref{eq:GradientLearning}
+
+де $Y\left(k\right)=\left(y^T\left(1\right), y^T\left(2\right),\dots,y^T\left(k\right)\right)^{T}$-- $\left(k \times s\right)$ матриця спостережень,
 
 \begin{equation}
 \begin{aligned}
-\begin{cases}
-W^{[1]j}\left(k+1\right)&= W^{[1]j}\left(k\right) + \frac{y\left(k+1\right)-W^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)}{r^{[1]j}\left(k+1\right)}\\
-&\times\left(\mu^{[1]j}\left(k+1\right)\right)^{T},\\
-r^{[1]j}\left(k+1\right)&=\alpha r^{[1]j}\left(k\right)+\left\|\mu^{[1]j}\left(k+1\right)\right\|^{2},\\
-&0 \leq \alpha \leq 1,
-\end{cases}
+\hat{Y}^{[m]}\left(k\right)=\left(
+\begin{matrix}
+\hat{y}_1^{[m]T}\left(1\right)&\hat{y}_2^{[m]T}\left(1\right)&\dots&\hat{y}_q^{[m]T}\left(1\right)\\
+\hat{y}_1^{[m]T}\left(2\right)&\hat{y}_2^{[m]T}\left(2\right)&\dots&\hat{y}_q^{[m]T}\left(2\right)\\
+\vdots&\vdots&&\vdots\\
+\hat{y}_1^{[m]T}\left(k\right)&\hat{y}_2^{[m]T}\left(k\right)&\dots&\hat{y}_q^{[m]T}\left(k\right)\\
+\end{matrix}
+\right),
 \end{aligned}
 \end{equation}
+\medskip
 
-де $y\left(k+1\right)=\left(y^{1}\left(k+1\right),y^{2}\left(k+1\right),\dots, y^{g}\left(k+1\right)\right)^{T}$.\\
-Аналогічним чином проводиться навчання інших каскадів, при цьому вектор вункцій належності $m$-го каскаду $\mu^{[mm]j}\left(k+1\right)$ збільшує свою розмірність на $\left(m-1\right)g$ компоненти, що їх утворили виходи попередніх каскадів.
+де $I$ -- одинична $\left(g \times g\right)$ матриця,
+
+$\otimes$ -- символ тензорного добутку.
+
+З урахуванням ?? обмежень запишемо функцію Лагранжа
+
+\begin{equation}
+\begin{aligned}
+L^{[m]}\left(k\right)&=E^{[m]}\left(k\right)+\lambda\left(E^{T}c^{[m]}-1\right)\\
+&=\sum\limits_{\tau=1}^{k}\left\|y\left(\tau\right)-\hat{y}^{[m]}\left(\tau\right)c^{[m]}\right\|^2+\lambda\left(E^Tc^{[m]}-1\right)\\
+&=Tr\left(\left(Y\left(k\right)-\hat{Y}^{[m]}\left(k\right)I\otimes c^{[m]}\right)^T\left(Y\left(k\right)-\hat{Y}^{[m]}\left(k\right)I\otimes c^{[m]}\right)\right)\\
+&+\lambda\left(E^Tc^{[m]}-1\right)\\
+&=Tr\left(V^{[m]T}\left(k\right)V^{[m]}\left(k\right)\right)+\lambda\left(E^Tc^{[m]}-1\right),
+\end{aligned}
+\end{equation}
+\medskip
+
+де $V^{[m]}\left(k\right)=Y\left(k\right)-\hat{Y}^{[m]}\left(k\right)I \otimes c^{[m]}$-- $\left(k \times g\right)$ матриця оновлень.
+
+Розв'язання системи рівнянь Каруша-Куна-Таккера
+
+\begin{equation}
+\begin{cases}
+\nabla_{c^{[m]}}L^{[m]}\left(k\right)=\overrightarrow{0},\\
+\frac{\partial L^{[m]}\left(k\right)}{\partial \lambda}=0
+\end{cases}
+\end{equation}
+\medskip
+
+призводить до очевидного результату
+
+\begin{equation}
+\begin{cases}
+c^{[m]}=\left(R^{[m]}\left(k\right)\right)^{-1}E\left(E^T\left(R^{[m]}\left(k\right)\right)^{-1}\right)^{-1}\\
+\lambda=-2E^T\left(R^{[m]}\left(k\right)\right)^{-1}E,
+\end{cases}
+\end{equation}
+\medskip
+
+де $R^{[m]}\left(k\right)=V^{[m]T}\left(k\right)V^{[m]}\left(k\right)$.
+
+Таким чином, можна організувати оптимальне об'єднання виходів усіх нейронів пулу кожного каскаду. Зрозуміло, що в якості таких нейронів можуть використовуватися не тільки багатовимірні нео-фаззі нейрони, але й будь-які інші конструкції, що реалізують нелінійне відображення \mbox{$R^{n+\left(m-1\right)g}\rightarrow R^g$}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

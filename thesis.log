@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  9 FEB 2016 21:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  9 FEB 2016 22:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -529,24 +529,30 @@ Overfull \hbox (12.74342pt too wide) detected at line 792
 LaTeX Warning: Reference `sec:MIMOEvolvingCascadedSystemBuiltOnNFNs' on page 27
  undefined on input line 850.
 
-[27] [28] [29]
-{\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 3.
-[30
+[27] [28] [29] [30]
+Overfull \hbox (24.81168pt too wide) in paragraph at lines 1028--1032
+\T2A/cmr/m/n/14.4 будь-якi iн-шi кон-стру-кцiЁ, що ре-а-лi-зу-ють не-лi-нiй-не 
+вiд-обра-же-н-ня []. 
+ []
 
-] [31] [32] [33] [34]
-Overfull \hbox (12.59999pt too wide) in paragraph at lines 1006--1009
+[31]
+{\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 3.
+[32
+
+] [33] [34] [35] [36]
+Overfull \hbox (12.59999pt too wide) in paragraph at lines 1109--1112
 \T2A/cmr/m/n/14.4 де мi-ру не-чi-ткоЁ по-дi-бно-стi $\OML/cmm/m/it/14.4 N[][]$ 
 \T2A/cmr/m/n/14.4 мо-жна зна-йти за будь-яким ви-ра-зом []. 
  []
 
-[35] [36]
-Overfull \hbox (16.25555pt too wide) in paragraph at lines 1062--1063
+[37] [38]
+Overfull \hbox (16.25555pt too wide) in paragraph at lines 1165--1166
 []\T2A/cmr/m/n/14.4 що при $\OML/cmm/m/it/14.4 ^^L \OT1/cmr/m/n/14.4 = 2$ \T2A/
 cmr/m/n/14.4 збi-га-№-ться з ал-го-ри-тмом не-чi-тких с-середнiх Без-де-ка (FCM
 ) [[]]
  []
 
-[37] [38] [39] [40] [41] [42] (./thesis.bbl [43]
+[39] [40] [41] [42] [43] [44] (./thesis.bbl [45]
 Underfull \hbox (badness 10000) in paragraph at lines 24--31
 []\OT1/cmr/m/n/14.4 Adaptive Clus-ter-ing for Mul-ti-ple Evolv-ing Streams / Bi
 -
@@ -587,7 +593,7 @@ Underfull \hbox (badness 1776) in paragraph at lines 41--48
 7. []  URL:
  []
 
-[44
+[46
 
 ]
 Underfull \hbox (badness 7273) in paragraph at lines 144--151
@@ -632,7 +638,7 @@ Underfull \hbox (badness 5036) in paragraph at lines 154--162
 \OT1/cmr/m/n/14.4 FOR ON-LINE IN-FOR-MA-TION PRO-CESS-ING. []  2013. []  URL:
  []
 
-[45]
+[47]
 Underfull \hbox (badness 2970) in paragraph at lines 199--205
 []\OT1/cmr/m/n/14.4 Chung Fu-Lai, Lee Tong. Fuzzy com-pet-i-tive learn-ing // N
 eu-
@@ -644,13 +650,13 @@ Underfull \hbox (badness 3148) in paragraph at lines 199--205
 []  URL:
  []
 
-[46]
+[48]
 Underfull \hbox (badness 1264) in paragraph at lines 245--252
 \OT1/cmr/m/n/14.4 Im-age Recog-ni-tion / Frank H^^?opp-ner, Frank Kla-wonn, Rud
 olf Kruse,
  []
 
-[47]
+[49]
 Underfull \hbox (badness 2012) in paragraph at lines 362--369
 []\OT1/cmr/m/n/14.4 Leng Gang, Prasad Gir-i-jesh, McGin-nity T. Mar-tin. An on-
 line
@@ -698,7 +704,7 @@ Underfull \hbox (badness 4967) in paragraph at lines 383--390
   URL:
  []
 
-[48]
+[50]
 Underfull \hbox (badness 1365) in paragraph at lines 405--409
 []\OT1/cmr/m/n/14.4 Miki T., (Japan) T. Ya-makawa. Ana-log Im-ple-men-ta-tion o
 f Neo-
@@ -710,7 +716,7 @@ Underfull \hbox (badness 3088) in paragraph at lines 442--449
 s
  []
 
-[49]
+[51]
 Underfull \hbox (badness 10000) in paragraph at lines 487--495
 []\OT1/cmr/m/n/14.4 Smoothly dis-tributed fuzzy C-means: a new self-organizing
  []
@@ -745,7 +751,7 @@ Underfull \hbox (badness 1902) in paragraph at lines 515--527
 01. []  URL:
  []
 
-[50]
+[52]
 Underfull \hbox (badness 3209) in paragraph at lines 576--583
 []\OT1/cmr/m/n/14.4 Wu Yi. Net-work Big Data: A Lit-er-a-ture Sur-vey on Stream
 
@@ -757,7 +763,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 576--583
 L:
  []
 
-) [51] (./thesis.aux)
+) [53] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -790,10 +796,10 @@ e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2015
 /texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on thesis.pdf (51 pages, 338484 bytes).
+Output written on thesis.pdf (53 pages, 345756 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
+ 241 PDF objects out of 1000 (max. 8388607)
+ 168 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
