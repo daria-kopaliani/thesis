@@ -1,0 +1,668 @@
+\documentclass{vakthesis}
+\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\newcommand{\SweaveOpts}[1]{}  % do not interfere with LaTeX
+\newcommand{\SweaveInput}[1]{} % because they are not real TeX commands
+\newcommand{\Sexpr}[1]{}       % will only be parsed by R
+
+
+\usepackage[T2A]{fontenc}
+\usepackage[cp1251]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{geometry}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+\usepackage{amsmath}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{color,soul}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+%\geometry{hmargin={30mm,15mm},lines=29,vcentering}
+\everymath=\expandafter{\the\everymath\displaystyle}
+
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
+ 
+%\DeclareMathSizes{10}{10}{10}{10}
+
+
+\begin{document}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grepl(db, input): input string 21 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grepl(db, input): input string 22 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grepl(db, input): input string 23 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grepl(db, input): input string 26 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grepl(db, input): input string 31 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grep("{}\textasciicircum{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}bibliography.+"{}, input, value = TRUE): input string 21 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grep("{}\textasciicircum{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}bibliography.+"{}, input, value = TRUE): input string 22 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grep("{}\textasciicircum{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}bibliography.+"{}, input, value = TRUE): input string 23 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grep("{}\textasciicircum{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}bibliography.+"{}, input, value = TRUE): input string 26 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grep("{}\textasciicircum{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}bibliography.+"{}, input, value = TRUE): input string 31 is invalid in this locale}}\end{kframe}
+\end{knitrout}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Гібридна каскадна нейро-фаззі мережа з оптимізацією пулу нейронів}
+\label{CascadedNeoFuzzySystemWithPoolOptimization}%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Зазвичай під <<навчанням>> розуміють процес коригування синаптичних ваг, використовуючи певну процедуру оптимізації, що ґрунтується на пошуці екстремуму заданого критерію навчання. Якість процесу навчання може бути поліпшена шляхом коригування топології мережі разом з синаптичних вагами \cite{ref44, ref45}. Ця ідея лежить в основі систем обчислювального інтелекту, що еволюціонують \cite{ref46, ref47}.
+
+Мабуть найбільш відомою реалізацією цього підходу є каскадно-кореляційі нейронні мережі \cite{ref48, ref49, ref50}, привабливибі високою ефективністю та простотою налаштування як синаптичних вагових коефіціентів, так і топології мережі. Така мережа напочатку міститий лише один пул (ансамбль) нейронів, які навчаються назалежно один від іншого (перший каскад). Кожен нейрон у пулі може відмінні функції активації та метод навчання. Доки навчання триває, нейрони у пулі не взаємодіють один з одним. Після того як процесс налаштування вагових коефіціентів завершився для всіх нейронів пулу першого каскаду, кращий нейрон відповідно до обраного критерію навчання формує перший каскад і коефіціенти його синаптичних ваг більше не коригуються. Далі формується другий каскад зазвичай з нейронів, подібних до нейронів першого каскаду. Різниця лише в тому, що нейрони, які навчаються в пулі другого каскаду мають додатковий вхід (і, отже, додатковий синаптичний ваговий коефіцієнт) - вихід першого каскаду. Подібно до першого каскаду, у другому каскаді залишиться лише один найбільш продуктивний нейрон і його синаптичні вагові коефіцієнти зафіксуються. Аналогічним чином нейрони третього каскаду матимуть два додаткових входи, а саме виходи першого та другого каскадів. Еволюційна мережа продовжуватиме розширяти свою архітектуру новими каскадами, доки вона не досягне бажаної якості вирішення завдання для заданого набору даних.
+
+Автори найпопулярнішої каскадної нейронної мережі, що еволюціонує, CasCorLA, Фалман та Ліб'єр, використовали елементарні персептрони Розенблат з традиційними сигмоїдальними функціями активації і коригували синаптичні вагові коефіцієнти за допомогою QuickProp-алгоритму \cite{ref48}, що є модифікацією $\delta$-правила. Оскільки вихідний сигнал таких нейронів нелінійно залежить від синапсових ваг, швидкість навчання не може бути суттєво збільшена для таких нейронів.
+
+Для уникниння багатоепохового навчання \cite{ref51, ref52, ref53, ref54, ref55, ref56, ref57, ref58} доцільно в якості вузлів системи використовувати такі типи нейронів, що їх виходи лінейно залежать від синаптичних ваг, що дозволить використовувати оптимальні за швидкодією методи навчання та обробляти дані в онлайн режимі.
+
+Проте варто зазначити, що у випадку послідовного навчання системи неможливо визначити найкращий нейрон у пулі, адже при оброблянні нестаціонарних об'єктів певний нейрон може бути кращим для однієї частини тренувальної вибірки, проте поступатися у точності іншому нейрону на іншій частині вибірки. Отже доцільно зберегти усі нейрони пулу та використовувати певну оптимізуючу процедуру (відповідну обраному критерію якості) задля визначення нейрона-переможця на кожному кроці обробляння даних.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Архітектура оптимізованої каскадної нейронної мережі}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Архітектура пропонованої гібридної системи з оптомізованим пулов нейронів у кожному каскаді наведена на ...
+Виходом такої системи (так званим <<рецептивним>> шаром) є векторний сигнал
+
+\begin{equation}
+x\left(k\right) = \left(x_1\left(k\right), x_2\left(k\right),\dots,x_n(\left(k\right)\right)^T,
+\end{equation}
+\medskip
+
+де $k=1,2,\dots,$ -- кількість обраців у таблиці <<об'єкт - властивість>> або поточний дискретний час.
+
+Ці сигнали подаються на входи кожного нейрона в мережі $N_j^{[m]}$ ($j = 1,2,\dots,q$ -- кількість нейронів у тренувальному пулі, $m=1,2,...$ -- номер каскаду) з вихідним сигналом $\hat{y}_j^{[m]}\left(k\right)$. Далі вихідні сигнали кожного каскаду $\hat{y}_j^{[m]}\left(k\right)$ надходять до <<узагальнюючого>> вузлу $GN^{[m]}$, який генерує поточно-оптимальний вихідний сигнал відповідного каскаду $\hat{y}^{*[m]}$. Слід зауважити, що вхідними сигналами першого каскаду є вектор $x\left(k\right)$ (що може містити опціональне порогове значення $x_0\left(k\right)\equiv1$), другий каскад має додатковий вхід для сгенерованого першим каскадом вихідного сигналу $\hat{y}^{*[1]}\left(k\right)$, нейрони другого каскаду оброблятимуть два додаткових сигнали $\hat{y}^{*[1]}\left(k\right)$, $\hat{y}^{*[2]}\left(k\right)$, нейрони $m$-ого каскаду матимуть $\left(m-1\right)$ додаткових вхідних сигналів: $\hat{y}^{*[1]}\left(k\right),$ $\hat{y}^{*[2]}\left(k\right),$ $\hat{y}^{*[m-1]}\left(k\right)$. Під час тренування системи нові каскади додаються доки не буде досягнута бажана точність.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Навчання елементарних персептронів Розенблатта у каскадній оптимізованій системі}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Наразі вважатимемо $j$-й вузол $m$-ого каскаду елементарним персепторном Розенблату з активаційною функцією
+
+\begin{equation}
+0>\sigma_j^{m}\left(\gamma_j^{[m]}u_j^{[m]}\right)=\frac{1}{1+e^{-\gamma_j^{[m]}u_j^{[m]}}}<1
+\end{equation}
+\medskip
+
+де $u_j^{[m]}$ -- внутрішній активаційний сингнал $j$-ого нейрону $m$-ого каскаду, 
+
+$\gamma_j^{[m]}$ -- параметр посилення.
+
+У такому випадку вихідні сигнали нейронів тренувального пулу першого каскаду матимуть вигляд
+
+\begin{equation}
+\hat{y}_j^{[1]} =\sigma_J^{[1]}\left(\gamma_j^{[1]}\sum\limits_{i=0}^{n}{w_{ji}^{[1]}x_i}\right)=\sigma_j^{[1]}\left(\gamma_j^{[1]}w_j^{[1]T}x\right),
+\end{equation}  
+\medskip
+
+де $w_{ji}^{[1]}$ -- $i$-й ваговий коефіцієнт $j$-ого нейрону першого каскаду.  
+
+Вихідні сигнали другого каскаду дорівнюватимуть 
+
+\begin{equation}
+\hat{y}_j^{[2]} =\sigma_J^{[2]}\left(\gamma_j^{[2]}\left(\sum\limits_{i=0}^n{w_{ji}^{[2]}x_i+w_{j,n+1}^{[2]}\hat{y}^{*[1]}}\right)\right),
+\end{equation}  
+\medskip
+
+\begin{samepage}
+вихідні сигнали $m$-ого каскаду матимуть вигляд
+
+\begin{equation}
+\begin{aligned}
+&\hat{y}_j^{[m]}=\sigma_j^{[m]}\biggl(\gamma_j^{[m]}\biggl(\sum\limits_{i=0}^n{w_{ji}^{[m]}x_i+w_{j,n+1}^{[m]}\hat{y}^{*[1]}}\\
+&+w_{j,n+2}^{m}\hat{y}^{*[2]}+\dots+w_{j,n+m-1}^{[m]}\hat{y}^{*[m-1]}\biggr)\biggr)\\
+&=\sigma_j^{[m]}\left(\gamma_j^{[m]}\sum\limits_{i=0}^{n+m-1}{w_{ji}^{[m]}x_j^{[m]}}\right)=\sigma_j^{[m]}\left(w_j^{[m]T}x^{[m]}\right),
+\end{aligned}
+\end{equation}
+\end{samepage}
+\medskip
+
+де $x^{[m]}=\left(x^T,\hat{y}^{*[1]},\hat{y}^{*[m-1]}\right)^T$.
+
+Таким чином, нейронна мережа з персептронами Розенблатта у якості вузлів, що містить $m$ каскадів, залежить від $\left(m\left(n+2\right) + \sum\limits_{p=1}^{m-1}p\right)$ параметрів, у тому числі від параметрів посилення $\gamma_{j}^{[p]}$, $p=1,2,\dots,m$.
+
+У якості критерію навчання можна використовувати загальноприйняту квадратичну функцію
+
+\begin{equation}\label{eq:RosenblattLearningCriterion}
+\begin{aligned}
+E_{j}^{[m]}&=\frac{1}{2}\left(e_j^{[m]}\left(k\right)\right)^2\\
+&=\frac{1}{2}\left(y\left(k\right)-\hat{y}_j^{[m]}\left(k\right)\right)^2\\
+&=\frac{1}{2}\left(y\left(k\right)-\sigma_j^{[m]}\left(\gamma_j^{[m]}w_j^{[m]T}x^{[m]}\left(k\right)\right)\right)^2,
+\end{aligned}
+\end{equation}
+\medskip
+
+де $y\left(k\right)$ шуканий сигнал.
+
+Градієнтну оптимізацію критерію \eqref{eq:RosenblattLearningCriterion} відносно $w_j^{[m]}$ можна записати у вигляді
+
+\begin{equation}\label{eq:RosenblattLearningCriterionGradientOptimization}
+\begin{aligned}
+w_j^{[m]}\left(k+1\right)=&w_j^{[m]}+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\gamma_j^{[m]}\hat{y}_j^{[m]}\left(k+1\right)\\
+&\times\left(1-\hat{y}_j^{[m]}\left(k+1\right)\right)x^{[m]}\left(k+1\right)\\
+=&w_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\gamma_j^{[m]}J_j^{[m]}\left(k+1\right)
+\end{aligned}
+\end{equation}
+\medskip
+
+де $\eta_j^{[m]\left(k+1\right)}$ -- параметр швидкості навчання.
+
+Мінімізувати критерій \eqref{eq:RosenblattLearningCriterion} відносно $\gamma_j^{[m]}$ можна за допомогою алгоритму Крушке-Мовелана \cite{ref73}
+
+\begin{equation}\label{eq:RosenblattLearningCriterionKrushkeMovellanMinimization}
+\begin{aligned}
+\gamma_j^{[m]}\left(k+1\right)=&\gamma_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\hat{y}_j^{[m]}\left(k+1\right)\\
+&\times\left(1-\hat{y}_j^{[m]}\left(k+1\right)\right)u_j^{[m]}\left(k+1\right).
+\end{aligned}
+\end{equation}
+\medskip
+
+Поєднуючи \eqref{eq:RosenblattLearningCriterionGradientOptimization} та \eqref{eq:RosenblattLearningCriterion} отримаємо алгоритм навчання для $j$-ого нейрону $m$-ого каскаду
+
+\begin{equation}
+\begin{aligned}
+\frac{w_j^{[m]}\left(k+1\right)}{\gamma_j^{[m]}\left(k+1\right)}&=\frac{w_j^{[m]}\left(k\right)}{\gamma_j^{[m]}\left(k+\right)}+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\hat{y}_j^{[m]}\left(k+1\right)\\
+&\times\left(1-\hat{y}_j^{[m]}\left(k+1\right)\right)\left(\frac{\gamma_j^{[m]}x^{[m]}\left(k+1\right)}{u_j^{[m]}\left(k+1\right)}\right),
+\end{aligned}
+\end{equation}
+\medskip
+
+Або, вводячи нові змінні, у більш компактній формі
+
+\begin{equation}
+\begin{aligned}
+\tilde{w}_j^{[m]}\left(k+1\right)&=\tilde{w}_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\hat{y}_j^{[m]}\left(k+1\right)\tilde{x}^{[m]}\left(k+1\right)\\
+&=\tilde{w}_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\tilde{J}_j^{[m]}\left(k+1\right).
+\end{aligned}
+\end{equation}
+\medskip
+
+Використовуючи \hl{регулюючий параметр} (momentum term) \cite{ref74,ref75,ref76} можна удосконалити процесс корегування синаптичних вагових коефіцієнтів під час навчання. Тоді, замість критерію \eqref{eq:RosenblattLearningCriterion} слід використовувати функцію
+
+\begin{equation}
+\begin{aligned}
+E_j^{[m]}\left(k\right)=&\frac{\eta}{2}\left(e_j^{[m]}\left(k\right)\right)^2\\
+&+\frac{1-eta}{2}\left\|\tilde{w}_j^{[m]}\left(k\right)-\tilde{w}_j^{[m]}\left(k-1\right)\right\|^2,0<\eta\leq1.
+\end{aligned}
+\end{equation}
+\medskip
+
+Тоді алгоритм навчання приймає вигляд
+
+\begin{equation}\label{eq:RosenblattLearningAlgorithm}
+\begin{aligned}
+\tilde{w}_j^{[m]}\left(k+1\right)=&\tilde{w}_j^{[m]}\left(k\right)\\
+&+\eta_j^{[m]}\left(k+1\right)\biggl(\eta e_j^{[m]}\left(k+1\right)\tilde{J}_j^{[m]}\left(k+1\right)\\
+&+\left(1-\eta\right)\left(\tilde{w}_j^{[m]}\left(k\right)-\tilde{w}_j^{[m]}\left(k+1\right)\right)\biggr),
+\end{aligned}
+\end{equation}
+\medskip
+
+що є модифікацією процедури Сільва-Альмеїда \cite{ref75}.
+
+Доцільно вдосконалити алгоритм використовуючи підхід, запропонований у \cite{ref68}, тоді алгоритм \eqref{eq:RosenblattLearningAlgorithm} набуває слідкуючих та фільтруючих властивостей. Так, кінцева модифікація алгоритму приймає вигляд
+
+\begin{equation}
+\begin{aligned}
+\begin{cases}
+\tilde{w}_j^{[m]}\left(k+1\right)=&\tilde{w}_j^{[m]}\left(k\right)+\frac{\eta e_j^{[m]}\left(k+1\right)\tilde{J}_j^{[m]}\left(k+1\right)}{r_j^{[m]}\left(k+1\right)}\\
+&+\frac{\left(1-\eta\right)\left(\tilde{w}_j^{[m]}\left(k\right)-\tilde{w}_j^{[m]}\left(k-1\right)\right)}{r_j^{[m]}\left(k+1\right)},\\
+r_j^{[m]}\left(k+1\right)=&r_j^{[m]}\left(k\right)+\left\|\tilde{J}_j^{[m]}\left(k+1\right)\right\|^2-\left\|\tilde{J}_j^{[m]}\left(k-s\right)\right\|^2,
+\end{cases}
+\end{aligned}
+\end{equation}
+\medskip
+
+де $s$ -- розмір <<плаваючого>> вікна.
+
+Цікаво, що при $s=1$ та $\eta=1$ отримуємо нелінійну версію загальновідомого алгоритму Качмажа-Уідроу-Хоффа \cite{ref65,ref66}:
+\begin{equation}
+\tilde{w}_j^{[m]}\left(k+1\right)=\tilde{w}_j^{[m]}\left(k\right)+\frac{e_j^{[m]}\left(k+1\right)\tilde{J}_j^{[m]}\left(k+1\right)}{\left\|\tilde{J}_j^{[m]}\left(k+1\right)\right\|^2},
+\end{equation}
+\medskip
+
+який широко використовується для навчання штучних нейронних мереж і відомий високою швидкістю збіжності.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Навчання нео-фаззі нейронів у оптимізованій каскадній нейронній мережі}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Низька швидкість навчання персептронів Розенблатта у поєднанні з труднощами інтерпретації результатів (властиві всім ІНС в цілому) спонукає нас шукати альтернативні підходи до синтезу еволюційних нейронних мереж. Як зазначається у \cite{ref59}, нейро-фаззі системи відомі високою інтерпритуємістю і прозорістю, а також добрими апроксимаційними властивостями, та є основою гібридних систем штучного інтелекту. У \cite{ref55,ref54} розглядаються гібридні каскадні системи штучного інтелекту побудовані на нео-фаззі нейронах \cite{ref61,ref63}, що дозволяє їм суттєво підвищити швидкість корегування синаптичних вагових коефіцієнтів. Нео-фаззі нейрон (NFN), що його архітектуру наведено на рис.~\ref{fig:NFN},  -- це нелінійна система, що реалізує висновування
+
+\begin{equation}
+\hat{y}=\sum\limits_{i=1}^{n}f_i\left(x_i\right)
+\end{equation}
+\medskip
+
+де $x_i$ -- $i$-й вхідний сигнал $(i=1,2,\dots,n)$,
+
+$\hat{y}$ -- вихідний сигнал нео-фаззі нейрону.
+\begin{figure}
+\begin{center}
+\includegraphics[height=17cm]{NFN.pdf}
+\caption{Архітектура нео-фаззі нейрону}
+\label{fig:NFN}
+\end{center}
+\end{figure}
+Структурними елементами нео-фаззі нейрона є нелінійні синапси $NS_i$, які трансформують вхідні сигнали в такий спосіб:
+
+\begin{equation}
+f_i\left(x_i\right)=\sum\limits_{l=1}^h{w_{li}\mu_{li}\left(x_i\right)},
+\end{equation}
+\medskip
+
+де $w_{li}$ -- $l$-й ваговий коефіцієнт $i$-ого нелінійного синапсу,
+
+$l=1,2,\dots,h$ -- кількість синаптичних ваг, а отже і функцій належності $\mu_{li}\left(x_i\right)$ у синапсі.
+
+Таким чином, нелінійний синапс $NS_i$ реалізує нечітке висновування 
+
+\begin{equation}
+\text{IF } x_i \text{ IS } X_{li} \text{ THEN THE OUTPUT IS } w_{li},
+\end{equation}
+\medskip
+
+де $X_{li}$ -- нечітка множина з функцією належності $\mu_{li}$,
+
+$w_{li}$ -- сінглтон (синаптичний ваговий коефіцієнт у консиквенті).
+
+Тобто нелінійній синапс фактично є системою висновування Такаґі-Суґено нульового порядку \cite{ref59}.
+
+Запишемо вихідні сигнали для нейронів першого каскаду у наступному вигляді:
+
+\begin{equation}\label{eq:FirstascadeNeoFuzzyNeuronOutputs}
+\begin{cases}
+\hat{y}_j^{[1]}\left(k\right)=\sum\limits_{i=1}^n{f_{ji}^{[1]}\left(x\left(k\right)\right)}=\sum\limits_{i=1}^n\sum\limits_{l=1}^h{w_{jli}^{[1]}\mu_{jli}^{[1]}\left(x_i\left(k\right)\right)},\\
+\text{IF } x_i \text{ IS } X_{li} \text{ THEN THE OUTPUT IS } w_{li}
+\end{cases}
+\end{equation}
+\medskip
+
+$J$-й нео-фаззі нейрон першого каскаду зображено на \hl{...} (згідно топології нейронної мережі, зображеної на \hl{...}) 
+
+Автори нео-фаззі нейрону \cite{ref61,ref63} в якості фунцій належності використовували традиційні трикутні структури, які задовольняють умови розбиття Руспіні:
+
+\begin{equation}\label{eq:TriangularMembershipFunctions}
+\mu_{jli}^{[1]}\left(x_i\right)=
+\begin{cases}
+\frac{x_i-c_{j,l-1,i}^{[1]}}{c_{jli}^{[1]}-c_{j,l-1,i}^{[1]}} \text { if } x_i\in\left[c_{j,l-1,i}^{[1]},c_{jli}^{[1]}\right],\\
+\frac{c_{j,l+1,i}^{[1]}-x_i}{c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}\text{ if }x_i \in \left[c_{jli}^{[1]},c_{j,l+1,i}^{[1]}\right],\\
+0\text { otherwise},
+\end{cases}
+\end{equation}
+\medskip
+
+де $c_{jli}^{[1]}$ -- довільно обрані центри параметрів функцій належності на інтервалі $\left[0,1\right]$, зазвичай рівномірно розподілені.
+
+Такий вибір функцій належності гарантує, що вхідний сигнал $x_i$ активує лише два сусідні функції, а сума їх значень завжди дорівнюватиме $1$:
+
+\begin{equation}
+\mu_{jli}^{[1]}\left(x_i\right)+\mu_{j,l+1,i}^{[1]}\left(x_i\right)=1,
+\end{equation}
+
+\begin{equation}
+f_{jl}^{[1]}\left(x_i\right)=w_{jli}^{[1]}\mu_{jli}^{[1]}\left(x_i\right)+w_{j,l+1,i}^{[1]}\mu_{j,l+1,i}^{[1]}\left(x_i\right).
+\end{equation}
+\medskip
+
+Аппроксимуючі властивості системи можна поліпшити використовуючи кубічні сплайни \cite{ref55} замість трикутних функцій належності:
+
+\begin{equation}
+\mu_{jli}^{[1]}\left(x_i\right)=
+\begin{cases}
+\frac{1}{4}\left(2+3\frac{2x_i-c_{jli}^{[1]}-c_{j,l-1,i}^{[1]}}{c_{jli1}^{[1]}-c_{j,l-1,i}^{[1]}}-\left(\frac{2x_i-c_{jli}^{[1]}-c_{j,l-1,i}^{[1]}}{c_{jli}^{[1]}-c_{j,l-1,i}^{[1]}}\right)^3\right),\\
+\text{if }x\in\left[c_{j,l-1,i}^{[1]},c_{jli}^{[1]}\right],\\
+\frac{1}{4}\left(2-3\frac{2x_i-c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}{c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}+\left(\frac{2x_i-c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}{c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}\right)^3\right),\\
+\text{if }x\in\left[c_{jli}^{[1]},c_{j,l+1,i}^{[1]}\right],\\
+0,\text{ otherwise},
+\end{cases}
+\end{equation}
+\medskip
+
+або $B$-сплайни \cite{ref54}:
+
+\begin{equation}
+\mu_{jli}^{g[1]}=
+\begin{cases}
+\begin{rcases}
+1,\text{ if }x_{i}\in \left[c_{jli}^{[1]},c_{j,l+1,i}^{[1]}\right],\\
+0,\text{ otherwise}
+\end{rcases}
+\text{ for }g=1,\\
+\frac{x_i-c_{jli}^{[1]}}{c_{j,l+g-1,i}^{[1]}-c_{jli}^{[1]}}\mu_{jli}^{g-1,[1]}\left(x_i\right)+\frac{c_{j,l+g,i}^{[1]}-x_i}{c_{j,l+g,i}^{[1]}-c_{j,l+g,i}^{[1]}}\mu_{j,l+1,i}^{g-1,[1]}\left(x_i\right),\\
+\text{ for }g>1,
+\end{cases}
+\end{equation}
+\medskip
+
+де $\mu_{jli}^{g[1]}\left(x_i\right)$ -- $l$-й сплайн $g$-ого порядку.
+
+Нескладно помітити, що при $g=2$ отримуємо трикутні функції належності \eqref{eq:TriangularMembershipFunctions}.
+
+$B$-сплайни, як і трикутні функції належності, забезпечують розбиття Руспіні, але в загальному випадку вони можуть активувати довільне число функцій належності, за межами інтервалу $\left[0,1\right]$, що може стати у нагоді для подальших каскадів. 
+
+Також у якості функцій належності нелінійних синапсів можна використовувати інші структури, такі як поліноміальні гармонійні функції, вейвлети, ортогональні функції, тощо. Проте не можна сказати наперед, які з функцій забезпечать кращі результати, тому ідея використання не одного нейрона, а пулу нейронів з різними функціями належності та активації виглядає доречною та перспективною.
+
+\hl{За аналогією} до \eqref{eq:FirstascadeNeoFuzzyNeuronOutputs} визначаймо вихідні сигнали інших каскадів. Так, для другого каскаду можемо записати вихідні сигнали у формі
+
+\begin{equation}
+\hat{y}_j^{[2]}=\sum\limits_{i=1}^n\sum\limits_{l=1}^{h}{w_{jli}^{[2]}\mu_{jli}^{[2]}\left(x_i\right)}+\sum\limits_{l=1}^{h}{w_{j,l,n+1}^{[2]}\mu_{j,l,n+1}^{[2]}}\left(\hat{y}^{*[1]}\right),
+\end{equation}
+\medskip
+
+вихідні сигнали для нейронів $m$-ого каскаду
+
+\begin{equation}
+\hat{y}_j^{[m]}=\sum\limits_{i=1}^n\sum\limits_{l=1}^{h}{w_{jli}^{[m]}\mu_{jli}^{[m]}\left(x_i\right)}+\sum\limits_{p=n+1}^{n+m-1}\sum\limits_{l=1}^{h}{w_{jlp}^{[m]}\mu_{jlp}^{[m]}\left(\hat{y}^{*[p-n]}\right)}.
+\end{equation}
+\medskip
+
+Таким чином, каскадна нейронна мережа з нео-фаззі нейронів, що сформована $m$ каскадами, містить $h\left(\sum\limits_{p=1}^{m-1}p\right)$ параметрів.
+
+Введемо вектор функцій належності для $j$-ого нео-фаззі нейрону $m$-ого каскаду
+
+\begin{equation}
+\begin{aligned}
+\mu_{j}^{[m]}\left(k\right)=\biggl(&\mu_{j11}^{[m]}\left(x_1\left(k\right)\right),\dots,\mu_{jh1}^{[m]}\left(x_1\left(k\right)\right),\mu_{j12}^{[m]}\left(x_2\left(k\right)\right),\\
+&\dots,\mu_{jh2}^{[m]}\left(x_2\left(k\right)\right),\dots,\mu_{jli}^{[m]}\left(x_i\left(k\right)\right),\dots,\mu_{jhn}^{[m]}\left(x_n\left(k\right)\right),\\
+&\dots,\mu_{j1,n+1}^{[m]}\left(\hat{y}^{*[1]}\left(k\right)\right),\dots,\mu_{jh,n+m-1}^{[m]}\left(\hat{y}^{*[m-1]}\left(k\right)\right)\biggr)^T
+\end{aligned}
+\end{equation}
+\medskip
+
+та відповідний вектор синаптичних вагових коефіцієнтів
+
+\begin{equation}
+\begin{aligned}
+w_{j}^{[m]}=\biggl(&w_{j11}^{[m]},\dots,w_{jh1}^{[m]},w_{j12}^{[m]},\dots,w_{jh2}^{[m]},\dots,w_{jli}^{[m]},\\
+&\dots,w_{jhn}^{[m]},w_{j1,n+1}^{[m]},\dots,w_{jh,n+m-1}^{[m]},\biggr)^T.
+\end{aligned}
+\end{equation}
+\medskip
+
+Тоді можемо компактно записати вихідні сигнали для $j$-ого нейрону $m$-ого каскаду
+
+\begin{equation}\label{eq:NFNCascadeOutput}
+\hat{y}_j^{[m]}\left(k\right)=w_j^{[m]T}\mu_j^{[m]}\left(k\right).
+\end{equation}
+\medskip
+
+У такому разі критерій навчання \eqref{eq:RosenblattLearningCriterion} приймає вигляд
+
+\begin{equation}\label{eq:CompactLearningCriterion}
+E_j^{[m]}\left(k\right)=\frac{1}{2}\left(e_j^{m}\left(k\right)\right)^2=\frac{1}{2}\left(y\left(k\right)-w_j^{[m]T}\mu_j^{[m]}\left(k\right)\right),
+\end{equation}
+\medskip
+
+а мінімізувати його можна використавши модифікацію процедури \cite{ref70} для <<плаваючого>> вікна
+
+\begin{equation}\label{eq:NFNSlidingWindowMinimizationSlidingWindow}
+\begin{cases}
+w_j^{[m]}\left(k+1\right)=w_j^{[m]}\left(k\right)+\frac{e_j^{[m]}\left(k+1\right)\mu_j^{[m]}\left(k+1\right)}{r_j^{[m]}\left(k+1\right)},\\
+r_j^{[m]}\left(k+1\right)=r_j^{[m]}\left(k\right)+\left\|\mu_j^{[m]}\left(k+1\right)\right\|^2-\left\|\mu_j^{[m]}\left(k-s\right)\right\|^2,
+\end{cases}
+\end{equation}
+\medskip
+
+або для випадку, коли $s=1$,
+
+\begin{equation}\label{eq:NFNSlidingWindowMinimization}
+w_j^{[m]}\left(k+1\right)=w_j^{[m]}\left(k\right)+\frac{e_j^{[m]}\left(k+1\right)\mu_j^{[m]}\left(k+1\right)}{\left\|\mu_j^{[m]}\left(k+1\right)\right\|^2},
+\end{equation}
+\medskip
+
+що збігається з одношаговим оптимальним алгоритмом Качмаж-Уідроу-Гоффа.
+
+Вочевидь, замість \eqref{eq:NFNSlidingWindowMinimizationSlidingWindow} можна скористатись іншими алгоритмами, як-от експоненційно зважений рекурентний метод найменших квадратів (EWRLSM), що використовується у DENFIS \cite{ref77}, ETS \cite{ref78} та FLEXFIX \cite{ref79,ref80}. Та варто зауважити, що EWRLSM може бути нестійким при невисокому коефіцієнті забувкуватості.
+
+При використанні критерію навчаняя з \hl{регулюючим параметром} (momentum term) \eqref{eq:RosenblattLearningCriterion} замість \eqref{eq:CompactLearningCriterion} отримаємо остаточний метод навчання нео-фаззі нейрона
+
+\begin{equation}
+\begin{aligned}
+\begin{cases}
+w_j^{[m]}\left(k+1\right)=&w_j^{[m]}\left(k\right)+\frac{\eta e_j^{[m]}\left(k+1\right)\mu_j^{[m]}\left(k+1\right)}{r_j^{[m]}\left(k+1\right)}\\
+&+\frac{\left(1-\eta\right)\left(w_j^{[m]}\left(k\right)-w_j^{[m]}\left(k-1\right)\right)}{r_j^{[m]}\left(k+1\right)},\\
+r_j^{[m]}\left(k+1\right)=&r_j^{[m]}\left(k\right)+\left\|\mu_j^{[m]}\left(k+1\right)|\right\|^2-\left\|\mu_j^{[m]}\left(k-s\right)\right\|^2.
+\end{cases}
+\end{aligned}
+\end{equation}
+\medskip
+
+Варто наголосити, що оскільки вихідні сигнали нео-фаззі нейрону лінійно залежать від його синаптичних вагових коефіцієнтів, можна використовувати будь-які методи адаптивної лініної ідентифікації \cite{ref67} (наприклад, рекурсивний метод найменших квадратів другого порядку, робастні методи, методи, що ігнорують застарілі данні, тощо), що дозволяє обробляти нестаціонарні сигнали в онлайн режимі.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Розширенні нео-фаззі нейрони в якості елементів гібридної каскадної мережі, що еволюціонує}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Як зазначалося вище, розглядаючи нелінійний синапс нео-фаззі нейрону з позицій нечіткої логіки, нескладно бачити, що він є вельми схожим на шар фазифікування таких нейро-фазі систем як мережі Такаґі-Суґено-Канґа, Дженґа, Ванґа-Менделя, і, фактично реалізує нечітке висновування Такаґі-Суґено нульового порядку \cite{ref83,ref84}. Та задля поліпшення апроксимуючих властивостей таких систем видається доцільним запропонувати удосконалений нелінійний синапс, такий, що реалізує нечітке висновування довільного порядку, далі <<розширений нелінійний синапс>> (ENS), та зсинтезувати <<розширений нео-фаззі нейрон>> (ENFN), що містить такі структури замість традиційних нелінійних синапсів $NS_i$. Архітектури розширеного нелінійного синапсу та розширенного нео-фазі нейрону
+наведено на \hl{...} відповідно.
+
+Вводячі нові змінні 
+
+\begin{equation}
+\phi_{li}\left(x_i\right)=\mu_{li}\left(x_i\right)\left(w_{li}^0+w_{li}^1x_i+w_{li}^2x_i^2+\dots+w_{li}^px_i^p\right),
+\end{equation}
+\begin{equation}
+\begin{aligned}
+f_i\left(x_i\right)&=\sum\limits_{l=1}^h\mu_{li}\left(x_i\right)\left(w_{li}^0+w_{li}^1x_i+w_{li}^2x_i^2+\dots+w_{li}^px_i^p\right)\\
+&=w_{li}^0\mu_{li}\left(x_i\right)+w_{li}^1x_i\mu_{1i}\left(x_i\right)+\dots+w_{li}^px_i^p\mu_{1i}\left(x_i\right)\\
+&+w_{2i}^0\mu_{2i}\left(x_i\right)+\dots+w_{2i}^px_i^p\mu_{2i}\left(x_i\right)+\dots+w_{hi}^px_i^p\mu_{hi}\left(x_i\right),
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+w_i=\left(w_{1i}^0,w_{1i}^1,\dots,w_{1i}^p,w_{2i}^0,\dots,w_{2i}^p,\dots,w_{hi}^p \right)^T,
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\tilde{\mu}_i\left(x_i\right)=\biggl(&\mu_{1i}\left(x_i\right),x_i(\mu_{1i}\left(x_i\right),\dots,x_i^p(\mu_{1i}\left(x_i\right),\\
+&\mu_{2i}\left(x_i\right),\dots,x_i^p\mu_{2i}\left(x_i\right),\dots,x_i^p\mu_{hi}\left(x_i\right)\biggr)^T
+\end{aligned}
+\end{equation}
+\\
+\medskip
+можна представити вихідні сигнали розширенного нео-фаззі нейрона у вигляді 
+
+\begin{equation}
+f_i\left(x_i\right)=w_i^T\tilde{\mu}_i\left(x_i\right),
+\end{equation}
+\begin{equation}
+\begin{aligned}
+\hat{y}&=\sum\limits_{i=1}^{n}{f_i\left(x_i\right)}\\
+&=\sum\limits_{i=1}^{n}{w_i^T\tilde{\mu}\left(x_i\right)}\\
+&={\tilde{w}^T\tilde{\mu}\left(x\right)},
+\end{aligned}
+\end{equation}
+\medskip
+
+де
+
+\begin{equation}
+\tilde{w}^T=\left(w_1^T,\dots,w_i^T,\dots,w_n^T\right)^T,
+\end{equation}
+
+\begin{equation}
+\tilde{\mu}\left(x\right)=\left(\tilde{\mu}_1^T\left(x_1\right),\dots, \tilde{\mu}_i^T\left(x_i\right),\dots, \tilde{\mu}_n^T\left(x_n\right) \right)^T,
+\end{equation}
+\medskip
+
+Таким чином, ENFN містить $\left(p+1\right)hn$ вагових коефціцєнтів та реалізує нечітке висновування Такаґі-Суґено $p$-ого порядку, а висновування, що його реалізує кожний розширений нелінійний синапс $ENS_i$ можна записати у формі
+
+\begin{equation}
+\begin{aligned}
+\text{IF } x_i \text{ IS } X_{li} \text{ THEN THE OUTPUT IS }\\
+w_{li}^0+w_{li}^1x_i+\dots+w_{li}^px_p,\text{   }l=1,2,\dots,h,
+\end{aligned}
+\end{equation}
+\medskip
+
+що збігається з нечітким висновуванням Такаґі-Суґено $p$-ого порядку.
+
+Коли подати векторний сигнал $x\left(k\right)$ на вхід $ENFN$ першого каскаду, на виході отримуюємо скалярне значення
+
+\begin{equation}
+\hat{y}^{[1]}\left(k\right)=\tilde{w}^{[1]T}\left(k-1\right)\tilde{\mu}^{[1]}\left(x\left(k\right)\right),
+\end{equation}
+\medskip
+
+що відрізняється від виразу \eqref{eq:NFNCascadeOutput} для звичайних $NFN$ тим, що містить у $p+1$ більше параметрів, що корегуються.
+
+Вочевидь, будь-які методи навчання нео-фаззі нейронів підійдуть і для розширених нео-фаззі нейронів. Так вирази \eqref{eq:NFNSlidingWindowMinimizationSlidingWindow} та \eqref{eq:NFNSlidingWindowMinimization} для $j$-ого нейрону $m$-ого каскаду приймають вигляд 
+
+\begin{equation}\label{eq:ENFNSlidingWindowMinimizationSlidingWindow}
+\begin{cases}
+\tilde{w}_j^{[m]}\left(k+1\right)=\tilde{w}_j^{[m]}\left(k\right)+\frac{e_j^{[m]}\left(k+1\right)\tilde{\mu}_j^{[m]}\left(k+1\right)}{\tilde{r}_j^{[m]}\left(k+1\right)},\\
+\tilde{r}_j^{[m]}\left(k+1\right)=\tilde{r}_j^{[m]}\left(k\right)+\left\|\tilde{\mu}_j^{[m]}\left(k+1\right)\right\|^2-\left\|\tilde{\mu}_j^{[m]}\left(k-s\right)\right\|^2
+\end{cases}
+\end{equation}
+\medskip
+
+та 
+
+\begin{equation}\label{eq:ENFNSlidingWindowMinimization}
+\tilde{w}_j^{[m]}\left(k+1\right)=\tilde{w}_j^{[m]}\left(k\right)+\frac{e_j^{[m]}\left(k+1\right)\tilde{\mu}_j^{[m]}\left(k+1\right)}{\left\|\tilde{\mu}_j^{[m]}\left(k+1\right)\right\|^2}
+\end{equation}
+\medskip
+
+відповідно.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Оптимізація пулу нео-фаззі нейронів}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Вихідні сигнали, згенеровані нейронами пулу кожного з каскадів, можна об'єднати у окремому вузлі, нейроні $GN^{[m]}$, з точністю $\hat{y}^{*[m]}\left(k\right)$, не меншою від точності будь-якого нейрону пулу $\hat{y}_j^{[m]}\left(k\right)$. Це завдання можна вирішити за допомогою підходу ансамлей нейронних мереж.
+Хоча відомі алгоритми не призначені для роботи в онлайн-режимі, варто розглянути методи адаптивного узагальнюючого прогнозування \cite{ref81,ref82}.
+
+Введемо вектор ухідних сигналів для $m$-ого каскаду:
+
+\begin{equation}
+\hat{y}^{[m]}\left(k\right)=\left(\hat{y}_1^{[m]}\left(k\right),\hat{y}_2^{[m]}\left(k\right),\dots,\hat{y}_q^{[m]}\left(k\right)\right)^T;
+\end{equation}
+\medskip
+
+тоді отпимальний вихідний сигнал, що його генерує нейрон $GN^{[m]}$ (що, власне, є адаптивним лінійним асоціатором \cite{ref44,ref45}), можна записати у формі
+
+\begin{equation}
+\hat{y}^{*[m]}\left(k\right)=\sum\limits_{j=1}^{1}{c_j^{[m]}\hat{y}_j^{[m]}\left(k\right)}=c^{[m]T}\hat{y}^{[m]}\left(k\right)
+\end{equation}
+\medskip
+
+з обмеженнями на <<незміщенність>> \hl{unbiasedness - незсувність?}
+
+\begin{equation}\label{eq:GeneralizingNeuronUnbiasenessConstraint}
+\sum\limits_{j=1}^q{c_j^{[m]}}=E^Tc^{[m]}=1,
+\end{equation}
+\medskip
+
+де $c^{[m]}=\left(c_1^{[m]}, c_2^{[m]},\dots,c_q^{[m]}\right)^T$ та $E = \left(1,1,\dots,1\right)^T$ -- $\left(q\times1\right)$-вектори.
+
+Введемо критерій навчання на <<плаваючому>> вікні
+
+\begin{equation}
+\begin{aligned}
+E^{[m]}\left(k\right)=&\frac{1}{2}\sum\limits_{\tau=k-s+1}^k{\left(y\left(\tau\right)-\hat{y}^{*[m]}\left(\tau\right)\right)^2}\\
+=&\frac{1}{2}\sum\limits_{\tau=k-s+1}^k{\left(y\left(\tau\right)-c^{[m]T}\hat{y}^{[m]}\left(\tau\right)\right)^2},
+\end{aligned}
+\end{equation}
+\medskip
+
+зважаючи на обмеженяя \eqref{eq:GeneralizingNeuronUnbiasenessConstraint}, функція Лаґранжа матиме вигляд
+
+\begin{equation}\label{eq:PoolOptimizatoinLaGrangeFunction}
+L^{[m]}\left(k\right)=E^{[m]}\left(k\right)-\lambda\left(1-E^Tc^{[m]}\right),
+\end{equation}
+\medskip
+
+де $\lambda$ -- невизначений Лаґранжів множник.
+
+Мінімізуючи \eqref{eq:PoolOptimizatoinLaGrangeFunction} відносно $c^{[m]}$, отримуємо
+
+\begin{equation}\label{eq:GeneralizedOutputPacketMode}
+\begin{cases}
+\hat{y}^{*[m]}\left(k+1\right)=\frac{\hat{y}^{[m]T}\left(k+1\right)P^{[m]}\left(k+1\right)E}{E^TP^{[m]}\left(k+1\right)E},\\
+P^{[m]}\left(k+1\right)=\left(\sum\limits_{\tau=k-s+2}^{k+1}{\hat{y}^{[m]}\left(\tau\right)}\hat{y}^{[m]T}\left(\tau\right)\right)^{-1}
+\end{cases}
+\end{equation}
+\medskip
+
+або у рекурентній формі
+
+\begin{equation}\label{eq:GeneralizedOutputRecurrent}
+\begin{cases}
+\begin{aligned}
+\tilde{P}^{[m]}\left(k+1\right)=&P^{[m]}\left(k\right)-\frac{P^{[m]}\left(k\right)\hat{y}^{[m]}\left(k+1\right)\hat{y}^{[m]T}\left(k+1\right)P^{[m]}\left(k\right)}{1+\hat{y}^{[m]T}\left(k+1\right)P^{[m]}\left(k\right)\hat{y}^{[m]}\left(k+1\right)},\\
+P^{[m]}\left(k+1\right)=&\tilde{P}^{[m]}\left(k+1\right)+\\
+&\frac{\tilde{P}^{[m]}\left(k+1\right)\hat{y}\left(k-s+1\right)\hat{y}^{[m]T}\left(k-s+1\right)\tilde{P}^{[m]}\left(k+1\right)}{1-\hat{y}^{[m]T}\left(k-s+1\right)\tilde{P}^{[m]}\left(k+1\right)\hat{y}^{[m]}\left(k-s+1\right)},\\
+\hat{y}^{*[m]}\left(k+1\right)=&\frac{\hat{y}^{[m]T}\left(k+1\right)P^{[m]}\left(k+1\right)E}{E^TP^{[m]}\left(k+1\right)E}.
+\end{aligned}
+\end{cases}
+\end{equation}
+\medskip
+
+У випадку, коли $s=1$ \eqref{eq:GeneralizedOutputPacketMode} та \eqref{eq:GeneralizedOutputRecurrent} приймають вельми простий вигляд:
+
+\begin{equation}
+\begin{aligned}
+\hat{y}^{*[m]}\left(k+1\right)&=\frac{\hat{y}^{[m]T}\left(k+1\right)\hat{y}^{[m]}\left(k+1\right)}{E^T\hat{y}^{[m]}\left(k+1\right)}\\
+&=\frac{\left\|\hat{y}^{[m]}\left(k+1\right)\right\|^2}{E^T\hat{y}^{[m]}\left(k+1\right)}\\
+&=\frac{\sum\limits_{j=1}^q{\left(\hat{y}^{[m]}\left(k+1\right)\right)^2}}{\sum\limits_{j=1}^q{\hat{y}^{[m]}\left(k+1\right)}}.
+\end{aligned}
+\end{equation}
+\medskip
+
+Важливо зазначити, що навчання як нео-фаззі нейронів, так і нейронів-узалгальнювачів можна організовувати в онлайн-режимі. Таким чином, вагові коефіцієнти нейронів попередніх каскадів (на відміну від CasCorLA) можна не замороджувати, а постійно корегувати. Так само, число каскадів не має бути фіксованим і може змінюватись у часі, що відрізняє пропоновану нейронної мережі від інших відомих каскадних систем.  
+\bibliographystyle{ugost2008ns}
+\bibliography{references}	
+\end{document}
