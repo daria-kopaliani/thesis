@@ -195,7 +195,7 @@ r_j^{[m]}\left(k+1\right)=&r_j^{[m]}\left(k\right)+\left\|\tilde{J}_j^{[m]}\left
 $\hat{y}$ -- вихідний сигнал нео-фаззі нейрону.
 \begin{figure}
 \begin{center}
-\includegraphics[height=17cm]{NFN.pdf}
+\includegraphics[height=18cm]{NFN}
 \caption{Архітектура нео-фаззі нейрону}
 \label{fig:NFN}
 \end{center}

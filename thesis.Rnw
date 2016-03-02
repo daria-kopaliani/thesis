@@ -36,7 +36,8 @@
   \let\originalright\right
   \renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
   \renewcommand{\right}{\aftergroup\egroup\originalright}
-
+  \renewcommand{\floatpagefraction}{.8}%
+  \renewcommand{\topfraction}{.75}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -45,11 +46,11 @@
 <<chapter1, child='SISOCascadedNetwork.Rnw'>>=
 @
 
-<<chapter2, child='MIMOCascadedNetwork.Rnw'>>=
-@
+%<<chapter2, child='MIMOCascadedNetwork.Rnw'>>=
+%@
 
-<<chapter2, child='SelfLearningCascadedNetwork.Rnw'>>=
-@
+%<<chapter3, child='SelfLearningCascadedNetwork.Rnw'>>=
+%@
 
 \bibliographystyle{ugost2008ns}
 \bibliography{references}	

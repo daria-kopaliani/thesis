@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  2 MAR 2016 12:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  2 MAR 2016 12:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**thesis_playground.tex
-(./thesis_playground.tex
+**thesis.tex
+(./thesis.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (./vakthesis.cls
@@ -355,31 +355,29 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-))
-(./thesis_playground.aux)
-\openout1 = `thesis_playground.aux'.
+)) (./thesis.aux)
+\openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 69.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 70.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    ... okay on input line 70.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -473,46 +471,179 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 File: speciality.20070212N70 (vakthesis)
+[1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./thesis.toc)
+\tf@toc=\write3
+\openout3 = `thesis.toc'.
+
+ [2
+
+]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 1.
-Package epstopdf Info: Source file: <images/NFN.eps>
-(epstopdf)                    date: 2016-03-02 12:11:44
-(epstopdf)                    size: 98140 bytes
-(epstopdf)             Output file: <images/NFN-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-03-02 12:11:49
-(epstopdf)                    size: 12221 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/NFN-eps-converted-t
-o.pdf images/NFN.eps>
-(epstopdf)             \includegraphics on input line 117.
-Package epstopdf Info: Output file is already uptodate.
-<images/NFN-eps-converted-to.pdf, id=1, 545.03625pt x 627.34375pt>
-File: images/NFN-eps-converted-to.pdf Graphic file (type pdf)
 
-<use images/NFN-eps-converted-to.pdf>
-Package pdftex.def Info: images/NFN-eps-converted-to.pdf used on input line 117
-.
-(pdftex.def)             Requested size: 395.5279pt x 455.24408pt.
- [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+Overfull \hbox (1.98187pt too wide) in paragraph at lines 108--109
+[]\T2A/cmr/m/n/14.4 Мабуть най-бiльш вi-до-мою ре-а-лi-за-цi-№ю цьо-го пiд-хо-д
+у № каскадно-кореляцiйi
+ []
+
+[3
+
+] [4] [5] [6] [7] [8]
+
+! LaTeX Error: File `NFN' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 \includegraphics[height=18cm]{NFN}
+                                        
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[9]
+Overfull \hbox (0.1621pt too wide) in paragraph at lines 319--320
+[]\T2A/cmr/m/n/14.4 Тобто не-лi-нiй-нiй си-напс фа-кти-чно № си-сте-мою ви-сно-
+ву-ва-н-ня Така i-Су ено
+ []
+
+[10] [11] [12]
+Overfull \hbox (7.28288pt too wide) in paragraph at lines 466--467
+\T2A/cmr/m/n/14.4 екс-по-нен-цiй-но зва-же-ний ре-ку-рен-тний ме-тод най-мен-ши
+х ква-дра-тiв (EWRLSM),
+ []
+
+[13]
+Overfull \hbox (14.923pt too wide) in paragraph at lines 468--469
+[]\T2A/cmr/m/n/14.4 При ви-ко-ри-стан-нi кри-те-рiю на-вча-няя з []ре[]-[]гу[]-
+[]лю[]-[]ю[]-[]чим[] [][][]па[]-[]ра[]-[]ме[]-[]тром (momentum
+ []
+
+[14] [15] [16] [17] [18] (./thesis.bbl [19]
+Underfull \hbox (badness 2213) in paragraph at lines 24--31
+[]\OT1/cmr/m/n/14.4 Angelov Pla-men P., Lughofer Ed-win. Data-driven evolv-ing 
+fuzzy
+ []
 
 
- <./images/NFN-eps-converted-to.pdf>]
-(./thesis_playground.aux) ) 
+Underfull \hbox (badness 1490) in paragraph at lines 24--31
+\OT1/cmr/m/n/14.4 sys-tems us-ing eTS and FLEX-FIS: com-par-a-tive anal-y-sis /
+/ Int. J.
+ []
+
+
+Underfull \hbox (badness 1776) in paragraph at lines 24--31
+\OT1/cmr/m/n/14.4 Gen-eral Sys-tems. []  2008. []  Vol. 37, no. 1. []  P. 45--6
+7. []  URL:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--74
+[]\OT1/cmr/m/n/14.4 Bodyanskiy Yev-geniy, Vik-torov Yev-gen. 110 9 -- In-tel-li
+-gent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--74
+\OT1/cmr/m/n/14.4 Pro-cess-ing THE CAS-CADE NEO-FUZZY AR-CHI-TEC-TURE
+ []
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 67--74
+\OT1/cmr/m/n/14.4 AND ITS ON-LINE LEARN-ING AL-GO-RITHM. []  2013. []  URL:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--85
+[]\OT1/cmr/m/n/14.4 Bodyanskiy Yev-geniy, Vik-torov Yev-gen, Pliss Iryna. In-te
+r-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--85
+\OT1/cmr/m/n/14.4 na-tional Book Se-ries "In-for-ma-tion Sci-ence and Com-put-i
+ng "
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--85
+\OT1/cmr/m/n/14.4 25 THE CAS-CADE GROW-ING NEU-RAL NET-WORK US-ING
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--85
+\OT1/cmr/m/n/14.4 QUADRATIC NEU-RONS AND ITS LEARN-ING AL-GO-RITHMS
+ []
+
+
+Underfull \hbox (badness 5036) in paragraph at lines 77--85
+\OT1/cmr/m/n/14.4 FOR ON-LINE IN-FOR-MA-TION PRO-CESS-ING. []  2013. []  URL:
+ []
+
+[20
+
+] [21]
+Underfull \hbox (badness 1609) in paragraph at lines 180--187
+[]\OT1/cmr/m/n/14.4 Lughofer Ed-win. FLEX-FIS: A Ro-bust In-cre-men-tal Learn-i
+ng Ap-
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 180--187
+\OT1/cmr/m/n/14.4 proach for Evolv-ing Takagi-Sugeno Fuzzy Mod-els // IEEE T. F
+uzzy
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 180--187
+\OT1/cmr/m/n/14.4 Sys-tems. []  2008. []  Vol. 16, no. 6. []  P. 1393--1410. []
+  URL:
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 202--206
+[]\OT1/cmr/m/n/14.4 Miki T., (Japan) T. Ya-makawa. Ana-log Im-ple-men-ta-tion o
+f Neo-
+ []
+
+[22]
+Underfull \hbox (badness 1902) in paragraph at lines 245--257
+\OT1/cmr/m/n/14.4 tive Noise Can-cel-la-tion For Multi-Sensory Sig-nals. []  20
+01. []  URL:
+ []
+
+) [23] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 5436 strings out of 493089
- 75547 string characters out of 6134842
- 152478 words of memory out of 5000000
- 8819 multiletter control sequences out of 15000+600000
- 6677 words of font info for 19 fonts, out of 8000000 for 9000
+ 5611 strings out of 493089
+ 77856 string characters out of 6134842
+ 164204 words of memory out of 5000000
+ 8967 multiletter control sequences out of 15000+600000
+ 13643 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 276i,7n,31p,825b,285s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/
-cm-super/cm-super-t2a.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/publi
-c/cm-super/sfbx1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
-cm-super/sfrm1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm
--super/sfrm1440.pfb>
-Output written on thesis_playground.pdf (1 page, 38640 bytes).
+ 276i,18n,31p,1443b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-s
+uper/cm-super-t2a.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx14
+40.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1440
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
+Output written on thesis.pdf (23 pages, 233912 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 135 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
