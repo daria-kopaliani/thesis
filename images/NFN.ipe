@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70107" creator="Ipe 7.2.2">
-<info created="D:20160302104857" modified="D:20160302120925" title="test"/>
+<info created="D:20160302104857" modified="D:20160307160534" title="test"/>
 <preamble>%%BeginIpePreamble
   \usepackage{amsfonts}
   \newcommand{\R}{\mathbb{R}}
@@ -260,11 +260,11 @@ h
 <layer name="beta"/>
 <layer name="gamma"/>
 <view layers="synapse" active="synapse"/>
-<text layer="synapse" matrix="1 0 0 1 -165 -221" transformations="translations" pos="420 808" stroke="black" type="label" width="44.943" height="14.118" depth="5.89" valign="baseline" size="huge">$NS_{j1}$</text>
+<text layer="synapse" matrix="1 0 0 1 -165 -221" transformations="translations" pos="420 808" stroke="black" type="label" width="44.943" height="14.118" depth="5.89" valign="baseline" size="huge">$NS_{j2}$</text>
 <path matrix="1 0 0 1 -22 -224" stroke="black">
 2 0 0 2 32 744 e
 </path>
-<text matrix="1 0 0 1 -19.5095 -232" transformations="translations" pos="20 760" stroke="black" type="label" width="19.019" height="13.555" depth="3.1" valign="baseline" size="huge">$\tilde{x}_1$</text>
+<text matrix="1 0 0 1 -19.5095 -232" transformations="translations" pos="20 760" stroke="black" type="label" width="19.019" height="8.896" depth="3.1" valign="baseline" size="huge">${x}_2$</text>
 <path matrix="1 0 0 1 0 -208" stroke="black" arrow="normal/normal">
 48 784 m
 64 784 l
@@ -314,40 +314,10 @@ h
 1 0 0 1 16 704 e
 </path>
 </group>
-<group matrix="1 0 0 1 32 -248">
-<text matrix="1 0 0 1 -0.668 -49.5025" transformations="translations" pos="48 816" stroke="black" type="label" width="33.336" height="8.895" depth="5.89" valign="baseline" size="huge">$\mu_{j21}$</text>
-<path matrix="1 0 0 1 0 -48" stroke="black">
-32 832 m
-32 800 l
-96 800 l
-96 832 l
-h
-</path>
-</group>
-<group matrix="1 0 0 1 32 -256">
-<text matrix="1 0 0 1 -0.668 -113.502" transformations="translations" pos="48 816" stroke="black" type="label" width="34.399" height="8.895" depth="5.89" valign="baseline" size="huge">$\mu_{jh1}$</text>
-<path matrix="1 0 0 1 0 -112" stroke="black">
-32 832 m
-32 800 l
-96 800 l
-96 832 l
-h
-</path>
-</group>
 <path matrix="1 0 0 1 32 -240" stroke="black">
 96 816 m
 112 816 l
 </path>
-<group matrix="1 0 0 1 -50 -241.6">
-<path matrix="0.666667 0 0 0.75 108.48 217.503" stroke="black">
-128 832 m
-128 768 l
-224 800 l
-128 832 l
-128 832 l
-</path>
-<text matrix="1 0 0 1 -9 1" transformations="translations" pos="208 816" stroke="black" type="label" width="35.626" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{j11}$</text>
-</group>
 <path matrix="1 0 0 1 32 -296" stroke="black">
 96 816 m
 112 816 l
@@ -363,7 +333,7 @@ h
 128 832 l
 128 832 l
 </path>
-<text matrix="1 0 0 1 -59 -296.6" transformations="translations" pos="208 816" stroke="black" type="label" width="35.626" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{j21}$</text>
+<text matrix="1 0 0 1 -59 -296.6" transformations="translations" pos="208 816" stroke="black" type="label" width="35.626" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{j22}$</text>
 <path matrix="1 0 0 1 32 -208" fill="white" arrow="normal/normal">
 176 728 m
 224 728 l
@@ -375,7 +345,7 @@ h
 128 832 l
 128 832 l
 </path>
-<text matrix="1 0 0 1 -59 -368.6" transformations="translations" pos="208 816" stroke="black" type="label" width="36.689" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{jh1}$</text>
+<text matrix="1 0 0 1 -59 -368.6" transformations="translations" pos="208 816" stroke="black" type="label" width="36.689" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{jh2}$</text>
 <text matrix="1 0 0 1 38.1465 -221.258" transformations="translations" pos="224 736" stroke="black" type="label" width="21.81" height="15.493" depth="5.17" valign="baseline" size="huge">$\sum$</text>
 <path matrix="1 0 0 1 65.0515 -280.097" stroke="black">
 20 0 0 20 208 800 e
@@ -394,7 +364,7 @@ h
 224 656 l
 272 708 l
 </path>
-<text matrix="1 0 0 1 31.332 -241.502" transformations="translations" pos="48 816" stroke="black" type="label" width="33.336" height="8.895" depth="5.89" valign="baseline" size="huge">$\mu_{j11}$</text>
+<text matrix="1 0 0 1 31.332 -241.502" transformations="translations" pos="48 816" stroke="black" type="label" width="33.336" height="8.895" depth="5.89" valign="baseline" size="huge">$\mu_{j12}$</text>
 <path matrix="1 0 0 1 32 -240" stroke="black">
 32 832 m
 32 800 l
@@ -413,152 +383,7 @@ h
 1 0 0 1 16 704 e
 </path>
 </group>
-<group matrix="1 0 0 1 0 -432">
-<path matrix="1 0 0 1 -22 -16" stroke="black">
-2 0 0 2 32 744 e
-</path>
-<text matrix="1 0 0 1 -19.5095 -24" transformations="translations" pos="20 760" stroke="black" type="label" width="19.019" height="13.555" depth="3.1" valign="baseline" size="huge">$\tilde{x}_1$</text>
-<path stroke="black" arrow="normal/normal">
-48 784 m
-64 784 l
-</path>
-<path stroke="black" arrow="normal/normal">
-48 656 m
-64 656 l
-</path>
-<path stroke="black" arrow="normal/normal">
-12 728 m
-64 728 l
-</path>
-<path stroke="black">
-48 784 m
-48 656 l
-48 656 l
-</path>
-<path stroke="black" fill="black">
-2 0 0 2 48 728 e
-</path>
-<path stroke="black" dash="dashed">
-32 816 m
-32 624 l
-304 624 l
-304 816 l
-h
-</path>
-<group matrix="1 0 0 1 0 -2">
-<path matrix="1 0 0 1 80 -4" stroke="black" fill="black">
-1 0 0 1 16 704 e
-</path>
-<path matrix="1 0 0 1 80 -9.5" stroke="black" fill="black">
-1 0 0 1 16 704 e
-</path>
-<path matrix="1 0 0 1 80 -15" stroke="black" fill="black">
-1 0 0 1 16 704 e
-</path>
-</group>
-<group matrix="1 0 0 1 80 -2">
-<path matrix="1 0 0 1 80 -4" stroke="black" fill="black">
-1 0 0 1 16 704 e
-</path>
-<path matrix="1 0 0 1 80 -9.5" stroke="black" fill="black">
-1 0 0 1 16 704 e
-</path>
-<path matrix="1 0 0 1 80 -15" stroke="black" fill="black">
-1 0 0 1 16 704 e
-</path>
-</group>
-<group matrix="1 0 0 1 32 -32">
-<text matrix="1 0 0 1 -0.668 -1.5025" transformations="translations" pos="48 816" stroke="black" type="label" width="33.336" height="8.895" depth="5.89" valign="baseline" size="huge">$\mu_{j11}$</text>
-<path stroke="black">
-32 832 m
-32 800 l
-96 800 l
-96 832 l
-h
-</path>
-</group>
-<group matrix="1 0 0 1 32 -40">
-<text matrix="1 0 0 1 -0.668 -49.5025" transformations="translations" pos="48 816" stroke="black" type="label" width="33.336" height="8.895" depth="5.89" valign="baseline" size="huge">$\mu_{j21}$</text>
-<path matrix="1 0 0 1 0 -48" stroke="black">
-32 832 m
-32 800 l
-96 800 l
-96 832 l
-h
-</path>
-</group>
-<group matrix="1 0 0 1 32 -48">
-<text matrix="1 0 0 1 -0.668 -113.502" transformations="translations" pos="48 816" stroke="black" type="label" width="34.399" height="8.895" depth="5.89" valign="baseline" size="huge">$\mu_{jh1}$</text>
-<path matrix="1 0 0 1 0 -112" stroke="black">
-32 832 m
-32 800 l
-96 800 l
-96 832 l
-h
-</path>
-</group>
-<path matrix="1 0 0 1 32 -32" stroke="black">
-96 816 m
-112 816 l
-</path>
-<group matrix="1 0 0 1 -50 -33.6">
-<path matrix="0.666667 0 0 0.75 108.48 217.503" stroke="black">
-128 832 m
-128 768 l
-224 800 l
-128 832 l
-128 832 l
-</path>
-<text matrix="1 0 0 1 -9 1" transformations="translations" pos="208 816" stroke="black" type="label" width="35.626" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{j11}$</text>
-</group>
-<path matrix="1 0 0 1 32 -88" stroke="black">
-96 816 m
-112 816 l
-</path>
-<path matrix="1 0 0 1 32 -160" stroke="black">
-96 816 m
-112 816 l
-</path>
-<path matrix="0.666667 0 0 0.75 58.48 127.903" stroke="black">
-128 832 m
-128 768 l
-224 800 l
-128 832 l
-128 832 l
-</path>
-<text matrix="1 0 0 1 -59 -88.6" transformations="translations" pos="208 816" stroke="black" type="label" width="35.626" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{j21}$</text>
-<path matrix="1 0 0 1 32 0" fill="white" arrow="normal/normal">
-176 728 m
-224 728 l
-</path>
-<path matrix="0.666667 0 0 0.75 58.48 55.903" stroke="black">
-128 832 m
-128 768 l
-224 800 l
-128 832 l
-128 832 l
-</path>
-<text matrix="1 0 0 1 -59 -160.6" transformations="translations" pos="208 816" stroke="black" type="label" width="36.689" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{jh1}$</text>
-<text matrix="1 0 0 1 38.1465 -13.2585" transformations="translations" pos="224 736" stroke="black" type="label" width="21.81" height="15.493" depth="5.17" valign="baseline" size="huge">$\sum$</text>
-<path matrix="1 0 0 1 65.0515 -72.097" stroke="black">
-20 0 0 20 208 800 e
-</path>
-<path stroke="black" arrow="normal/normal">
-208 728 m
-252 728 l
-</path>
-<path stroke="black" arrow="normal/normal">
-208 784 m
-224 784 l
-272 748 l
-</path>
-<path stroke="black" arrow="normal/normal">
-208 656 m
-224 656 l
-272 708 l
-</path>
-</group>
-<text matrix="1 0 0 1 -165 -445" transformations="translations" pos="420 808" stroke="black" type="label" width="44.943" height="14.118" depth="5.89" valign="baseline" size="huge">$NS_{j1}$</text>
+<text matrix="1 0 0 1 -165 -445" transformations="translations" pos="420 808" stroke="black" type="label" width="46.304" height="14.118" depth="5.89" valign="baseline" size="huge">$NS_{jn}$</text>
 <text matrix="1 0 0 1 -165 -13" transformations="translations" pos="420 808" stroke="black" type="label" width="44.943" height="14.118" depth="5.89" valign="baseline" size="huge">$NS_{j1}$</text>
 <text matrix="1 0 0 1 198.147 -221.258" transformations="translations" pos="224 736" stroke="black" type="label" width="21.81" height="15.493" depth="5.17" valign="baseline" size="huge">$\sum$</text>
 <path matrix="1 0 0 1 225.052 -280.097" stroke="black">
@@ -569,7 +394,7 @@ h
 412 520 l
 </path>
 <text transformations="translations" pos="372 572" stroke="black" type="label" width="0" height="0" depth="0" valign="baseline" size="Large"></text>
-<text matrix="1 0 0 1 -64 -20" transformations="translations" pos="400 548" stroke="black" type="label" width="57.766" height="15.477" depth="5.89" valign="baseline" size="huge">$f_{j2}(\tilde{x}_2)$</text>
+<text matrix="1 0 0 1 -64 -20" transformations="translations" pos="400 548" stroke="black" type="label" width="57.766" height="15.477" depth="5.89" valign="baseline" size="huge">$f_{j2}({x}_2)$</text>
 <group matrix="1 0 0 1 68 -32">
 <text matrix="1 0 0 1 -5.813 2" transformations="translations" pos="352 652" stroke="black" type="label" width="35.626" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{j00}$</text>
 <path matrix="1 0 0 1 4 44" stroke="black">
@@ -590,7 +415,7 @@ h
 <path matrix="1 0 0 1 -22 -16" stroke="black">
 2 0 0 2 32 744 e
 </path>
-<text matrix="1 0 0 1 -19.5095 -24" transformations="translations" pos="20 760" stroke="black" type="label" width="19.019" height="13.555" depth="3.1" valign="baseline" size="huge">$\tilde{x}_1$</text>
+<text matrix="1 0 0 1 -19.5095 -24" transformations="translations" pos="20 760" stroke="black" type="label" width="19.019" height="8.896" depth="3.1" valign="baseline" size="huge">${x}_1$</text>
 <path stroke="black" arrow="normal/normal">
 48 784 m
 64 784 l
@@ -746,12 +571,171 @@ h
 336 296 l
 432 500 l
 </path>
-<text matrix="1 0 0 1 -52 180" transformations="translations" pos="400 548" stroke="black" type="label" width="57.766" height="15.477" depth="5.89" valign="baseline" size="huge">$f_{j1}(\tilde{x}_1)$</text>
-<text matrix="1 0 0 1 -48 -248" transformations="translations" pos="400 548" stroke="black" type="label" width="60.489" height="15.477" depth="5.89" valign="baseline" size="huge">$f_{jn}(\tilde{x}_n)$</text>
+<text matrix="1 0 0 1 -52 180" transformations="translations" pos="400 548" stroke="black" type="label" width="57.766" height="15.477" depth="5.89" valign="baseline" size="huge">$f_{j1}({x}_1)$</text>
+<text matrix="1 0 0 1 -48 -248" transformations="translations" pos="400 548" stroke="black" type="label" width="60.489" height="15.477" depth="5.89" valign="baseline" size="huge">$f_{jn}({x}_n)$</text>
 <path stroke="black" arrow="normal/normal">
 453 520 m
 528 520 l
 </path>
 <text matrix="1 0 0 1 40 -8" transformations="translations" pos="488 536" stroke="black" type="label" width="16.982" height="14.349" depth="5.89" valign="baseline" size="huge">$\hat{y}_j$</text>
+<text matrix="1 0 0 1 31.332 -297.502" transformations="translations" pos="48 816" stroke="black" type="label" width="33.336" height="8.895" depth="5.89" valign="baseline" size="huge">$\mu_{j22}$</text>
+<path matrix="1 0 0 1 32 -296" stroke="black">
+32 832 m
+32 800 l
+96 800 l
+96 832 l
+h
+</path>
+<text matrix="1 0 0 1 31.332 -369.502" transformations="translations" pos="48 816" stroke="black" type="label" width="34.399" height="8.895" depth="5.89" valign="baseline" size="huge">$\mu_{jh2}$</text>
+<path matrix="1 0 0 1 32 -368" stroke="black">
+32 832 m
+32 800 l
+96 800 l
+96 832 l
+h
+</path>
+<path matrix="0.666667 0 0 0.75 58.48 -24.097" stroke="black">
+128 832 m
+128 768 l
+224 800 l
+128 832 l
+128 832 l
+</path>
+<text matrix="1 0 0 1 -59 -240.6" transformations="translations" pos="208 816" stroke="black" type="label" width="35.626" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{j12}$</text>
+<path matrix="1 0 0 1 -22 -448" stroke="black">
+2 0 0 2 32 744 e
+</path>
+<text matrix="1 0 0 1 -19.5095 -456" transformations="translations" pos="20 760" stroke="black" type="label" width="20.38" height="8.896" depth="3.1" valign="baseline" size="huge">${x}_n$</text>
+<path matrix="1 0 0 1 0 -432" stroke="black" arrow="normal/normal">
+48 784 m
+64 784 l
+</path>
+<path matrix="1 0 0 1 0 -432" stroke="black" arrow="normal/normal">
+48 656 m
+64 656 l
+</path>
+<path matrix="1 0 0 1 0 -432" stroke="black" arrow="normal/normal">
+12 728 m
+64 728 l
+</path>
+<path matrix="1 0 0 1 0 -432" stroke="black">
+48 784 m
+48 656 l
+48 656 l
+</path>
+<path matrix="1 0 0 1 0 -432" stroke="black" fill="black">
+2 0 0 2 48 728 e
+</path>
+<path matrix="1 0 0 1 0 -432" stroke="black" dash="dashed">
+32 816 m
+32 624 l
+304 624 l
+304 816 l
+h
+</path>
+<group matrix="1 0 0 1 0 -434">
+<path matrix="1 0 0 1 80 -4" stroke="black" fill="black">
+1 0 0 1 16 704 e
+</path>
+<path matrix="1 0 0 1 80 -9.5" stroke="black" fill="black">
+1 0 0 1 16 704 e
+</path>
+<path matrix="1 0 0 1 80 -15" stroke="black" fill="black">
+1 0 0 1 16 704 e
+</path>
+</group>
+<group matrix="1 0 0 1 80 -434">
+<path matrix="1 0 0 1 80 -4" stroke="black" fill="black">
+1 0 0 1 16 704 e
+</path>
+<path matrix="1 0 0 1 80 -9.5" stroke="black" fill="black">
+1 0 0 1 16 704 e
+</path>
+<path matrix="1 0 0 1 80 -15" stroke="black" fill="black">
+1 0 0 1 16 704 e
+</path>
+</group>
+<path matrix="1 0 0 1 32 -464" stroke="black">
+96 816 m
+112 816 l
+</path>
+<path matrix="1 0 0 1 32 -520" stroke="black">
+96 816 m
+112 816 l
+</path>
+<path matrix="1 0 0 1 32 -592" stroke="black">
+96 816 m
+112 816 l
+</path>
+<path matrix="0.666667 0 0 0.75 58.48 -304.097" stroke="black">
+128 832 m
+128 768 l
+224 800 l
+128 832 l
+128 832 l
+</path>
+<text matrix="1 0 0 1 -59 -520.6" transformations="translations" pos="208 816" stroke="black" type="label" width="36.988" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{j2n}$</text>
+<path matrix="1 0 0 1 32 -432" fill="white" arrow="normal/normal">
+176 728 m
+224 728 l
+</path>
+<path matrix="0.666667 0 0 0.75 58.48 -376.097" stroke="black">
+128 832 m
+128 768 l
+224 800 l
+128 832 l
+128 832 l
+</path>
+<text matrix="1 0 0 1 -59 -592.6" transformations="translations" pos="208 816" stroke="black" type="label" width="38.051" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{jhn}$</text>
+<text matrix="1 0 0 1 38.1465 -445.259" transformations="translations" pos="224 736" stroke="black" type="label" width="21.81" height="15.493" depth="5.17" valign="baseline" size="huge">$\sum$</text>
+<path matrix="1 0 0 1 65.0515 -504.097" stroke="black">
+20 0 0 20 208 800 e
+</path>
+<path matrix="1 0 0 1 0 -432" stroke="black" arrow="normal/normal">
+208 728 m
+252 728 l
+</path>
+<path matrix="1 0 0 1 0 -432" stroke="black" arrow="normal/normal">
+208 784 m
+224 784 l
+272 748 l
+</path>
+<path matrix="1 0 0 1 0 -432" stroke="black" arrow="normal/normal">
+208 656 m
+224 656 l
+272 708 l
+</path>
+<text matrix="1 0 0 1 31.332 -465.502" transformations="translations" pos="48 816" stroke="black" type="label" width="34.698" height="8.895" depth="5.89" valign="baseline" size="huge">$\mu_{j1n}$</text>
+<path matrix="1 0 0 1 32 -464" stroke="black">
+32 832 m
+32 800 l
+96 800 l
+96 832 l
+h
+</path>
+<text matrix="1 0 0 1 31.332 -521.503" transformations="translations" pos="48 816" stroke="black" type="label" width="34.698" height="8.895" depth="5.89" valign="baseline" size="huge">$\mu_{j2n}$</text>
+<path matrix="1 0 0 1 32 -520" stroke="black">
+32 832 m
+32 800 l
+96 800 l
+96 832 l
+h
+</path>
+<text matrix="1 0 0 1 31.332 -593.502" transformations="translations" pos="48 816" stroke="black" type="label" width="35.761" height="8.895" depth="5.89" valign="baseline" size="huge">$\mu_{jhn}$</text>
+<path matrix="1 0 0 1 32 -592" stroke="black">
+32 832 m
+32 800 l
+96 800 l
+96 832 l
+h
+</path>
+<path matrix="0.666667 0 0 0.75 58.48 -248.097" stroke="black">
+128 832 m
+128 768 l
+224 800 l
+128 832 l
+128 832 l
+</path>
+<text matrix="1 0 0 1 -59 -464.6" transformations="translations" pos="208 816" stroke="black" type="label" width="36.988" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{j1n}$</text>
 </page>
 </ipe>

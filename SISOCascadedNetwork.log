@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  1 MAR 2016 16:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  7 MAR 2016 16:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -270,23 +270,183 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen137
 \SOUL@ulht=\dimen138
 )
-(./SISOCascadedNetwork.aux)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/mnsymbol/MnSymbol.sty
+Package: MnSymbol 2007/01/21 v1.4 support for the MnSymbol font
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/eufrak.sty
+Package: eufrak 2009/06/22 v3.00 Euler Fraktur fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuFrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 39.
+)
+LaTeX Info: Redefining \dagger on input line 84.
+LaTeX Info: Redefining \ddagger on input line 84.
+LaTeX Info: Redefining \mathparagraph on input line 84.
+LaTeX Info: Redefining \mathsection on input line 84.
+LaTeX Info: Redefining \mathdollar on input line 84.
+LaTeX Info: Redefining \mathsterling on input line 84.
+LaTeX Info: Redefining \Re on input line 84.
+LaTeX Info: Redefining \Im on input line 84.
+\symMnSyA=\mathgroup4
+\symMnSyB=\mathgroup5
+\symMnSyC=\mathgroup6
+\symMnSyD=\mathgroup7
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 119.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/MnSymbolE/m/n on input line 119.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/MnSymbolE/m/n on input line 119.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 120.
+LaTeX Font Info:    Encoding `OMS' has changed to `U' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 120.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> U/MnSymbolF/m/n on input line 120.
+LaTeX Font Info:    Encoding `OMS' has changed to `U' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 120.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> U/MnSymbolF/m/n on input line 120.
+LaTeX Font Info:    Overwriting symbol font `MnSyA' in version `bold'
+(Font)                  U/MnSymbolA/m/n --> U/MnSymbolA/b/n on input line 121.
+LaTeX Font Info:    Overwriting symbol font `MnSyB' in version `bold'
+(Font)                  U/MnSymbolB/m/n --> U/MnSymbolB/b/n on input line 122.
+LaTeX Font Info:    Overwriting symbol font `MnSyC' in version `bold'
+(Font)                  U/MnSymbolC/m/n --> U/MnSymbolC/b/n on input line 123.
+LaTeX Font Info:    Overwriting symbol font `MnSyD' in version `bold'
+(Font)                  U/MnSymbolD/m/n --> U/MnSymbolD/b/n on input line 124.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/MnSymbolE/m/n --> OMX/MnSymbolE/b/n on input line 1
+25.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  U/MnSymbolF/m/n --> U/MnSymbolF/b/n on input line 126.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 241.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
+(Font)                  OMS/MnSymbolS/m/n --> OMS/MnSymbolS/b/n on input line 2
+41.
+LaTeX Info: Redefining \longrightarrow on input line 548.
+LaTeX Info: Redefining \longleftarrow on input line 549.
+LaTeX Info: Redefining \longleftrightarrow on input line 550.
+LaTeX Info: Redefining \Longrightarrow on input line 551.
+LaTeX Info: Redefining \Longleftarrow on input line 552.
+LaTeX Info: Redefining \Longleftrightarrow on input line 553.
+LaTeX Info: Redefining \longmapsto on input line 554.
+LaTeX Info: Redefining \vdots on input line 868.
+LaTeX Font Info:    Redeclaring math symbol \braceld on input line 1721.
+LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 1722.
+LaTeX Font Info:    Redeclaring math symbol \bracerd on input line 1723.
+LaTeX Font Info:    Redeclaring math symbol \braceru on input line 1724.
+LaTeX Info: Redefining \downbracefill on input line 1799.
+LaTeX Info: Redefining \upbracefill on input line 1800.
+LaTeX Info: Redefining \overbrace on input line 1819.
+LaTeX Info: Redefining \underbrace on input line 1820.
+LaTeX Info: Redefining \surd on input line 1843.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 1845.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 1846.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
+)
+No file SISOCascadedNetwork.aux.
 \openout1 = `SISOCascadedNetwork.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 78.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 78.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -379,67 +539,67 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package color Info: Redefining color shadecolor on input line 79.
-LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 82.
+Package color Info: Redefining color shadecolor on input line 80.
+LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 83.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-Overfull \hbox (49.8138pt too wide) in paragraph at lines 82--83
-[]\T2A/cmtt/m/n/14.4 ## Warning in grepl(db, input): input string 21 is invalid
- in this locale[] 
- []
-
-
-Overfull \hbox (49.8138pt too wide) in paragraph at lines 84--85
+Overfull \hbox (49.8138pt too wide) in paragraph at lines 83--84
 []\T2A/cmtt/m/n/14.4 ## Warning in grepl(db, input): input string 22 is invalid
  in this locale[] 
  []
 
 
-Overfull \hbox (49.8138pt too wide) in paragraph at lines 86--87
+Overfull \hbox (49.8138pt too wide) in paragraph at lines 85--86
 []\T2A/cmtt/m/n/14.4 ## Warning in grepl(db, input): input string 23 is invalid
  in this locale[] 
  []
 
 
-Overfull \hbox (49.8138pt too wide) in paragraph at lines 88--89
-[]\T2A/cmtt/m/n/14.4 ## Warning in grepl(db, input): input string 26 is invalid
+Overfull \hbox (49.8138pt too wide) in paragraph at lines 87--88
+[]\T2A/cmtt/m/n/14.4 ## Warning in grepl(db, input): input string 24 is invalid
  in this locale[] 
  []
 
 
-Overfull \hbox (49.8138pt too wide) in paragraph at lines 90--91
-[]\T2A/cmtt/m/n/14.4 ## Warning in grepl(db, input): input string 31 is invalid
+Overfull \hbox (49.8138pt too wide) in paragraph at lines 89--90
+[]\T2A/cmtt/m/n/14.4 ## Warning in grepl(db, input): input string 27 is invalid
  in this locale[] 
  []
 
 
-Overfull \hbox (20.58034pt too wide) in paragraph at lines 92--93
+Overfull \hbox (49.8138pt too wide) in paragraph at lines 91--92
+[]\T2A/cmtt/m/n/14.4 ## Warning in grepl(db, input): input string 32 is invalid
+ in this locale[] 
+ []
+
+
+Overfull \hbox (20.58034pt too wide) in paragraph at lines 93--94
 []\T2A/cmtt/m/n/14.4 ## Warning in grep("^\\\\bibliography.+", input, value = T
 RUE): input
  []
 
 
-Overfull \hbox (20.58034pt too wide) in paragraph at lines 94--95
+Overfull \hbox (20.58034pt too wide) in paragraph at lines 95--96
 []\T2A/cmtt/m/n/14.4 ## Warning in grep("^\\\\bibliography.+", input, value = T
 RUE): input
  []
 
 
-Overfull \hbox (20.58034pt too wide) in paragraph at lines 96--97
+Overfull \hbox (20.58034pt too wide) in paragraph at lines 97--98
 []\T2A/cmtt/m/n/14.4 ## Warning in grep("^\\\\bibliography.+", input, value = T
 RUE): input
  []
 
 
-Overfull \hbox (20.58034pt too wide) in paragraph at lines 98--99
+Overfull \hbox (20.58034pt too wide) in paragraph at lines 99--100
 []\T2A/cmtt/m/n/14.4 ## Warning in grep("^\\\\bibliography.+", input, value = T
 RUE): input
  []
 
 
-Overfull \hbox (20.58034pt too wide) in paragraph at lines 100--100
+Overfull \hbox (20.58034pt too wide) in paragraph at lines 101--101
 []\T2A/cmtt/m/n/14.4 ## Warning in grep("^\\\\bibliography.+", input, value = T
 RUE): input
  []
@@ -449,157 +609,384 @@ RUE): input
 ]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 1.
 
-Overfull \hbox (1.98187pt too wide) in paragraph at lines 112--113
-[]\T2A/cmr/m/n/14.4 Мабуть най-бiльш вi-до-мою ре-а-лi-за-цi-№ю цьо-го пiд-хо-д
-у № каскадно-кореляцiйi
+Package natbib Warning: Citation `ref44' on page 2 undefined on input line 111.
+
+
+
+Package natbib Warning: Citation `ref45' on page 2 undefined on input line 111.
+
+
+
+Package natbib Warning: Citation `ref46' on page 2 undefined on input line 111.
+
+
+
+Package natbib Warning: Citation `ref47' on page 2 undefined on input line 111.
+
+
+
+Package natbib Warning: Citation `ref48' on page 2 undefined on input line 113.
+
+
+
+Package natbib Warning: Citation `ref49' on page 2 undefined on input line 113.
+
+
+
+Package natbib Warning: Citation `ref50' on page 2 undefined on input line 113.
+
+
+
+Overfull \hbox (5.78783pt too wide) in paragraph at lines 113--114
+[]\T2A/cmr/m/n/14.4 Мабуть, най-бiльш вi-до-мою ре-а-лi-за-цi-№ю цьо-го пiд-хо-
+ду № каскадно-кореляцiйi
  []
 
 [2
 
-] [3] [4] [5] [6] [7] <images/NFN.pdf, id=37, 565.11125pt x 670.505pt>
-File: images/NFN.pdf Graphic file (type pdf)
+]
+Package epstopdf Info: Source file: <images/CasCorLA.eps>
+(epstopdf)                    date: 2016-03-02 15:26:49
+(epstopdf)                    size: 25440 bytes
+(epstopdf)             Output file: <images/CasCorLA-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-03-02 15:29:10
+(epstopdf)                    size: 8235 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/CasCorLA-eps-conver
+ted-to.pdf images/CasCorLA.eps>
+(epstopdf)             \includegraphics on input line 117.
+Package epstopdf Info: Output file is already uptodate.
+ <images/CasCorLA-eps-converted-to.pdf, id=13, 281.05pt x 231.86626pt>
+File: images/CasCorLA-eps-converted-to.pdf Graphic file (type pdf)
 
-<use images/NFN.pdf>
-Package pdftex.def Info: images/NFN.pdf used on input line 296.
-(pdftex.def)             Requested size: 455.625pt x 540.60236pt.
- [8] [9 <./images/NFN.pdf>]
-Overfull \hbox (0.1621pt too wide) in paragraph at lines 323--324
+<use images/CasCorLA-eps-converted-to.pdf>
+Package pdftex.def Info: images/CasCorLA-eps-converted-to.pdf used on input lin
+e 117.
+(pdftex.def)             Requested size: 455.24408pt x 375.60002pt.
+
+
+LaTeX Warning: Reference `fig:CasCorLA' on page 3 undefined on input line 123.
+
+
+Package natbib Warning: Citation `ref48' on page 3 undefined on input line 123.
+
+
+
+Package natbib Warning: Citation `ref51' on page 3 undefined on input line 125.
+
+
+
+Package natbib Warning: Citation `ref52' on page 3 undefined on input line 125.
+
+
+
+Package natbib Warning: Citation `ref53' on page 3 undefined on input line 125.
+
+
+
+Package natbib Warning: Citation `ref54' on page 3 undefined on input line 125.
+
+
+
+Package natbib Warning: Citation `ref55' on page 3 undefined on input line 125.
+
+
+
+Package natbib Warning: Citation `ref56' on page 3 undefined on input line 125.
+
+
+
+Package natbib Warning: Citation `ref57' on page 3 undefined on input line 125.
+
+
+
+Package natbib Warning: Citation `ref58' on page 3 undefined on input line 125.
+
+
+[3 <./images/CasCorLA-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:SISOCascadedNetwork' on page 4 undefined on input
+ line 131.
+
+Package epstopdf Info: Source file: <images/SISOCascadedNetwork.eps>
+(epstopdf)                    date: 2016-03-02 19:22:37
+(epstopdf)                    size: 141624 bytes
+(epstopdf)             Output file: <images/SISOCascadedNetwork-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2016-03-02 19:22:44
+(epstopdf)                    size: 16577 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/SISOCascadedNetwork
+-eps-converted-to.pdf images/SISOCascadedNetwork.eps>
+(epstopdf)             \includegraphics on input line 135.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/SISOCascadedNetwork-eps-converted-to.pdf, id=29, 512.91624pt x 520.9462
+4pt>
+File: images/SISOCascadedNetwork-eps-converted-to.pdf Graphic file (type pdf)
+ <use images/SISOCascadedNetwork-eps-converted-to.pdf>
+Package pdftex.def Info: images/SISOCascadedNetwork-eps-converted-to.pdf used o
+n input line 135.
+(pdftex.def)             Requested size: 455.24408pt x 462.37682pt.
+ [4] [5 <./images/SISOCascadedNetwork-eps-converted-to.pdf>] [6]
+
+LaTeX Warning: Reference `eq:RosenblattLearningCriterion' on page 7 undefined o
+n input line 211.
+
+
+LaTeX Warning: Reference `eq:RosenblattLearningCriterion' on page 7 undefined o
+n input line 224.
+
+
+Package natbib Warning: Citation `ref73' on page 7 undefined on input line 224.
+
+
+[7]
+
+LaTeX Warning: Reference `eq:RosenblattLearningCriterionGradientOptimization' o
+n page 8 undefined on input line 234.
+
+
+LaTeX Warning: Reference `eq:RosenblattLearningCriterion' on page 8 undefined o
+n input line 234.
+
+
+Package natbib Warning: Citation `ref74' on page 8 undefined on input line 254.
+
+
+
+Package natbib Warning: Citation `ref75' on page 8 undefined on input line 254.
+
+
+
+Package natbib Warning: Citation `ref76' on page 8 undefined on input line 254.
+
+
+
+LaTeX Warning: Reference `eq:RosenblattLearningCriterion' on page 8 undefined o
+n input line 254.
+
+
+Package natbib Warning: Citation `ref75' on page 8 undefined on input line 275.
+
+
+[8]
+
+Package natbib Warning: Citation `ref68' on page 9 undefined on input line 277.
+
+
+
+LaTeX Warning: Reference `eq:RosenblattLearningAlgorithm' on page 9 undefined o
+n input line 277.
+
+
+Package natbib Warning: Citation `ref65' on page 9 undefined on input line 292.
+
+
+
+Package natbib Warning: Citation `ref66' on page 9 undefined on input line 292.
+
+
+
+Package natbib Warning: Citation `ref59' on page 9 undefined on input line 302.
+
+
+
+Package natbib Warning: Citation `ref55' on page 9 undefined on input line 302.
+
+
+
+Package natbib Warning: Citation `ref54' on page 9 undefined on input line 302.
+
+
+
+Package natbib Warning: Citation `ref61' on page 9 undefined on input line 302.
+
+
+
+Package natbib Warning: Citation `ref63' on page 9 undefined on input line 302.
+
+
+
+LaTeX Warning: Reference `fig:NFN' on page 9 undefined on input line 302.
+
+[9]
+Package epstopdf Info: Source file: <images/NFN.eps>
+(epstopdf)                    date: 2016-03-07 13:44:43
+(epstopdf)                    size: 97752 bytes
+(epstopdf)             Output file: <images/NFN-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-03-07 13:44:53
+(epstopdf)                    size: 12097 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/NFN-eps-converted-t
+o.pdf images/NFN.eps>
+(epstopdf)             \includegraphics on input line 315.
+Package epstopdf Info: Output file is already uptodate.
+ <images/NFN-eps-converted-to.pdf, id=84, 545.03625pt x 627.34375pt>
+File: images/NFN-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/NFN-eps-converted-to.pdf>
+Package pdftex.def Info: images/NFN-eps-converted-to.pdf used on input line 315
+.
+(pdftex.def)             Requested size: 455.24408pt x 523.98811pt.
+
+
+Package natbib Warning: Citation `ref59' on page 10 undefined on input line 343
+.
+
+
+Overfull \hbox (0.1621pt too wide) in paragraph at lines 343--344
 []\T2A/cmr/m/n/14.4 Тобто не-лi-нiй-нiй си-напс фа-кти-чно № си-сте-мою ви-сно-
 ву-ва-н-ня Така i-Су ено
  []
 
-[10] [11] [12]
-Overfull \hbox (7.28288pt too wide) in paragraph at lines 470--471
+[10] [11 <./images/NFN-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/NFN[2].eps>
+(epstopdf)                    date: 2016-03-07 13:45:54
+(epstopdf)                    size: 114557 bytes
+(epstopdf)             Output file: <images/NFN[2]-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-03-07 13:46:06
+(epstopdf)                    size: 13963 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/NFN[2]-eps-converte
+d-to.pdf images/NFN[2].eps>
+(epstopdf)             \includegraphics on input line 357.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/NFN[2]-eps-converted-to.pdf, id=109, 550.055pt x 621.32124pt>
+File: images/NFN[2]-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/NFN[2]-eps-converted-to.pdf>
+Package pdftex.def Info: images/NFN[2]-eps-converted-to.pdf used on input line 
+357.
+(pdftex.def)             Requested size: 398.33858pt x 449.95811pt.
+
+
+LaTeX Warning: Reference `fig:NFN[2]' on page 12 undefined on input line 362.
+
+
+LaTeX Warning: Reference `fig:CasCorLA' on page 12 undefined on input line 362.
+
+
+
+Package natbib Warning: Citation `ref61' on page 12 undefined on input line 364
+.
+
+
+Package natbib Warning: Citation `ref63' on page 12 undefined on input line 364
+.
+
+[12 <./images/NFN[2]-eps-converted-to.pdf>]
+
+Package natbib Warning: Citation `ref55' on page 13 undefined on input line 389
+.
+
+
+Package natbib Warning: Citation `ref54' on page 13 undefined on input line 403
+.
+
+[13]
+
+LaTeX Warning: Reference `eq:TriangularMembershipFunctions' on page 14 undefine
+d on input line 421.
+
+
+LaTeX Warning: Reference `eq:FirstascadeNeoFuzzyNeuronOutputs' on page 14 undef
+ined on input line 427.
+
+[14]
+
+LaTeX Warning: Reference `eq:RosenblattLearningCriterion' on page 15 undefined 
+on input line 471.
+
+
+Package natbib Warning: Citation `ref70' on page 15 undefined on input line 478
+.
+
+[15]
+
+LaTeX Warning: Reference `eq:NFNSlidingWindowMinimizationSlidingWindow' on page
+ 16 undefined on input line 497.
+
+
+Package natbib Warning: Citation `ref77' on page 16 undefined on input line 497
+.
+
+
+Package natbib Warning: Citation `ref78' on page 16 undefined on input line 497
+.
+
+
+Package natbib Warning: Citation `ref79' on page 16 undefined on input line 497
+.
+
+
+Package natbib Warning: Citation `ref80' on page 16 undefined on input line 497
+.
+
+
+Overfull \hbox (7.28288pt too wide) in paragraph at lines 497--498
 \T2A/cmr/m/n/14.4 екс-по-нен-цiй-но зва-же-ний ре-ку-рен-тний ме-тод най-мен-ши
 х ква-дра-тiв (EWRLSM),
  []
 
-[13]
-Overfull \hbox (14.923pt too wide) in paragraph at lines 472--473
+
+LaTeX Warning: Reference `eq:RosenblattLearningCriterion' on page 16 undefined 
+on input line 499.
+
+
+LaTeX Warning: Reference `eq:CompactLearningCriterion' on page 16 undefined on 
+input line 499.
+
+
+Overfull \hbox (14.923pt too wide) in paragraph at lines 499--500
 []\T2A/cmr/m/n/14.4 При ви-ко-ри-стан-нi кри-те-рiю на-вча-няя з []ре[]-[]гу[]-
 []лю[]-[]ю[]-[]чим[] [][][]па[]-[]ра[]-[]ме[]-[]тром (momentum
  []
 
-[14] [15] [16] [17] [18] (./SISOCascadedNetwork.bbl [19]
-Underfull \hbox (badness 2213) in paragraph at lines 24--31
-[]\OT1/cmr/m/n/14.4 Angelov Pla-men P., Lughofer Ed-win. Data-driven evolv-ing 
-fuzzy
- []
 
+Package natbib Warning: Citation `ref67' on page 16 undefined on input line 512
+.
 
-Underfull \hbox (badness 1490) in paragraph at lines 24--31
-\OT1/cmr/m/n/14.4 sys-tems us-ing eTS and FLEX-FIS: com-par-a-tive anal-y-sis /
-/ Int. J.
- []
+[16]
+Package epstopdf Info: Source file: <images/ENFNSynapse.eps>
+(epstopdf)                    date: 2016-03-07 16:14:36
+(epstopdf)                    size: 105477 bytes
+(epstopdf)             Output file: <images/ENFNSynapse-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-03-07 16:31:39
+(epstopdf)                    size: 12242 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/ENFNSynapse-eps-con
+verted-to.pdf images/ENFNSynapse.eps>
+(epstopdf)             \includegraphics on input line 523.
+Package epstopdf Info: Output file is already uptodate.
+ <images/ENFNSynapse-eps-converted-to.pdf, id=148, 562.1pt x 241.90375pt>
+File: images/ENFNSynapse-eps-converted-to.pdf Graphic file (type pdf)
 
+<use images/ENFNSynapse-eps-converted-to.pdf>
+Package pdftex.def Info: images/ENFNSynapse-eps-converted-to.pdf used on input 
+line 523.
+(pdftex.def)             Requested size: 483.69684pt x 208.16235pt.
+)
+Runaway argument?
+{Синапс розширеного нео-фаззі нейрону $ENS$ \label {fig:ENFNSynapse} \ETC.
+! File ended while scanning use of \@xdblarg.
+<inserted text> 
+                \par 
+<*> SISOCascadedNetwork.tex
+                           
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
 
-Underfull \hbox (badness 1776) in paragraph at lines 24--31
-\OT1/cmr/m/n/14.4 Gen-eral Sys-tems. []  2008. []  Vol. 37, no. 1. []  P. 45--6
-7. []  URL:
- []
+! Emergency stop.
+<*> SISOCascadedNetwork.tex
+                           
+*** (job aborted, no legal \end found)
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--74
-[]\OT1/cmr/m/n/14.4 Bodyanskiy Yev-geniy, Vik-torov Yev-gen. 110 9 -- In-tel-li
--gent
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--74
-\OT1/cmr/m/n/14.4 Pro-cess-ing THE CAS-CADE NEO-FUZZY AR-CHI-TEC-TURE
- []
-
-
-Underfull \hbox (badness 4391) in paragraph at lines 67--74
-\OT1/cmr/m/n/14.4 AND ITS ON-LINE LEARN-ING AL-GO-RITHM. []  2013. []  URL:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--85
-[]\OT1/cmr/m/n/14.4 Bodyanskiy Yev-geniy, Vik-torov Yev-gen, Pliss Iryna. In-te
-r-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--85
-\OT1/cmr/m/n/14.4 na-tional Book Se-ries "In-for-ma-tion Sci-ence and Com-put-i
-ng "
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--85
-\OT1/cmr/m/n/14.4 25 THE CAS-CADE GROW-ING NEU-RAL NET-WORK US-ING
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--85
-\OT1/cmr/m/n/14.4 QUADRATIC NEU-RONS AND ITS LEARN-ING AL-GO-RITHMS
- []
-
-
-Underfull \hbox (badness 5036) in paragraph at lines 77--85
-\OT1/cmr/m/n/14.4 FOR ON-LINE IN-FOR-MA-TION PRO-CESS-ING. []  2013. []  URL:
- []
-
-[20
-
-] [21]
-Underfull \hbox (badness 1609) in paragraph at lines 180--187
-[]\OT1/cmr/m/n/14.4 Lughofer Ed-win. FLEX-FIS: A Ro-bust In-cre-men-tal Learn-i
-ng Ap-
- []
-
-
-Underfull \hbox (badness 1178) in paragraph at lines 180--187
-\OT1/cmr/m/n/14.4 proach for Evolv-ing Takagi-Sugeno Fuzzy Mod-els // IEEE T. F
-uzzy
- []
-
-
-Underfull \hbox (badness 4967) in paragraph at lines 180--187
-\OT1/cmr/m/n/14.4 Sys-tems. []  2008. []  Vol. 16, no. 6. []  P. 1393--1410. []
-  URL:
- []
-
-
-Underfull \hbox (badness 1365) in paragraph at lines 202--206
-[]\OT1/cmr/m/n/14.4 Miki T., (Japan) T. Ya-makawa. Ana-log Im-ple-men-ta-tion o
-f Neo-
- []
-
-[22]
-Underfull \hbox (badness 1902) in paragraph at lines 245--257
-\OT1/cmr/m/n/14.4 tive Noise Can-cel-la-tion For Multi-Sensory Sig-nals. []  20
-01. []  URL:
- []
-
-) [23] (./SISOCascadedNetwork.aux) ) 
+ 
 Here is how much of TeX's memory you used:
- 5152 strings out of 493089
- 71284 string characters out of 6134842
- 160667 words of memory out of 5000000
- 8539 multiletter control sequences out of 15000+600000
- 9954 words of font info for 27 fonts, out of 8000000 for 9000
+ 6957 strings out of 493089
+ 95494 string characters out of 6134842
+ 162235 words of memory out of 5000000
+ 10313 multiletter control sequences out of 15000+600000
+ 14508 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,16n,31p,1456b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/e
-nc/dvips/cm-super/cm-super-t2a.enc}</usr/local/texlive/2015/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm
--super/sfbx1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-s
-uper/sfrm1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super
-/sftt1440.pfb>
-Output written on SISOCascadedNetwork.pdf (23 pages, 929240 bytes).
-PDF statistics:
- 943 PDF objects out of 1000 (max. 8388607)
- 745 compressed objects within 8 object streams
- 0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 38i,16n,31p,1468b,283s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

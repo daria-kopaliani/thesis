@@ -8,7 +8,8 @@
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{color,soul}
 \usepackage{graphicx}
-\graphicspath{ {images/} }
+\usepackage{MnSymbol}
+\graphicspath{{images/}}
 
 
 %\geometry{hmargin={30mm,15mm},lines=29,vcentering}
@@ -36,8 +37,8 @@
   \let\originalright\right
   \renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
   \renewcommand{\right}{\aftergroup\egroup\originalright}
-  \renewcommand{\floatpagefraction}{.8}%
-  \renewcommand{\topfraction}{.75}
+  \renewcommand{\floatpagefraction}{.85}%
+  %\renewcommand{\topfraction}{.8}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
