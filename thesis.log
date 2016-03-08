@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  8 MAR 2016 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  8 MAR 2016 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -567,12 +567,12 @@ LaTeX Warning: Reference `ch:CascadedNeoFuzzySystemWithPoolOptimization' on pag
 e 4 undefined on input line 117.
 
 Package epstopdf Info: Source file: <images/MIMOCcascadeNetworkBuiltOnNFN.eps>
-(epstopdf)                    date: 2016-03-07 18:15:14
-(epstopdf)                    size: 142994 bytes
+(epstopdf)                    date: 2016-03-08 14:23:11
+(epstopdf)                    size: 142750 bytes
 (epstopdf)             Output file: <images/MIMOCcascadeNetworkBuiltOnNFN-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2016-03-07 18:15:24
-(epstopdf)                    size: 16697 bytes
+(epstopdf)                    date: 2016-03-08 14:30:41
+(epstopdf)                    size: 16677 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/MIMOCcascadeNetwork
 BuiltOnNFN-eps-converted-to.pdf images/MIMOCcascadeNetworkBuiltOnNFN.eps>
 (epstopdf)             \includegraphics on input line 123.
@@ -649,7 +649,7 @@ Package epstopdf Info: Source file: <images/MNFN.eps>
 (epstopdf)                    size: 13358 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/MNFN-eps-converted-
 to.pdf images/MNFN.eps>
-(epstopdf)             \includegraphics on input line 381.
+(epstopdf)             \includegraphics on input line 388.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/MNFN-eps-converted-to.pdf, id=147, 556.0775pt x 751.80875pt>
@@ -657,15 +657,15 @@ File: images/MNFN-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/MNFN-eps-converted-to.pdf>
 Package pdftex.def Info: images/MNFN-eps-converted-to.pdf used on input line 38
-1.
+8.
 (pdftex.def)             Requested size: 341.43306pt x 461.6197pt.
  [13] [14 <./images/MNFN-eps-converted-to.pdf>] [15] [16]
-Overfull \hbox (18.69112pt too wide) in paragraph at lines 545--546
+Overfull \hbox (18.69112pt too wide) in paragraph at lines 559--560
 \T2A/cmr/m/n/14.4 будь-якi iн-шi кон-стру-кцiЁ, що ре-а-лi-зу-ють не-лi-нiй-не 
 вiд-обра-же-н-ня []. 
  []
 
-(./thesis.bbl [17]
+[17] (./thesis.bbl [18]
 Underfull \hbox (badness 2213) in paragraph at lines 24--31
 []\OT1/cmr/m/n/14.4 Angelov Pla-men P., Lughofer Ed-win. Data-driven evolv-ing 
 fuzzy
@@ -726,9 +726,9 @@ Underfull \hbox (badness 5036) in paragraph at lines 77--85
 \OT1/cmr/m/n/14.4 FOR ON-LINE IN-FOR-MA-TION PRO-CESS-ING. []  2013. []  URL:
  []
 
-[18
+[19
 
-] [19]
+] [20]
 Underfull \hbox (badness 1609) in paragraph at lines 180--187
 []\OT1/cmr/m/n/14.4 Lughofer Ed-win. FLEX-FIS: A Ro-bust In-cre-men-tal Learn-i
 ng Ap-
@@ -752,13 +752,13 @@ Underfull \hbox (badness 1365) in paragraph at lines 202--206
 f Neo-
  []
 
-[20]
+[21]
 Underfull \hbox (badness 1902) in paragraph at lines 245--257
 \OT1/cmr/m/n/14.4 tive Noise Can-cel-la-tion For Multi-Sensory Sig-nals. []  20
 01. []  URL:
  []
 
-) [21] (./thesis.aux)
+) [22] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -794,10 +794,10 @@ ist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2015/texmf-dist/
 fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2015/texmf-dist/fo
 nts/type1/public/cm-super/sfxc1728.pfb>
-Output written on thesis.pdf (21 pages, 318078 bytes).
+Output written on thesis.pdf (22 pages, 320156 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
+ 258 PDF objects out of 1000 (max. 8388607)
+ 183 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
