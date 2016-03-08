@@ -37,18 +37,18 @@
   \let\originalright\right
   \renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
   \renewcommand{\right}{\aftergroup\egroup\originalright}
-  \renewcommand{\floatpagefraction}{.85}%
-  %\renewcommand{\topfraction}{.8}
+  \renewcommand{\floatpagefraction}{.9}%
+  \renewcommand{\topfraction}{.9}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-<<chapter1, child='SISOCascadedNetwork.Rnw'>>=
-@
-
-%<<chapter2, child='MIMOCascadedNetwork.Rnw'>>=
+%<<chapter1, child='SISOCascadedNetwork.Rnw'>>=
 %@
+
+<<chapter2, child='MIMOCascadedNetwork.Rnw'>>=
+@
 
 %<<chapter3, child='SelfLearningCascadedNetwork.Rnw'>>=
 %@

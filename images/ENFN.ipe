@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70107" creator="Ipe 7.2.2">
-<info created="D:20160307163039" modified="D:20160307163636" title="1"/>
+<info created="D:20160307163039" modified="D:20160307164526" title="1"/>
 <preamble>%%BeginIpePreamble
   \usepackage{amsfonts}
   \newcommand{\R}{\mathbb{R}}
@@ -325,7 +325,7 @@ h
 160 552 l
 h
 </path>
-<text matrix="1 0 0 1 236.947 -23.827" transformations="translations" pos="20 760" stroke="black" type="label" width="38.105" height="9.805" depth="2.15" valign="baseline" size="Large">$ENS_2$</text>
+<text matrix="1 0 0 1 236.947 -23.8275" transformations="translations" pos="20 760" stroke="black" type="label" width="38.105" height="9.805" depth="2.15" valign="baseline" size="Large">$ENS_2$</text>
 <path matrix="1 0 0 1 144 150" stroke="black">
 104 552 m
 104 524 l

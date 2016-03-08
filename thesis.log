@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  7 MAR 2016 16:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  8 MAR 2016 14:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -428,7 +428,11 @@ LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-(./thesis.aux)
+(./thesis.aux
+
+LaTeX Warning: Label `ch:MIMOEvolvingCascadedSystem' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
@@ -555,144 +559,113 @@ File: speciality.20070212N70 (vakthesis)
 
 ]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 1.
-
-Overfull \hbox (5.78783pt too wide) in paragraph at lines 109--110
-[]\T2A/cmr/m/n/14.4 Мабуть, най-бiльш вi-до-мою ре-а-лi-за-цi-№ю цьо-го пiд-хо-
-ду № каскадно-кореляцiйi
- []
-
 [3
 
 ]
-Package epstopdf Info: Source file: <images/CasCorLA.eps>
-(epstopdf)                    date: 2016-03-02 15:26:49
-(epstopdf)                    size: 25440 bytes
-(epstopdf)             Output file: <images/CasCorLA-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-03-02 15:29:10
-(epstopdf)                    size: 8235 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/CasCorLA-eps-conver
-ted-to.pdf images/CasCorLA.eps>
-(epstopdf)             \includegraphics on input line 113.
-Package epstopdf Info: Output file is already uptodate.
- <images/CasCorLA-eps-converted-to.pdf, id=18, 281.05pt x 231.86626pt>
-File: images/CasCorLA-eps-converted-to.pdf Graphic file (type pdf)
 
-<use images/CasCorLA-eps-converted-to.pdf>
-Package pdftex.def Info: images/CasCorLA-eps-converted-to.pdf used on input lin
-e 113.
-(pdftex.def)             Requested size: 455.24408pt x 375.60002pt.
- [4 <./images/CasCorLA-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <images/SISOCascadedNetwork.eps>
-(epstopdf)                    date: 2016-03-02 19:22:37
-(epstopdf)                    size: 141624 bytes
-(epstopdf)             Output file: <images/SISOCascadedNetwork-eps-converted-t
-o.pdf>
-(epstopdf)                    date: 2016-03-02 19:22:44
-(epstopdf)                    size: 16577 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/SISOCascadedNetwork
--eps-converted-to.pdf images/SISOCascadedNetwork.eps>
-(epstopdf)             \includegraphics on input line 131.
+LaTeX Warning: Reference `ch:CascadedNeoFuzzySystemWithPoolOptimization' on pag
+e 4 undefined on input line 117.
+
+Package epstopdf Info: Source file: <images/MIMOCcascadeNetworkBuiltOnNFN.eps>
+(epstopdf)                    date: 2016-03-07 18:15:14
+(epstopdf)                    size: 142994 bytes
+(epstopdf)             Output file: <images/MIMOCcascadeNetworkBuiltOnNFN-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2016-03-07 18:15:24
+(epstopdf)                    size: 16697 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/MIMOCcascadeNetwork
+BuiltOnNFN-eps-converted-to.pdf images/MIMOCcascadeNetworkBuiltOnNFN.eps>
+(epstopdf)             \includegraphics on input line 123.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/SISOCascadedNetwork-eps-converted-to.pdf, id=34, 512.91624pt x 520.9462
-4pt>
-File: images/SISOCascadedNetwork-eps-converted-to.pdf Graphic file (type pdf)
- <use images/SISOCascadedNetwork-eps-converted-to.pdf>
-Package pdftex.def Info: images/SISOCascadedNetwork-eps-converted-to.pdf used o
-n input line 131.
-(pdftex.def)             Requested size: 455.24408pt x 462.37682pt.
- [5] [6 <./images/SISOCascadedNetwork-eps-converted-to.pdf>] [7] [8] [9] [10]
-Package epstopdf Info: Source file: <images/NFN.eps>
-(epstopdf)                    date: 2016-03-07 13:44:43
-(epstopdf)                    size: 97752 bytes
-(epstopdf)             Output file: <images/NFN-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-03-07 13:44:53
-(epstopdf)                    size: 12097 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/NFN-eps-converted-t
-o.pdf images/NFN.eps>
-(epstopdf)             \includegraphics on input line 311.
-Package epstopdf Info: Output file is already uptodate.
+<images/MIMOCcascadeNetworkBuiltOnNFN-eps-converted-to.pdf, id=18, 529.98pt x 5
+47.04375pt>
+File: images/MIMOCcascadeNetworkBuiltOnNFN-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use images/MIMOCcascadeNetworkBuiltOnNFN-eps-converted-to.pdf>
+Package pdftex.def Info: images/MIMOCcascadeNetworkBuiltOnNFN-eps-converted-to.
+pdf used on input line 123.
+(pdftex.def)             Requested size: 426.79134pt x 440.5404pt.
 
-<images/NFN-eps-converted-to.pdf, id=89, 545.03625pt x 627.34375pt>
-File: images/NFN-eps-converted-to.pdf Graphic file (type pdf)
-
-<use images/NFN-eps-converted-to.pdf>
-Package pdftex.def Info: images/NFN-eps-converted-to.pdf used on input line 311
-.
-(pdftex.def)             Requested size: 455.24408pt x 523.98811pt.
- [11 <./images/NFN-eps-converted-to.pdf>]
-Overfull \hbox (0.1621pt too wide) in paragraph at lines 339--340
-[]\T2A/cmr/m/n/14.4 Тобто не-лi-нiй-нiй си-напс фа-кти-чно № си-сте-мою ви-сно-
-ву-ва-н-ня Така i-Су ено
+[4] [5 <./images/MIMOCcascadeNetworkBuiltOnNFN-eps-converted-to.pdf>] [6]
+[7]
+Overfull \hbox (1.49582pt too wide) detected at line 257
+[][]
  []
 
-Package epstopdf Info: Source file: <images/NFN[2].eps>
-(epstopdf)                    date: 2016-03-07 13:45:54
-(epstopdf)                    size: 114557 bytes
-(epstopdf)             Output file: <images/NFN[2]-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-03-07 13:46:06
-(epstopdf)                    size: 13963 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/NFN[2]-eps-converte
-d-to.pdf images/NFN[2].eps>
-(epstopdf)             \includegraphics on input line 353.
+[8]
+Package epstopdf Info: Source file: <images/MIMOCcascadeNetworkBuiltOnNFNOptimi
+zed.eps>
+(epstopdf)                    date: 2016-03-07 21:23:25
+(epstopdf)                    size: 195886 bytes
+(epstopdf)             Output file: <images/MIMOCcascadeNetworkBuiltOnNFNOptimi
+zed-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-03-07 21:43:47
+(epstopdf)                    size: 21701 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/MIMOCcascadeNetwork
+BuiltOnNFNOptimized-eps-converted-to.pdf images/MIMOCcascadeNetworkBuiltOnNFNOp
+timized.eps>
+(epstopdf)             \includegraphics on input line 284.
 Package epstopdf Info: Output file is already uptodate.
-<images/NFN[2]-eps-converted-to.pdf, id=111, 550.055pt x 621.32124pt>
-File: images/NFN[2]-eps-converted-to.pdf Graphic file (type pdf)
 
-<use images/NFN[2]-eps-converted-to.pdf>
-Package pdftex.def Info: images/NFN[2]-eps-converted-to.pdf used on input line 
-353.
-(pdftex.def)             Requested size: 398.33858pt x 449.95811pt.
- [12] [13 <./images/NFN[2]-eps-converted-to.pdf>] [14] [15]
-Overfull \hbox (7.28288pt too wide) in paragraph at lines 493--494
-\T2A/cmr/m/n/14.4 екс-по-нен-цiй-но зва-же-ний ре-ку-рен-тний ме-тод най-мен-ши
-х ква-дра-тiв (EWRLSM),
+<images/MIMOCcascadeNetworkBuiltOnNFNOptimized-eps-converted-to.pdf, id=70, 485
+.815pt x 481.8pt>
+File: images/MIMOCcascadeNetworkBuiltOnNFNOptimized-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use images/MIMOCcascadeNetworkBuiltOnNFNOptimized-eps-converted-to.pdf>
+Package pdftex.def Info: images/MIMOCcascadeNetworkBuiltOnNFNOptimized-eps-conv
+erted-to.pdf used on input line 284.
+(pdftex.def)             Requested size: 455.24408pt x 451.48053pt.
+
+[9] [10 <./images/MIMOCcascadeNetworkBuiltOnNFNOptimized-eps-converted-to.pdf>]
+[11]
+Package epstopdf Info: Source file: <images/MIMOBuiltOnNFNProblem.eps>
+(epstopdf)                    date: 2016-03-08 14:01:40
+(epstopdf)                    size: 170748 bytes
+(epstopdf)             Output file: <images/MIMOBuiltOnNFNProblem-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2016-03-08 14:04:28
+(epstopdf)                    size: 18775 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/MIMOBuiltOnNFNProbl
+em-eps-converted-to.pdf images/MIMOBuiltOnNFNProblem.eps>
+(epstopdf)             \includegraphics on input line 359.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/MIMOBuiltOnNFNProblem-eps-converted-to.pdf, id=113, 561.09625pt x 756.8
+275pt>
+File: images/MIMOBuiltOnNFNProblem-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use images/MIMOBuiltOnNFNProblem-eps-converted-to.pdf>
+Package pdftex.def Info: images/MIMOBuiltOnNFNProblem-eps-converted-to.pdf used
+ on input line 359.
+(pdftex.def)             Requested size: 369.88582pt x 498.90718pt.
+ [12 <./images/MIMOBuiltOnNFNProblem-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/MNFN.eps>
+(epstopdf)                    date: 2016-03-07 22:31:06
+(epstopdf)                    size: 105709 bytes
+(epstopdf)             Output file: <images/MNFN-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-03-07 22:33:20
+(epstopdf)                    size: 13358 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/MNFN-eps-converted-
+to.pdf images/MNFN.eps>
+(epstopdf)             \includegraphics on input line 381.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/MNFN-eps-converted-to.pdf, id=147, 556.0775pt x 751.80875pt>
+File: images/MNFN-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/MNFN-eps-converted-to.pdf>
+Package pdftex.def Info: images/MNFN-eps-converted-to.pdf used on input line 38
+1.
+(pdftex.def)             Requested size: 341.43306pt x 461.6197pt.
+ [13] [14 <./images/MNFN-eps-converted-to.pdf>] [15] [16]
+Overfull \hbox (18.69112pt too wide) in paragraph at lines 545--546
+\T2A/cmr/m/n/14.4 будь-якi iн-шi кон-стру-кцiЁ, що ре-а-лi-зу-ють не-лi-нiй-не 
+вiд-обра-же-н-ня []. 
  []
 
-[16]
-Overfull \hbox (14.923pt too wide) in paragraph at lines 495--496
-[]\T2A/cmr/m/n/14.4 При ви-ко-ри-стан-нi кри-те-рiю на-вча-няя з []ре[]-[]гу[]-
-[]лю[]-[]ю[]-[]чим[] [][][]па[]-[]ра[]-[]ме[]-[]тром (momentum
- []
-
-Package epstopdf Info: Source file: <images/ENFNSynapse.eps>
-(epstopdf)                    date: 2016-03-07 16:14:36
-(epstopdf)                    size: 105477 bytes
-(epstopdf)             Output file: <images/ENFNSynapse-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-03-07 16:31:39
-(epstopdf)                    size: 12242 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/ENFNSynapse-eps-con
-verted-to.pdf images/ENFNSynapse.eps>
-(epstopdf)             \includegraphics on input line 519.
-Package epstopdf Info: Output file is already uptodate.
-<images/ENFNSynapse-eps-converted-to.pdf, id=150, 562.1pt x 241.90375pt>
-File: images/ENFNSynapse-eps-converted-to.pdf Graphic file (type pdf)
-
-<use images/ENFNSynapse-eps-converted-to.pdf>
-Package pdftex.def Info: images/ENFNSynapse-eps-converted-to.pdf used on input 
-line 519.
-(pdftex.def)             Requested size: 455.24408pt x 195.91881pt.
- [17]
-Package epstopdf Info: Source file: <images/ENFN.eps>
-(epstopdf)                    date: 2016-03-07 16:30:47
-(epstopdf)                    size: 81664 bytes
-(epstopdf)             Output file: <images/ENFN-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-03-07 16:35:35
-(epstopdf)                    size: 9569 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/ENFN-eps-converted-
-to.pdf images/ENFN.eps>
-(epstopdf)             \includegraphics on input line 530.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/ENFN-eps-converted-to.pdf, id=154, 334.24875pt x 122.4575pt>
-File: images/ENFN-eps-converted-to.pdf Graphic file (type pdf)
-
-<use images/ENFN-eps-converted-to.pdf>
-Package pdftex.def Info: images/ENFN-eps-converted-to.pdf used on input line 53
-0.
-(pdftex.def)             Requested size: 398.33858pt x 145.95044pt.
- [18 <./images/ENFNSynapse-eps-converted-to.pdf> <./images/ENFN-eps-converted-t
-o.pdf>] [19] [20] [21] [22] (./thesis.bbl [23]
+(./thesis.bbl [17]
 Underfull \hbox (badness 2213) in paragraph at lines 24--31
 []\OT1/cmr/m/n/14.4 Angelov Pla-men P., Lughofer Ed-win. Data-driven evolv-ing 
 fuzzy
@@ -753,9 +726,9 @@ Underfull \hbox (badness 5036) in paragraph at lines 77--85
 \OT1/cmr/m/n/14.4 FOR ON-LINE IN-FOR-MA-TION PRO-CESS-ING. []  2013. []  URL:
  []
 
-[24
+[18
 
-] [25]
+] [19]
 Underfull \hbox (badness 1609) in paragraph at lines 180--187
 []\OT1/cmr/m/n/14.4 Lughofer Ed-win. FLEX-FIS: A Ro-bust In-cre-men-tal Learn-i
 ng Ap-
@@ -779,44 +752,52 @@ Underfull \hbox (badness 1365) in paragraph at lines 202--206
 f Neo-
  []
 
-[26]
+[20]
 Underfull \hbox (badness 1902) in paragraph at lines 245--257
 \OT1/cmr/m/n/14.4 tive Noise Can-cel-la-tion For Multi-Sensory Sig-nals. []  20
 01. []  URL:
  []
 
-) [27] (./thesis.aux) ) 
+) [21] (./thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 7072 strings out of 493089
- 97144 string characters out of 6134842
- 166158 words of memory out of 5000000
- 10410 multiletter control sequences out of 15000+600000
+ 7049 strings out of 493089
+ 96712 string characters out of 6134842
+ 165048 words of memory out of 5000000
+ 10389 multiletter control sequences out of 15000+600000
  18495 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 276i,18n,31p,2724b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsy
-mbol/MnSymbolD.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol
-/MnSymbolF.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnS
-ymbolE.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbo
-lC.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2
-a.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol1
-0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol1
-2.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol7
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on thesis.pdf (27 pages, 331949 bytes).
+ 276i,20n,31p,2000b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/
+usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/
+local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{/usr/loca
+l/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/local/te
+xlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{/usr/local/texliv
+e/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol7.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/cm-super/sfxc1728.pfb>
+Output written on thesis.pdf (21 pages, 318078 bytes).
 PDF statistics:
- 281 PDF objects out of 1000 (max. 8388607)
- 198 compressed objects within 2 object streams
+ 255 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
