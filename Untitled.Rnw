@@ -9,9 +9,6 @@
 \usepackage{color,soul}
 \usepackage{graphicx}
 \usepackage{MnSymbol}
-\usepackage{booktabs}
-\usepackage{multirow}
-\usepackage{tabularx}
 \graphicspath{{images/}}
 
 
@@ -22,17 +19,17 @@
  
 %\DeclareMathSizes{10}{10}{10}{10}
 \begin{document}  
-  \title{Еволюційні нейро-фаззі мережі з каскадною структурою для інтелектуального аналізу данних}
-  \author{Копаліані Дар'я Сергіївна}
-	\supervisor{Бодянський Євгеній Володимирович}{доктор технічних наук, професор}
+  \title{Г…ГўГ®Г«ГѕГ¶ВіГ©Г­Ві Г­ГҐГ©Г°Г®-ГґГ Г§Г§Ві Г¬ГҐГ°ГҐГ¦Ві Г§ ГЄГ Г±ГЄГ Г¤Г­Г®Гѕ Г±ГІГ°ГіГЄГІГіГ°Г®Гѕ Г¤Г«Гї ВіГ­ГІГҐГ«ГҐГЄГІГіГ Г«ГјГ­Г®ГЈГ® Г Г­Г Г«ВіГ§Гі Г¤Г Г­Г­ГЁГµ}
+  \author{ГЉГ®ГЇГ Г«ВіГ Г­Ві Г„Г Г°'Гї Г‘ГҐГ°ГЈВіВїГўГ­Г }
+	\supervisor{ГЃГ®Г¤ГїГ­Г±ГјГЄГЁГ© ВЄГўГЈГҐГ­ВіГ© Г‚Г®Г«Г®Г¤ГЁГ¬ГЁГ°Г®ГўГЁГ·}{Г¤Г®ГЄГІГ®Г° ГІГҐГµГ­ВіГ·Г­ГЁГµ Г­Г ГіГЄ, ГЇГ°Г®ГґГҐГ±Г®Г°}
 	\speciality{05.13.23}
 	\udc{004.032.26}
-	\institution{Харківський національний університет радіоелектроніки}{Харків}
+	\institution{Г•Г Г°ГЄВіГўГ±ГјГЄГЁГ© Г­Г Г¶ВіГ®Г­Г Г«ГјГ­ГЁГ© ГіГ­ВіГўГҐГ°Г±ГЁГІГҐГІ Г°Г Г¤ВіГ®ГҐГ«ГҐГЄГІГ°Г®Г­ВіГЄГЁ}{Г•Г Г°ГЄВіГў}
 	\date{2015}
 	
 	\maketitle
 	
-	% Зміст
+	% Г‡Г¬ВіГ±ГІ
 	\tableofcontents
 	
   \newcommand{\V}[1]{\mathit{#1}}
@@ -47,20 +44,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-<<chapter1, child='Intro.Rnw'>>=
+%<<chapter1, child='SISOCascadedNetwork.Rnw'>>=
+%@
+
+<<chapter2, child='MIMOCascadedNetwork.Rnw'>>=
 @
 
-<<chapter2, child='SISOCascadedNetwork.Rnw'>>=
-@
-
-<<chapter3, child='MIMOCascadedNetwork.Rnw'>>=
-@
-
-<<chapter4, child='SelfLearningCascadedNetwork.Rnw'>>=
-@
-
-<<chapter5, child='Experiments.Rnw'>>=
-@
+%<<chapter3, child='SelfLearningCascadedNetwork.Rnw'>>=
+%@
 
 \bibliographystyle{ugost2008ns}
 \bibliography{references}	
