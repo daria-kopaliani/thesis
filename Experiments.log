@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  31 MAR 2016 15:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  31 MAR 2016 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -740,10 +740,6 @@ Overfull \hbox (22.19191pt too wide) in paragraph at lines 399--400
  [] 
  []
 
-
-LaTeX Warning: Reference `fig:3DClusteredIrisDatasetM12Beta4' on page 12 undefi
-ned on input line 405.
-
 [12 <./images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf>]
 <images/ClusteredIrisDatasetM7Beta5.pdf, id=90, 461.725pt x 461.725pt>
 File: images/ClusteredIrisDatasetM7Beta5.pdf Graphic file (type pdf)
@@ -778,17 +774,53 @@ Package pdftex.def Info: images/3DClusteredIrisDatasetM12Beta4.pdf used on inpu
 t line 449.
 (pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
  [15 <./images/3DClusteredIrisDatasetM7Beta5.pdf>]
+<images/StudentKnowledgeDataSet.pdf, id=119, 461.725pt x 526.96875pt>
+File: images/StudentKnowledgeDataSet.pdf Graphic file (type pdf)
+
+<use images/StudentKnowledgeDataSet.pdf>
+Package pdftex.def Info: images/StudentKnowledgeDataSet.pdf used on input line 
+462.
+(pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
+ [16 <./images/3DClusteredIrisDatasetM12Beta4.pdf>] [17 <./images/StudentKnowle
+dgeDataSet.pdf>]
+<images/3DStudentKnowledgeDataSet.pdf, id=136, 461.725pt x 490.83376pt>
+File: images/3DStudentKnowledgeDataSet.pdf Graphic file (type pdf)
+
+<use images/3DStudentKnowledgeDataSet.pdf>
+Package pdftex.def Info: images/3DStudentKnowledgeDataSet.pdf used on input lin
+e 480.
+(pdftex.def)             Requested size: 461.72388pt x 490.83255pt.
+ [18 <./images/3DStudentKnowledgeDataSet.pdf>]
+<images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=145, 461.725pt x 49
+0.83376pt>
+File: images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf Graphic file (type
+ pdf)
+ <use images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf>
+Package pdftex.def Info: images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf
+ used on input line 490.
+(pdftex.def)             Requested size: 461.72388pt x 490.83255pt.
+
+<images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=146, 461.725pt x 526.
+96875pt>
+File: images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf Graphic file (type p
+df)
+ <use images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf>
+Package pdftex.def Info: images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf u
+sed on input line 500.
+(pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
+ [19 <./images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf>]
 No file Experiments.bbl.
-[16 <./images/3DClusteredIrisDatasetM12Beta4.pdf>] (./Experiments.aux)
+[20 <./images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf>]
+(./Experiments.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7222 strings out of 493089
- 100232 string characters out of 6134842
- 168531 words of memory out of 5000000
- 10535 multiletter control sequences out of 15000+600000
+ 7245 strings out of 493089
+ 101276 string characters out of 6134842
+ 168579 words of memory out of 5000000
+ 10554 multiletter control sequences out of 15000+600000
  21308 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,9n,31p,1012b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -807,10 +839,10 @@ ve/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive
 015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/201
 5/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on Experiments.pdf (16 pages, 508039 bytes).
+Output written on Experiments.pdf (20 pages, 916865 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
+ 207 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

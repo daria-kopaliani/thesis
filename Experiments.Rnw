@@ -345,8 +345,61 @@ max & 0.9731262 & 0.9754579 & 0.9918301 & 0.9762515 \\
 \begin{center}
 \includegraphics{3DClusteredIrisDatasetM12Beta4.pdf}
 \caption{Розкластерований датасет <<Іриси Фішера>> при $m=12$, $\beta=4$ (Точність кластерування $\approx 96\%$)}
-\label{fig:3DClusteredIrisDatasetM12Beta4.pdf}
+\label{fig:3DClusteredIrisDatasetM12Beta4}
 \end{center}
 \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Придумати назву 3}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Наступну серію експериментів було проведено на датасеті <<Знання студентів про електричні машини постійного струму>>.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{StudentKnowledgeDataSet.pdf}
+\caption{Датасет <<Знання студентів про електричні машини постійного струму>>}
+\label{fig:StudentKnowledgeDataSet}
+\end{center}
+\end{figure}
+
+Цей датасет було додано до UCI репозиторію у 2013 році, він містить 403 паттерни, кожен з п'ятьма атрибутами:
+
+\begin{enumerate}
+\item STG: кількість часу, що його витратив(витратила) студент(ка) на навчання цільового матеріалу,
+\item SCG: Кількість повторюваннь навчання цільового матеріалу студентом(студенткою),
+\item STR: Кількість часу, що його використав(використала) студент(ка) на навчання матеріалу, пов'язаного з цільовим матеріалом,
+\item LPR: Оцінка, що її отримав(отримала) студент(ка) на іспиті з предмету, пов'язаного з цільовим предметом,
+\item PEG: Оцінка, що її отримав(отримала) студент(ка) на іспиті з цільового предмету,
+\end{enumerate}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{3DStudentKnowledgeDataSet.pdf}
+\caption{Датасет <<Знання студентів про електричні машини постійного струму>>}
+\label{fig:3DStudentKnowledgeDataSet}
+\end{center}
+\end{figure}
+
+Попарні графіки атрибутів наведено на рис.~\ref{fig:StudentKnowledgeDataSet} та у тримірному просторі на рис.~\ref{fig:3DStudentKnowledgeDataSet}.
+
+\begin{figure}
+\begin{center}
+\includegraphics{3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf}
+\caption{Датасет <<Знання студентів про електричні машини постійного струму>>}
+\label{fig:3DClusterizedStudentKnowledgeDataSetM4Beta2}
+\end{center}
+\end{figure}
+
+Для цього експерименту нейрони-узагальнювачі керувалися рекурентним Ксі-Бені Індексом при визначанні локально-оптимального нейрона (з найлішпшим параметром фаззіфікації) та каскаду (з оптимальною кількістю кластерів).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{ClusterizedStudentKnowledgeDataSetM4Beta2.pdf}
+\caption{Датасет <<Знання студентів про електричні машини постійного струму>>}
+\label{fig:ClusterizedStudentKnowledgeDataSetM4Beta2}
+\end{center}
+\end{figure}
+
+Оптимальне розбиття, що його наведено на рис.\ref{fig:3DClusterizedStudentKnowledgeDataSetM4Beta2} та на рис.\ref{fig:ClusterizedStudentKnowledgeDataSetM4Beta2}, надав другий нейрон третього каскаду з $m=4$, $\beta=2$ з коефіцієнтом Ксі-Бені $0.38155$.
 
 
