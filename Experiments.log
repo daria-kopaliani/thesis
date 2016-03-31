@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  31 MAR 2016 13:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  31 MAR 2016 15:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -740,24 +740,55 @@ Overfull \hbox (22.19191pt too wide) in paragraph at lines 399--400
  [] 
  []
 
-[12 <./images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf>]
-<images/ClusteredIrisDatasetM14Beta4.pdf, id=90, 447.6725pt x 435.6275pt>
-File: images/ClusteredIrisDatasetM14Beta4.pdf Graphic file (type pdf)
 
-<use images/ClusteredIrisDatasetM14Beta4.pdf>
-Package pdftex.def Info: images/ClusteredIrisDatasetM14Beta4.pdf used on input 
-line 409.
-(pdftex.def)             Requested size: 447.6714pt x 435.62643pt.
- [13 <./images/ClusteredIrisDatasetM14Beta4.pdf>] [14] (./Experiments.aux)
+LaTeX Warning: Reference `fig:3DClusteredIrisDatasetM12Beta4' on page 12 undefi
+ned on input line 405.
+
+[12 <./images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf>]
+<images/ClusteredIrisDatasetM7Beta5.pdf, id=90, 461.725pt x 461.725pt>
+File: images/ClusteredIrisDatasetM7Beta5.pdf Graphic file (type pdf)
+
+<use images/ClusteredIrisDatasetM7Beta5.pdf>
+Package pdftex.def Info: images/ClusteredIrisDatasetM7Beta5.pdf used on input l
+ine 410.
+(pdftex.def)             Requested size: 461.72388pt x 461.72388pt.
+
+<images/ClusteredIrisDatasetM12Beta4.pdf, id=91, 461.725pt x 461.725pt>
+File: images/ClusteredIrisDatasetM12Beta4.pdf Graphic file (type pdf)
+
+<use images/ClusteredIrisDatasetM12Beta4.pdf>
+Package pdftex.def Info: images/ClusteredIrisDatasetM12Beta4.pdf used on input 
+line 419.
+(pdftex.def)             Requested size: 461.72388pt x 461.72388pt.
+ [13 <./images/ClusteredIrisDatasetM7Beta5.pdf>] [14 <./images/ClusteredIrisDat
+asetM12Beta4.pdf>]
+<images/3DClusteredIrisDatasetM7Beta5.pdf, id=109, 461.725pt x 526.96875pt>
+File: images/3DClusteredIrisDatasetM7Beta5.pdf Graphic file (type pdf)
+
+<use images/3DClusteredIrisDatasetM7Beta5.pdf>
+Package pdftex.def Info: images/3DClusteredIrisDatasetM7Beta5.pdf used on input
+ line 439.
+(pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
+
+<images/3DClusteredIrisDatasetM12Beta4.pdf, id=110, 461.725pt x 526.96875pt>
+File: images/3DClusteredIrisDatasetM12Beta4.pdf Graphic file (type pdf)
+
+<use images/3DClusteredIrisDatasetM12Beta4.pdf>
+Package pdftex.def Info: images/3DClusteredIrisDatasetM12Beta4.pdf used on inpu
+t line 449.
+(pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
+ [15 <./images/3DClusteredIrisDatasetM7Beta5.pdf>]
+No file Experiments.bbl.
+[16 <./images/3DClusteredIrisDatasetM12Beta4.pdf>] (./Experiments.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7201 strings out of 493089
- 99443 string characters out of 6134842
- 168496 words of memory out of 5000000
- 10518 multiletter control sequences out of 15000+600000
+ 7222 strings out of 493089
+ 100232 string characters out of 6134842
+ 168531 words of memory out of 5000000
+ 10535 multiletter control sequences out of 15000+600000
  21308 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,9n,31p,1012b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -776,10 +807,10 @@ ve/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive
 015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/201
 5/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on Experiments.pdf (14 pages, 386746 bytes).
+Output written on Experiments.pdf (16 pages, 508039 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 170 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -48,25 +48,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-<<include = FALSE>>=
-options(device = "cairo_pdf")
-@
 <<chapter1, child='Intro.Rnw'>>=
 @
 
-%<<chapter2, child='SISOCascadedNetwork.Rnw'>>=
-%@
+<<chapter2, child='SISOCascadedNetwork.Rnw'>>=
+@
 
-%<<chapter3, child='MIMOCascadedNetwork.Rnw'>>=
-%@
+<<chapter3, child='MIMOCascadedNetwork.Rnw'>>=
+@
 
-%<<chapter4, child='SelfLearningCascadedNetwork.Rnw'>>=
-%@
+<<chapter4, child='SelfLearningCascadedNetwork.Rnw'>>=
+@
 
 <<chapter5, child='Experiments.Rnw'>>=
 @
 
 \bibliographystyle{ugost2008ns}
-%\bibliography{references}	
+\bibliography{references}	
 
 \end{document}
