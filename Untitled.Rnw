@@ -1,4 +1,4 @@
-\documentclass{vakthesis}
+\documentclass{article}
 \usepackage[T2A]{fontenc}
 \usepackage[cp1251]{inputenc}
 \usepackage[english,russian,ukrainian]{babel}
@@ -9,6 +9,9 @@
 \usepackage{color,soul}
 \usepackage{graphicx}
 \usepackage{MnSymbol}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
 \graphicspath{{images/}}
 
 
@@ -19,17 +22,11 @@
  
 %\DeclareMathSizes{10}{10}{10}{10}
 \begin{document}  
-  \title{Г…ГўГ®Г«ГѕГ¶ВіГ©Г­Ві Г­ГҐГ©Г°Г®-ГґГ Г§Г§Ві Г¬ГҐГ°ГҐГ¦Ві Г§ ГЄГ Г±ГЄГ Г¤Г­Г®Гѕ Г±ГІГ°ГіГЄГІГіГ°Г®Гѕ Г¤Г«Гї ВіГ­ГІГҐГ«ГҐГЄГІГіГ Г«ГјГ­Г®ГЈГ® Г Г­Г Г«ВіГ§Гі Г¤Г Г­Г­ГЁГµ}
-  \author{ГЉГ®ГЇГ Г«ВіГ Г­Ві Г„Г Г°'Гї Г‘ГҐГ°ГЈВіВїГўГ­Г }
-	\supervisor{ГЃГ®Г¤ГїГ­Г±ГјГЄГЁГ© ВЄГўГЈГҐГ­ВіГ© Г‚Г®Г«Г®Г¤ГЁГ¬ГЁГ°Г®ГўГЁГ·}{Г¤Г®ГЄГІГ®Г° ГІГҐГµГ­ВіГ·Г­ГЁГµ Г­Г ГіГЄ, ГЇГ°Г®ГґГҐГ±Г®Г°}
-	\speciality{05.13.23}
-	\udc{004.032.26}
-	\institution{Г•Г Г°ГЄВіГўГ±ГјГЄГЁГ© Г­Г Г¶ВіГ®Г­Г Г«ГјГ­ГЁГ© ГіГ­ВіГўГҐГ°Г±ГЁГІГҐГІ Г°Г Г¤ВіГ®ГҐГ«ГҐГЄГІГ°Г®Г­ВіГЄГЁ}{Г•Г Г°ГЄВіГў}
-	\date{2015}
+  \title{Еволюційні нейро-фаззі мережі з каскадною структурою для інтелектуального аналізу данних}
+  \author{Копаліані Дар'я Сергіївна}
+  
 	
-	\maketitle
-	
-	% Г‡Г¬ВіГ±ГІ
+	% Зміст
 	\tableofcontents
 	
   \newcommand{\V}[1]{\mathit{#1}}
@@ -44,16 +41,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%<<chapter1, child='SISOCascadedNetwork.Rnw'>>=
-%@
+\begin{tabular}{rcccc}
+& $\beta=2$ & $\beta=2$ & $\beta=2$ & $\beta=2$ \\ \hline
+avg & 0.8681836 & 0.8659319 & 0.8187704 & 0.8095087 \\
+min & 0.7475948 & 0.7156541 & 0.6296959 & 0.6141553 \\
+max & 0.8681836 & 0.9214113 & 0.950829 & 0.9444444 \\
+\end{tabular}
 
-<<chapter2, child='MIMOCascadedNetwork.Rnw'>>=
-@
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics{Rplot12}
+\caption{Точність кластерування від кількості кластерів та параметру фаззіфіказії}
+\label{fig:clustering07}
+\end{center}
+\end{figure}
 
-%<<chapter3, child='SelfLearningCascadedNetwork.Rnw'>>=
-%@
 
-\bibliographystyle{ugost2008ns}
-\bibliography{references}	
 
 \end{document}
