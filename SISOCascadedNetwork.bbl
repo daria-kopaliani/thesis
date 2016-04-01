@@ -1,0 +1,296 @@
+\begin{thebibliography}{}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\selectlanguage{#1}\fi}
+\providecommand*{\href}[2]{{\small #2}}
+\providecommand*{\url}[1]{{\small #1}}
+\providecommand*{\BibUrl}[1]{\url{#1}}
+\providecommand{\BibAnnote}[1]{}
+\providecommand*{\BibEmph}[1]{#1}
+\ProvideTextCommandDefault{\cyrdash}{\hbox to.8em{--\hss--}}
+\providecommand*{\BibDash}{\ifdim\lastskip>0pt\unskip\nobreak\hskip.2em\fi
+\cyrdash\hskip.2em\ignorespaces}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[Angelov and Filev(2004)]{ref78}\selectlanguageifdefined{english}
+\BibEmph{Angelov~Plamen~P, Filev~Dimitar~P}. An approach to online
+  identification of Takagi-Sugeno fuzzy models~// \BibEmph{Systems, Man, and
+  Cybernetics, Part B: Cybernetics, IEEE Transactions on}. \BibDash
+\newblock 2004. \BibDash
+\newblock Vol.~34, no.~1. \BibDash
+\newblock P.~484--498.
+
+\bibitem[Angelov and Lughofer(2008)]{ref79}\selectlanguageifdefined{english}
+\BibEmph{Angelov~Plamen~P., Lughofer~Edwin}. Data-driven evolving fuzzy systems
+  using e{TS} and {FLEXFIS}: comparative analysis~// \BibEmph{Int. J. General
+  Systems}. \BibDash
+\newblock 2008. \BibDash
+\newblock Vol.~37, no.~1. \BibDash
+\newblock P.~45--67. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1080/03081070701500059}.
+
+\bibitem[Bodyanskiy et~al.(2011{\natexlab{a}})Bodyanskiy, Grimm, and
+  Teslenko]{ref58}\selectlanguageifdefined{english}
+\BibEmph{Bodyanskiy~Yevgeniy, Grimm~Paul, Teslenko~Nataliya}. Evolving cascaded
+  neural network based on multidimensional Epanechnikov's kernels and its
+  learning algorithm~// \BibEmph{Int. J. Information Technologies and
+  Knowledge}. \BibDash
+\newblock 2011{\natexlab{a}}. \BibDash
+\newblock Vol.~5, no.~1. \BibDash
+\newblock P.~25--30.
+
+\bibitem[Bodyanskiy et~al.(2011{\natexlab{b}})Bodyanskiy, Kharchenko, and
+  Vynokurova]{ref57}\selectlanguageifdefined{english}
+\BibEmph{Bodyanskiy~Yevgeniy, Kharchenko~Oleksandra, Vynokurova~Olena}. Hybrid
+  cascade neural network based on wavelet-neuron~// \BibEmph{Information
+  Theories and Application}. \BibDash
+\newblock 2011{\natexlab{b}}. \BibDash
+\newblock Vol.~18, no.~4. \BibDash
+\newblock P.~335--343.
+
+\bibitem[Bodyanskiy et~al.(2003)Bodyanskiy, Kokshenev, and
+  Kolodyazhniy]{ref68}\selectlanguageifdefined{english}
+\BibEmph{Bodyanskiy~Yevgeniy, Kokshenev~Illya, Kolodyazhniy~Vitaliy}. An
+  adaptive learning algorithm for a neo fuzzy neuron.~// EUSFLAT Conf. \BibDash
+\newblock 2003. \BibDash
+\newblock P.~375--379.
+
+\bibitem[Bodyanskiy and Viktorov(2009)]{ref55}\selectlanguageifdefined{english}
+\BibEmph{Bodyanskiy~Yevgeniy, Viktorov~Yevgen}. The cascaded neo-fuzzy
+  architecture using cubic-spline activation functions~// \BibEmph{Inf Theor
+  Appl}. \BibDash
+\newblock 2009. \BibDash
+\newblock Vol.~16, no.~3. \BibDash
+\newblock P.~245--259.
+
+\bibitem[Bodyanskiy and Viktorov(2013)]{ref52}\selectlanguageifdefined{en}
+\BibEmph{Bodyanskiy~Yevgeniy, Viktorov~Yevgen}. 110 9 -- Intelligent Processing
+  {THE} {CASCADE} {NEO}-{FUZZY} {ARCHITECTURE} {AND} {ITS} {ONLINE} {LEARNING}
+  {ALGORITHM}. \BibDash
+\newblock 2013. \BibDash
+\newblock URL:
+  \BibUrl{http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.386.7492}.
+  \BibAnnote{The Pennsylvania State University CiteSeerX Archives.}
+
+\bibitem[Bodyanskiy et~al.(2013)Bodyanskiy, Viktorov and
+  Pliss]{ref53}\selectlanguageifdefined{en}
+\BibEmph{Bodyanskiy~Yevgeniy, Viktorov~Yevgen, Pliss~Iryna}. International Book
+  Series {"}Information Science and Computing {"} 25 {THE} {CASCADE} {GROWING}
+  {NEURAL} {NETWORK} {USING} {QUADRATIC} {NEURONS} {AND} {ITS} {LEARNING}
+  {ALGORITHMS} {FOR} {ON}-{LINE} {INFORMATION} {PROCESSING}. \BibDash
+\newblock 2013. \BibDash
+\newblock URL:
+  \BibUrl{http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.386.9313}.
+  \BibAnnote{The Pennsylvania State University CiteSeerX Archives.}
+
+\bibitem[Bodyanskiy et~al.(1986)Bodyanskiy, Pliss, and
+  Solovyova]{ref70}\selectlanguageifdefined{english}
+\BibEmph{Bodyanskiy~Ye~V, Pliss~IP, Solovyova~T}. Multistep optimal predictors
+  of multidimensional non-stationary stochastic processes~// \BibEmph{Doklady
+  AN USSR, series A}. \BibDash
+\newblock 1986. \BibDash
+\newblock Vol.~12. \BibDash
+\newblock P.~47--49.
+
+\bibitem[Chen and Chang(1995)]{ref74}\selectlanguageifdefined{english}
+\BibEmph{Chen~L~H, Chang~S}. An adaptive learning algorithm for principal
+  component analysis.~// \BibEmph{IEEE transactions on neural networks / a
+  publication of the IEEE Neural Networks Council}. \BibDash
+\newblock 1995. \BibDash
+\newblock Vol.~6, no.~5. \BibDash
+\newblock P.~1255--63.
+
+\bibitem[Cichocki and Unbehauen(1998)]{ref44}\selectlanguageifdefined{english}
+\BibEmph{Cichocki~A., Unbehauen~R.} Neural networks for optimization and signal
+  processing~// \BibEmph{Journal of Signal Processing}. \BibDash
+\newblock 1998. \BibDash
+\newblock Vol.~2. \BibDash
+\newblock P.~62--63.
+
+\bibitem[Fahlman and Lebiere(1990)]{ref48}\selectlanguageifdefined{english}
+\BibEmph{Fahlman~Scott~E., Lebiere~Christian}. The cascade-correlation learning
+  architecture~// Advances in Neural Information Processing Systems 2. \BibDash
+\newblock Morgan Kaufmann, 1990. \BibDash
+\newblock P.~524--532.
+
+\bibitem[Haykin(1994)]{ref45}\selectlanguageifdefined{english}
+\BibEmph{Haykin~S.} Neural Networks: a Comprehensive Foundation. \BibDash
+\newblock New York, NY~: Macmillan, 1994.
+
+\bibitem[Bodyanskiy et~al.(2008)Bodyanskiy, Dolotov, Pliss, and
+  Viktorov]{ref51}\selectlanguageifdefined{english}
+\BibEmph{Bodyanskiy~Yevgeniy, Dolotov~Artem, Pliss~Iryna, Viktorov~Yevgen}.
+  International Book Series "Information Science and Computing" 13 THE CASCADE
+  ORTHOGONAL NEURAL NETWORK. \BibDash
+\newblock 2008.
+
+\bibitem[Jang et~al.(1997)Jang, Sun, and
+  Mizutani]{ref59}\selectlanguageifdefined{english}
+\BibEmph{Jang~Jyh-Shing~Roger, Sun~Chuen-Tsai, Mizutani~Eiji}. Neuro-fuzzy and
+  soft computing: a computational approach to learning and machine
+  intelligence. MATLAB curriculum series. \BibDash
+\newblock pub-PH:adr~: Pren{\-}tice-Hall, 1997. \BibDash
+\newblock P.~xxvi + 614. \BibDash
+\newblock
+  ISBN:~\href{http://isbndb.com/search-all.html?kw=0-13-261066-3}{0-13-261066-3}.
+
+\bibitem[Kaczmarz(1993)]{ref66}\selectlanguageifdefined{english}
+\BibEmph{Kaczmarz~S.} Approximate solution of systems of linear equations~//
+  \BibEmph{Int. J. Control,}. \BibDash
+\newblock 1993. \BibDash
+\newblock Vol. vol. 53. \BibDash
+\newblock P.~1269--1271.
+
+\bibitem[Kasabov(2007)]{ref46}\selectlanguageifdefined{english}
+\BibEmph{Kasabov~Nikola}. Evolving connectionist systems - the knowledge
+  engineering approach (2. ed.). \BibDash
+\newblock Springer, 2007. \BibDash
+\newblock P.~I--XXI, 1--457. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1007/978-1-84628-347-5}.
+
+\bibitem[Kasabov and Song(2002)]{ref77}\selectlanguageifdefined{english}
+\BibEmph{Kasabov~Nikola~K, Song~Qun}. DENFIS: dynamic evolving neural-fuzzy
+  inference system and its application for time-series prediction~//
+  \BibEmph{Fuzzy Systems, IEEE Transactions on}. \BibDash
+\newblock 2002. \BibDash
+\newblock Vol.~10, no.~2. \BibDash
+\newblock P.~144--154.
+
+\bibitem[Kolodyazhniy and
+  Bodyanskiy(2010)]{ref54}\selectlanguageifdefined{english}
+\BibEmph{Kolodyazhniy~V, Bodyanskiy~Ye}. Cascaded multiresolution spline-based
+  fuzzy neural network~// \BibEmph{Proc. Int. Symp. on Evolving Intelligent
+  Systems}. \BibDash
+\newblock 2010. \BibDash
+\newblock P.~26--29.
+
+\bibitem[Kruschke and Movellan(1991)]{ref73}\selectlanguageifdefined{english}
+\BibEmph{Kruschke~John~K, Movellan~Javier~R}. Benefits of gain: Speeded
+  learning and minimal hidden layers in back-propagation networks~//
+  \BibEmph{Systems, Man and Cybernetics, IEEE Transactions on}. \BibDash
+\newblock 1991. \BibDash
+\newblock Vol.~21, no.~1. \BibDash
+\newblock P.~273--280.
+
+\bibitem[Ljung(1999)]{ref67}\selectlanguageifdefined{english}
+\BibEmph{Ljung~Lennart}. System Identification: Theory for the User. \BibDash
+\newblock Prentice-Hall, Inc., 1999.
+
+\bibitem[Lughofer(2008)]{ref80}\selectlanguageifdefined{english}
+\BibEmph{Lughofer~Edwin}. {FLEXFIS}: {A} Robust Incremental Learning Approach
+  for Evolving Takagi-Sugeno Fuzzy Models~// \BibEmph{IEEE T. Fuzzy Systems}.
+  \BibDash
+\newblock 2008. \BibDash
+\newblock Vol.~16, no.~6. \BibDash
+\newblock P.~1393--1410. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1109/TFUZZ.2008.925908}.
+
+\bibitem[Lughofer(2011)]{ref47}\selectlanguageifdefined{english}
+\BibEmph{Lughofer~Edwin}. Evolving Fuzzy Systems - Methodologies, Advanced
+  Concepts and Applications. \BibDash
+\newblock Springer, 2011. \BibDash
+\newblock Vol.~266 of \BibEmph{Studies in Fuzziness and Soft Computing}.
+  \BibDash
+\newblock P.~1--410. \BibDash
+\newblock
+  ISBN:~\href{http://isbndb.com/search-all.html?kw=978-3-642-18086-6}{978-3-642-18086-6}.
+  \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1007/978-3-642-18087-3;
+  http://dx.doi.org/10.1007/978-3-642-18087-3}.
+
+\bibitem[Miki and (Japan)(1999)]{ref63}\selectlanguageifdefined{english}
+\BibEmph{Miki~T., (Japan)~T.~Yamakawa}. Analog Implementation of Neo-Fuzzy
+  Neuron and Its On-board Learning. \BibDash
+\newblock WSEAS, 1999. \BibDash
+\newblock URL: \BibUrl{http://www.worldses.org/online/}.
+
+\bibitem[Nechyba and Xu(1997)]{ref50}\selectlanguageifdefined{english}
+\BibEmph{Nechyba~Michael~C., Xu~Yangsheng}. Cascade Neural Networks with
+  Node-Decoupled Extended Kalman Filtering. \BibDash
+\newblock 1997.
+
+\bibitem[Otto et~al.(2003)Otto, Bodyanskiy, and
+  Kolodyazhniy]{ref81}\selectlanguageifdefined{english}
+\BibEmph{Otto~Peter, Bodyanskiy~Yevgeniy, Kolodyazhniy~Vitaliy}. A new learning
+  algorithm for a forecasting neuro-fuzzy network~// \BibEmph{Integrated
+  Computer-Aided Engineering}. \BibDash
+\newblock 2003. \BibDash
+\newblock Vol.~10, no.~4. \BibDash
+\newblock P.~399--409. \BibDash
+\newblock URL:
+  \BibUrl{http://content.iospress.com/articles/integrated-computer-aided-engineering/ica00163}.
+
+\bibitem[Prechelt(1997)]{ref49}\selectlanguageifdefined{english}
+\BibEmph{Prechelt~L.} Investigation of the CasCor Family of Learning
+  Algorithms~// \BibEmph{Neural Networks}. \BibDash
+\newblock 1997. \BibDash
+\newblock Vol.~10, no.~5. \BibDash
+\newblock P.~885--896.
+
+\bibitem[Silva and Almeida(1990)]{ref75}\selectlanguageifdefined{english}
+\BibEmph{Silva~F.~M., Almeida~L.~B.} Speeding up back-propagation~// Advanced
+  Neural Computers~/ Ed.\ by\ R.~Eckmiller. \BibDash
+\newblock Amsterdam~: Elsevier, 1990. \BibDash
+\newblock P.~151--158.
+
+\bibitem[Veitch and Holmes(1991)]{ref76}\selectlanguageifdefined{english}
+\BibEmph{Veitch~A.~C., Holmes~G.} A Modified Quickprop Algorithm~//
+  \BibEmph{Neural Computation}. \BibDash
+\newblock 1991. \BibDash
+\newblock Vol.~3, no.~3. \BibDash
+\newblock P.~310--311.
+
+\bibitem[Vorobyov et~al.(2001)Vorobyov, Cichocki, and
+  Bodyanskiy]{ref82}\selectlanguageifdefined{english}
+\BibEmph{Vorobyov~Sergiy~A., Cichocki~Andrzej, Bodyanskiy~Yevgeniy~V.} Adaptive
+  Noise Cancellation For Multi-Sensory Signals. \BibDash
+\newblock 2001. \BibDash
+\newblock URL: \BibUrl{http://citeseer.ist.psu.edu/404753.html}.
+  \BibAnnote{Sergiy A. Vorobyov (Laboratory for Advanced Brain Signal
+  Processing , Brain Science Institute; The Institute of Physical and Chemical
+  Research (RIKEN); 2-1 Hirosawa , Wako-shi , Saitama 351-0198 JAPAN); Andrzej
+  Cichocki (Laboratory for Advanced Brain Signal Processing , Brain Science
+  Institute; The Institute of Physical and Chemical Research (RIKEN); 2-1
+  Hirosawa , Wako-shi , Saitama 351-0198 JAPAN); Yevgeniy V. Bodyanskiy
+  (Control Systems Research Laboratory; Kharkiv State Technical University of
+  Radioelectronics; 14 Lenin Ave . , Kharkiv 61166 UKRAINE);.}
+
+\bibitem[Wang(1994)]{ref84}\selectlanguageifdefined{english}
+\BibEmph{Wang~Li-Xin}. Adaptive fuzzy systems and control - design and
+  stability analysis. \BibDash
+\newblock Prentice Hall, 1994. \BibDash
+\newblock P.~I--XVII, 1--232. \BibDash
+\newblock
+  ISBN:~\href{http://isbndb.com/search-all.html?kw=978-0-13-099631-2}{978-0-13-099631-2}.
+
+\bibitem[Wang and Mendel(1992)]{ref83}\selectlanguageifdefined{english}
+\BibEmph{Wang~Li-Xin, Mendel~Jerry~M.} Fuzzy basis functions, universal
+  approximation, and orthogonal least-squares learning~// \BibEmph{IEEE
+  Transactions on Neural Networks}. \BibDash
+\newblock 1992. \BibDash
+\newblock Vol.~3, no.~5. \BibDash
+\newblock P.~807--814. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1109/72.159070}.
+
+\bibitem[Widrow and Hoff(1960)]{ref65}\selectlanguageifdefined{english}
+\BibEmph{Widrow~B., Hoff~M.~E.} Adaptive Switching Circuits~// Proceedings
+  WESCON. \BibDash
+\newblock 1960. \BibDash
+\newblock P.~96--104.
+
+\bibitem[Yamakawa and Tomoda(1992)]{ref61}\selectlanguageifdefined{english}
+\BibEmph{Yamakawa~T., Tomoda~S.} A Neo Fuzzy Neuron and its Applications to
+  System Identification and Prediction of the System Behaivour~// Proc.\ 2nd
+  Int.\ Conf.\ on Fuzzy Logic and Neural Networks (IIZUKA'92). \BibDash
+\newblock Iizuka, 1992. \BibDash
+\newblock P.~477--483.
+
+\bibitem[Ye et~al.(2011)Ye, Vynokurova, and
+  Teslenko]{ref56}\selectlanguageifdefined{english}
+\BibEmph{Ye~Bodyanskiy, Vynokurova~E, Teslenko~N}. Cascade
+  GMDH-wavelet-neuro-fuzzy network~// \BibEmph{Proc. of the 4th Intern.
+  Workshop on Inductive Modelling IWIM 2011}. \BibDash
+\newblock 2011. \BibDash
+\newblock P.~22--30.
+
+\end{thebibliography}
