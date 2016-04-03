@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  4 APR 2016 01:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  4 APR 2016 02:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -656,13 +656,13 @@ File: speciality.20070212N70 (vakthesis)
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./thesis.toc
-Overfull \hbox (9.86017pt too wide) in paragraph at lines 16--16
+Overfull \hbox (9.86017pt too wide) in paragraph at lines 15--15
  [][] []\T2A/cmr/m/n/14.4 Деструктивнийй пiд-хiд до на-ла-шту-ва-н-ня ар-хi-те-
 кту-ри ней- 
  []
 
 
-Overfull \hbox (10.62245pt too wide) in paragraph at lines 17--17
+Overfull \hbox (10.62245pt too wide) in paragraph at lines 16--16
  [][] []\T2A/cmr/m/n/14.4 Конструктивний пiд-хiд до на-ла-шту-ва-н-ня ар-хi-те-
 кту-ри ней- 
  []
@@ -672,7 +672,7 @@ Overfull \hbox (10.62245pt too wide) in paragraph at lines 17--17
 ]
 
 LaTeX Warning: Reference `ch:evolvingClusteringSystem' on page 3 undefined on i
-nput line 43.
+nput line 42.
 
 [3])
 \tf@toc=\write3
@@ -689,6 +689,12 @@ Package natbib Warning: Citation `ref150' on page 5 undefined on input line 128
 Overfull \hbox (1.41989pt too wide) in paragraph at lines 158--159
  \T2A/cmr/bx/n/14.4 На-у-ко-ва но-ви-зна отри-ма-них ре-зуль-та-тiв.[] \T2A/cmr
 /m/n/14.4 До но-вих, одер-жа-них осо-
+ []
+
+
+Overfull \hbox (1.76295pt too wide) in paragraph at lines 164--165
+\T2A/cmr/m/n/14.4 них з ав-то-ма-ти-чним ви-зна-че-н-ням локально-оптимальноЁ к
+iль-ко-стi кла-
  []
 
 [7]
@@ -798,60 +804,70 @@ Package natbib Warning: Citation `ref163' on page 8 undefined on input line 188
 
 [8] [9] [10]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 1.
-
-Package natbib Warning: Citation `ref123' on page 11 undefined on input line 20
-7.
-
 [11
 
-] [12] [13] [14] [15] [16]
+] <images/SupervisedLearning.png, id=44, 476.5002pt x 248.6088pt>
+File: images/SupervisedLearning.png Graphic file (type png)
 
-Package natbib Warning: Citation `ref86' on page 17 undefined on input line 266
+<use images/SupervisedLearning.png>
+Package pdftex.def Info: images/SupervisedLearning.png used on input line 219.
+(pdftex.def)             Requested size: 476.49902pt x 248.60817pt.
+ [12 <./images/SupervisedLearning.png>]
+<images/UnsupervisedLearning.png, id=54, 347.3778pt x 170.5572pt>
+File: images/UnsupervisedLearning.png Graphic file (type png)
+
+<use images/UnsupervisedLearning.png>
+Package pdftex.def Info: images/UnsupervisedLearning.png used on input line 233
+.
+(pdftex.def)             Requested size: 347.37695pt x 170.55678pt.
+ [13 <./images/UnsupervisedLearning.png>]
+
+Package natbib Warning: Citation `ref86' on page 14 undefined on input line 251
 .
 
 
-Package natbib Warning: Citation `ref87' on page 17 undefined on input line 266
+Package natbib Warning: Citation `ref87' on page 14 undefined on input line 251
 .
 
-
-Overfull \hbox (6.4973pt too wide) in paragraph at lines 284--285
+[14]
+Overfull \hbox (6.4973pt too wide) in paragraph at lines 269--270
 \T2A/cmr/m/n/14.4 обро-блю-ва-ти ве-ли-кi ма-си-ви да-них ве-ли-коЁ роз-мiр-но-
 стi, якi мо-жуть ма-ти пропу-
  []
 
-[17]
-Overfull \hbox (5.55807pt too wide) in paragraph at lines 290--291
+[15]
+Overfull \hbox (5.55807pt too wide) in paragraph at lines 275--276
 []\T2A/cmr/m/n/14.4 деструктивний пiд-хiд: за осно-ву бе-ре-ться за-зда-ле-гiть
  на-дли-шко-во скла-
  []
 
-[18] [19] [20]
-Overfull \hbox (0.47705pt too wide) in paragraph at lines 358--359
- \T2A/cmr/bx/n/14.4 1.4.2. Кон-стру-ктив-ний пiд-хiд до на-ла-шту-ва-н-ня ар-хi
+[16] [17] [18]
+Overfull \hbox (0.47705pt too wide) in paragraph at lines 360--361
+ \T2A/cmr/bx/n/14.4 1.3.2. Кон-стру-ктив-ний пiд-хiд до на-ла-шту-ва-н-ня ар-хi
 -те-кту-ри ней-
  []
 
-[21] [22] [23] [24] [25] [26]
-Overfull \hbox (20.2725pt too wide) in paragraph at lines 498--500
- \T2A/cmr/bx/n/14.4 1.4.3. За-да-ча не-чi-тко-го кла-сте-ру-ва-н-ня да-них.[] \
+[19] [20] [21] [22] [23] [24]
+Overfull \hbox (20.2725pt too wide) in paragraph at lines 502--504
+ \T2A/cmr/bx/n/14.4 1.3.3. За-да-ча не-чi-тко-го кла-сте-ру-ва-н-ня да-них.[] \
 T2A/cmr/m/n/14.4 Кла-сте-ри-за-цiя № основ-
  []
 
-[27] [28] [29]
-Overfull \hbox (0.8033pt too wide) in paragraph at lines 523--524
+[25] [26] [27]
+Overfull \hbox (0.8033pt too wide) in paragraph at lines 527--528
 []\T2A/cmr/m/n/14.4 Розробка спе-цi-а-лi-зо-ва-них шту-чних ней-ро-нiв, якi ма-
 ють пiд-ви-ще-ну (по-
  []
 
-[30] [31]
+[28] [29]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 2.
 
-Overfull \hbox (5.78783pt too wide) in paragraph at lines 550--551
+Overfull \hbox (5.78783pt too wide) in paragraph at lines 554--555
 []\T2A/cmr/m/n/14.4 Мабуть, най-бiльш вi-до-мою ре-а-лi-за-цi-№ю цьо-го пiд-хо-
 ду № каскадно-кореляцiйi
  []
 
-[32
+[30
 
 ]
 Package epstopdf Info: Source file: <images/CasCorLA.eps>
@@ -862,16 +878,16 @@ Package epstopdf Info: Source file: <images/CasCorLA.eps>
 (epstopdf)                    size: 8235 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/CasCorLA-eps-conver
 ted-to.pdf images/CasCorLA.eps>
-(epstopdf)             \includegraphics on input line 554.
+(epstopdf)             \includegraphics on input line 558.
 Package epstopdf Info: Output file is already uptodate.
- <images/CasCorLA-eps-converted-to.pdf, id=124, 281.05pt x 231.86626pt>
+ <images/CasCorLA-eps-converted-to.pdf, id=122, 281.05pt x 231.86626pt>
 File: images/CasCorLA-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/CasCorLA-eps-converted-to.pdf>
 Package pdftex.def Info: images/CasCorLA-eps-converted-to.pdf used on input lin
-e 554.
+e 558.
 (pdftex.def)             Requested size: 455.24408pt x 375.60002pt.
- [33 <./images/CasCorLA-eps-converted-to.pdf>]
+ [31 <./images/CasCorLA-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/SISOCascadedNetwork.eps>
 (epstopdf)                    date: 2016-03-02 19:22:37
 (epstopdf)                    size: 141624 bytes
@@ -881,18 +897,18 @@ o.pdf>
 (epstopdf)                    size: 16577 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/SISOCascadedNetwork
 -eps-converted-to.pdf images/SISOCascadedNetwork.eps>
-(epstopdf)             \includegraphics on input line 575.
+(epstopdf)             \includegraphics on input line 579.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/SISOCascadedNetwork-eps-converted-to.pdf, id=138, 512.91624pt x 520.946
+<images/SISOCascadedNetwork-eps-converted-to.pdf, id=137, 512.91624pt x 520.946
 24pt>
 File: images/SISOCascadedNetwork-eps-converted-to.pdf Graphic file (type pdf)
  <use images/SISOCascadedNetwork-eps-converted-to.pdf>
 Package pdftex.def Info: images/SISOCascadedNetwork-eps-converted-to.pdf used o
-n input line 575.
+n input line 579.
 (pdftex.def)             Requested size: 455.24408pt x 462.37682pt.
- [34] [35 <./images/SISOCascadedNetwork-eps-converted-to.pdf>] [36] [37] [38] [
-39]
+ [32] [33 <./images/SISOCascadedNetwork-eps-converted-to.pdf>] [34] [35] [36] [
+37]
 Package epstopdf Info: Source file: <images/NFN.eps>
 (epstopdf)                    date: 2016-03-07 13:44:43
 (epstopdf)                    size: 97752 bytes
@@ -901,22 +917,23 @@ Package epstopdf Info: Source file: <images/NFN.eps>
 (epstopdf)                    size: 12097 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/NFN-eps-converted-t
 o.pdf images/NFN.eps>
-(epstopdf)             \includegraphics on input line 760.
+(epstopdf)             \includegraphics on input line 781.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/NFN-eps-converted-to.pdf, id=184, 545.03625pt x 627.34375pt>
+<images/NFN-eps-converted-to.pdf, id=182, 545.03625pt x 627.34375pt>
 File: images/NFN-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/NFN-eps-converted-to.pdf>
-Package pdftex.def Info: images/NFN-eps-converted-to.pdf used on input line 760
+Package pdftex.def Info: images/NFN-eps-converted-to.pdf used on input line 781
 .
 (pdftex.def)             Requested size: 455.24408pt x 523.98811pt.
- [40 <./images/NFN-eps-converted-to.pdf>]
-Overfull \hbox (0.1621pt too wide) in paragraph at lines 788--789
+
+Overfull \hbox (0.1621pt too wide) in paragraph at lines 809--810
 []\T2A/cmr/m/n/14.4 Тобто не-лi-нiй-нiй си-напс фа-кти-чно № си-сте-мою ви-сно-
 ву-ва-н-ня Така i-Су ено
  []
 
+[38]
 Package epstopdf Info: Source file: <images/NFN[2].eps>
 (epstopdf)                    date: 2016-03-07 13:45:54
 (epstopdf)                    size: 114557 bytes
@@ -925,25 +942,20 @@ Package epstopdf Info: Source file: <images/NFN[2].eps>
 (epstopdf)                    size: 13963 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/NFN[2]-eps-converte
 d-to.pdf images/NFN[2].eps>
-(epstopdf)             \includegraphics on input line 802.
+(epstopdf)             \includegraphics on input line 823.
 Package epstopdf Info: Output file is already uptodate.
-<images/NFN[2]-eps-converted-to.pdf, id=206, 550.055pt x 621.32124pt>
+ <images/NFN[2]-eps-converted-to.pdf, id=187, 550.055pt x 621.32124pt>
 File: images/NFN[2]-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/NFN[2]-eps-converted-to.pdf>
 Package pdftex.def Info: images/NFN[2]-eps-converted-to.pdf used on input line 
-802.
+823.
 (pdftex.def)             Requested size: 398.33858pt x 449.95811pt.
- [41] [42 <./images/NFN[2]-eps-converted-to.pdf>] [43] [44]
-Overfull \hbox (7.28288pt too wide) in paragraph at lines 942--943
+ [39 <./images/NFN-eps-converted-to.pdf>] [40 <./images/NFN[2]-eps-converted-to
+.pdf>] [41] [42] [43]
+Overfull \hbox (7.28288pt too wide) in paragraph at lines 963--964
 \T2A/cmr/m/n/14.4 екс-по-нен-цiй-но зва-же-ний ре-ку-рен-тний ме-тод най-мен-ши
 х ква-дра-тiв (EWRLSM),
- []
-
-[45]
-Overfull \hbox (37.95401pt too wide) in paragraph at lines 944--945
-[]\T2A/cmr/m/n/14.4 При ви-ко-ри-стан-нi кри-те-рiя на-вча-н-ня з []ре[]-[]гу[]
--[]ля[]-[]ри[]-[]зу[]-[]ю[]-[]чим[] [][][]па[]-[]ра[]-[]ме[]-[]тром (momentum
  []
 
 Package epstopdf Info: Source file: <images/ENFNSynapse.eps>
@@ -954,16 +966,16 @@ Package epstopdf Info: Source file: <images/ENFNSynapse.eps>
 (epstopdf)                    size: 12242 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/ENFNSynapse-eps-con
 verted-to.pdf images/ENFNSynapse.eps>
-(epstopdf)             \includegraphics on input line 966.
+(epstopdf)             \includegraphics on input line 987.
 Package epstopdf Info: Output file is already uptodate.
-<images/ENFNSynapse-eps-converted-to.pdf, id=245, 562.1pt x 241.90375pt>
+<images/ENFNSynapse-eps-converted-to.pdf, id=244, 562.1pt x 241.90375pt>
 File: images/ENFNSynapse-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/ENFNSynapse-eps-converted-to.pdf>
 Package pdftex.def Info: images/ENFNSynapse-eps-converted-to.pdf used on input 
-line 966.
+line 987.
 (pdftex.def)             Requested size: 455.24408pt x 195.91881pt.
- [46]
+ [44]
 Package epstopdf Info: Source file: <images/ENFN.eps>
 (epstopdf)                    date: 2016-03-07 16:36:54
 (epstopdf)                    size: 81666 bytes
@@ -972,20 +984,20 @@ Package epstopdf Info: Source file: <images/ENFN.eps>
 (epstopdf)                    size: 9572 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/ENFN-eps-converted-
 to.pdf images/ENFN.eps>
-(epstopdf)             \includegraphics on input line 977.
+(epstopdf)             \includegraphics on input line 998.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/ENFN-eps-converted-to.pdf, id=249, 334.24875pt x 122.4575pt>
+<images/ENFN-eps-converted-to.pdf, id=248, 334.24875pt x 122.4575pt>
 File: images/ENFN-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/ENFN-eps-converted-to.pdf>
-Package pdftex.def Info: images/ENFN-eps-converted-to.pdf used on input line 97
-7.
+Package pdftex.def Info: images/ENFN-eps-converted-to.pdf used on input line 99
+8.
 (pdftex.def)             Requested size: 398.33858pt x 145.95044pt.
- [47 <./images/ENFNSynapse-eps-converted-to.pdf> <./images/ENFN-eps-converted-t
-o.pdf>] [48] [49] [50] [51] [52] [53]
+ [45 <./images/ENFNSynapse-eps-converted-to.pdf>] [46 <./images/ENFN-eps-conver
+ted-to.pdf>] [47] [48] [49] [50] [51]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 3.
-[54
+[52
 
 ]
 Package epstopdf Info: Source file: <images/MIMOCcascadeNetworkBuiltOnNFN.eps>
@@ -997,25 +1009,25 @@ onverted-to.pdf>
 (epstopdf)                    size: 16677 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/MIMOCcascadeNetwork
 BuiltOnNFN-eps-converted-to.pdf images/MIMOCcascadeNetworkBuiltOnNFN.eps>
-(epstopdf)             \includegraphics on input line 1199.
+(epstopdf)             \includegraphics on input line 1220.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/MIMOCcascadeNetworkBuiltOnNFN-eps-converted-to.pdf, id=313, 529.98pt x 
+<images/MIMOCcascadeNetworkBuiltOnNFN-eps-converted-to.pdf, id=312, 529.98pt x 
 547.04375pt>
 File: images/MIMOCcascadeNetworkBuiltOnNFN-eps-converted-to.pdf Graphic file (t
 ype pdf)
  <use images/MIMOCcascadeNetworkBuiltOnNFN-eps-converted-to.pdf>
 Package pdftex.def Info: images/MIMOCcascadeNetworkBuiltOnNFN-eps-converted-to.
-pdf used on input line 1199.
+pdf used on input line 1220.
 (pdftex.def)             Requested size: 426.79134pt x 440.5404pt.
 
-[55] [56 <./images/MIMOCcascadeNetworkBuiltOnNFN-eps-converted-to.pdf>]
-[57] [58]
-Overfull \hbox (1.49583pt too wide) detected at line 1333
+[53] [54 <./images/MIMOCcascadeNetworkBuiltOnNFN-eps-converted-to.pdf>]
+[55] [56]
+Overfull \hbox (1.49583pt too wide) detected at line 1354
 [][]
  []
 
-[59]
+[57]
 Package epstopdf Info: Source file: <images/MIMOCcascadeNetworkBuiltOnNFNOptimi
 zed.eps>
 (epstopdf)                    date: 2016-03-07 21:23:25
@@ -1027,21 +1039,21 @@ zed-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/MIMOCcascadeNetwork
 BuiltOnNFNOptimized-eps-converted-to.pdf images/MIMOCcascadeNetworkBuiltOnNFNOp
 timized.eps>
-(epstopdf)             \includegraphics on input line 1361.
+(epstopdf)             \includegraphics on input line 1382.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/MIMOCcascadeNetworkBuiltOnNFNOptimized-eps-converted-to.pdf, id=354, 48
+<images/MIMOCcascadeNetworkBuiltOnNFNOptimized-eps-converted-to.pdf, id=353, 48
 5.815pt x 481.8pt>
 File: images/MIMOCcascadeNetworkBuiltOnNFNOptimized-eps-converted-to.pdf Graphi
 c file (type pdf)
 
 <use images/MIMOCcascadeNetworkBuiltOnNFNOptimized-eps-converted-to.pdf>
 Package pdftex.def Info: images/MIMOCcascadeNetworkBuiltOnNFNOptimized-eps-conv
-erted-to.pdf used on input line 1361.
+erted-to.pdf used on input line 1382.
 (pdftex.def)             Requested size: 455.24408pt x 451.48053pt.
 
-[60] [61 <./images/MIMOCcascadeNetworkBuiltOnNFNOptimized-eps-converted-to.pdf>
-] [62]
+[58] [59 <./images/MIMOCcascadeNetworkBuiltOnNFNOptimized-eps-converted-to.pdf>
+] [60]
 Package epstopdf Info: Source file: <images/MIMOBuiltOnNFNProblem.eps>
 (epstopdf)                    date: 2016-03-08 14:01:40
 (epstopdf)                    size: 170748 bytes
@@ -1051,18 +1063,18 @@ Package epstopdf Info: Source file: <images/MIMOBuiltOnNFNProblem.eps>
 (epstopdf)                    size: 18775 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/MIMOBuiltOnNFNProbl
 em-eps-converted-to.pdf images/MIMOBuiltOnNFNProblem.eps>
-(epstopdf)             \includegraphics on input line 1435.
+(epstopdf)             \includegraphics on input line 1456.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/MIMOBuiltOnNFNProblem-eps-converted-to.pdf, id=398, 561.09625pt x 756.8
+<images/MIMOBuiltOnNFNProblem-eps-converted-to.pdf, id=396, 561.09625pt x 756.8
 275pt>
 File: images/MIMOBuiltOnNFNProblem-eps-converted-to.pdf Graphic file (type pdf)
 
  <use images/MIMOBuiltOnNFNProblem-eps-converted-to.pdf>
 Package pdftex.def Info: images/MIMOBuiltOnNFNProblem-eps-converted-to.pdf used
- on input line 1435.
+ on input line 1456.
 (pdftex.def)             Requested size: 369.88582pt x 498.90718pt.
- [63 <./images/MIMOBuiltOnNFNProblem-eps-converted-to.pdf>]
+ [61 <./images/MIMOBuiltOnNFNProblem-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/MNFN.eps>
 (epstopdf)                    date: 2016-03-07 22:31:06
 (epstopdf)                    size: 105709 bytes
@@ -1071,1129 +1083,724 @@ Package epstopdf Info: Source file: <images/MNFN.eps>
 (epstopdf)                    size: 13358 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/MNFN-eps-converted-
 to.pdf images/MNFN.eps>
-(epstopdf)             \includegraphics on input line 1465.
+(epstopdf)             \includegraphics on input line 1486.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/MNFN-eps-converted-to.pdf, id=432, 556.0775pt x 751.80875pt>
+<images/MNFN-eps-converted-to.pdf, id=431, 556.0775pt x 751.80875pt>
 File: images/MNFN-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/MNFN-eps-converted-to.pdf>
 Package pdftex.def Info: images/MNFN-eps-converted-to.pdf used on input line 14
-65.
+86.
 (pdftex.def)             Requested size: 341.43306pt x 461.6197pt.
- [64] [65 <./images/MNFN-eps-converted-to.pdf>] [66] [67]
-Overfull \hbox (18.69112pt too wide) in paragraph at lines 1637--1638
+ [62] [63 <./images/MNFN-eps-converted-to.pdf>] [64] [65]
+Overfull \hbox (18.69112pt too wide) in paragraph at lines 1658--1659
 \T2A/cmr/m/n/14.4 будь-якi iн-шi кон-стру-кцiЁ, що ре-а-лi-зу-ють не-лi-нiй-не 
 вiд-обра-же-н-ня []. 
  []
 
-[68] [69]
+[66] [67]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 4.
-[70
+[68
 
-] [71] [72] [73]
-Overfull \hbox (0.86208pt too wide) in paragraph at lines 1707--1708
+] [69] [70] [71]
+Overfull \hbox (0.86208pt too wide) in paragraph at lines 1728--1729
 []\T2A/cmr/m/n/14.4 Iндекс ен-тро-пiЁ роз-би-т-тя на-бу-ва№ зна-чень у iн-тер-в
 а-лi $[][]$. Що ближ-
  []
 
-[74] [75] [76] [77]
-Overfull \hbox (11.94626pt too wide) in paragraph at lines 1809--1810
+[72] [73] [74] [75]
+Overfull \hbox (11.94626pt too wide) in paragraph at lines 1830--1831
 []\T2A/cmr/m/n/14.4 що при $\OML/cmm/m/it/14.4 ^^L \U/MnSymbolD/m/n/14.4 ^^@ \O
 T1/cmr/m/n/14.4 2$ \T2A/cmr/m/n/14.4 збi-га-№-ться з ал-го-ри-тмом не-чi-тких с
 -середнiх Без-де-ка (FCM) [[]]
  []
 
-[78] [79] [80] [81] [82]
+[76] [77] [78] [79] [80]
 
-LaTeX Warning: Reference `ch:evolvingClusteringSystem' on page 83 undefined on 
-input line 1947.
+LaTeX Warning: Reference `ch:evolvingClusteringSystem' on page 81 undefined on 
+input line 1968.
 
 
-Overfull \hbox (0.23845pt too wide) in paragraph at lines 1952--1953
+Overfull \hbox (0.23845pt too wide) in paragraph at lines 1973--1974
 []\T2A/cmr/m/n/14.4 Запропоновано ме-тод ви-зна-че-н-ня ло-каль-но опти-маль-но
 Ё кiль-ко-стi кла-
  []
 
-[83] [84]
+[81] [82]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 5.
-<images/ENFNDataSetPhasePortrait.png, id=521, 247.1634pt x 229.3368pt>
+<images/ENFNDataSetPhasePortrait.png, id=520, 247.1634pt x 229.3368pt>
 File: images/ENFNDataSetPhasePortrait.png Graphic file (type png)
 
 <use images/ENFNDataSetPhasePortrait.png>
 Package pdftex.def Info: images/ENFNDataSetPhasePortrait.png used on input line
- 2002.
+ 2023.
 (pdftex.def)             Requested size: 247.16278pt x 229.33624pt.
- [85
+ [83
 
 ]
-<images/ENFNErrorFromInferenceOrder.png, id=527, 501.5538pt x 235.6002pt>
+<images/ENFNErrorFromInferenceOrder.png, id=524, 501.5538pt x 235.6002pt>
 File: images/ENFNErrorFromInferenceOrder.png Graphic file (type png)
 
 <use images/ENFNErrorFromInferenceOrder.png>
 Package pdftex.def Info: images/ENFNErrorFromInferenceOrder.png used on input l
-ine 2012.
+ine 2033.
 (pdftex.def)             Requested size: 501.55258pt x 235.59961pt.
 
-Overfull \hbox (17.85574pt too wide) in paragraph at lines 2012--2013
+Overfull \hbox (17.85574pt too wide) in paragraph at lines 2033--2034
  [] 
  []
 
 
-<images/ENFNErrorFromNumberOfMembershipFunctions.png, id=528, 296.307pt x 243.7
+<images/ENFNErrorFromNumberOfMembershipFunctions.png, id=525, 296.307pt x 243.7
 908pt>
 File: images/ENFNErrorFromNumberOfMembershipFunctions.png Graphic file (type pn
 g)
  <use images/ENFNErrorFromNumberOfMembershipFunctions.png>
 Package pdftex.def Info: images/ENFNErrorFromNumberOfMembershipFunctions.png us
-ed on input line 2019.
+ed on input line 2040.
 (pdftex.def)             Requested size: 296.30627pt x 243.7902pt.
- [86 <./images/ENFNDataSetPhasePortrait.png> <./images/ENFNErrorFromInferenceOr
+ [84 <./images/ENFNDataSetPhasePortrait.png> <./images/ENFNErrorFromInferenceOr
 der.png>]
-<images/ENFNPrediction3IO3MF.png, id=534, 512.1534pt x 212.9556pt>
+<images/ENFNPrediction3IO3MF.png, id=531, 512.1534pt x 212.9556pt>
 File: images/ENFNPrediction3IO3MF.png Graphic file (type png)
 
 <use images/ENFNPrediction3IO3MF.png>
-Package pdftex.def Info: images/ENFNPrediction3IO3MF.png used on input line 202
-7.
+Package pdftex.def Info: images/ENFNPrediction3IO3MF.png used on input line 204
+8.
 (pdftex.def)             Requested size: 512.15215pt x 212.95506pt.
 
-Overfull \hbox (28.4553pt too wide) in paragraph at lines 2027--2028
+Overfull \hbox (28.4553pt too wide) in paragraph at lines 2048--2049
  [] 
  []
 
-[87 <./images/ENFNErrorFromNumberOfMembershipFunctions.png> <./images/ENFNPredi
-ction3IO3MF.png>] [88]
-<images/ENFNMackeyGlassPredictionsIO3M3.png, id=543, 424.9476pt x 189.3474pt>
+[85 <./images/ENFNErrorFromNumberOfMembershipFunctions.png> <./images/ENFNPredi
+ction3IO3MF.png>] [86]
+<images/ENFNMackeyGlassPredictionsIO3M3.png, id=541, 424.9476pt x 189.3474pt>
 File: images/ENFNMackeyGlassPredictionsIO3M3.png Graphic file (type png)
 
 <use images/ENFNMackeyGlassPredictionsIO3M3.png>
 Package pdftex.def Info: images/ENFNMackeyGlassPredictionsIO3M3.png used on inp
-ut line 2083.
+ut line 2104.
 (pdftex.def)             Requested size: 424.94655pt x 189.34692pt.
- [89 <./images/ENFNMackeyGlassPredictionsIO3M3.png>]
-<images/ENFNMackeyGlassPredictionsIO0M3.png, id=548, 399.4122pt x 145.0218pt>
+ [87 <./images/ENFNMackeyGlassPredictionsIO3M3.png>]
+<images/ENFNMackeyGlassPredictionsIO0M3.png, id=546, 399.4122pt x 145.0218pt>
 File: images/ENFNMackeyGlassPredictionsIO0M3.png Graphic file (type png)
 
 <use images/ENFNMackeyGlassPredictionsIO0M3.png>
 Package pdftex.def Info: images/ENFNMackeyGlassPredictionsIO0M3.png used on inp
-ut line 2130.
+ut line 2151.
 (pdftex.def)             Requested size: 399.41122pt x 145.02144pt.
- [90]
-<images/ENFNMackeyGlassIO3M3ErrorFromInferenceOrder.png, id=552, 479.8728pt x 2
+ [88]
+<images/ENFNMackeyGlassIO3M3ErrorFromInferenceOrder.png, id=550, 479.8728pt x 2
 44.7544pt>
 File: images/ENFNMackeyGlassIO3M3ErrorFromInferenceOrder.png Graphic file (type
  png)
  <use images/ENFNMackeyGlassIO3M3ErrorFromInferenceOrder.png>
 Package pdftex.def Info: images/ENFNMackeyGlassIO3M3ErrorFromInferenceOrder.png
- used on input line 2138.
+ used on input line 2159.
 (pdftex.def)             Requested size: 479.87163pt x 244.75378pt.
 
-[91 <./images/ENFNMackeyGlassPredictionsIO0M3.png> <./images/ENFNMackeyGlassIO3
+[89 <./images/ENFNMackeyGlassPredictionsIO0M3.png> <./images/ENFNMackeyGlassIO3
 M3ErrorFromInferenceOrder.png>]
-<images/UkrEnergoPhasePortrait.png, id=559, 227.8914pt x 223.5552pt>
+<images/UkrEnergoPhasePortrait.png, id=556, 227.8914pt x 223.5552pt>
 File: images/UkrEnergoPhasePortrait.png Graphic file (type png)
 
 <use images/UkrEnergoPhasePortrait.png>
 Package pdftex.def Info: images/UkrEnergoPhasePortrait.png used on input line 2
-150.
+171.
 (pdftex.def)             Requested size: 227.89084pt x 223.55464pt.
 
-<images/ENFNUkrEnergoPredictionIO1M6.png, id=560, 456.2646pt x 199.947pt>
+<images/ENFNUkrEnergoPredictionIO1M6.png, id=557, 456.2646pt x 199.947pt>
 File: images/ENFNUkrEnergoPredictionIO1M6.png Graphic file (type png)
 
 <use images/ENFNUkrEnergoPredictionIO1M6.png>
 Package pdftex.def Info: images/ENFNUkrEnergoPredictionIO1M6.png used on input 
-line 2162.
+line 2183.
 (pdftex.def)             Requested size: 456.26349pt x 199.9465pt.
- [92 <./images/UkrEnergoPhasePortrait.png>]
-<images/ElectricityDemandPhasePortrait.pdf, id=565, 480.20845pt x 309.06215pt>
+ [90 <./images/UkrEnergoPhasePortrait.png>]
+<images/ElectricityDemandPhasePortrait.pdf, id=562, 480.20845pt x 309.06215pt>
 File: images/ElectricityDemandPhasePortrait.pdf Graphic file (type pdf)
 
 <use images/ElectricityDemandPhasePortrait.pdf>
 Package pdftex.def Info: images/ElectricityDemandPhasePortrait.pdf used on inpu
-t line 2178.
+t line 2199.
 (pdftex.def)             Requested size: 289.07999pt x 186.05649pt.
 
-<images/ENFNNet+FuzzyGeneralizerElectricityDemand.png, id=566, 458.1918pt x 303
+<images/ENFNNet+FuzzyGeneralizerElectricityDemand.png, id=563, 458.1918pt x 303
 .534pt>
 File: images/ENFNNet+FuzzyGeneralizerElectricityDemand.png Graphic file (type p
 ng)
  <use images/ENFNNet+FuzzyGeneralizerElectricityDemand.png>
 Package pdftex.def Info: images/ENFNNet+FuzzyGeneralizerElectricityDemand.png u
-sed on input line 2188.
+sed on input line 2209.
 (pdftex.def)             Requested size: 458.19069pt x 303.53325pt.
 
-Overfull \hbox (7.4835pt too wide) in paragraph at lines 2197--2220
+Overfull \hbox (7.4835pt too wide) in paragraph at lines 2218--2241
  [][] 
  []
 
-[93 <./images/ENFNUkrEnergoPredictionIO1M6.png>] [94 <./images/ElectricityDeman
+[91 <./images/ENFNUkrEnergoPredictionIO1M6.png>] [92 <./images/ElectricityDeman
 dPhasePortrait.pdf> <./images/ENFNNet+FuzzyGeneralizerElectricityDemand.png>]
-Overfull \hbox (15.75388pt too wide) in paragraph at lines 2222--2223
+Overfull \hbox (15.75388pt too wide) in paragraph at lines 2243--2244
 \T2A/cmr/m/n/14.4 си-сте-ми -- у та-бли-цi reftab:SubtidalCoastalLevelOfFluctua
 tionsPredictionAccuracy. 
  []
 
 
-<images/SubtidalCoastalLevelPhasePortrait.pdf, id=596, 457.60907pt x 298.58511p
+<images/SubtidalCoastalLevelPhasePortrait.pdf, id=594, 457.60907pt x 298.58511p
 t>
 File: images/SubtidalCoastalLevelPhasePortrait.pdf Graphic file (type pdf)
  <use images/SubtidalCoastalLevelPhasePortrait.pdf>
 Package pdftex.def Info: images/SubtidalCoastalLevelPhasePortrait.pdf used on i
-nput line 2226.
+nput line 2247.
 (pdftex.def)             Requested size: 289.07999pt x 188.62444pt.
 
-<images/ENFNNet+FuzzyGeneralizerSubtidalCoastalLevelFlunctuations.pdf, id=597, 
+<images/ENFNNet+FuzzyGeneralizerSubtidalCoastalLevelFlunctuations.pdf, id=595, 
 460.32089pt x 302.83069pt>
 File: images/ENFNNet+FuzzyGeneralizerSubtidalCoastalLevelFlunctuations.pdf Grap
 hic file (type pdf)
 
 <use images/ENFNNet+FuzzyGeneralizerSubtidalCoastalLevelFlunctuations.pdf>
 Package pdftex.def Info: images/ENFNNet+FuzzyGeneralizerSubtidalCoastalLevelFlu
-nctuations.pdf used on input line 2234.
+nctuations.pdf used on input line 2255.
 (pdftex.def)             Requested size: 460.31976pt x 302.82994pt.
 
-Overfull \hbox (7.4835pt too wide) in paragraph at lines 2243--2266
+Overfull \hbox (7.4835pt too wide) in paragraph at lines 2264--2287
  [][] 
  []
 
-[95] [96 <./images/SubtidalCoastalLevelPhasePortrait.pdf> <./images/ENFNNet+Fuz
+[93] [94 <./images/SubtidalCoastalLevelPhasePortrait.pdf> <./images/ENFNNet+Fuz
 zyGeneralizerSubtidalCoastalLevelFlunctuations.pdf>]
-<images/ESTPCompetitionTimeSeriesPhasePortrait.pdf, id=637, 458.34473pt x 297.5
+<images/ESTPCompetitionTimeSeriesPhasePortrait.pdf, id=635, 458.34473pt x 297.5
 2626pt>
 File: images/ESTPCompetitionTimeSeriesPhasePortrait.pdf Graphic file (type pdf)
 
  <use images/ESTPCompetitionTimeSeriesPhasePortrait.pdf>
 Package pdftex.def Info: images/ESTPCompetitionTimeSeriesPhasePortrait.pdf used
- on input line 2272.
+ on input line 2293.
 (pdftex.def)             Requested size: 289.07999pt x 187.66045pt.
 
-<images/ENFNNetFuzzyGeneralizerESTPCompettionTimeSeries.pdf, id=638, 475.92073p
+<images/ENFNNetFuzzyGeneralizerESTPCompettionTimeSeries.pdf, id=636, 475.92073p
 t x 326.0216pt>
 File: images/ENFNNetFuzzyGeneralizerESTPCompettionTimeSeries.pdf Graphic file (
 type pdf)
 
 <use images/ENFNNetFuzzyGeneralizerESTPCompettionTimeSeries.pdf>
 Package pdftex.def Info: images/ENFNNetFuzzyGeneralizerESTPCompettionTimeSeries
-.pdf used on input line 2280.
+.pdf used on input line 2301.
 (pdftex.def)             Requested size: 475.91957pt x 326.0208pt.
 
-Overfull \hbox (36.21419pt too wide) in paragraph at lines 2286--2287
+Overfull \hbox (36.21419pt too wide) in paragraph at lines 2307--2308
 []\T2A/cmr/m/n/14.4 Результати про-гно-зу-ва-н-ня ней-ро-нiв окре-мих ка-ска-дi
 в, нейронiв-узагалтнювачiв,
  []
 
 
-Overfull \hbox (7.4835pt too wide) in paragraph at lines 2291--2314
+Overfull \hbox (7.4835pt too wide) in paragraph at lines 2312--2335
  [][] 
  []
 
-[97] [98 <./images/ESTPCompetitionTimeSeriesPhasePortrait.pdf> <./images/ENFNNe
-tFuzzyGeneralizerESTPCompettionTimeSeries.pdf>] [99]
-<images/MIMOLorenz3D.pdf, id=683, 419.66641pt x 432.053pt>
+[95] [96 <./images/ESTPCompetitionTimeSeriesPhasePortrait.pdf> <./images/ENFNNe
+tFuzzyGeneralizerESTPCompettionTimeSeries.pdf>] [97]
+<images/MIMOLorenz3D.pdf, id=681, 419.66641pt x 432.053pt>
 File: images/MIMOLorenz3D.pdf Graphic file (type pdf)
 
 <use images/MIMOLorenz3D.pdf>
-Package pdftex.def Info: images/MIMOLorenz3D.pdf used on input line 2337.
+Package pdftex.def Info: images/MIMOLorenz3D.pdf used on input line 2358.
 (pdftex.def)             Requested size: 419.66537pt x 432.05194pt.
- [100 <./images/MIMOLorenz3D.pdf>]
-Overfull \hbox (13.35707pt too wide) in paragraph at lines 2348--2371
+ [98 <./images/MIMOLorenz3D.pdf>]
+Overfull \hbox (13.35707pt too wide) in paragraph at lines 2369--2392
  [][] 
  []
 
-[101] <images/MIMOLorenz.pdf, id=702, 463.9089pt x 301.56114pt>
+[99] <images/MIMOLorenz.pdf, id=700, 463.9089pt x 301.56114pt>
 File: images/MIMOLorenz.pdf Graphic file (type pdf)
 
 <use images/MIMOLorenz.pdf>
-Package pdftex.def Info: images/MIMOLorenz.pdf used on input line 2391.
+Package pdftex.def Info: images/MIMOLorenz.pdf used on input line 2412.
 (pdftex.def)             Requested size: 463.90778pt x 301.5604pt.
- [102]
-Overfull \hbox (1.95505pt too wide) in paragraph at lines 2403--2404
+ [100]
+Overfull \hbox (1.95505pt too wide) in paragraph at lines 2424--2425
 []\T2A/cmr/m/n/14.4 Одна з основ-них пе-ре-ваг, при-та-ман-них про-по-но-ва-нiй
  са-мо-на-вчан-нiй нейро-
  []
 
-<images/clustering01.pdf, id=706, 459.7175pt x 266.9975pt>
+<images/clustering01.pdf, id=704, 459.7175pt x 266.9975pt>
 File: images/clustering01.pdf Graphic file (type pdf)
 
 <use images/clustering01.pdf>
-Package pdftex.def Info: images/clustering01.pdf used on input line 2407.
+Package pdftex.def Info: images/clustering01.pdf used on input line 2428.
 (pdftex.def)             Requested size: 459.71637pt x 266.99683pt.
- [103 <./images/MIMOLorenz.pdf>]
-Overfull \hbox (15.22507pt too wide) in paragraph at lines 2417--2418
+ [101 <./images/MIMOLorenz.pdf>]
+Overfull \hbox (15.22507pt too wide) in paragraph at lines 2438--2439
 \T2A/cmr/m/n/14.4 ним ви-яви-ся дру-гий ка-скад ($\OML/cmm/m/it/14.4 m \U/MnSym
 bolD/m/n/14.4 ^^@ \OT1/cmr/m/n/14.4 3$\T2A/cmr/m/n/14.4 ) з трьо-ма кла-сте-ра-
 ми i нейроном-переможцем
  []
 
-[104 <./images/clustering01.pdf>] [105]
-<images/clustering03.pdf, id=740, 454.69875pt x 242.9075pt>
+[102 <./images/clustering01.pdf>] [103]
+<images/clustering03.pdf, id=738, 454.69875pt x 242.9075pt>
 File: images/clustering03.pdf Graphic file (type pdf)
 
 <use images/clustering03.pdf>
-Package pdftex.def Info: images/clustering03.pdf used on input line 2474.
+Package pdftex.def Info: images/clustering03.pdf used on input line 2495.
 (pdftex.def)             Requested size: 454.69763pt x 242.90689pt.
 
-<images/clustering002.pdf, id=741, 454.69875pt x 242.9075pt>
+<images/clustering002.pdf, id=739, 454.69875pt x 242.9075pt>
 File: images/clustering002.pdf Graphic file (type pdf)
 
 <use images/clustering002.pdf>
-Package pdftex.def Info: images/clustering002.pdf used on input line 2492.
+Package pdftex.def Info: images/clustering002.pdf used on input line 2513.
 (pdftex.def)             Requested size: 454.69763pt x 242.90689pt.
- [106 <./images/clustering03.pdf>] [107 <./images/clustering002.pdf>]
-<images/clustering04.pdf, id=754, 454.69875pt x 242.9075pt>
+ [104 <./images/clustering03.pdf>] [105 <./images/clustering002.pdf>]
+<images/clustering04.pdf, id=752, 454.69875pt x 242.9075pt>
 File: images/clustering04.pdf Graphic file (type pdf)
 
 <use images/clustering04.pdf>
-Package pdftex.def Info: images/clustering04.pdf used on input line 2577.
+Package pdftex.def Info: images/clustering04.pdf used on input line 2598.
 (pdftex.def)             Requested size: 454.69763pt x 242.90689pt.
- [108]
-<images/HierarchialClusteringOfIrisDataset.pdf, id=758, 447.6725pt x 518.93875p
+ [106]
+<images/HierarchialClusteringOfIrisDataset.pdf, id=756, 447.6725pt x 518.93875p
 t>
 File: images/HierarchialClusteringOfIrisDataset.pdf Graphic file (type pdf)
  <use images/HierarchialClusteringOfIrisDataset.pdf>
 Package pdftex.def Info: images/HierarchialClusteringOfIrisDataset.pdf used on 
-input line 2595.
+input line 2616.
 (pdftex.def)             Requested size: 447.6714pt x 518.93748pt.
 
-<images/ClusteredIrisDatasetM3Beta2.pdf, id=759, 447.6725pt x 435.6275pt>
+<images/ClusteredIrisDatasetM3Beta2.pdf, id=757, 447.6725pt x 435.6275pt>
 File: images/ClusteredIrisDatasetM3Beta2.pdf Graphic file (type pdf)
 
 <use images/ClusteredIrisDatasetM3Beta2.pdf>
 Package pdftex.def Info: images/ClusteredIrisDatasetM3Beta2.pdf used on input l
-ine 2605.
+ine 2626.
 (pdftex.def)             Requested size: 447.6714pt x 435.62643pt.
- [109 <./images/clustering04.pdf>]
-[110 <./images/HierarchialClusteringOfIrisDataset.pdf>] [111 <./images/Clustere
-dIrisDatasetM3Beta2.pdf>] [112] [113]
-<images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf, id=789, 5
+ [107 <./images/clustering04.pdf>]
+[108 <./images/HierarchialClusteringOfIrisDataset.pdf>] [109 <./images/Clustere
+dIrisDatasetM3Beta2.pdf>] [110] [111]
+<images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf, id=787, 5
 05.89pt x 453.54352pt>
 File: images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf Graph
 ic file (type pdf)
 
 <use images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf>
 Package pdftex.def Info: images/IrisClusteringEfficiencyFromNumberOfClustersAnd
-Fuzzyfier.pdf used on input line 2677.
+Fuzzyfier.pdf used on input line 2698.
 (pdftex.def)             Requested size: 397.48499pt x 356.36462pt.
 
-<images/ClusteredIrisDatasetM7Beta5.pdf, id=790, 461.725pt x 461.725pt>
+<images/ClusteredIrisDatasetM7Beta5.pdf, id=788, 461.725pt x 461.725pt>
 File: images/ClusteredIrisDatasetM7Beta5.pdf Graphic file (type pdf)
 
 <use images/ClusteredIrisDatasetM7Beta5.pdf>
 Package pdftex.def Info: images/ClusteredIrisDatasetM7Beta5.pdf used on input l
-ine 2687.
+ine 2708.
 (pdftex.def)             Requested size: 461.72388pt x 461.72388pt.
 
-<images/ClusteredIrisDatasetM12Beta4.pdf, id=791, 461.725pt x 461.725pt>
+<images/ClusteredIrisDatasetM12Beta4.pdf, id=789, 461.725pt x 461.725pt>
 File: images/ClusteredIrisDatasetM12Beta4.pdf Graphic file (type pdf)
 
 <use images/ClusteredIrisDatasetM12Beta4.pdf>
 Package pdftex.def Info: images/ClusteredIrisDatasetM12Beta4.pdf used on input 
-line 2696.
+line 2717.
 (pdftex.def)             Requested size: 461.72388pt x 461.72388pt.
- [114 <./images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf>]
-<images/3DClusteredIrisDatasetM7Beta5.pdf, id=814, 461.725pt x 526.96875pt>
+ [112 <./images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf>]
+<images/3DClusteredIrisDatasetM7Beta5.pdf, id=812, 461.725pt x 526.96875pt>
 File: images/3DClusteredIrisDatasetM7Beta5.pdf Graphic file (type pdf)
 
 <use images/3DClusteredIrisDatasetM7Beta5.pdf>
 Package pdftex.def Info: images/3DClusteredIrisDatasetM7Beta5.pdf used on input
- line 2717.
+ line 2738.
 (pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
- [115 <./images/ClusteredIrisDatasetM7Beta5.pdf>]
+ [113 <./images/ClusteredIrisDatasetM7Beta5.pdf>]
 Overfull \vbox (390.96786pt too high) has occurred while \output is active []
 
 
-[116 <./images/ClusteredIrisDatasetM12Beta4.pdf> <./images/3DClusteredIrisDatas
+[114 <./images/ClusteredIrisDatasetM12Beta4.pdf> <./images/3DClusteredIrisDatas
 etM7Beta5.pdf>]
-<images/3DClusteredIrisDatasetM12Beta4.pdf, id=837, 461.725pt x 526.96875pt>
+<images/3DClusteredIrisDatasetM12Beta4.pdf, id=834, 461.725pt x 526.96875pt>
 File: images/3DClusteredIrisDatasetM12Beta4.pdf Graphic file (type pdf)
 
 <use images/3DClusteredIrisDatasetM12Beta4.pdf>
 Package pdftex.def Info: images/3DClusteredIrisDatasetM12Beta4.pdf used on inpu
-t line 2727.
+t line 2748.
 (pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
- [117]
-<images/StudentKnowledgeDataSet.pdf, id=841, 461.725pt x 526.96875pt>
+ [115]
+<images/StudentKnowledgeDataSet.pdf, id=839, 461.725pt x 526.96875pt>
 File: images/StudentKnowledgeDataSet.pdf Graphic file (type pdf)
 
 <use images/StudentKnowledgeDataSet.pdf>
 Package pdftex.def Info: images/StudentKnowledgeDataSet.pdf used on input line 
-2737.
+2758.
 (pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
- [118 <./images/3DClusteredIrisDatasetM12Beta4.pdf>] [119 <./images/StudentKnow
+ [116 <./images/3DClusteredIrisDatasetM12Beta4.pdf>] [117 <./images/StudentKnow
 ledgeDataSet.pdf>]
-<images/3DStudentKnowledgeDataSet.pdf, id=858, 461.725pt x 490.83376pt>
+<images/3DStudentKnowledgeDataSet.pdf, id=856, 461.725pt x 490.83376pt>
 File: images/3DStudentKnowledgeDataSet.pdf Graphic file (type pdf)
 
 <use images/3DStudentKnowledgeDataSet.pdf>
 Package pdftex.def Info: images/3DStudentKnowledgeDataSet.pdf used on input lin
-e 2755.
+e 2776.
 (pdftex.def)             Requested size: 461.72388pt x 490.83255pt.
- [120 <./images/3DStudentKnowledgeDataSet.pdf>]
-<images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=867, 461.725pt x 49
+ [118 <./images/3DStudentKnowledgeDataSet.pdf>]
+<images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=865, 461.725pt x 49
 0.83376pt>
 File: images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf Graphic file (type
  pdf)
  <use images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf>
 Package pdftex.def Info: images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf
- used on input line 2765.
+ used on input line 2786.
 (pdftex.def)             Requested size: 461.72388pt x 490.83255pt.
 
-<images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=868, 461.725pt x 526.
+<images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=866, 461.725pt x 526.
 96875pt>
 File: images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf Graphic file (type p
 df)
  <use images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf>
 Package pdftex.def Info: images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf u
-sed on input line 2775.
+sed on input line 2796.
 (pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
- [121 <./images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf>] [122 <./image
+ [119 <./images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf>] [120 <./image
 s/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf>]
-<images/SpoonAppClassification.png, id=886, 289.08pt x 514.0806pt>
+<images/SpoonAppClassification.png, id=883, 289.08pt x 514.0806pt>
 File: images/SpoonAppClassification.png Graphic file (type png)
 
 <use images/SpoonAppClassification.png>
 Package pdftex.def Info: images/SpoonAppClassification.png used on input line 2
-792.
+813.
 (pdftex.def)             Requested size: 289.07928pt x 514.07935pt.
- [123] [124 <./images/SpoonAppClassification.png>] <images/SpoonAppClustering.p
-ng, id=894, 289.08pt x 514.0806pt>
+ [121] [122 <./images/SpoonAppClassification.png>] <images/SpoonAppClustering.p
+ng, id=892, 289.08pt x 514.0806pt>
 File: images/SpoonAppClustering.png Graphic file (type png)
 
 <use images/SpoonAppClustering.png>
-Package pdftex.def Info: images/SpoonAppClustering.png used on input line 2806.
+Package pdftex.def Info: images/SpoonAppClustering.png used on input line 2827.
 
 (pdftex.def)             Requested size: 289.07928pt x 514.07935pt.
- [125 <./images/SpoonAppClustering.png>]
-[126] [127] [128]
-Overfull \hbox (1.36967pt too wide) in paragraph at lines 2847--2847
+ [123 <./images/SpoonAppClustering.png>]
+[124] [125] [126]
+Overfull \hbox (1.36967pt too wide) in paragraph at lines 2876--2876
 []|\T2A/cmr/m/n/14.4 Попереднi
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2847--2847
+Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
 []|\T2A/cmr/m/n/14.4 Подальшi
  []
 
 
-Overfull \hbox (1.36967pt too wide) in paragraph at lines 2850--2850
+Overfull \hbox (1.36967pt too wide) in paragraph at lines 2879--2879
 []|\T2A/cmr/m/n/14.4 Попереднi
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2850--2850
+Underfull \hbox (badness 10000) in paragraph at lines 2879--2879
 []|\T2A/cmr/m/n/14.4 Подальшi
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2852--2852
+Underfull \hbox (badness 10000) in paragraph at lines 2881--2881
 []|\T2A/cmr/m/n/14.4 Розбирання вiз-кiв 0.162-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2852--2852
+Underfull \hbox (badness 10000) in paragraph at lines 2881--2881
 []|\T2A/cmr/m/n/14.4 109.05.046
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2853--2853
+Underfull \hbox (badness 10000) in paragraph at lines 2882--2882
 []|\T2A/cmr/m/n/14.4 Розбирання вiз-кiв 0.114-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2853--2853
+Underfull \hbox (badness 10000) in paragraph at lines 2882--2882
 []|\T2A/cmr/m/n/14.4 109.05.047
  []
 
 
-Underfull \hbox (badness 2707) in paragraph at lines 2854--2854
+Underfull \hbox (badness 2707) in paragraph at lines 2883--2883
 []|\T2A/cmr/m/n/14.4 Попередня де-фе-кта-цiя ву-злiв
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2854--2854
+Underfull \hbox (badness 10000) in paragraph at lines 2883--2883
 []|\T2A/cmr/m/n/14.4 109.05.047
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2854--2854
+Underfull \hbox (badness 10000) in paragraph at lines 2883--2883
 \T2A/cmr/m/n/14.4 109.05.049
  []
 
 
-Underfull \hbox (badness 2707) in paragraph at lines 2855--2855
+Underfull \hbox (badness 2707) in paragraph at lines 2884--2884
 []|\T2A/cmr/m/n/14.4 Попередня де-фе-кта-цiя ву-злiв
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2855--2855
+Underfull \hbox (badness 10000) in paragraph at lines 2884--2884
 []|\T2A/cmr/m/n/14.4 109.05.046
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2855--2855
+Underfull \hbox (badness 10000) in paragraph at lines 2884--2884
 []|\T2A/cmr/m/n/14.4 109.05.050
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 2856--2856
+Underfull \hbox (badness 2818) in paragraph at lines 2885--2885
 []|\T2A/cmr/m/n/14.4 Абразивне очи-ще-н-ня де-та-лей
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2856--2856
+Underfull \hbox (badness 10000) in paragraph at lines 2885--2885
 []|\T2A/cmr/m/n/14.4 109.01.022
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2856--2856
+Underfull \hbox (badness 10000) in paragraph at lines 2885--2885
 \T2A/cmr/m/n/14.4 109.01.035
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2856--2856
+Underfull \hbox (badness 10000) in paragraph at lines 2885--2885
 \T2A/cmr/m/n/14.4 109.01.036
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 2857--2857
+Underfull \hbox (badness 2818) in paragraph at lines 2886--2886
 []|\T2A/cmr/m/n/14.4 Абразивне очи-ще-н-ня де-та-лей
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2857--2857
+Underfull \hbox (badness 10000) in paragraph at lines 2886--2886
 []|\T2A/cmr/m/n/14.4 109.01.022
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2857--2857
+Underfull \hbox (badness 10000) in paragraph at lines 2886--2886
 \T2A/cmr/m/n/14.4 109.01.035
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2857--2857
+Underfull \hbox (badness 10000) in paragraph at lines 2886--2886
 \T2A/cmr/m/n/14.4 109.01.036
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2858--2858
-[]|\T2A/cmr/m/n/14.4 109.05.049
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2859--2859
-[]|\T2A/cmr/m/n/14.4 109.01.031
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2860--2860
-[]|\T2A/cmr/m/n/14.4 109.05.046
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2860--2860
-\T2A/cmr/m/n/14.4 109.05.047
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2860--2860
-[]|\T2A/cmr/m/n/14.4 109.01.005
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2862--2862
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ви-го-тов-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2862--2862
-\T2A/cmr/m/n/14.4 ле-них де-та-лей вiз-ку 0.162-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2862--2862
-[]|\T2A/cmr/m/n/14.4 109.01.044
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2862--2862
-\T2A/cmr/m/n/14.4 109.01.007
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2864--2864
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ви-го-тов-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2864--2864
-\T2A/cmr/m/n/14.4 ле-них де-та-лей вiз-ку 0.114-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2864--2864
-[]|\T2A/cmr/m/n/14.4 109.01.044
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2864--2864
-\T2A/cmr/m/n/14.4 109.01.007
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2864--2864
-\T2A/cmr/m/n/14.4 109.01.009
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2865--2865
-[]|\T2A/cmr/m/n/14.4 Ремонт ра-ми вiз-ку 0.162-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2865--2865
-[]|\T2A/cmr/m/n/14.4 109.05.052
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2865--2865
-\T2A/cmr/m/n/14.4 109.05.053
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2867--2867
-[]|\T2A/cmr/m/n/14.4 109.01.029
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2868--2868
-[]|\T2A/cmr/m/n/14.4 Ремонт ра-ми вiз-ку 0.114-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2868--2868
-[]|\T2A/cmr/m/n/14.4 109.05.052
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2868--2868
-\T2A/cmr/m/n/14.4 109.05.053
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2870--2870
-[]|\T2A/cmr/m/n/14.4 109.01.030
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2871--2871
-[]|\T2A/cmr/m/n/14.4 Ремонт на-дре-сор-но-го бру-су
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2871--2871
-[]|\T2A/cmr/m/n/14.4 109.05.052
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2871--2871
-\T2A/cmr/m/n/14.4 109.05.053
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2875--2875
-[]|\T2A/cmr/m/n/14.4 109.01.040
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
-[]|\T2A/cmr/m/n/14.4 Ремонт на-дре-сор-но-го бру-су
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
-[]|\T2A/cmr/m/n/14.4 109.05.052
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
-\T2A/cmr/m/n/14.4 109.05.053
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
-[]|\T2A/cmr/m/n/14.4 109.01.041
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2881--2881
-[]|\T2A/cmr/m/n/14.4 Ремонт де-та-лей пiд-вi-сок
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2881--2881
-[]|\T2A/cmr/m/n/14.4 109.05.052
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2881--2881
-[]|\T2A/cmr/m/n/14.4 109.01.041
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2881--2881
-\T2A/cmr/m/n/14.4 109.01.023
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2881--2881
-\T2A/cmr/m/n/14.4 109.01.024
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2882--2882
-[]|\T2A/cmr/m/n/14.4 109.05.052
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2882--2882
-[]|\T2A/cmr/m/n/14.4 109.01.041
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2882--2882
-\T2A/cmr/m/n/14.4 109.01.039
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2883--2883
-[]|\T2A/cmr/m/n/14.4 109.05.052
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2883--2883
-[]|\T2A/cmr/m/n/14.4 109.01.041
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2883--2883
-\T2A/cmr/m/n/14.4 109.01.039
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2884--2884
-[]|\T2A/cmr/m/n/14.4 109.05.052
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2884--2884
-[]|\T2A/cmr/m/n/14.4 109.01.037
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2884--2884
-\T2A/cmr/m/n/14.4 109.01.038
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2884--2884
-\T2A/cmr/m/n/14.4 109.01.025
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2885--2885
-[]|\T2A/cmr/m/n/14.4 109.05.049
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2885--2885
-[]|\T2A/cmr/m/n/14.4 109.01.037
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2885--2885
-\T2A/cmr/m/n/14.4 109.01.038
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2885--2885
-\T2A/cmr/m/n/14.4 109.01.025
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2886--2886
-[]|\T2A/cmr/m/n/14.4 109.05.049
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2886--2886
-[]|\T2A/cmr/m/n/14.4 109.01.037
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2886--2886
-\T2A/cmr/m/n/14.4 109.01.038
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2886--2886
-\T2A/cmr/m/n/14.4 109.01.025
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2887--2887
-[]|\T2A/cmr/m/n/14.4 109.01.025
+[]|\T2A/cmr/m/n/14.4 109.05.049
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2888--2888
-[]|\T2A/cmr/m/n/14.4 109.01.025
- []
-
-
-Underfull \hbox (badness 3735) in paragraph at lines 2889--2889
-[]|\T2A/cmr/m/n/14.4 Грунтування вiд-ре-мон-то-ва-них
- []
-
-
-Underfull \hbox (badness 1668) in paragraph at lines 2889--2889
-\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
+[]|\T2A/cmr/m/n/14.4 109.01.031
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2889--2889
-[]|\T2A/cmr/m/n/14.4 109.01.023
+[]|\T2A/cmr/m/n/14.4 109.05.046
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2889--2889
-\T2A/cmr/m/n/14.4 109.01.017
+\T2A/cmr/m/n/14.4 109.05.047
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2889--2889
-\T2A/cmr/m/n/14.4 109.01.018
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2889--2889
-\T2A/cmr/m/n/14.4 109.01.019
- []
-
-
-Underfull \hbox (badness 2277) in paragraph at lines 2890--2890
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
- []
-
-
-Underfull \hbox (badness 2142) in paragraph at lines 2890--2890
-\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
+[]|\T2A/cmr/m/n/14.4 109.01.005
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2891--2891
-[]|\T2A/cmr/m/n/14.4 Фарбування вiд-ре-мон-то-ва-них
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ви-го-тов-
  []
 
 
-Underfull \hbox (badness 1668) in paragraph at lines 2891--2891
-\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
- []
-
-[129] [130]
-Underfull \hbox (badness 2277) in paragraph at lines 2892--2892
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
+Underfull \hbox (badness 10000) in paragraph at lines 2891--2891
+\T2A/cmr/m/n/14.4 ле-них де-та-лей вiз-ку 0.162-
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 2892--2892
-\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
+Underfull \hbox (badness 10000) in paragraph at lines 2891--2891
+[]|\T2A/cmr/m/n/14.4 109.01.044
  []
 
 
-Underfull \hbox (badness 3735) in paragraph at lines 2893--2893
-[]|\T2A/cmr/m/n/14.4 Грунтування вiд-ре-мон-то-ва-них
- []
-
-
-Underfull \hbox (badness 1668) in paragraph at lines 2893--2893
-\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
+Underfull \hbox (badness 10000) in paragraph at lines 2891--2891
+\T2A/cmr/m/n/14.4 109.01.007
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2893--2893
-[]|\T2A/cmr/m/n/14.4 109.01.024
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ви-го-тов-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2893--2893
-\T2A/cmr/m/n/14.4 109.01.017
+\T2A/cmr/m/n/14.4 ле-них де-та-лей вiз-ку 0.114-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2893--2893
-\T2A/cmr/m/n/14.4 109.01.018
+[]|\T2A/cmr/m/n/14.4 109.01.044
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2893--2893
-\T2A/cmr/m/n/14.4 109.01.019
+\T2A/cmr/m/n/14.4 109.01.007
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 2894--2894
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
+Underfull \hbox (badness 10000) in paragraph at lines 2893--2893
+\T2A/cmr/m/n/14.4 109.01.009
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 2894--2894
-\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
+Underfull \hbox (badness 10000) in paragraph at lines 2894--2894
+[]|\T2A/cmr/m/n/14.4 Ремонт ра-ми вiз-ку 0.162-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2895--2895
-[]|\T2A/cmr/m/n/14.4 Фарбування вiд-ре-мон-то-ва-них
+Underfull \hbox (badness 10000) in paragraph at lines 2894--2894
+[]|\T2A/cmr/m/n/14.4 109.05.052
  []
 
 
-Underfull \hbox (badness 1668) in paragraph at lines 2895--2895
-\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
+Underfull \hbox (badness 10000) in paragraph at lines 2894--2894
+\T2A/cmr/m/n/14.4 109.05.053
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 2896--2896
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
- []
-
-
-Underfull \hbox (badness 2142) in paragraph at lines 2896--2896
-\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2897--2897
-[]|\T2A/cmr/m/n/14.4 109.01.033
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2897--2897
-\T2A/cmr/m/n/14.4 109.01.039
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2898--2898
-[]|\T2A/cmr/m/n/14.4 109.01.041
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2898--2898
-\T2A/cmr/m/n/14.4 109.01.034
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2899--2899
-[]|\T2A/cmr/m/n/14.4 109.05.051
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2899--2899
-[]|\T2A/cmr/m/n/14.4 109.01.033
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2900--2900
-[]|\T2A/cmr/m/n/14.4 109.05.051
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2900--2900
-[]|\T2A/cmr/m/n/14.4 109.01.034
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2901--2901
+Underfull \hbox (badness 10000) in paragraph at lines 2896--2896
 []|\T2A/cmr/m/n/14.4 109.01.029
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 2902--2902
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ра-ми вiз-
+Underfull \hbox (badness 10000) in paragraph at lines 2897--2897
+[]|\T2A/cmr/m/n/14.4 Ремонт ра-ми вiз-ку 0.114-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2903--2903
+Underfull \hbox (badness 10000) in paragraph at lines 2897--2897
+[]|\T2A/cmr/m/n/14.4 109.05.052
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2897--2897
+\T2A/cmr/m/n/14.4 109.05.053
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2899--2899
 []|\T2A/cmr/m/n/14.4 109.01.030
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 2904--2904
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ра-ми вiз-
+Underfull \hbox (badness 10000) in paragraph at lines 2900--2900
+[]|\T2A/cmr/m/n/14.4 Ремонт на-дре-сор-но-го бру-су
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2905--2905
-[]|\T2A/cmr/m/n/14.4 109.05.049
+Underfull \hbox (badness 10000) in paragraph at lines 2900--2900
+[]|\T2A/cmr/m/n/14.4 109.05.052
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2905--2905
-[]|\T2A/cmr/m/n/14.4 109.01.037
+Underfull \hbox (badness 10000) in paragraph at lines 2900--2900
+\T2A/cmr/m/n/14.4 109.05.053
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2906--2906
-[]|\T2A/cmr/m/n/14.4 109.05.049
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2906--2906
+[127]
+Underfull \hbox (badness 10000) in paragraph at lines 2904--2904
 []|\T2A/cmr/m/n/14.4 109.01.040
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2906--2906
-\T2A/cmr/m/n/14.4 109.01.041
+Underfull \hbox (badness 10000) in paragraph at lines 2905--2905
+[]|\T2A/cmr/m/n/14.4 Ремонт на-дре-сор-но-го бру-су
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 2907--2907
-\T2A/cmr/m/n/14.4 жiль-ноЁ пе-ре-да-чi вiз-ку 0.162-
+Underfull \hbox (badness 10000) in paragraph at lines 2905--2905
+[]|\T2A/cmr/m/n/14.4 109.05.052
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2907--2907
-[]|\T2A/cmr/m/n/14.4 109.01.021
+Underfull \hbox (badness 10000) in paragraph at lines 2905--2905
+\T2A/cmr/m/n/14.4 109.05.053
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2907--2907
-\T2A/cmr/m/n/14.4 109.01.022
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2907--2907
-\T2A/cmr/m/n/14.4 109.01.020
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2907--2907
-\T2A/cmr/m/n/14.4 109.01.035
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2907--2907
-\T2A/cmr/m/n/14.4 109.05.061
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2907--2907
-\T2A/cmr/m/n/14.4 109.05.064
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2907--2907
-[]|\T2A/cmr/m/n/14.4 109.01.040
- []
-
-
-Underfull \hbox (badness 1571) in paragraph at lines 2908--2908
-\T2A/cmr/m/n/14.4 жiль-ноЁ пе-ре-да-чi вiз-ку 0.114-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2908--2908
-[]|\T2A/cmr/m/n/14.4 109.01.021
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2908--2908
-\T2A/cmr/m/n/14.4 109.01.022
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2908--2908
-\T2A/cmr/m/n/14.4 109.01.020
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2908--2908
-\T2A/cmr/m/n/14.4 109.01.035
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2908--2908
-\T2A/cmr/m/n/14.4 109.05.063
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2908--2908
-\T2A/cmr/m/n/14.4 109.05.065
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2908--2908
+Underfull \hbox (badness 10000) in paragraph at lines 2909--2909
 []|\T2A/cmr/m/n/14.4 109.01.041
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2909--2909
-[]|\T2A/cmr/m/n/14.4 109.01.036
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2909--2909
-\T2A/cmr/m/n/14.4 109.01.037
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2909--2909
-[]|\T2A/cmr/m/n/14.4 109.01.040
- []
-
-
-Underfull \hbox (badness 4726) in paragraph at lines 2910--2910
-[]|\T2A/cmr/m/n/14.4 Збiрка вiз-ку 0.162-04.20.00 :
+Underfull \hbox (badness 10000) in paragraph at lines 2910--2910
+[]|\T2A/cmr/m/n/14.4 Ремонт де-та-лей пiд-вi-сок
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2910--2910
-[]|\T2A/cmr/m/n/14.4 109.01.036
+[]|\T2A/cmr/m/n/14.4 109.05.052
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2910--2910
-\T2A/cmr/m/n/14.4 109.01.037
+[]|\T2A/cmr/m/n/14.4 109.01.041
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2910--2910
-\T2A/cmr/m/n/14.4 109.01.039
+\T2A/cmr/m/n/14.4 109.01.023
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2910--2910
-\T2A/cmr/m/n/14.4 109.05.057
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2910--2910
-\T2A/cmr/m/n/14.4 109.01.017
+\T2A/cmr/m/n/14.4 109.01.024
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2911--2911
-[]|\T2A/cmr/m/n/14.4 Фарбування вiз-ку 0.162-
+[]|\T2A/cmr/m/n/14.4 109.05.052
  []
 
-[131] [132]
-Underfull \hbox (badness 4726) in paragraph at lines 2913--2913
-[]|\T2A/cmr/m/n/14.4 Збiрка вiз-ку 0.114-04.10.00 :
+
+Underfull \hbox (badness 10000) in paragraph at lines 2911--2911
+[]|\T2A/cmr/m/n/14.4 109.01.041
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2911--2911
+\T2A/cmr/m/n/14.4 109.01.039
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2912--2912
+[]|\T2A/cmr/m/n/14.4 109.05.052
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2912--2912
+[]|\T2A/cmr/m/n/14.4 109.01.041
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2912--2912
+\T2A/cmr/m/n/14.4 109.01.039
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2913--2913
-[]|\T2A/cmr/m/n/14.4 109.01.036
+[]|\T2A/cmr/m/n/14.4 109.05.052
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2913--2913
+[]|\T2A/cmr/m/n/14.4 109.01.037
  []
 
 
@@ -2203,74 +1810,479 @@ Underfull \hbox (badness 10000) in paragraph at lines 2913--2913
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2913--2913
-\T2A/cmr/m/n/14.4 109.01.039
+\T2A/cmr/m/n/14.4 109.01.025
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2913--2913
-\T2A/cmr/m/n/14.4 109.01.017
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2916--2916
+Underfull \hbox (badness 10000) in paragraph at lines 2914--2914
 []|\T2A/cmr/m/n/14.4 109.05.049
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 2914--2914
+[]|\T2A/cmr/m/n/14.4 109.01.037
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2914--2914
+\T2A/cmr/m/n/14.4 109.01.038
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2914--2914
+\T2A/cmr/m/n/14.4 109.01.025
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2915--2915
+[]|\T2A/cmr/m/n/14.4 109.05.049
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2915--2915
+[]|\T2A/cmr/m/n/14.4 109.01.037
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2915--2915
+\T2A/cmr/m/n/14.4 109.01.038
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2915--2915
+\T2A/cmr/m/n/14.4 109.01.025
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 2916--2916
+[]|\T2A/cmr/m/n/14.4 109.01.025
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2917--2917
+[]|\T2A/cmr/m/n/14.4 109.01.025
+ []
+
+
+Underfull \hbox (badness 3735) in paragraph at lines 2918--2918
+[]|\T2A/cmr/m/n/14.4 Грунтування вiд-ре-мон-то-ва-них
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 2918--2918
+\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2918--2918
+[]|\T2A/cmr/m/n/14.4 109.01.023
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2918--2918
+\T2A/cmr/m/n/14.4 109.01.017
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2918--2918
+\T2A/cmr/m/n/14.4 109.01.018
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2918--2918
+\T2A/cmr/m/n/14.4 109.01.019
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 2919--2919
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 2919--2919
+\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2920--2920
+[]|\T2A/cmr/m/n/14.4 Фарбування вiд-ре-мон-то-ва-них
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 2920--2920
+\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
+ []
+
+[128]
+Underfull \hbox (badness 2277) in paragraph at lines 2921--2921
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 2921--2921
+\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
+ []
+
+
+Underfull \hbox (badness 3735) in paragraph at lines 2922--2922
+[]|\T2A/cmr/m/n/14.4 Грунтування вiд-ре-мон-то-ва-них
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 2922--2922
+\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2922--2922
+[]|\T2A/cmr/m/n/14.4 109.01.024
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2922--2922
+\T2A/cmr/m/n/14.4 109.01.017
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2922--2922
+\T2A/cmr/m/n/14.4 109.01.018
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2922--2922
+\T2A/cmr/m/n/14.4 109.01.019
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 2923--2923
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 2923--2923
+\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2924--2924
+[]|\T2A/cmr/m/n/14.4 Фарбування вiд-ре-мон-то-ва-них
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 2924--2924
+\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 2925--2925
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 2925--2925
+\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2926--2926
+[]|\T2A/cmr/m/n/14.4 109.01.033
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2926--2926
+\T2A/cmr/m/n/14.4 109.01.039
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2927--2927
+[]|\T2A/cmr/m/n/14.4 109.01.041
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2927--2927
+\T2A/cmr/m/n/14.4 109.01.034
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2928--2928
+[]|\T2A/cmr/m/n/14.4 109.05.051
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2928--2928
+[]|\T2A/cmr/m/n/14.4 109.01.033
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2929--2929
+[]|\T2A/cmr/m/n/14.4 109.05.051
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2929--2929
+[]|\T2A/cmr/m/n/14.4 109.01.034
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2930--2930
+[]|\T2A/cmr/m/n/14.4 109.01.029
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 2931--2931
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ра-ми вiз-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2932--2932
+[]|\T2A/cmr/m/n/14.4 109.01.030
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 2933--2933
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ра-ми вiз-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2934--2934
+[]|\T2A/cmr/m/n/14.4 109.05.049
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2934--2934
+[]|\T2A/cmr/m/n/14.4 109.01.037
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2935--2935
+[]|\T2A/cmr/m/n/14.4 109.05.049
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2935--2935
+[]|\T2A/cmr/m/n/14.4 109.01.040
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2935--2935
+\T2A/cmr/m/n/14.4 109.01.041
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 2936--2936
+\T2A/cmr/m/n/14.4 жiль-ноЁ пе-ре-да-чi вiз-ку 0.162-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
+[]|\T2A/cmr/m/n/14.4 109.01.021
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
+\T2A/cmr/m/n/14.4 109.01.022
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
+\T2A/cmr/m/n/14.4 109.01.020
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
+\T2A/cmr/m/n/14.4 109.01.035
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
+\T2A/cmr/m/n/14.4 109.05.061
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
+\T2A/cmr/m/n/14.4 109.05.064
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2936--2936
+[]|\T2A/cmr/m/n/14.4 109.01.040
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 2937--2937
+\T2A/cmr/m/n/14.4 жiль-ноЁ пе-ре-да-чi вiз-ку 0.114-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2937
+[]|\T2A/cmr/m/n/14.4 109.01.021
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2937
+\T2A/cmr/m/n/14.4 109.01.022
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2937
+\T2A/cmr/m/n/14.4 109.01.020
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2937
+\T2A/cmr/m/n/14.4 109.01.035
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2937
+\T2A/cmr/m/n/14.4 109.05.063
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2937
+\T2A/cmr/m/n/14.4 109.05.065
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2937
+[]|\T2A/cmr/m/n/14.4 109.01.041
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2938
+[]|\T2A/cmr/m/n/14.4 109.01.036
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2938
+\T2A/cmr/m/n/14.4 109.01.037
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2938
+[]|\T2A/cmr/m/n/14.4 109.01.040
+ []
+
+
+Underfull \hbox (badness 4726) in paragraph at lines 2939--2939
+[]|\T2A/cmr/m/n/14.4 Збiрка вiз-ку 0.162-04.20.00 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2939--2939
+[]|\T2A/cmr/m/n/14.4 109.01.036
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2939--2939
+\T2A/cmr/m/n/14.4 109.01.037
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2939--2939
+\T2A/cmr/m/n/14.4 109.01.039
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2939--2939
+\T2A/cmr/m/n/14.4 109.05.057
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2939--2939
+\T2A/cmr/m/n/14.4 109.01.017
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2940--2940
+[]|\T2A/cmr/m/n/14.4 Фарбування вiз-ку 0.162-
+ []
+
+[129] [130] [131]
+Underfull \hbox (badness 4726) in paragraph at lines 2942--2942
+[]|\T2A/cmr/m/n/14.4 Збiрка вiз-ку 0.114-04.10.00 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2942--2942
+[]|\T2A/cmr/m/n/14.4 109.01.036
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2942--2942
+\T2A/cmr/m/n/14.4 109.01.038
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2942--2942
+\T2A/cmr/m/n/14.4 109.01.039
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2942--2942
+\T2A/cmr/m/n/14.4 109.01.017
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2945--2945
+[]|\T2A/cmr/m/n/14.4 109.05.049
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2945--2945
 []|\T2A/cmr/m/n/14.4 109.01.007
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2916--2916
+Underfull \hbox (badness 10000) in paragraph at lines 2945--2945
 \T2A/cmr/m/n/14.4 109.01.009
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2916--2916
+Underfull \hbox (badness 10000) in paragraph at lines 2945--2945
 \T2A/cmr/m/n/14.4 109.01.044
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2916--2916
+Underfull \hbox (badness 10000) in paragraph at lines 2945--2945
 \T2A/cmr/m/n/14.4 109.01.047
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2917--2917
+Underfull \hbox (badness 10000) in paragraph at lines 2946--2946
 []|\T2A/cmr/m/n/14.4 Нове фор-му-ва-н-ня па-са-жир-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2917--2917
+Underfull \hbox (badness 10000) in paragraph at lines 2946--2946
 []|\T2A/cmr/m/n/14.4 109.01.001
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2918--2918
+Underfull \hbox (badness 10000) in paragraph at lines 2947--2947
 []|\T2A/cmr/m/n/14.4 Фарбування ко-лi-сноЁ па-ри
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2918--2918
+Underfull \hbox (badness 10000) in paragraph at lines 2947--2947
 []|\T2A/cmr/m/n/14.4 109.01.040
  []
 
-[133] [134] [135] [136]
-Overfull \hbox (2.52611pt too wide) in paragraph at lines 2925--2926
+[132] [133] [134] [135]
+Overfull \hbox (2.52611pt too wide) in paragraph at lines 2954--2955
 \T2A/cmr/m/n/14.4 ка- i[]Су- е-но до-вiль-но-го по-ряд-ку. Про-де-мон-стро-ва-н
 о, що роз-ши-ре-нi нео-
  []
 
-[137]
-Overfull \hbox (13.74104pt too wide) in paragraph at lines 2931--2932
+[136]
+Overfull \hbox (13.74104pt too wide) in paragraph at lines 2960--2961
 \T2A/cmr/m/n/14.4 кiв-ський ва-го-но-бу-дiв-ний за-вод>> за до-по-мо-гою ка-ска
 -дноЁ гi-бри-дноЁ нейро-
  []
 
-[138] [139
+[137] [138
 
-] [140] (./thesis.bbl [141]
+] [139] (./thesis.bbl [140]
 Underfull \hbox (badness 10000) in paragraph at lines 24--31
 []\OT1/cmr/m/n/14.4 Adaptive Clus-ter-ing for Mul-ti-ple Evolv-ing Streams / Bi
 -
@@ -2311,7 +2323,7 @@ Underfull \hbox (badness 1776) in paragraph at lines 41--48
 7. []  URL:
  []
 
-[142
+[141
 
 ]
 Underfull \hbox (badness 7273) in paragraph at lines 144--151
@@ -2356,7 +2368,7 @@ Underfull \hbox (badness 5036) in paragraph at lines 154--162
 \OT1/cmr/m/n/14.4 FOR ON-LINE IN-FOR-MA-TION PRO-CESS-ING. []  2013. []  URL:
  []
 
-[143]
+[142]
 Underfull \hbox (badness 2970) in paragraph at lines 199--205
 []\OT1/cmr/m/n/14.4 Chung Fu-Lai, Lee Tong. Fuzzy com-pet-i-tive learn-ing // N
 eu-
@@ -2368,13 +2380,13 @@ Underfull \hbox (badness 3148) in paragraph at lines 199--205
 []  URL:
  []
 
-[144]
+[143]
 Underfull \hbox (badness 1264) in paragraph at lines 245--252
 \OT1/cmr/m/n/14.4 Im-age Recog-ni-tion / Frank H^^?opp-ner, Frank Kla-wonn, Rud
 olf Kruse,
  []
 
-[145]
+[144]
 Underfull \hbox (badness 2012) in paragraph at lines 362--369
 []\OT1/cmr/m/n/14.4 Leng Gang, Prasad Gir-i-jesh, McGin-nity T. Mar-tin. An on-
 line
@@ -2422,7 +2434,7 @@ Underfull \hbox (badness 4967) in paragraph at lines 383--390
   URL:
  []
 
-[146]
+[145]
 Underfull \hbox (badness 1365) in paragraph at lines 405--409
 []\OT1/cmr/m/n/14.4 Miki T., (Japan) T. Ya-makawa. Ana-log Im-ple-men-ta-tion o
 f Neo-
@@ -2434,7 +2446,7 @@ Underfull \hbox (badness 3088) in paragraph at lines 442--449
 s
  []
 
-[147]
+[146]
 Underfull \hbox (badness 10000) in paragraph at lines 487--495
 []\OT1/cmr/m/n/14.4 Smoothly dis-tributed fuzzy C-means: a new self-organizing
  []
@@ -2469,7 +2481,7 @@ Underfull \hbox (badness 1902) in paragraph at lines 515--527
 01. []  URL:
  []
 
-[148]
+[147]
 Underfull \hbox (badness 3209) in paragraph at lines 581--588
 []\OT1/cmr/m/n/14.4 Wu Yi. Net-work Big Data: A Lit-er-a-ture Sur-vey on Stream
 
@@ -2485,7 +2497,7 @@ L:
 
 Package natbib Warning: There were undefined citations.
 
-[149] (./thesis.aux)
+[148] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -2494,10 +2506,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8956 strings out of 493089
- 134711 string characters out of 6134842
- 218220 words of memory out of 5000000
- 12197 multiletter control sequences out of 15000+600000
+ 8967 strings out of 493089
+ 135077 string characters out of 6134842
+ 224239 words of memory out of 5000000
+ 12206 multiletter control sequences out of 15000+600000
  29743 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  276i,20n,44p,4416b,643s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2527,10 +2539,10 @@ pe1/public/cm-super/sfti1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
 1/public/cm-super/sftt1000.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 public/cm-super/sfxc1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
 blic/cm-super/sfxc1728.pfb>
-Output written on thesis.pdf (149 pages, 5115686 bytes).
+Output written on thesis.pdf (148 pages, 5168014 bytes).
 PDF statistics:
- 1052 PDF objects out of 1200 (max. 8388607)
- 717 compressed objects within 8 object streams
+ 1053 PDF objects out of 1200 (max. 8388607)
+ 715 compressed objects within 8 object streams
  0 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 
