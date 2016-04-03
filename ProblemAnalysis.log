@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  3 APR 2016 21:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  3 APR 2016 20:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**thesis.tex
-(./thesis.tex
+**ProblemAnalysis.tex
+(./ProblemAnalysis.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (./vakthesis.cls
@@ -526,37 +526,30 @@ Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/ncctools/extdash.sty
 Package: extdash 2005/01/29 v1.2 Extended Dash Package (NCC)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/upquote/upquote.sty
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
-tim
-)
-(./thesis.aux
+(./ProblemAnalysis.aux)
+\openout1 = `ProblemAnalysis.aux'.
 
-LaTeX Warning: Label `ch:Intro' multiply defined.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 99.
 
-)
-\openout1 = `thesis.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 92.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    ... okay on input line 99.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -651,104 +644,133 @@ e
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-File: speciality.20070212N70 (vakthesis)
-[1
-
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./thesis.toc
-Overfull \hbox (9.86017pt too wide) in paragraph at lines 8--8
- [][] []\T2A/cmr/m/n/14.4 Деструктивнийй пiд-хiд до на-ла-шту-ва-н-ня ар-хi-те-
-кту-ри ней- 
- []
-
-
-Overfull \hbox (10.62245pt too wide) in paragraph at lines 9--9
- [][] []\T2A/cmr/m/n/14.4 Конструктивний пiд-хiд до на-ла-шту-ва-н-ня ар-хi-те-
-кту-ри ней- 
- []
-
+Package color Info: Redefining color shadecolor on input line 101.
+LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 104
+.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-\tf@toc=\write3
-\openout3 = `thesis.toc'.
+Overfull \hbox (49.8138pt too wide) in paragraph at lines 104--105
+[]\T2A/cmtt/m/n/14.4 ## Warning in grepl(db, input): input string 43 is invalid
+ in this locale[] 
+ []
 
- [2
 
-] [3
+Overfull \hbox (49.8138pt too wide) in paragraph at lines 106--107
+[]\T2A/cmtt/m/n/14.4 ## Warning in grepl(db, input): input string 44 is invalid
+ in this locale[] 
+ []
+
+
+Overfull \hbox (49.8138pt too wide) in paragraph at lines 108--109
+[]\T2A/cmtt/m/n/14.4 ## Warning in grepl(db, input): input string 45 is invalid
+ in this locale[] 
+ []
+
+
+Overfull \hbox (49.8138pt too wide) in paragraph at lines 110--111
+[]\T2A/cmtt/m/n/14.4 ## Warning in grepl(db, input): input string 48 is invalid
+ in this locale[] 
+ []
+
+
+Overfull \hbox (49.8138pt too wide) in paragraph at lines 112--113
+[]\T2A/cmtt/m/n/14.4 ## Warning in grepl(db, input): input string 53 is invalid
+ in this locale[] 
+ []
+
+
+Overfull \hbox (20.58034pt too wide) in paragraph at lines 114--115
+[]\T2A/cmtt/m/n/14.4 ## Warning in grep("^\\\\bibliography.+", input, value = T
+RUE): input
+ []
+
+
+Overfull \hbox (20.58034pt too wide) in paragraph at lines 116--117
+[]\T2A/cmtt/m/n/14.4 ## Warning in grep("^\\\\bibliography.+", input, value = T
+RUE): input
+ []
+
+
+Overfull \hbox (20.58034pt too wide) in paragraph at lines 118--119
+[]\T2A/cmtt/m/n/14.4 ## Warning in grep("^\\\\bibliography.+", input, value = T
+RUE): input
+ []
+
+
+Overfull \hbox (20.58034pt too wide) in paragraph at lines 120--121
+[]\T2A/cmtt/m/n/14.4 ## Warning in grep("^\\\\bibliography.+", input, value = T
+RUE): input
+ []
+
+
+Overfull \hbox (20.58034pt too wide) in paragraph at lines 122--122
+[]\T2A/cmtt/m/n/14.4 ## Warning in grep("^\\\\bibliography.+", input, value = T
+RUE): input
+ []
+
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 1.
+[2
 
-Package natbib Warning: Citation `ref123' on page 4 undefined on input line 141
-.
-
-[4
-
-] [5] [6] [7] [8] [9]
-Overfull \hbox (6.4973pt too wide) in paragraph at lines 218--219
+] [3] [4] [5] [6] [7]
+Overfull \hbox (6.4973pt too wide) in paragraph at lines 211--212
 \T2A/cmr/m/n/14.4 обро-блю-ва-ти ве-ли-кi ма-си-ви да-них ве-ли-коЁ роз-мiр-но-
 стi, якi мо-жуть ма-ти пропу-
  []
 
-[10]
-Overfull \hbox (5.55807pt too wide) in paragraph at lines 224--225
+[8]
+Overfull \hbox (5.55807pt too wide) in paragraph at lines 217--218
 []\T2A/cmr/m/n/14.4 деструктивний пiд-хiд: за осно-ву бе-ре-ться за-зда-ле-гiть
  на-дли-шко-во скла-
  []
 
-[11] [12] [13]
-Overfull \hbox (0.47705pt too wide) in paragraph at lines 292--293
+[9] [10] [11]
+Overfull \hbox (0.47705pt too wide) in paragraph at lines 285--286
  \T2A/cmr/bx/n/14.4 1.4.2. Кон-стру-ктив-ний пiд-хiд до на-ла-шту-ва-н-ня ар-хi
 -те-кту-ри ней-
  []
 
-[14] [15] [16] [17] [18] [19]
-Overfull \hbox (20.2725pt too wide) in paragraph at lines 432--434
+[12] [13] [14] [15] [16] [17]
+Overfull \hbox (20.2725pt too wide) in paragraph at lines 425--427
  \T2A/cmr/bx/n/14.4 1.4.3. За-да-ча не-чi-тко-го кла-сте-ру-ва-н-ня да-них.[] \
 T2A/cmr/m/n/14.4 Кла-сте-ри-за-цiя № основ-
  []
 
-[20] [21] (./thesis.bbl [22])
-
-Package natbib Warning: There were undefined citations.
-
-[23
-
-] (./thesis.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[18] [19]
+No file ProblemAnalysis.bbl.
+[20] (./ProblemAnalysis.aux) ) 
 Here is how much of TeX's memory you used:
- 8308 strings out of 493089
- 117829 string characters out of 6134842
- 185686 words of memory out of 5000000
- 11622 multiletter control sequences out of 15000+600000
- 18495 words of font info for 46 fonts, out of 8000000 for 9000
+ 8283 strings out of 493089
+ 117859 string characters out of 6134842
+ 185470 words of memory out of 5000000
+ 11608 multiletter control sequences out of 15000+600000
+ 14508 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 276i,14n,38p,1066b,272s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/
-usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/
-local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/loca
-l/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{/usr/local/te
-xlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{/usr/local/texliv
-e/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/public/cm-super/sfxc1728.pfb>
-Output written on thesis.pdf (23 pages, 253918 bytes).
+ 38i,11n,38p,1075b,226s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvi
+ps/mnsymbol/MnSymbolC.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/m
+nsymbol/MnSymbolD.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsym
+bol/MnSymbolE.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/
+MnSymbolF.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSy
+mbolA.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super
+-t2a.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymb
+ol10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymb
+ol12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
+Output written on ProblemAnalysis.pdf (20 pages, 245441 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
+ 131 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
