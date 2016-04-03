@@ -1,6 +1,126 @@
-<<echo=FALSE, cache=FALSE>>=
-set_parent('thesis.Rnw')
-@
+\documentclass{vakthesis}
+\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\newcommand{\SweaveOpts}[1]{}  % do not interfere with LaTeX
+\newcommand{\SweaveInput}[1]{} % because they are not real TeX commands
+\newcommand{\Sexpr}[1]{}       % will only be parsed by R
+
+
+\usepackage[T2A]{fontenc}
+\usepackage[cp1251]{inputenc}
+\usepackage[english,russian,ukrainian]{babel}
+\usepackage{geometry}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+\usepackage{amsmath}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{color,soul}
+\usepackage{graphicx}
+\usepackage{MnSymbol}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage[labelsep=endash]{caption}
+\usepackage[shortcuts]{extdash}
+
+\graphicspath{{images/}}
+
+
+%\geometry{hmargin={30mm,15mm},lines=29,vcentering}
+\everymath=\expandafter{\the\everymath\displaystyle}
+
+\geometry{a4paper, total={170mm,257mm}, left=25mm, top=20mm}
+
+%This is to make proper table captions, you most definately do *not* want to edit this
+\makeatletter
+\let\ORG@makecaption\@makecaption
+\let\ORGlongtable\longtable
+\let\ORGLT@makecaption\LT@makecaption
+\AtBeginDocument{%
+  \let\@maketablecaption\ORG@makecaption
+  \let\longtable\ORGlongtable
+  \let\LT@makecaption\ORGLT@makecaption
+}
+\makeatother
+
+
+%\DeclareMathSizes{10}{10}{10}{10}
+
+
+\begin{document}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grepl(db, input): input string 43 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grepl(db, input): input string 44 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grepl(db, input): input string 45 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grepl(db, input): input string 48 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grepl(db, input): input string 53 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grep("{}\textasciicircum{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}bibliography.+"{}, input, value = TRUE): input string 43 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grep("{}\textasciicircum{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}bibliography.+"{}, input, value = TRUE): input string 44 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grep("{}\textasciicircum{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}bibliography.+"{}, input, value = TRUE): input string 45 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grep("{}\textasciicircum{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}bibliography.+"{}, input, value = TRUE): input string 48 is invalid in this locale}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in grep("{}\textasciicircum{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}bibliography.+"{}, input, value = TRUE): input string 53 is invalid in this locale}}\end{kframe}
+\end{knitrout}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -82,22 +202,24 @@ set_parent('thesis.Rnw')
 
 
 
-Оскільки сучасні обчислювальні технології дозволяють накопичувати і обробляти досить великі масиви інформації, то на перший план виходить швидкість обробляння даних, а також можливість роботи з ними в послідовному режимі. Крім того варто зазначити, що інформація, яка обробляється, може характеризуватися нелінійним і нестаціонарним характером даних. У таких випадках доцільно використання штучних нейронних мереж, які володіють універсальними апроксимуючими властивостями. Застосування апарату нечіткої логіки дозволяє розширити функціональні можливості штучних нейронних мереж і коло вирішуваних завдань. Завдання дослідження полягає в розробці архітектур нейро-фаззі мереж і методів їх навчання, що володіють високою гнучкістю налаштування параметрів для інтелектуального аналізу даних в умовах невизначеності. Для досягнення поставленої мети необхідно розглянути наступні питання:
+Оскільки сучасні обчислювальні технології дозволяють накопичувати і обробляти досить великі масиви інформації, то на перший план виходить швидкість обробки даних, а також можливість роботи з ними в послідовному режимі. Крім того варто зазначити, що інформація, яка обробляється, може характеризуватися нелінійним і нестаціонарним характером даних. У таких випадках доцільно використання штучних нейронних мереж, які володіють універсальними апроксимуючими властивостями. Застосування апарату нечіткої логіки дозволяє розширити функціональні можливості штучних нейронних мереж і коло вирішуваних завдань. Завдання дослідження полягає в розробці архітектур нейро-фаззі мереж і методів їх навчання, що володіють високою гнучкістю налаштування параметрів для інтелектуального аналізу даних в умовах невизначеності. Для досягнення поставленої мети необхідно розглянути наступні питання:
 
 \begin{enumerate}
 \item Аналіз існуючих нейро-фаззі архітектур і методів їх навчання.
-\item Розробка спеціалізованих штучних нейронів, які мають підвищену (порівняно з традиційними нейронами) швидкістю навчання, а також здатних ефективно вирішувати завдання прогнозування, ідентифікації і класетрування в умовах апріорної і поточної невизначеності.
+\item Розробка спеціалізованих штучних нейронів, які мають підвищену (порівняно з традиційними нейронами) швидкістю навчання, швидкодії, а також здатних ефективно вирішувати завдання прогнозування, ідентифікації і класетрування в умовах апріорної і поточної невизначеності.
 \item Розробка на основі цих нейронів штучних нейронних мереж зі зростаючою архітектурою та методів їх навчання.
 \item Дослідження методів і способів, що дозволяють виконати гібридизацію (перехід від нейро до нейро-нечіткої системи).
-\item Розробка методів навчання, що дозволяють гібридній нейро-нечіткій зростаючій архітектурі функціонувати в режимі послідовного обробляння інформації.
-\item Проведення імітаційного моделювання розроблених методів і архітектур та розв'язання з їх допомогою практичних завдань.
+\item Розробка методів навчання, що дозволяють гібридної нейро нечіткої зростаючої архітектурі функціонувати в режимі послідовної обробки інформації.
+\item Проведення імітаційного моделювання розроблених методів і архітектур та рішення з їх допомогою практичних завдань.
 \end{enumerate}
 
 \section*{Висновки до розділу~\ref{ch:TODO}}
 
 \begin{enumerate}
-\item Розглянуто гібридні нейро-фаззі системи для вирішення завдань обробляння інформації за умови апріорної і поточної невизначеності. У якості головного недоліку таких систем виділено відсутність ефективних способів настройки архітектури з можливістю функціонувати в режимі реального часу.
-\item Проаналізовано стан проблеми кластерування даних і розглянуті існуючі підходи до її вирішення. Розглянуто основні принципи нечіткої логіки та систем нечіткого висновування. Проаналізовані існуючі архітектури штучних нейронних мереж і методи їх самонавчання, що використовуються для вирішення завдань кластерування даних.
+\item Розглянуто гібридні нейро-фаззі системи для вирішення завдань обробки інформації за умови апріорної і поточної невизначеності. У якості головного недоліку таких систем виділено відсутність ефективних способів настройки архітектури з можливістю функціонувати в режимі послідовної обробки інформації.
+\item Проаналізовано стан проблеми кластерування даних і розглянуті існуючі підходи до її вирішення. Розглянуто основні принципи нечіткої логіки та систем нечіткого висновування. Проаналізовані існуючі архітектури штучних нейронних мереж і методи їх самонавчання, що використовуються для вирішення завдань кластерування даних
 \item Проведено аналіз існуючих конструктивних і деструктивних методів структурної адаптації нейронних мереж. Виділено їх сильні і слабкі сторони. Обґрунтовано доцільність використання конструктивних алгоритмів для синтезу систем, що мають функціонувати в режимі послідовного обробляння даних.
-\item Сформульовано завдання дослідження.
 \end{enumerate}
+\bibliographystyle{ugost2008ns}
+\bibliography{references}	
+\end{document}

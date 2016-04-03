@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  3 APR 2016 21:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  4 APR 2016 00:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**ProblemAnalysis.tex
-(./ProblemAnalysis.tex
+**Intro.tex
+(./Intro.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (./vakthesis.cls
@@ -526,8 +526,8 @@ Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/ncctools/extdash.sty
 Package: extdash 2005/01/29 v1.2 Extended Dash Package (NCC)
 )
-(./ProblemAnalysis.aux)
-\openout1 = `ProblemAnalysis.aux'.
+(./Intro.aux)
+\openout1 = `Intro.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
 LaTeX Font Info:    ... okay on input line 99.
@@ -545,8 +545,7 @@ LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 99.
 LaTeX Font Info:    ... okay on input line 99.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 99.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 99.
@@ -712,73 +711,56 @@ RUE): input
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-{\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 1.
-
-Package natbib Warning: Citation `ref123' on page 2 undefined on input line 134
-.
-
 [2
 
-] [3] [4] [5] [6] [7]
-Overfull \hbox (6.4973pt too wide) in paragraph at lines 211--212
-\T2A/cmr/m/n/14.4 обро-блю-ва-ти ве-ли-кi ма-си-ви да-них ве-ли-коЁ роз-мiр-но-
-стi, якi мо-жуть ма-ти пропу-
+] [3]
+Overfull \hbox (1.41989pt too wide) in paragraph at lines 162--163
+ \T2A/cmr/bx/n/14.4 На-у-ко-ва но-ви-зна отри-ма-них ре-зуль-та-тiв.[] \T2A/cmr
+/m/n/14.4 До но-вих, одер-жа-них осо-
  []
 
-[8]
-Overfull \hbox (5.55807pt too wide) in paragraph at lines 217--218
-[]\T2A/cmr/m/n/14.4 деструктивний пiд-хiд: за осно-ву бе-ре-ться за-зда-ле-гiть
- на-дли-шко-во скла-
+[4] [5] [6]
+Overfull \hbox (0.8033pt too wide) in paragraph at lines 209--210
+[]\T2A/cmr/m/n/14.4 Розробка спе-цi-а-лi-зо-ва-них шту-чних ней-ро-нiв, якi ма-
+ють пiд-ви-ще-ну (по-
  []
 
-[9] [10] [11]
-Overfull \hbox (0.47705pt too wide) in paragraph at lines 285--286
- \T2A/cmr/bx/n/14.4 1.4.2. Кон-стру-ктив-ний пiд-хiд до на-ла-шту-ва-н-ня ар-хi
--те-кту-ри ней-
+[7]
+
+LaTeX Warning: Reference `ch:TODO' on page 8 undefined on input line 216.
+
+
+Overfull \hbox (5.36845pt too wide) in paragraph at lines 219--220
+[]\T2A/cmr/m/n/14.4 Розглянуто гi-бри-днi нейро-фаззi си-сте-ми для ви-рi-ше-н-
+ня зав-дань оброб-
  []
 
-[12] [13] [14] [15] [16] [17]
-Overfull \hbox (20.2725pt too wide) in paragraph at lines 425--427
- \T2A/cmr/bx/n/14.4 1.4.3. За-да-ча не-чi-тко-го кла-сте-ру-ва-н-ня да-них.[] \
-T2A/cmr/m/n/14.4 Кла-сте-ри-за-цiя № основ-
- []
+(./Intro.bbl [8] [9
 
-[18] [19] (./ProblemAnalysis.bbl [20])
+]) [10] (./Intro.aux)
 
-Package natbib Warning: There were undefined citations.
+LaTeX Warning: There were undefined references.
 
-[21
-
-] (./ProblemAnalysis.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 8310 strings out of 493089
- 118191 string characters out of 6134842
- 185522 words of memory out of 5000000
- 11633 multiletter control sequences out of 15000+600000
- 14806 words of font info for 42 fonts, out of 8000000 for 9000
+ 8297 strings out of 493089
+ 117909 string characters out of 6134842
+ 187411 words of memory out of 5000000
+ 11640 multiletter control sequences out of 15000+600000
+ 8159 words of font info for 22 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,11n,38p,1075b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/
-mnsymbol/MnSymbolC.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsy
-mbol/MnSymbolD.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol
-/MnSymbolE.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnS
-ymbolF.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbo
-lA.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2
-a.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol1
-0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol1
-2.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on ProblemAnalysis.pdf (21 pages, 255281 bytes).
+ 38i,6n,38p,1032b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
+}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
+Output written on Intro.pdf (10 pages, 140716 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
+ 62 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
