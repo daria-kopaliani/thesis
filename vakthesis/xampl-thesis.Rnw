@@ -146,9 +146,11 @@
 <<chapter2, child='xampl-concl.Rnw'>>=%       Висновки
 @
 
-%<<chapter2, child='xampl-bib.Rnw'>>=
+%<<bib, child='xampl-bib.Rnw'>>=%         Список використаних джерел (+список публікацій автора)
 %@
-%\include{xampl-bib}%         Список використаних джерел (+список публікацій автора)
+\bibliography{xample-mybib}  
+\bibliography{xample-thesisbib}  
+
 %\appendix
 %\include{xampl-app1}%        Додаток 1
 %\include{xampl-app2}%        Додаток 2 і т. д. ще скільки потрібно додатків
