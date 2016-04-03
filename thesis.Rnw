@@ -48,7 +48,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-<<chapter1, child='Intro.Rnw'>>=
+<<chapter1, child='ProblemAnalysis.Rnw'>>=
 @
 
 <<chapter2, child='SISOCascadedNetwork.Rnw'>>=
