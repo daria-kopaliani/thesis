@@ -23,9 +23,9 @@
 %\geometry{hmargin={30mm,15mm},lines=29,vcentering}
 \everymath=\expandafter{\the\everymath\displaystyle}
 
-\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
+\geometry{a4paper, total={170mm,257mm}, left=25mm, top=20mm}
 
-%This is to make proper table captions
+%This is to make proper table captions, you most definately do *not* want to edit this
 \makeatletter
 \let\ORG@makecaption\@makecaption
 \let\ORGlongtable\longtable
