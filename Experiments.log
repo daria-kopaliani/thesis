@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  1 APR 2016 18:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  2 APR 2016 19:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -659,255 +659,391 @@ RUE): input
 
 ]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 1.
+<images/ENFNDataSetPhasePortrait.png, id=8, 247.1634pt x 229.3368pt>
+File: images/ENFNDataSetPhasePortrait.png Graphic file (type png)
 
-Overfull \hbox (3.37018pt too wide) in paragraph at lines 127--128
- \T2A/cmr/bx/n/14.4 1.1.1. При-ду-ма-ти на-зву1.[] \T2A/cmr/m/n/14.4 Одна з осн
-ов-них пе-ре-ваг, при-та-ман-них про-
+<use images/ENFNDataSetPhasePortrait.png>
+Package pdftex.def Info: images/ENFNDataSetPhasePortrait.png used on input line
+ 150.
+(pdftex.def)             Requested size: 247.16278pt x 229.33624pt.
+ [2
+
+]
+<images/ENFNErrorFromInferenceOrder.png, id=24, 501.5538pt x 235.6002pt>
+File: images/ENFNErrorFromInferenceOrder.png Graphic file (type png)
+
+<use images/ENFNErrorFromInferenceOrder.png>
+Package pdftex.def Info: images/ENFNErrorFromInferenceOrder.png used on input l
+ine 160.
+(pdftex.def)             Requested size: 501.55258pt x 235.59961pt.
+
+Overfull \hbox (17.85574pt too wide) in paragraph at lines 160--161
+ [] 
  []
 
-<images/clustering01.pdf, id=8, 459.7175pt x 266.9975pt>
+
+<images/ENFNErrorFromNumberOfMembershipFunctions.png, id=25, 296.307pt x 243.79
+08pt>
+File: images/ENFNErrorFromNumberOfMembershipFunctions.png Graphic file (type pn
+g)
+ <use images/ENFNErrorFromNumberOfMembershipFunctions.png>
+Package pdftex.def Info: images/ENFNErrorFromNumberOfMembershipFunctions.png us
+ed on input line 167.
+(pdftex.def)             Requested size: 296.30627pt x 243.7902pt.
+ [3 <./images/ENFNDataSetPhasePortrait.png> <./images/ENFNErrorFromInferenceOrd
+er.png>]
+<images/ENFNPrediction3IO3MF.png, id=31, 512.1534pt x 212.9556pt>
+File: images/ENFNPrediction3IO3MF.png Graphic file (type png)
+
+<use images/ENFNPrediction3IO3MF.png>
+Package pdftex.def Info: images/ENFNPrediction3IO3MF.png used on input line 175
+.
+(pdftex.def)             Requested size: 512.15215pt x 212.95506pt.
+
+Overfull \hbox (28.4553pt too wide) in paragraph at lines 175--176
+ [] 
+ []
+
+[4 <./images/ENFNErrorFromNumberOfMembershipFunctions.png> <./images/ENFNPredic
+tion3IO3MF.png>] [5]
+<images/ENFNMackeyGlassPredictionsIO3M3.png, id=42, 424.9476pt x 189.3474pt>
+File: images/ENFNMackeyGlassPredictionsIO3M3.png Graphic file (type png)
+
+<use images/ENFNMackeyGlassPredictionsIO3M3.png>
+Package pdftex.def Info: images/ENFNMackeyGlassPredictionsIO3M3.png used on inp
+ut line 231.
+(pdftex.def)             Requested size: 424.94655pt x 189.34692pt.
+ [6 <./images/ENFNMackeyGlassPredictionsIO3M3.png>]
+<images/ENFNMackeyGlassPredictionsIO0M3.png, id=47, 399.4122pt x 145.0218pt>
+File: images/ENFNMackeyGlassPredictionsIO0M3.png Graphic file (type png)
+
+<use images/ENFNMackeyGlassPredictionsIO0M3.png>
+Package pdftex.def Info: images/ENFNMackeyGlassPredictionsIO0M3.png used on inp
+ut line 277.
+(pdftex.def)             Requested size: 399.41122pt x 145.02144pt.
+ [7]
+<images/ENFNMackeyGlassIO3M3ErrorFromInferenceOrder.png, id=52, 479.8728pt x 24
+4.7544pt>
+File: images/ENFNMackeyGlassIO3M3ErrorFromInferenceOrder.png Graphic file (type
+ png)
+ <use images/ENFNMackeyGlassIO3M3ErrorFromInferenceOrder.png>
+Package pdftex.def Info: images/ENFNMackeyGlassIO3M3ErrorFromInferenceOrder.png
+ used on input line 285.
+(pdftex.def)             Requested size: 479.87163pt x 244.75378pt.
+ [8 <./images/ENFNMackeyGlassPredictionsIO0M3.png> <./images/ENFNMackeyGlassIO3
+M3ErrorFromInferenceOrder.png>]
+<images/UkrEnergoPhasePortrait.png, id=58, 227.8914pt x 223.5552pt>
+File: images/UkrEnergoPhasePortrait.png Graphic file (type png)
+
+<use images/UkrEnergoPhasePortrait.png>
+Package pdftex.def Info: images/UkrEnergoPhasePortrait.png used on input line 2
+97.
+(pdftex.def)             Requested size: 227.89084pt x 223.55464pt.
+
+<images/ENFNUkrEnergoPredictionIO1M6.png, id=59, 456.2646pt x 199.947pt>
+File: images/ENFNUkrEnergoPredictionIO1M6.png Graphic file (type png)
+
+<use images/ENFNUkrEnergoPredictionIO1M6.png>
+Package pdftex.def Info: images/ENFNUkrEnergoPredictionIO1M6.png used on input 
+line 309.
+(pdftex.def)             Requested size: 456.26349pt x 199.9465pt.
+ [9 <./images/UkrEnergoPhasePortrait.png>]
+<images/ElectricityDemandPhasePortrait.pdf, id=64, 480.20845pt x 309.06215pt>
+File: images/ElectricityDemandPhasePortrait.pdf Graphic file (type pdf)
+
+<use images/ElectricityDemandPhasePortrait.pdf>
+Package pdftex.def Info: images/ElectricityDemandPhasePortrait.pdf used on inpu
+t line 325.
+(pdftex.def)             Requested size: 289.07999pt x 186.05649pt.
+
+<images/ENFNNet+FuzzyGeneralizerElectricityDemand.png, id=65, 458.1918pt x 303.
+534pt>
+File: images/ENFNNet+FuzzyGeneralizerElectricityDemand.png Graphic file (type p
+ng)
+ <use images/ENFNNet+FuzzyGeneralizerElectricityDemand.png>
+Package pdftex.def Info: images/ENFNNet+FuzzyGeneralizerElectricityDemand.png u
+sed on input line 335.
+(pdftex.def)             Requested size: 458.19069pt x 303.53325pt.
+
+Overfull \hbox (7.4835pt too wide) in paragraph at lines 342--365
+ [][] 
+ []
+
+[10 <./images/ENFNUkrEnergoPredictionIO1M6.png>] [11 <./images/ElectricityDeman
+dPhasePortrait.pdf> <./images/ENFNNet+FuzzyGeneralizerElectricityDemand.png>]
+<images/SubtidalCoastalLevelPhasePortrait.pdf, id=95, 457.60907pt x 298.58511pt
+>
+File: images/SubtidalCoastalLevelPhasePortrait.pdf Graphic file (type pdf)
+ <use images/SubtidalCoastalLevelPhasePortrait.pdf>
+Package pdftex.def Info: images/SubtidalCoastalLevelPhasePortrait.pdf used on i
+nput line 372.
+(pdftex.def)             Requested size: 289.07999pt x 188.62444pt.
+
+<images/ENFNNet+FuzzyGeneralizerSubtidalCoastalLevelFlunctuations.pdf, id=96, 4
+60.32089pt x 302.83069pt>
+File: images/ENFNNet+FuzzyGeneralizerSubtidalCoastalLevelFlunctuations.pdf Grap
+hic file (type pdf)
+
+<use images/ENFNNet+FuzzyGeneralizerSubtidalCoastalLevelFlunctuations.pdf>
+Package pdftex.def Info: images/ENFNNet+FuzzyGeneralizerSubtidalCoastalLevelFlu
+nctuations.pdf used on input line 380.
+(pdftex.def)             Requested size: 460.31976pt x 302.82994pt.
+
+Overfull \hbox (7.4835pt too wide) in paragraph at lines 387--410
+ [][] 
+ []
+
+[12] [13 <./images/SubtidalCoastalLevelPhasePortrait.pdf> <./images/ENFNNet+Fuz
+zyGeneralizerSubtidalCoastalLevelFlunctuations.pdf>]
+<images/ESTPCompetitionTimeSeriesPhasePortrait.pdf, id=137, 458.34473pt x 297.5
+2626pt>
+File: images/ESTPCompetitionTimeSeriesPhasePortrait.pdf Graphic file (type pdf)
+
+ <use images/ESTPCompetitionTimeSeriesPhasePortrait.pdf>
+Package pdftex.def Info: images/ESTPCompetitionTimeSeriesPhasePortrait.pdf used
+ on input line 417.
+(pdftex.def)             Requested size: 289.07999pt x 187.66045pt.
+
+<images/ENFNNet+FuzzyGeneralizerESTPCompettionTimeSeries.pdf, id=138, 475.92073
+pt x 326.0216pt>
+File: images/ENFNNet+FuzzyGeneralizerESTPCompettionTimeSeries.pdf Graphic file 
+(type pdf)
+
+<use images/ENFNNet+FuzzyGeneralizerESTPCompettionTimeSeries.pdf>
+Package pdftex.def Info: images/ENFNNet+FuzzyGeneralizerESTPCompettionTimeSerie
+s.pdf used on input line 425.
+(pdftex.def)             Requested size: 475.91957pt x 326.0208pt.
+
+Overfull \hbox (36.21419pt too wide) in paragraph at lines 431--432
+[]\T2A/cmr/m/n/14.4 Результати про-гно-зу-ва-н-ня ней-ро-нiв окре-мих ка-ска-дi
+в, нейронiв-узагалтнювачiв,
+ []
+
+
+Overfull \hbox (7.4835pt too wide) in paragraph at lines 434--457
+ [][] 
+ []
+
+[14] [15 <./images/ESTPCompetitionTimeSeriesPhasePortrait.pdf> <./images/ENFNNe
+t+FuzzyGeneralizerESTPCompettionTimeSeries.pdf>] [16]
+<images/MIMOLorenz3D.pdf, id=182, 419.66641pt x 432.053pt>
+File: images/MIMOLorenz3D.pdf Graphic file (type pdf)
+
+<use images/MIMOLorenz3D.pdf>
+Package pdftex.def Info: images/MIMOLorenz3D.pdf used on input line 481.
+(pdftex.def)             Requested size: 419.66537pt x 432.05194pt.
+ [17 <./images/MIMOLorenz3D.pdf>]
+Overfull \hbox (13.35707pt too wide) in paragraph at lines 490--513
+ [][] 
+ []
+
+[18] <images/MIMOLorenz.pdf, id=201, 463.9089pt x 301.56114pt>
+File: images/MIMOLorenz.pdf Graphic file (type pdf)
+
+<use images/MIMOLorenz.pdf>
+Package pdftex.def Info: images/MIMOLorenz.pdf used on input line 534.
+(pdftex.def)             Requested size: 463.90778pt x 301.5604pt.
+ [19]
+Overfull \hbox (1.95505pt too wide) in paragraph at lines 546--547
+[]\T2A/cmr/m/n/14.4 Одна з основ-них пе-ре-ваг, при-та-ман-них про-по-но-ва-нiй
+ са-мо-на-вчан-нiй нейро-
+ []
+
+<images/clustering01.pdf, id=207, 459.7175pt x 266.9975pt>
 File: images/clustering01.pdf Graphic file (type pdf)
 
 <use images/clustering01.pdf>
-Package pdftex.def Info: images/clustering01.pdf used on input line 131.
+Package pdftex.def Info: images/clustering01.pdf used on input line 550.
 (pdftex.def)             Requested size: 459.71637pt x 266.99683pt.
- [2
+ [20 <./images/MIMOLorenz.pdf>]
 
- <./images/clustering01.pdf>]
-
-LaTeX Warning: Reference `eq:reccurentPartitioningCoefficient' on page 3 undefi
-ned on input line 139.
+LaTeX Warning: Reference `eq:reccurentPartitioningCoefficient' on page 21 undef
+ined on input line 558.
 
 
-LaTeX Warning: Reference `eq:recurrentXieBeniIndex' on page 3 undefined on inpu
-t line 139.
+LaTeX Warning: Reference `eq:recurrentXieBeniIndex' on page 21 undefined on inp
+ut line 558.
 
 
-Overfull \hbox (15.22507pt too wide) in paragraph at lines 141--142
+Overfull \hbox (15.22507pt too wide) in paragraph at lines 560--561
 \T2A/cmr/m/n/14.4 ним ви-яви-ся дру-гий ка-скад ($\OML/cmm/m/it/14.4 m \U/MnSym
 bolD/m/n/14.4 ^^@ \OT1/cmr/m/n/14.4 3$\T2A/cmr/m/n/14.4 ) з трьо-ма кла-сте-ра-
 ми i нейроном-переможцем
  []
 
-[3] <images/clustering03.pdf, id=30, 454.69875pt x 242.9075pt>
+[21 <./images/clustering01.pdf>] [22]
+<images/clustering03.pdf, id=241, 454.69875pt x 242.9075pt>
 File: images/clustering03.pdf Graphic file (type pdf)
 
 <use images/clustering03.pdf>
-Package pdftex.def Info: images/clustering03.pdf used on input line 197.
+Package pdftex.def Info: images/clustering03.pdf used on input line 616.
 (pdftex.def)             Requested size: 454.69763pt x 242.90689pt.
- [4]
-<images/clustering002.pdf, id=35, 454.69875pt x 242.9075pt>
+
+<images/clustering002.pdf, id=242, 454.69875pt x 242.9075pt>
 File: images/clustering002.pdf Graphic file (type pdf)
 
 <use images/clustering002.pdf>
-Package pdftex.def Info: images/clustering002.pdf used on input line 215.
+Package pdftex.def Info: images/clustering002.pdf used on input line 634.
 (pdftex.def)             Requested size: 454.69763pt x 242.90689pt.
- [5 <./images/clustering03.pdf> <./images/clustering002.pdf>] <images/clusterin
-g04.pdf, id=45, 454.69875pt x 242.9075pt>
+ [23 <./images/clustering03.pdf>] [24 <./images/clustering002.pdf>] <images/clu
+stering04.pdf, id=255, 454.69875pt x 242.9075pt>
 File: images/clustering04.pdf Graphic file (type pdf)
 
 <use images/clustering04.pdf>
-Package pdftex.def Info: images/clustering04.pdf used on input line 299.
+Package pdftex.def Info: images/clustering04.pdf used on input line 718.
 (pdftex.def)             Requested size: 454.69763pt x 242.90689pt.
- [6] [7 <./images/clustering04.pdf>]
-<images/HierarchialClusteringOfIrisDataset.pdf, id=56, 447.6725pt x 518.93875pt
->
+ [25]
+<images/HierarchialClusteringOfIrisDataset.pdf, id=260, 447.6725pt x 518.93875p
+t>
 File: images/HierarchialClusteringOfIrisDataset.pdf Graphic file (type pdf)
  <use images/HierarchialClusteringOfIrisDataset.pdf>
 Package pdftex.def Info: images/HierarchialClusteringOfIrisDataset.pdf used on 
-input line 317.
+input line 736.
 (pdftex.def)             Requested size: 447.6714pt x 518.93748pt.
- [8 <./images/HierarchialClusteringOfIrisDataset.pdf>]
-<images/ClusteredIrisDatasetM3Beta2.pdf, id=65, 447.6725pt x 435.6275pt>
+
+<images/ClusteredIrisDatasetM3Beta2.pdf, id=261, 447.6725pt x 435.6275pt>
 File: images/ClusteredIrisDatasetM3Beta2.pdf Graphic file (type pdf)
 
 <use images/ClusteredIrisDatasetM3Beta2.pdf>
 Package pdftex.def Info: images/ClusteredIrisDatasetM3Beta2.pdf used on input l
-ine 327.
+ine 746.
 (pdftex.def)             Requested size: 447.6714pt x 435.62643pt.
- [9 <./images/ClusteredIrisDatasetM3Beta2.pdf>] [10] [11]
-<images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf, id=80, 50
-5.89pt x 505.89pt>
+ [26 <./images/clustering04.pdf>]
+[27 <./images/HierarchialClusteringOfIrisDataset.pdf>] [28 <./images/ClusteredI
+risDatasetM3Beta2.pdf>] [29] [30]
+<images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf, id=290, 5
+05.89pt x 453.54352pt>
 File: images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf Graph
 ic file (type pdf)
 
 <use images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf>
 Package pdftex.def Info: images/IrisClusteringEfficiencyFromNumberOfClustersAnd
-Fuzzyfier.pdf used on input line 399.
-(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+Fuzzyfier.pdf used on input line 818.
+(pdftex.def)             Requested size: 397.48499pt x 356.36462pt.
 
-Overfull \hbox (22.19191pt too wide) in paragraph at lines 399--400
- [] 
- []
-
-[12 <./images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf>]
-<images/ClusteredIrisDatasetM7Beta5.pdf, id=90, 461.725pt x 461.725pt>
+<images/ClusteredIrisDatasetM7Beta5.pdf, id=291, 461.725pt x 461.725pt>
 File: images/ClusteredIrisDatasetM7Beta5.pdf Graphic file (type pdf)
 
 <use images/ClusteredIrisDatasetM7Beta5.pdf>
 Package pdftex.def Info: images/ClusteredIrisDatasetM7Beta5.pdf used on input l
-ine 410.
+ine 829.
 (pdftex.def)             Requested size: 461.72388pt x 461.72388pt.
 
-<images/ClusteredIrisDatasetM12Beta4.pdf, id=91, 461.725pt x 461.725pt>
+<images/ClusteredIrisDatasetM12Beta4.pdf, id=292, 461.725pt x 461.725pt>
 File: images/ClusteredIrisDatasetM12Beta4.pdf Graphic file (type pdf)
 
 <use images/ClusteredIrisDatasetM12Beta4.pdf>
 Package pdftex.def Info: images/ClusteredIrisDatasetM12Beta4.pdf used on input 
-line 419.
+line 838.
 (pdftex.def)             Requested size: 461.72388pt x 461.72388pt.
- [13 <./images/ClusteredIrisDatasetM7Beta5.pdf>] [14 <./images/ClusteredIrisDat
-asetM12Beta4.pdf>]
-<images/3DClusteredIrisDatasetM7Beta5.pdf, id=109, 461.725pt x 526.96875pt>
+ [31 <./images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf>] [
+32 <./images/ClusteredIrisDatasetM7Beta5.pdf>] [33 <./images/ClusteredIrisDatas
+etM12Beta4.pdf>]
+<images/3DClusteredIrisDatasetM7Beta5.pdf, id=331, 461.725pt x 526.96875pt>
 File: images/3DClusteredIrisDatasetM7Beta5.pdf Graphic file (type pdf)
 
 <use images/3DClusteredIrisDatasetM7Beta5.pdf>
 Package pdftex.def Info: images/3DClusteredIrisDatasetM7Beta5.pdf used on input
- line 439.
+ line 858.
 (pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
-
-<images/3DClusteredIrisDatasetM12Beta4.pdf, id=110, 461.725pt x 526.96875pt>
+ [34 <./images/3DClusteredIrisDatasetM7Beta5.pdf>]
+<images/3DClusteredIrisDatasetM12Beta4.pdf, id=341, 461.725pt x 526.96875pt>
 File: images/3DClusteredIrisDatasetM12Beta4.pdf Graphic file (type pdf)
 
 <use images/3DClusteredIrisDatasetM12Beta4.pdf>
 Package pdftex.def Info: images/3DClusteredIrisDatasetM12Beta4.pdf used on inpu
-t line 449.
+t line 868.
 (pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
- [15 <./images/3DClusteredIrisDatasetM7Beta5.pdf>]
-<images/StudentKnowledgeDataSet.pdf, id=119, 461.725pt x 526.96875pt>
+
+<images/StudentKnowledgeDataSet.pdf, id=342, 461.725pt x 526.96875pt>
 File: images/StudentKnowledgeDataSet.pdf Graphic file (type pdf)
 
 <use images/StudentKnowledgeDataSet.pdf>
 Package pdftex.def Info: images/StudentKnowledgeDataSet.pdf used on input line 
-462.
+878.
 (pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
- [16 <./images/3DClusteredIrisDatasetM12Beta4.pdf>] [17 <./images/StudentKnowle
+ [35 <./images/3DClusteredIrisDatasetM12Beta4.pdf>] [36 <./images/StudentKnowle
 dgeDataSet.pdf>]
-<images/3DStudentKnowledgeDataSet.pdf, id=136, 461.725pt x 490.83376pt>
+<images/3DStudentKnowledgeDataSet.pdf, id=359, 461.725pt x 490.83376pt>
 File: images/3DStudentKnowledgeDataSet.pdf Graphic file (type pdf)
 
 <use images/3DStudentKnowledgeDataSet.pdf>
 Package pdftex.def Info: images/3DStudentKnowledgeDataSet.pdf used on input lin
-e 480.
+e 896.
 (pdftex.def)             Requested size: 461.72388pt x 490.83255pt.
- [18 <./images/3DStudentKnowledgeDataSet.pdf>]
-<images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=145, 461.725pt x 49
+ [37 <./images/3DStudentKnowledgeDataSet.pdf>]
+<images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=369, 461.725pt x 49
 0.83376pt>
 File: images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf Graphic file (type
  pdf)
  <use images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf>
 Package pdftex.def Info: images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf
- used on input line 490.
+ used on input line 906.
 (pdftex.def)             Requested size: 461.72388pt x 490.83255pt.
 
-<images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=146, 461.725pt x 526.
+<images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=370, 461.725pt x 526.
 96875pt>
 File: images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf Graphic file (type p
 df)
  <use images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf>
 Package pdftex.def Info: images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf u
-sed on input line 500.
+sed on input line 916.
 (pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
- [19 <./images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf>] [20 <./images/
+ [38 <./images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf>] [39 <./images/
 ClusterizedStudentKnowledgeDataSetM4Beta2.pdf>]
-<images/SpoonAppClassification.png, id=164, 289.08pt x 514.0806pt>
+<images/SpoonAppClassification.png, id=387, 289.08pt x 514.0806pt>
 File: images/SpoonAppClassification.png Graphic file (type png)
 
 <use images/SpoonAppClassification.png>
-Package pdftex.def Info: images/SpoonAppClassification.png used on input line 5
-18.
+Package pdftex.def Info: images/SpoonAppClassification.png used on input line 9
+33.
 (pdftex.def)             Requested size: 289.07928pt x 514.07935pt.
- [21] [22 <./images/SpoonAppClassification.png>] <images/SpoonAppClustering.png
-, id=173, 289.08pt x 514.0806pt>
+ [40] [41 <./images/SpoonAppClassification.png>] <images/SpoonAppClustering.png
+, id=395, 289.08pt x 514.0806pt>
 File: images/SpoonAppClustering.png Graphic file (type png)
 
 <use images/SpoonAppClustering.png>
-Package pdftex.def Info: images/SpoonAppClustering.png used on input line 532.
+Package pdftex.def Info: images/SpoonAppClustering.png used on input line 947.
 (pdftex.def)             Requested size: 289.07928pt x 514.07935pt.
- [23 <./images/SpoonAppClustering.png>]
-[24] [25]
-Overfull \hbox (11.71634pt too wide) in paragraph at lines 580--581
- \T2A/cmr/bx/n/14.4 1.2.1. Мо-де-лю-ва-н-ня роз-ши-рен-но-го нейро-фаззi ней-ро
--на.[] \T2A/cmr/m/n/14.4 Для цьо-
- []
-
-<images/ENFNDataSetPhasePortrait.png, id=186, 247.1634pt x 229.3368pt>
-File: images/ENFNDataSetPhasePortrait.png Graphic file (type png)
-
-<use images/ENFNDataSetPhasePortrait.png>
-Package pdftex.def Info: images/ENFNDataSetPhasePortrait.png used on input line
- 591.
-(pdftex.def)             Requested size: 247.16278pt x 229.33624pt.
- [26 <./images/ENFNDataSetPhasePortrait.png>]
-<images/ENFNErrorFromInferenceOrder.png, id=191, 501.5538pt x 235.6002pt>
-File: images/ENFNErrorFromInferenceOrder.png Graphic file (type png)
-
-<use images/ENFNErrorFromInferenceOrder.png>
-Package pdftex.def Info: images/ENFNErrorFromInferenceOrder.png used on input l
-ine 637.
-(pdftex.def)             Requested size: 501.55258pt x 235.59961pt.
-
-Overfull \hbox (17.85574pt too wide) in paragraph at lines 637--638
- [] 
- []
-
-[27]
-<images/ENFNErrorFromNumberOfMembershipFunctions.png, id=195, 296.307pt x 243.7
-908pt>
-File: images/ENFNErrorFromNumberOfMembershipFunctions.png Graphic file (type pn
-g)
- <use images/ENFNErrorFromNumberOfMembershipFunctions.png>
-Package pdftex.def Info: images/ENFNErrorFromNumberOfMembershipFunctions.png us
-ed on input line 644.
-(pdftex.def)             Requested size: 296.30627pt x 243.7902pt.
-
-<images/ENFNPrediction3IO3MF.png, id=196, 512.1534pt x 212.9556pt>
-File: images/ENFNPrediction3IO3MF.png Graphic file (type png)
-
-<use images/ENFNPrediction3IO3MF.png>
-Package pdftex.def Info: images/ENFNPrediction3IO3MF.png used on input line 652
-.
-(pdftex.def)             Requested size: 512.15215pt x 212.95506pt.
-
-Overfull \hbox (28.4553pt too wide) in paragraph at lines 652--653
- [] 
- []
-
-[28 <./images/ENFNErrorFromInferenceOrder.png> <./images/ENFNErrorFromNumberOfM
-embershipFunctions.png>]
+ [42 <./images/SpoonAppClustering.png>]
+[43]
 No file Experiments.bbl.
-[29 <./images/ENFNPrediction3IO3MF.png>] (./Experiments.aux)
+[44] (./Experiments.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7286 strings out of 493089
- 102667 string characters out of 6134842
- 168651 words of memory out of 5000000
- 10586 multiletter control sequences out of 15000+600000
+ 7367 strings out of 493089
+ 106214 string characters out of 6134842
+ 168835 words of memory out of 5000000
+ 10654 multiletter control sequences out of 15000+600000
  22911 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,31p,3747b,277s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
-}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/u
-sr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/l
-ocal/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}</usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on Experiments.pdf (29 pages, 3176013 bytes).
+ 38i,9n,31p,4414b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/
+usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{/usr/
+local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/loca
+l/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/usr/local
+/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/local/tex
+live/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}</usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/public/cm-super/sftt1440.pfb>
+Output written on Experiments.pdf (44 pages, 4717621 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
+ 460 PDF objects out of 1000 (max. 8388607)
+ 313 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

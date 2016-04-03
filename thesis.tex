@@ -1382,7 +1382,7 @@ c_{jl}^{[m]}\left(k+1\right)=c_{jl}^{[m]}\left(k\right)+\eta\left(k+1\right)\lef
 
 Варто зауважити, що, розглянувши співвідношення~\eqref{eq:recurrentFCM} з позицій навчання Кохоненової самоорганізованої мапи~(SOM)~\cite{ref16}, можна помітити, що множник~$\left(u_{jl}^{[m]}\right)^{\beta_{\scriptstyle{j}}}$ відповідає функції сусідства в правилі навчання на основі принципу «переможецю дістається більше», маючи при цьому дзвонуватий вигляд.
 
-Вочевидь, у випадку, коли $\beta_{j}=1$ та $u_{jl}^{[m]}\left(k\right)\in\left[0,1\right]$, процедура~\eqref{eq:recurrentFCM} збігається з чітким алгоритмом $c$-середніх (HCM), коли ж $\beta_{j}=0$, маємо стандартне правило навчання Когонена «переможцю дістається все»~\cite{ref16}
+Вочевидь, у випадку, коли $\beta_{j}=1$ та $u_{jl}^{[m]}\left(k\right)\in\left[0,1\right]$, процедура~\eqref{eq:recurrentFCM} збігається з чітким алгоритмом $c$-середніх (HCM), коли ж $\beta_{j}=0$, маємо стандартне правило навчання Кохонена «переможцю дістається все»~\cite{ref16}
 
 \begin{equation}\label{eq:winnerTakesAllKohonenLearningRule}
 c_{jl}^{[m]}\left(k+1\right)=c_{jl}^{[m]}\left(k\right)+\eta\left(k+1\right)\left(x\left(k+1\right)-c_{jl}^{[m]}\left(k\right)\right),
@@ -1414,11 +1414,11 @@ c_{jl}^{[m]}(k+1) = c_{jl}^{[m]}(k)+\frac{1}{N_{l}(k+1)}\left(x\left(k+1\right)-
 
 де $N_{l}\left(k+1\right)$~---~число векторів, віднесених до $l$-го кластеру в $k+1$-й момент реального часу, що є стандартною процедурою стохастичної апроксимації.
 
-У загальному випадку алгоритм навчання~\eqref{eq:recurrentFCM} вузла можна розглядати як правило самонавчання нечіткої модифікації самоорганізовної мапи Когонена, архітектура якої наведена на рис
+У загальному випадку алгоритм навчання~\eqref{eq:recurrentFCM} вузла можна розглядати як правило самонавчання нечіткої модифікації самоорганізовної мапи Кохонена, архітектура якої наведена на рис
 
 TODO:рис
 
-Тут $N_{jl}^{[m]K}$~---~стандартні нейрони Когонена, пов'язані між собою латеральними зв'язками, що налаштовуються згідно "переможцю дістається більше" правилу навчання на основі другого співвідношення~\eqref{eq:recurrentFCM}. Вузли $N_{jl}^{[m]u}$ обчислюють рівні належності згідно першому співвідношенню~\eqref{eq:recurrentFCM}. Вузли $N_{j}^{[m]}$ кожного з каскадів відрізняються тільки фаззіфікатором алгоритму самонавчання, а вузол кожного наступного каскаду містить додатково один нейрон Когонена і один елемент для розрахунку рівнів належності.
+Тут $N_{jl}^{[m]K}$~---~стандартні нейрони Кохонена, пов'язані між собою латеральними зв'язками, що налаштовуються згідно "переможцю дістається більше" правилу навчання на основі другого співвідношення~\eqref{eq:recurrentFCM}. Вузли $N_{jl}^{[m]u}$ обчислюють рівні належності згідно першому співвідношенню~\eqref{eq:recurrentFCM}. Вузли $N_{j}^{[m]}$ кожного з каскадів відрізняються тільки фаззіфікатором алгоритму самонавчання, а вузол кожного наступного каскаду містить додатково один нейрон Кохонена і один елемент для розрахунку рівнів належності.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Керування каскадами самонавчанної нейро-фаззі системи, що еволюціонує}
@@ -1789,7 +1789,7 @@ max & 0.9807518 & 0.9788034 & 0.9753452 & 0.9748873 \\
 
 \begin{figure}
 \begin{center}
-\includegraphics{IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf}
+\includegraphics[width=5.5in]{IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf}
 \caption{Точність кластерування від кількості кластерів та параметру фаззіфіказії}
 \label{fig:IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier}
 \end{center}
@@ -1970,7 +1970,7 @@ max & 0.9731262 & 0.9754579 & 0.9918301 & 0.9762515 \\
 \subsection{Моделювання розширенного нейро-фаззі нейрона}%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Для цього експерименту датасет було сгенеровано за формулою
+Датасет для першого есперименту було сгенеровано за формулою
 
 \begin{equation}
 \sin{\bigl(k + \sin\left(2k\right)\bigr)} \textnormal{ для } k \in \left[1, 600\right],
@@ -2048,9 +2048,296 @@ Membership Functions & RMSE & SMAPE \\ \hline
 \end{center}
 \end{figure}
 
+Для апробації розширеного нео-фаззі нейрону розглянемо задачу прогнозування хаотичного ряду, що описується диференціальним рівнянням Мекі-Гласса \hl{[147 vik]}:
+
+\begin{equation}
+\label{eq:M}
+y'\left(t\right)=\frac{0.2\left(t-\tau\right)}{1+y^{10}\left(t-\tau\right)}-0.1y\left(t\right),
+\end{equation}
+\medskip
+
+при цьому значення часового ряду в кожній точці обчислене за допомогою методу Рунге-Кутта четвертого порядку. Часовий крок прийнятий рівним $0.1$, початкові умови: $x\left(0\right)=1.2$.
+
+Традиційно завдання прогнозування полягає у визначенні $x\left(t+6\right)$x часового ряду (5.2) з параметром затримки 17 по
+значенням x (t 18), x (t 12), x (t 6) і x (t).  Перед початком обробки отриманий часовий ряд нормувався таким чином, щоб його значення лежали в інтервалі $\left[0, 1\right]$ (область визначення трикутних функцій належності та кубічних сплайнів, що використубться у синапсах розширеного нео-фаззі нейрону. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{ENFNMackeyGlassPredictionsIO3M3.png}
+\caption{Прогнозування хаотичного часового ряду Макі-Гласса розширенним нео-фаззі нейроном з 3 трикутними функціями належності, що реалізує нечітке висновування 3-ого порядку (зелена лінія -- шуканий сигнал, синя пунктирна лінія -- сигнал на виході нейрону, червона лінія -- похибка; жовтобагряна вертикальна лінія позначає закінчення тренувальної частини датасету)}
+\label{fig:ENFNMackeyGlassPredictionsIO3M3}
+\end{center}
+\end{figure}
+
+На рис.\ref{fig:ENFNMackeyGlassPredictionsIO3M3} зображений результат прогнозування розширеного нео-фаззі нейрона з трьома функціями належності, що реалізує нечітке висновування 3-ого порядку. Для порівняння на рис.~\ref{fig:ENFNMackeyGlassPredictionsIO0M3} наведено прогнозування традиційного нео-фаззі нейрону (що реалізує нечітке висновування нульового порядку) з аналогічними функціями належності (3 трикутні функції належності).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{ENFNMackeyGlassPredictionsIO0M3.png}
+\caption{Прогнозування хаотичного часового ряду Макі-Гласса традиційним нео-фаззі нейроном з 3 трикутними функціями належності (зелена лінія -- шуканий сигнал, синя пунктирна лінія -- сигнал на виході нейрону, червона лінія -- похибка; жовтобагряна вертикальна лінія позначає закінчення тренувальної частини датасету)}
+\label{fig:ENFNMackeyGlassPredictionsIO0M3}
+\end{center}
+\end{figure}
+
+На рис.~\ref{fig:ENFNMackeyGlassIO3M3ErrorFromInferenceOrder} показана залежність похибки від порядку висновування розширенних нео-фаззі нейронів з трьома та п'ятьома дзвонуватими функціями належності.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{ENFNMackeyGlassIO3M3ErrorFromInferenceOrder.png}
+\caption{Похибка прогнозування хаотичного часового ряду Макі-Гласса розширенними нео-фаззі нейронами з 3 та 5 дзвонуватими функціями належності від порядку нечіткого висновування}
+\label{fig:ENFNMackeyGlassIO3M3ErrorFromInferenceOrder}
+\end{center}
+\end{figure}
+
+\begin{table}[H]
+\centering \small \begin{tabular}{rcc}
+Inference order 0 \\ \hline
+Membership Functions & RMSE & SMAPE \\ \hline
+%2 & 0.156093623279716 & 0.302950765207994 \\
+3 & 0.143482904587951 & 0.325353000527264 \\
+4 & 0.106294989490131 & 0.264501060116694 \\
+5 & 0.094578207548207 & 0.259630642224594 \\
+6 & 0.094578207548207 & 0.259630642224594 \\ \hline
+Inference order 1 \\ \hline
+Membership Functions & RMSE & SMAPE \\ \hline
+%2 & 0.0337893129825338 & 0.108432487493878 \\
+3 & 0.0491962584140483 & 0.136034984261077 \\
+4 & 0.0300830061654526 & 0.0978878141219238 \\
+5 & 0.0312245619190396 & 0.10776716206662 \\
+6 & 0.0277981639612314 & 0.0989376310206592 \\ \hline
+Inference order 2 \\ \hline
+Membership Functions & RMSE & SMAPE \\ \hline
+%2 & 0.0318577433605903 & 0.0933793821810412 \\
+3 & 0.0227629037042365 & 0.0658002874902031 \\
+4 & 0.0295377560571133 & 0.108260856276106 \\
+5 & 0.0283735498990618 & 0.0946515030316458 \\
+6 & 0.0251818186025806 & 0.0847398989365615 \\ \hline
+Inference order 3 \\ \hline
+Membership Functions & RMSE & SMAPE \\ \hline
+%2 & 0.0435853909382971 & 0.102398663434075 \\
+3 & 0.0221516072948077 & 0.0622040928066835 \\
+4 & 0.0261638552968437 & 0.0827913036508308 \\
+5 & 0.0274818416982828 & 0.114797690969503 \\
+6 & 0.0237394982902305 & 0.0846415828789446 \\ \hline
+\end{tabular}
+\caption{Точність прогнозу ряду Мекі-Глассу розширеним нео-фаззі нейроном від порядку висновування та кількості фунцій належності}
+\end{table}
+
+Як видно з таблиці та рис.~\ref{fig:ENFNMackeyGlassIO3M3ErrorFromInferenceOrder}, розширенний нео-фаззі нейрон, що реалізує нечітке висновування вищого від 0 порядку, прогнозує хаотичний часовий ряд за рівнянням Мекі-Гласса з суттєво вищою точністю ніж традиційний нео-фаззі нейрон.
+
+Також пропонований розширений нео-фаззі нейрон було апробовано на реальному часовому ряді <<Споживання електоренергії у м. Сімферополь за 2007 рік>> (фазовий портрет наведено на рис.~\ref{fig:UkrEnergoPhasePortrait}).
+
+\begin{figure}
+\begin{center}
+\includegraphics{UkrEnergoPhasePortrait.png}
+\caption{Фазовий портрет часового ряду <<Споживання електоренергії у м. Сімферополь за 2007 рік>>}
+\label{fig:UkrEnergoPhasePortrait}
+\end{center}
+\end{figure}
+
+Найліпший прогноз (RMSE $\approx 0.14$, SMAPE $\approx 0.21$) надав нейрон, що реалізує нечітке висновування 1-ого порядку з 6-ма функціями належності (рис.~\ref{fig:ENFNUkrEnergoPredictionIO1M6})
+
+\begin{figure}
+\begin{center}
+\includegraphics{ENFNUkrEnergoPredictionIO1M6.png}
+\caption{Прогнозування часового ряду <<Споживання електоренергії у м. Сімферополь за 2007 рік>> розширеним нео-фаззі нейроном з 6-ма дзвонувати функціями належності, що реалізує нечітке висновування 1-ого порядку (зелена лінія -- шуканий сигнал, синя пунктирна лінія -- сигнал на виході нейрону, червона лінія -- похибка; жовтобагряна вертикальна лінія позначає закінчення тренувальної частини датасету)}
+\label{fig:ENFNUkrEnergoPredictionIO1M6}
+\end{center}
+\end{figure}
+
+Експеременти, що описані у цьому підрозділі, підтвержують, що розширені нео-фаззі нейрони, які реалізують нечітке висновування довільного порядку, мають підвищену точність прогнозування хаотичних рядів порівняно з традиційними нео-фаззі нейронами (які реалізують нечітке висновування нульового порядку).
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Моделювання гiбридної каскадної нейро-фаззi мережі на розшиерниї нео-фаззі нейронах з оптимiзацiєю пулу нейронiв}%%%%%%%%%
+\section{Моделювання гiбридної каскадної нейро-фаззi мережі на розширенних нео-фаззі нейронах з оптимiзацiєю пулу нейронiв}%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Низку експериментів для апробації гiбридної каскадної нейро-фаззi мережі на розширенних нео-фаззі нейронах з оптимiзацiєю пулу нейронiв було проведено на датасетах, що їх надала дослідницька группа <<The Applications of Machine Learning (AML)>> з Університету Aалто, що у Фінлядії (Aalto University School of Science, Espoo, Finland).
+Одним з таких датасетів є часовий ряд <<Споживання електроенергії у Польщі за період з 1990-х років>> (фазовий портрет наведено на рис~\ref{fig:ElectricityDemandPhasePortrait}).
+ 
+\begin{figure}
+\begin{center}
+\includegraphics[width=4in]{ElectricityDemandPhasePortrait.pdf}
+\caption{Фазовий портрет часового ряду Прогнозування часового ряду <<Споживання електроенергії у Польщі за період з 1990-х років>>}
+\label{fig:ElectricityDemandPhasePortrait}
+\end{center}
+\end{figure}
+
+Вихідний сигнал гібридної каскадної нейро-мережі наведено на рис.~\ref{fig:ENFNNet+FuzzyGeneralizerElectricityDemand}, а похибки розширенних нео-фаззі нейронів та нейронів-узагальнювачів для кожного каскаду системи наведно у таблиці \hl{TODO}.
+
+\begin{figure}
+\begin{center}
+\includegraphics{ENFNNet+FuzzyGeneralizerElectricityDemand.png}
+\caption{Прогнозування часового ряду <<Споживання електоренергії у м. Сімферополь за 2007 рік>> гiбридної каскадної нейро-фаззi мережі з оптимiзацiєю пулу нейронiв (зелена лінія -- шуканий сигнал, синя пунктирна лінія -- сигнал на виході каскадної нейро-фаззі мережі, червона лінія -- похибка; жовтобагряна вертикальна лінія позначає закінчення тренувальної частини датасету)}
+\label{fig:ENFNNet+FuzzyGeneralizerElectricityDemand}
+\end{center}
+\end{figure}
+
+\begin{table}[H]
+\centering \small \begin{tabular}{rcc}
+Cascade I & SMAPE & RMSE \\ \hline
+Neuron I  (3 membership functions, inference order 3) & 0.080830 & 0.39288 \\
+Neuron II  (5 membership functions, inference order 4) & 0.075014 & 0.036680 \\
+Neuron III  (4 membership functions, inference order 5) & 0.074955 & 0.038170 \\
+Neuron-Generalizer & 0.059835 & 0.030302 \\ \hline
+Cascade II & SMAPE & RMSE \\ \hline
+Neuron I (3 membership functions, inference order 3) & 0.080835 & 0.039290 \\
+Neuron II (5 membership functions, inference order 4) & 0.059837 & 0.036683 \\
+Neuron III (4 membership functions, inference order 5) & 0.074966 & 0.038195 \\
+Neuron-Generalizer & 0.059821 & 0.036683 \\ \hline
+Cascade III & SMAPE & RMSE \\ \hline
+Neuron I (3 membership functions, inference order 3) & 0.080934 & 0.039333 \\
+Neuron II (5 membership functions, inference order 4) & 0.059869 & 0.036711 \\
+Neuron III (4 membership functions, inference order 5) & 0.75009 & 0.038213 \\
+Neuron-Generalizer & 0.059869 & 0.030320 \\ \hline
+Cascade IV & SMAPE & RMSE \\ \hline
+Neuron I (3 membership functions, inference order 3) & 0.080892 & 0.039316 \\
+Neuron II (5 membership functions, inference order 4) & 0.059869 & 0.030303 \\
+Neuron III (4 membership functions, inference order 5) & 0.075034 & 0.038213 \\
+Neuron-Generalizer & 0.059849 & 0.030303 \\ \hline
+\end{tabular}
+\caption{Результати прогнозування часового ряду <<Споживання електоренергії у м. Сімферополь за 2007 рік>> нейронів (зокрема нейронів-узагальнювачів) каскадної нейро-фаззі системи}
+\end{table}
+
+Фазовий портрет другого датасету <<Коливання рівню  приловоотливної зони>> (Subtidal coastal level of fluctuations) наведено на рис.~\ref{fig:ENFNNet+FuzzyGeneralizerElectricityDemand}, похибки вузлів системи -- у таблиці \hl{TODO}.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=4in]{SubtidalCoastalLevelPhasePortrait.pdf}
+\caption{Фазовий портрет часового ряду Прогнозування часового ряду <<Коливання рівню  приловоотливної зони>>}
+\label{fig:SubtidalCoastalLevelPhasePortrait}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics{ENFNNet+FuzzyGeneralizerSubtidalCoastalLevelFlunctuations.pdf}
+{Прогнозування часового ряду <<Коливання рівню  приловоотливної зони>> гiбридної каскадної нейро-фаззi мережі з оптимiзацiєю пулу нейронiв (зелена лінія -- шуканий сигнал, синя пунктирна лінія -- сигнал на виході каскадної нейро-фаззі мережі, червона лінія -- похибка; жовтобагряна вертикальна лінія позначає закінчення тренувальної частини датасету)}
+\label{fig:ENFNNet+FuzzyGeneralizerSubtidalCoastalLevelFlunctuations}
+\end{center}
+\end{figure}
+
+\begin{table}[H]
+\centering \small \begin{tabular}{rcc}
+Cascade I & SMAPE & RMSE \\ \hline
+Neuron I  (3 membership functions, inference order 3) & 0.110067 & 0.036612 \\
+Neuron II  (5 membership functions, inference order 4) & 0.105192 & 0.035474 \\
+Neuron III  (4 membership functions, inference order 5) & 0.103129 & 0.034814 \\
+Neuron-Generalizer & 0.105598 & 0.035301 \\ \hline
+Cascade II & SMAPE & RMSE \\ \hline
+Neuron I (3 membership functions, inference order 3) & 0.110023 & 0.036593 \\
+Neuron II (5 membership functions, inference order 4) &0.105118 & 0.035457 \\
+Neuron III (4 membership functions, inference order 5) & 0.103148 & 0.035818 \\
+Neuron-Generalizer & 0.105577 & 0.035298 \\ \hline
+Cascade III & SMAPE & RMSE \\ \hline
+Neuron I (3 membership functions, inference order 3) & 0.110013 & 0.036591 \\
+Neuron II (5 membership functions, inference order 4) & 0.105126 & 0.035458 \\
+Neuron III (4 membership functions, inference order 5) & 0.103155 & 0.034820 \\
+Neuron-Generalizer & 0.105578 & 0.035299 \\ \hline
+Cascade IV & SMAPE & RMSE \\ \hline
+Neuron I (3 membership functions, inference order 3) & 0.110026 & 0.036594 \\
+Neuron II (5 membership functions, inference order 4) & 0.105153 & 0.035464 \\
+Neuron III (4 membership functions, inference order 5) & 0.103168 & 0.034822 \\
+Neuron-Generalizer & 0.105595 & 0.035301  \\ \hline
+\end{tabular}
+\caption{Результати прогнозування часового ряду <<Коливання рівню приловоотливної зони>> нейронів (зокрема нейронів-узагальнювачів) каскадної нейро-фаззі системи}
+\end{table}
+
+Останній датасет було взято зі змагань у прогнозуванні часових рядів <<European Symposium on Time Series Prediction 2008>>, фазовий портрет наведено на рис.~\ref{fig:ESTPCompetitionTimeSeriesPhasePortrait}, результат роботи пропонованої системи -- на рис.~\ref{fig:ENFNNet+FuzzyGeneralizerESTPCompettionTimeSeries}.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=4in]{ESTPCompetitionTimeSeriesPhasePortrait.pdf}
+\caption{Фазовий портрет часового ряду Прогнозування часового ряду <<ESTP Competition Time Series>>}
+\label{fig:ESTPCompetitionTimeSeriesPhasePortrait}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics{ENFNNet+FuzzyGeneralizerESTPCompettionTimeSeries.pdf}
+{Прогнозування часового ряду <<ESTP Competition Time Series>> гiбридної каскадної нейро-фаззi мережі з оптимiзацiєю пулу нейронiв (зелена лінія -- шуканий сигнал, синя пунктирна лінія -- сигнал на виході каскадної нейро-фаззі мережі, червона лінія -- похибка; жовтобагряна вертикальна лінія позначає закінчення тренувальної частини датасету)}
+\label{fig:ENFNNet+FuzzyGeneralizerESTPCompettionTimeSeries}
+\end{center}
+\end{figure}
+
+Результати прогнозування нейронів окремих каскадів, нейронів-узагалтнювачів, а також системи в цілому можно побачити у таблиці \hl{table}. 
+
+\begin{table}[H]
+\centering \small \begin{tabular}{rcc}
+Cascade I & SMAPE & RMSE \\ \hline
+Neuron I  (3 membership functions, inference order 3) & 0.175623 & 0.062985 \\
+Neuron II  (5 membership functions, inference order 4) & 0.149139 & 0.056551 \\
+Neuron III  (4 membership functions, inference order 5) & 0.146186 & 0.054414 \\
+Neuron-Generalizer & 0.159002 & 0.055274 \\ \hline
+Cascade II & SMAPE & RMSE \\ \hline
+Neuron I (3 membership functions, inference order 3) & 0.175602 & 0.062942 \\
+Neuron II (5 membership functions, inference order 4) & 0.149092 & 0.056487 \\
+Neuron III (4 membership functions, inference order 5) & 0.146278 & 0.054415 \\
+Neuron-Generalizer & 0.158996 & 0.055264 \\ \hline
+Cascade III & SMAPE & RMSE \\ \hline
+Neuron I (3 membership functions, inference order 3) & 0.175592 & 0.062933  \\
+Neuron II (5 membership functions, inference order 4) & 0.149090 & 0.056487 \\
+Neuron III (4 membership functions, inference order 5) & 0.146270 & 0.054415 \\
+Neuron-Generalizer & 0.158986 & 0.055262 \\ \hline
+Cascade IV & SMAPE & RMSE \\ \hline
+Neuron I (3 membership functions, inference order 3) & 0.175605 & 0.062947 \\
+Neuron II (5 membership functions, inference order 4) & 0.149127 & 0.056487 \\
+Neuron III (4 membership functions, inference order 5) & 0.146323 & 0.054419 \\
+Neuron-Generalizer & 0.159015 & 0.055268 \\ \hline
+\end{tabular}
+\caption{Результати прогнозування часового ряду <<ESTP Competition Time Series>> окремих нейронів (зокрема нейронів-узагальнювачів) каскадної нейро-фаззі системи}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Моделювання багатовимірної гiбридної каскадної нейро-фаззi мережі з оптимiзацiєю пулу нейронiв}%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+В якості тестового датасету для моделювання багатовимірної гiбридної каскадної нейро-фаззi мережі з оптимiзацiєю пулу нейронiв (що ґрунтується на багатовимірних нео-фаззі нейронах, як описано у \hl{linkchapter}) застосовувався багатовимірний ряд, сгенерованих за домогою диференціальних рівнянь моделі Лоренца:
+
+\begin{equation}
+\label{eq:Lorenz}
+\begin{cases}
+\dot{x}=\sigma\left(y-x\right),\\
+\dot{y}=-xz+rx-y,\\
+\dot{z}=xy-bz.
+\end{cases}
+\end{equation}
+\medskip
+
+У моделі Лоренца присутні три невідомих функції, а також кілька невідомих параметрів \hl{[21]}. При плавній зміні параметра динамічна система змінює тип свого аттрактора. Рішення системи рівнянь Лоренца \ref{eq:Lorenz} при значенні параметра $r$, що перевищує біфуркаційних, виглядає майже ідентично випадковому процесу. У певному сенсі, аттрактор Лоренца є стохастичними автоколиваннями, зо підтримуються у динамічній системі за рахунок зовнішнього джерела. У фазовому просторі дивний аттрактор має топологію деякого клубка траєкторій, в межах якого можна виділити дві області. У кожен момент часу рішення знаходиться в одній з цих областей, причому зміна станів системи в одну або іншу область є абсолютно непередбачуваною. 
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics{MIMOLorenz3D.pdf}
+\caption{Прогнозування багатовимірного часового ряду гiбридною каскадною нейро-фаззi мережею з оптимiзацiєю пулу нейронiв}
+\label{fig:MIMOLorenz3D}
+\end{center}
+\end{figure}
+
+Аттрактор Лоренца демонструє ще одну особливість, притаманну \hl{дивним} атракторам - чутливість до початкових умов. Аттрактори, тобто нерухомі точки і граничні цикли, характеризуються тим, що для різних початкових умов сімейства рішень сходилися до одного асимптотичному рішення, тобто різні категорії вийшли з різних точок, які відповідають різним початковим умовам, сходилися при $t \rightarrow \infty$ в одну точку або близькі криві. Тому поведінку звичайних систем, що мають атрактори поблизу нерухомих точок і граничних циклів, на великих часах добре передбачувано. З \hl{дивними} аттракторами все зовсім інакше. Які б близькі початкові умови не вибиралися, при $t \rightarrow \infty$ рішення будуть розходитися, віддаляючись одне від одного в фазовому просторі. Оскільки в реальних задачах початкові умови відомі з деякою погрішністю, абсолютно неможливо вказати поведінку такого аттрактора при досить великому $t$, тому поведінка систем, що описуються дивними аттракторами, є абсолютно непередбачуваною.
+
+Для генерування тестового датасету використовувались такі параметри:
+
+\begin{equation*}
+\begin{aligned}
+r =& 28,\\
+dt =& 0.001;\\
+\end{aligned}
+\end{equation*}
+\medskip
+
+По завершенні експерименту маємо систему з трьох (рідше чотирьох) каскадів з трьома багатовимірними нейронами MNFN та одним нейроном-узагальнювачем у кожному каскаді. Результати роботи системи зображені на рис.~\ref{fig:MIMOLorenz3D}.
+
+\begin{figure}
+\begin{center}
+\includegraphics{MIMOLorenz.pdf}
+\caption{Прогнозування багатовимірного часового ряду гiбридною каскадною нейро-фаззi мережею з оптимiзацiєю пулу нейронiв}
+\label{fig:MIMOLorenz}
+\end{center}
+\end{figure}
+
 
 
 \bibliographystyle{ugost2008ns}
