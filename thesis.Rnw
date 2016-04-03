@@ -11,8 +11,12 @@
 \usepackage{MnSymbol}
 \usepackage{booktabs}
 \usepackage{multirow}
-\usepackage{tabularx}
 \usepackage{float}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage[labelsep=endash]{caption}
+\usepackage[shortcuts]{extdash}
+
 \graphicspath{{images/}}
 
 
@@ -20,7 +24,20 @@
 \everymath=\expandafter{\the\everymath\displaystyle}
 
 \geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
- 
+
+%This is to make proper table captions
+\makeatletter
+\let\ORG@makecaption\@makecaption
+\let\ORGlongtable\longtable
+\let\ORGLT@makecaption\LT@makecaption
+\AtBeginDocument{%
+  \let\@maketablecaption\ORG@makecaption
+  \let\longtable\ORGlongtable
+  \let\LT@makecaption\ORGLT@makecaption
+}
+\makeatother
+
+
 %\DeclareMathSizes{10}{10}{10}{10}
 \begin{document}  
   \title{Еволюційні нейро-фаззі мережі з каскадною структурою для інтелектуального аналізу данних}
@@ -50,6 +67,9 @@
 
 <<chapter1, child='Intro.Rnw'>>=
 @
+
+%<<chapter1, child='ProblemAnalysis.Rnw'>>=
+%@
 
 <<chapter2, child='SISOCascadedNetwork.Rnw'>>=
 @
