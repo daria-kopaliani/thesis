@@ -71,17 +71,21 @@
 <<chapter1, child='ProblemAnalysis.Rnw'>>=
 @
 
-%<<chapter2, child='SISOCascadedNetwork.Rnw'>>=
-%@
+<<chapter2, child='SISOCascadedNetwork.Rnw'>>=
+@
 
-%<<chapter3, child='MIMOCascadedNetwork.Rnw'>>=
-%@
+<<chapter3, child='MIMOCascadedNetwork.Rnw'>>=
+@
 
-%<<chapter4, child='SelfLearningCascadedNetwork.Rnw'>>=
-%@
+<<chapter4, child='SelfLearningCascadedNetwork.Rnw'>>=
+@
 
-%<<chapter5, child='Experiments.Rnw'>>=
-%@
+<<chapter5, child='Experiments.Rnw'>>=
+@
+
+<<chapter5, child='Conclusions.Rnw'>>=
+@
+
 
 \bibliographystyle{ugost2008ns}
 \bibliography{references}	

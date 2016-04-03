@@ -198,6 +198,28 @@
 
 
 
+Оскільки сучасні обчислювальні технології дозволяють накопичувати і обробляти досить великі масиви інформації, то на перший план виходить швидкість обробляння даних, а також можливість роботи з ними в послідовному режимі. Крім того варто зазначити, що інформація, яка обробляється, може характеризуватися нелінійним і нестаціонарним характером даних. У таких випадках доцільно використання штучних нейронних мереж, які володіють універсальними апроксимуючими властивостями. Застосування апарату нечіткої логіки дозволяє розширити функціональні можливості штучних нейронних мереж і коло вирішуваних завдань. Завдання дослідження полягає в розробці архітектур нейро-фаззі мереж і методів їх навчання, що володіють високою гнучкістю налаштування параметрів для інтелектуального аналізу даних в умовах невизначеності. Для досягнення поставленої мети необхідно розглянути наступні питання:
+
+\begin{enumerate}
+\item Аналіз існуючих нейро-фаззі архітектур і методів їх навчання.
+\item Розробка спеціалізованих штучних нейронів, які мають підвищену (порівняно з традиційними нейронами) швидкістю навчання, а також здатних ефективно вирішувати завдання прогнозування, ідентифікації і класетрування в умовах апріорної і поточної невизначеності.
+\item Розробка на основі цих нейронів штучних нейронних мереж зі зростаючою архітектурою та методів їх навчання.
+\item Дослідження методів і способів, що дозволяють виконати гібридизацію (перехід від нейро до нейро-нечіткої системи).
+\item Розробка методів навчання, що дозволяють гібридній нейро-нечіткій зростаючій архітектурі функціонувати в режимі послідовного обробляння інформації.
+\item Проведення імітаційного моделювання розроблених методів і архітектур та розв'язання з їх допомогою практичних завдань.
+\end{enumerate}
+
+\section*{Висновки до розділу~\ref{ch:TODO}}
+
+\begin{enumerate}
+\item Розглянуто гібридні нейро-фаззі системи для вирішення завдань обробляння інформації за умови апріорної і поточної невизначеності. У якості головного недоліку таких систем виділено відсутність ефективних способів настройки архітектури з можливістю функціонувати в режимі реального часу.
+\item Проаналізовано стан проблеми кластерування даних і розглянуті існуючі підходи до її вирішення. Розглянуто основні принципи нечіткої логіки та систем нечіткого висновування. Проаналізовані існуючі архітектури штучних нейронних мереж і методи їх самонавчання, що використовуються для вирішення завдань кластерування даних.
+\item Проведено аналіз існуючих конструктивних і деструктивних методів структурної адаптації нейронних мереж. Виділено їх сильні і слабкі сторони. Обґрунтовано доцільність використання конструктивних алгоритмів для синтезу систем, що мають функціонувати в режимі послідовного обробляння даних.
+\item Сформульовано завдання дослідження.
+\end{enumerate}
+
+
+
 \chapter{Огляд стану проблеми та постановка задачі дослідження}
 %\label{ch:Intro}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -518,17 +540,2435 @@ R^3_{[q]}=\left|\sum^{N}\limits_{k=1}\left(o^{[3]}_q\left(k\right)-\bar{o}_q^{[3
 
 Як видно, існує розмаїття методів нечіткого кластерування, зоснованих на оптимуванні цільової функції. Але усі вони ґрунтуються на припущенні, що дослідникові попередньо відома кількість кластерів, що їх треба виявити. Допевне, таке припущення слушне не для всіх задач, адже інколи кількість кластерів у вхідних даних може бути невідомою або вона може змінюватися в часі. Цей випадок є предметом розгляду систем обробляння даних із мінливою (еволюційною) архітектурою [84], які здебільшого є гібридними системами з поліпшеними архітектурами, що поєднують декілька напрямків обчислювального інтелекту.
 
-%<<chapter2, child='SISOCascadedNetwork.Rnw'>>=
-%@
 
-%<<chapter3, child='MIMOCascadedNetwork.Rnw'>>=
-%@
 
-%<<chapter4, child='SelfLearningCascadedNetwork.Rnw'>>=
-%@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Гібридна каскадна нейро-фаззі мережа з оптимізацією пулу нейронів}
+\label{ch:CascadedNeoFuzzySystemWithPoolOptimization}
 
-%<<chapter5, child='Experiments.Rnw'>>=
-%@
+Зазвичай під <<навчанням>> розуміють процес коригування синаптичних вагових коефіцієнтів за допомогою певної процедури оптимізації, що ґрунтується на пошуку екстремуму заданого критерію навчання. Якість процесу навчання може бути поліпшена шляхом коригування топології мережі поспіль з синаптичними вагами~\cite{ref44, ref45}. Ця ідея лежить в основі систем обчислювального інтелекту, що еволюціонують~\cite{ref46, ref47}.
+
+Мабуть, найбільш відомою реалізацією цього підходу є каскадно-кореляційі нейронні мережі~\cite{ref48, ref49, ref50}, привабливі високою ефективністю та простотою налаштування як синаптичних вагових коефіціентів, так і топології мережі. Така мережа напочатку містить лише один пул (ансамбль) нейронів, які навчаються назалежно один від іншого (перший каскад). Кожен нейрон у пулі може мати відмінні функції активації та метод навчання. Доки навчання триває, нейрони у пулі не взаємодіють один з одним. Після того, як процесс налаштування вагових коефіціентів завершився для всіх нейронів пулу першого каскаду, кращий нейрон відповідно до обраного критерію навчання формує перший каскад і коефіціенти його синаптичних ваг більше не коригуються. Далі формується другий каскад зазвичай з нейронів, подібних до нейронів першого каскаду. Різниця лише в тому, що нейрони, які навчаються в пулі другого каскаду, мають додатковий вхід (і, отже, додатковий синаптичний ваговий коефіцієнт) - вихід першого каскаду. Подібно до першого каскаду, у другому каскаді залишається лише один найбільш продуктивний нейрон і його синаптичні вагові коефіцієнти фіксуються. Аналогічним чином нейрони третього каскаду матимуть два додаткових входи, а саме виходи першого та другого каскадів. Еволюційна мережа продовжуватиме розширяти свою архітектуру новими каскадами, доки вона не досягне бажаної якості вирішення завдання для заданого набору даних.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=16cm]{CasCorLA.eps}
+\caption{Архітектура каскадної системи (за Фальманом та Лєб'єром) після додавання двох прихованих вузлів. Вхідні сигнали, що надходять до вертикальних ліній, сумуються; вагові коефіцієнти, позначені $\medsquare$, -- зафіксовані, позначeні $\filledmedsquare$, -- налаштовуються}
+\label{fig:CasCorLA}
+\end{center}
+\end{figure}
+
+Автори найпопулярнішої каскадної нейронної мережі, що еволюціонує, CasCorLA (схему наведено на рис.~\ref{fig:CasCorLA}), Фальман та Лєб'єр, використовували елементарні персептрони Розенблатта з традиційними сигмоїдальними функціями активації і коригували синаптичні вагові коефіцієнти за допомогою QuickProp-алгоритму~\cite{ref48}, що є модифікацією $\delta$-правила. Оскільки вихідний сигнал таких нейронів нелінійно залежить від синаптичних ваг, швидкість навчання не може бути суттєво збільшена для таких нейронів.
+
+Для уникнення багатоепохового навчання \cite{ref51, ref52, ref53, ref54, ref55, ref56, ref57, ref58} доцільно в якості вузлів системи використовувати такі типи нейронів, що їх виходи лінійно залежать від синаптичних ваг, що дозволить використовувати оптимальні за швидкодією методи навчання та обробляти дані в онлайн режимі.
+
+Проте варто зазначити, що у випадку послідовного навчання системи, неможливо визначити найкращий нейрон у пулі, адже при оброблянні нестаціонарних об'єктів певний нейрон може бути кращим для однієї частини тренувальної вибірки, проте поступатися у точності іншому нейрону на іншій частині вибірки. Отже доцільно зберегти усі нейрони пулу та використовувати певну оптимізуючу процедуру (відповідно обраному критерію якості) задля визначення нейрона-переможця на кожному кроці обробляння даних.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Архітектура оптимізованої каскадної нейронної мережі}
+\label{sec:OptimizedCascadedNeuralNetworkArchitecture}
+
+Архітектура пропонованої гібридної системи з оптимізованим пулом нейронів у кожному каскаді наведена на рис.~\ref{fig:SISOCascadedNetwork}.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=16cm]{SISOCascadedNetwork.eps}
+%\includegraphics[height=19cm]{SISOCascadedNetwork.eps}
+\caption{Архітектура гібридної системи з оптимізованим пулом нейронів}
+\label{fig:SISOCascadedNetwork}
+\end{center}
+\end{figure}
+На вхід такої системи (так званий <<рецептивний>> шар) подається векторний сигнал
+
+\begin{equation}
+x\left(k\right) = \left(x_1\left(k\right), x_2\left(k\right),\dots,x_n\left(k\right)\right)^T,
+\end{equation}
+\medskip
+
+де $k=1,2,\dots,$ -- кількість образів у таблиці <<об'єкт - властивість>> або поточний дискретний час.
+
+Ці сигнали подаються на входи кожного нейрона в мережі $N_j^{[m]}$ ($j = 1,2,\dots,q$ -- кількість нейронів у тренувальному пулі, $m=1,2,...$ -- номер каскаду) з вихідним сигналом $\hat{y}_j^{[m]}\left(k\right)$. Далі вихідні сигнали кожного каскаду $\hat{y}_j^{[m]}\left(k\right)$ надходять до <<узагальнюючого>> вузлу $GN^{[m]}$, який генерує поточно-оптимальний вихідний сигнал відповідного каскаду $\hat{y}^{*[m]}$. Слід зауважити, що вхідними сигналами першого каскаду є вектор $x\left(k\right)$ (що може містити опціональне порогове значення $x_0\left(k\right)\equiv1$), другий каскад має додатковий вхід для сгенерованого першим каскадом вихідного сигналу $\hat{y}^{*[1]}\left(k\right)$, нейрони третього каскаду оброблятимуть два додаткових сигнали $\hat{y}^{*[1]}\left(k\right)$, $\hat{y}^{*[2]}\left(k\right)$, нейрони $m$-ого каскаду матимуть $\left(m-1\right)$ додаткових вхідних сигналів: $\hat{y}^{*[1]}\left(k\right),$ $\hat{y}^{*[2]}\left(k\right)$, $\dots$, $\hat{y}^{*[m-1]}\left(k\right)$. Під час тренування системи нові каскади додаються доки не буде досягнута бажана точність.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Навчання елементарних персептронів Розенблатта у каскадній оптимізованій системі}
+
+Наразі вважатимемо $j$-й вузол $m$-ого каскаду елементарним персептроном Розенблатта з активаційною функцією
+
+\begin{equation}
+0<\sigma_j^{m}\left(\gamma_j^{[m]}u_j^{[m]}\right)=\frac{1}{1+e^{-\gamma_j^{[m]}u_j^{[m]}}}<1,
+\end{equation}
+\medskip
+
+де $u_j^{[m]}$ -- внутрішній активаційний сигнал $j$-ого нейрону $m$-ого каскаду, 
+
+$\gamma_j^{[m]}$ -- параметр посилення.
+
+У такому випадку вихідні сигнали нейронів тренувального пулу першого каскаду матимуть вигляд
+
+\begin{equation}
+\hat{y}_j^{[1]} =\sigma_J^{[1]}\left(\gamma_j^{[1]}\sum\limits_{i=0}^{n}{w_{ji}^{[1]}x_i}\right)=\sigma_j^{[1]}\left(\gamma_j^{[1]}w_j^{[1]T}x\right),
+\end{equation}  
+\medskip
+
+де $w_{ji}^{[1]}$ -- $i$-й ваговий коефіцієнт $j$-ого нейрону першого каскаду.  
+
+Вихідні сигнали другого каскаду дорівнюватимуть 
+
+\begin{equation}
+\hat{y}_j^{[2]} =\sigma_J^{[2]}\left(\gamma_j^{[2]}\left(\sum\limits_{i=0}^n{w_{ji}^{[2]}x_i+w_{j,n+1}^{[2]}\hat{y}^{*[1]}}\right)\right),
+\end{equation}  
+\medskip
+
+\begin{samepage}
+вихідні сигнали $m$-ого каскаду матимуть вигляд
+
+\begin{equation}
+\begin{aligned}
+&\hat{y}_j^{[m]}=\sigma_j^{[m]}\biggl(\gamma_j^{[m]}\biggl(\sum\limits_{i=0}^n{w_{ji}^{[m]}x_i+w_{j,n+1}^{[m]}\hat{y}^{*[1]}}\\
+&+w_{j,n+2}^{m}\hat{y}^{*[2]}+\dots+w_{j,n+m-1}^{[m]}\hat{y}^{*[m-1]}\biggr)\biggr)\\
+&=\sigma_j^{[m]}\left(\gamma_j^{[m]}\sum\limits_{i=0}^{n+m-1}{w_{ji}^{[m]}x_j^{[m]}}\right)=\sigma_j^{[m]}\left(w_j^{[m]T}x^{[m]}\right),
+\end{aligned}
+\end{equation}
+\end{samepage}
+\medskip
+
+де $x^{[m]}=\left(x^T,\hat{y}^{*[1]},\hat{y}^{*[m-1]}\right)^T$.
+
+Таким чином, нейронна мережа з персептронами Розенблатта у якості вузлів, що містить $m$ каскадів, залежить від $\left(m\left(n+2\right) + \sum\limits_{p=1}^{m-1}p\right)$ параметрів, у тому числі від параметрів посилення $\gamma_{j}^{[p]}$, $p=1,2,\dots,m$.
+
+У якості критерію навчання можна використовувати загальноприйняту квадратичну функцію
+
+\begin{equation}\label{eq:RosenblattLearningCriterion}
+\begin{aligned}
+E_{j}^{[m]}&=\frac{1}{2}\left(e_j^{[m]}\left(k\right)\right)^2=\\
+&=\frac{1}{2}\left(y\left(k\right)-\hat{y}_j^{[m]}\left(k\right)\right)^2=\\
+&=\frac{1}{2}\left(y\left(k\right)-\sigma_j^{[m]}\left(\gamma_j^{[m]}w_j^{[m]T}x^{[m]}\left(k\right)\right)\right)^2,
+\end{aligned}
+\end{equation}
+\medskip
+
+де $y\left(k\right)$ -- бажане значення вихідного сигналу.
+
+Градієнтну оптимізацію критерію \eqref{eq:RosenblattLearningCriterion} відносно $w_j^{[m]}$ можна записати у вигляді
+
+\begin{equation}\label{eq:RosenblattLearningCriterionGradientOptimization}
+\begin{aligned}
+w_j^{[m]}\left(k+1\right)=&w_j^{[m]}+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\gamma_j^{[m]}\hat{y}_j^{[m]}\left(k+1\right)\\
+&\times\left(1-\hat{y}_j^{[m]}\left(k+1\right)\right)x^{[m]}\left(k+1\right)=\\
+=&w_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\gamma_j^{[m]}J_j^{[m]}\left(k+1\right),
+\end{aligned}
+\end{equation}
+\medskip
+
+де $\eta_j^{[m]\left(k+1\right)}$ -- параметр кроку навчання.
+
+Мінімізувати критерій \eqref{eq:RosenblattLearningCriterion} відносно $\gamma_j^{[m]}$ можна за допомогою алгоритму Крушке-Мовеланна \cite{ref73}
+
+\begin{equation}\label{eq:RosenblattLearningCriterionKrushkeMovellanMinimization}
+\begin{aligned}
+\gamma_j^{[m]}\left(k+1\right)=&\gamma_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\hat{y}_j^{[m]}\left(k+1\right)\\
+&\times\left(1-\hat{y}_j^{[m]}\left(k+1\right)\right)u_j^{[m]}\left(k+1\right).
+\end{aligned}
+\end{equation}
+\medskip
+
+Поєднуючи \eqref{eq:RosenblattLearningCriterionGradientOptimization} та \eqref{eq:RosenblattLearningCriterion}, отримаємо \hl{алгоритм навчання для $j$-ого нейрону $m$-ого каскаду}
+
+\begin{equation}
+\begin{aligned}
+\frac{w_j^{[m]}\left(k+1\right)}{\gamma_j^{[m]}\left(k+1\right)}&=\frac{w_j^{[m]}\left(k\right)}{\gamma_j^{[m]}\left(k+\right)}+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\hat{y}_j^{[m]}\left(k+1\right)\\
+&\times\left(1-\hat{y}_j^{[m]}\left(k+1\right)\right)\left(\frac{\gamma_j^{[m]}x^{[m]}\left(k+1\right)}{u_j^{[m]}\left(k+1\right)}\right),
+\end{aligned}
+\end{equation}
+\medskip
+
+або, вводячи нові змінні, у більш компактній формі
+
+\begin{equation}
+\begin{aligned}
+\tilde{w}_j^{[m]}\left(k+1\right)&=\tilde{w}_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\hat{y}_j^{[m]}\left(k+1\right)\tilde{x}^{[m]}\left(k+1\right)\\
+&=\tilde{w}_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\tilde{J}_j^{[m]}\left(k+1\right).
+\end{aligned}
+\end{equation}
+\medskip
+
+Використовуючи регуляризуючий параметр (momentum term) \cite{ref74,ref75,ref76}, можна удосконалити процесс корегування синаптичних вагових коефіцієнтів під час навчання. Тоді, замість критерію \eqref{eq:RosenblattLearningCriterion} слід використовувати функцію
+
+\begin{equation}
+\begin{aligned}
+E_j^{[m]}\left(k\right)=&\frac{\eta}{2}\left(e_j^{[m]}\left(k\right)\right)^2\\
+&+\frac{1-\eta}{2}\left\|\tilde{w}_j^{[m]}\left(k\right)-\tilde{w}_j^{[m]}\left(k-1\right)\right\|^2,0<\eta\leq1.
+\end{aligned}
+\end{equation}
+\medskip
+
+Тоді алгоритм навчання приймає вигляд
+
+\begin{equation}\label{eq:RosenblattLearningAlgorithm}
+\begin{aligned}
+\tilde{w}_j^{[m]}\left(k+1\right)=&\tilde{w}_j^{[m]}\left(k\right)\\
+&+\eta_j^{[m]}\left(k+1\right)\biggl(\eta e_j^{[m]}\left(k+1\right)\tilde{J}_j^{[m]}\left(k+1\right)\\
+&+\left(1-\eta\right)\left(\tilde{w}_j^{[m]}\left(k\right)-\tilde{w}_j^{[m]}\left(k+1\right)\right)\biggr),
+\end{aligned}
+\end{equation}
+\medskip
+
+що є модифікацією процедури Сільви-Альмейди \cite{ref75}.
+
+Доцільно вдосконалити алгоритм, використовуючи підхід, запропонований у \cite{ref68}, тоді алгоритм \eqref{eq:RosenblattLearningAlgorithm} набуває слідкуючих та фільтруючих властивостей. Таким чином, кінцева модифікація алгоритму набуваю вигляду
+
+\begin{equation}
+\begin{aligned}
+\begin{cases}
+\tilde{w}_j^{[m]}\left(k+1\right)=&\tilde{w}_j^{[m]}\left(k\right)+\frac{\eta e_j^{[m]}\left(k+1\right)\tilde{J}_j^{[m]}\left(k+1\right)}{r_j^{[m]}\left(k+1\right)}\\
+&+\frac{\left(1-\eta\right)\left(\tilde{w}_j^{[m]}\left(k\right)-\tilde{w}_j^{[m]}\left(k-1\right)\right)}{r_j^{[m]}\left(k+1\right)},\\
+r_j^{[m]}\left(k+1\right)=&r_j^{[m]}\left(k\right)+\left\|\tilde{J}_j^{[m]}\left(k+1\right)\right\|^2-\left\|\tilde{J}_j^{[m]}\left(k-s\right)\right\|^2,
+\end{cases}
+\end{aligned}
+\end{equation}
+\medskip
+
+де $s$ -- розмір <<ковзного>> вікна.
+
+Цікаво, що при $s=1$ та $\eta=1$ отримуємо нелінійну версію загальновідомого алгоритму Качмажа-Уідроу-Хоффа \cite{ref65,ref66}:
+\begin{equation}
+\tilde{w}_j^{[m]}\left(k+1\right)=\tilde{w}_j^{[m]}\left(k\right)+\frac{e_j^{[m]}\left(k+1\right)\tilde{J}_j^{[m]}\left(k+1\right)}{\left\|\tilde{J}_j^{[m]}\left(k+1\right)\right\|^2},
+\end{equation}
+\medskip
+
+який широко використовується для навчання штучних нейронних мереж і відомий високою швидкістю збіжності.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Навчання нео-фаззі нейронів у оптимізованій каскадній нейронній мережі}
+
+Низька швидкість навчання персептронів Розенблатта у поєднанні з труднощами інтерпретації результатів (властиві всім ШНС в цілому) спонукає шукати альтернативні підходи до синтезу еволюційних нейронних мереж. Як зазначається у \cite{ref59}, нейро-фаззі системи відомі високою інтерпретовистю і прозорістю, а також високими апроксимаційними властивостями, та є основою гібридних систем штучного інтелекту. У \cite{ref55,ref54} розглядаються гібридні каскадні системи штучного інтелекту побудовані на нео-фаззі нейронах \cite{ref61,ref63}, що дозволяє їм суттєво підвищити швидкість корегування синаптичних вагових коефіцієнтів. Нео-фаззі нейрон (NFN), що його архітектуру наведено на рис.~\ref{fig:NFN},  -- це нелінійна система, що реалізує нечітке висновування
+
+\begin{equation}
+\hat{y}=\sum\limits_{i=1}^{n}f_i\left(x_i\right),
+\end{equation}
+\medskip
+
+де $x_i$ -- $i$-й вхідний сигнал $(i=1,2,\dots,n)$,
+
+$\hat{y}$ -- вихідний сигнал нео-фаззі нейрону.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=16cm]{NFN.eps}
+\caption{Архітектура нео-фаззі нейрону}
+\label{fig:NFN}
+\end{center}
+\end{figure}
+
+Структурними елементами нео-фаззі нейрона є нелінійні синапси $NS_i$, які трансформують вхідні сигнали в наступний спосіб:
+
+\begin{equation}
+f_i\left(x_i\right)=\sum\limits_{l=1}^h{w_{li}\mu_{li}\left(x_i\right)},
+\end{equation}
+\medskip
+
+де $w_{li}$ -- $l$-й ваговий коефіцієнт $i$-ого нелінійного синапсу,
+
+$l=1,2,\dots,h$ -- кількість синаптичних ваг, а отже і функцій належності $\mu_{li}\left(x_i\right)$ у синапсі.
+
+Таким чином, нелінійний синапс $NS_i$ реалізує нечітке висновування 
+
+\begin{equation}
+\text{IF } x_i \text{ IS } X_{li} \text{ THEN THE OUTPUT IS } w_{li},
+\end{equation}
+\medskip
+
+де $X_{li}$ -- нечітка множина з функцією належності $\mu_{li}$,
+
+$w_{li}$ -- сінглтон (синаптичний ваговий коефіцієнт у консеквенті).
+
+Тобто нелінійній синапс фактично є системою висновування Такаґі-Суґено нульового порядку \cite{ref59}.
+
+Запишемо вихідні сигнали для нейронів першого каскаду у наступному вигляді:
+
+\begin{equation}\label{eq:FirstascadeNeoFuzzyNeuronOutputs}
+\begin{cases}
+\hat{y}_j^{[1]}\left(k\right)=\sum\limits_{i=1}^n{f_{ji}^{[1]}\left(x\left(k\right)\right)}=\sum\limits_{i=1}^n\sum\limits_{l=1}^h{w_{jli}^{[1]}\mu_{jli}^{[1]}\left(x_i\left(k\right)\right)},\\
+\text{IF } x_i \text{ IS } X_{li} \text{ THEN THE OUTPUT IS } w_{li}
+\end{cases}
+\end{equation}
+\medskip
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=14cm]{NFN[2].eps}
+\caption{Нео-фаззі нейрон другого каскаду пропонованої каскадної системи}
+\label{fig:NFN[2]}
+\end{center}
+\end{figure}
+$j$-й нео-фаззі нейрон другого каскаду зображено на рис.~\ref{fig:NFN[2]} згідно топології нейронної мережі, зображеної на рис.~\ref{fig:CasCorLA}). 
+
+Автори нео-фаззі нейрона \cite{ref61,ref63} в якості фунцій належності використовували традиційні трикутні структури, які задовільняють умові розбиття Руспіні:
+
+\begin{equation}\label{eq:TriangularMembershipFunctions}
+\mu_{jli}^{[1]}\left(x_i\right)=
+\begin{cases}
+\frac{x_i-c_{j,l-1,i}^{[1]}}{c_{jli}^{[1]}-c_{j,l-1,i}^{[1]}} \text { if } x_i\in\left[c_{j,l-1,i}^{[1]},c_{jli}^{[1]}\right],\\
+\frac{c_{j,l+1,i}^{[1]}-x_i}{c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}\text{ if }x_i \in \left[c_{jli}^{[1]},c_{j,l+1,i}^{[1]}\right],\\
+0\text { інакше},
+\end{cases}
+\end{equation}
+\medskip
+
+де $c_{jli}^{[1]}$ -- довільно обрані центри параметрів функцій належності на інтервалі $\left[0,1\right]$, зазвичай рівномірно розподілені.
+
+Такий вибір функцій належності гарантує, що вхідний сигнал $x_i$ активує лише два сусідні функції, а сума їх значень завжди дорівнюватиме $1$:
+
+\begin{equation}
+\mu_{jli}^{[1]}\left(x_i\right)+\mu_{j,l+1,i}^{[1]}\left(x_i\right)=1,
+\end{equation}
+
+\begin{equation}
+f_{jl}^{[1]}\left(x_i\right)=w_{jli}^{[1]}\mu_{jli}^{[1]}\left(x_i\right)+w_{j,l+1,i}^{[1]}\mu_{j,l+1,i}^{[1]}\left(x_i\right).
+\end{equation}
+\medskip
+
+Аппроксимуючі властивості системи можна поліпшити використовуючи кубічні сплайни \cite{ref55} замість трикутних функцій належності:
+
+\begin{equation}
+\mu_{jli}^{[1]}\left(x_i\right)=
+\begin{cases}
+\frac{1}{4}\left(2+3\frac{2x_i-c_{jli}^{[1]}-c_{j,l-1,i}^{[1]}}{c_{jli1}^{[1]}-c_{j,l-1,i}^{[1]}}-\left(\frac{2x_i-c_{jli}^{[1]}-c_{j,l-1,i}^{[1]}}{c_{jli}^{[1]}-c_{j,l-1,i}^{[1]}}\right)^3\right),\\
+\text{if }x\in\left[c_{j,l-1,i}^{[1]},c_{jli}^{[1]}\right],\\
+\frac{1}{4}\left(2-3\frac{2x_i-c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}{c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}+\left(\frac{2x_i-c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}{c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}\right)^3\right),\\
+\text{if }x\in\left[c_{jli}^{[1]},c_{j,l+1,i}^{[1]}\right],\\
+0,\text{ інакше},
+\end{cases}
+\end{equation}
+\medskip
+
+або $B$-сплайни \cite{ref54}:
+
+\begin{equation}
+\mu_{jli}^{g[1]}=
+\begin{cases}
+\begin{rcases}
+1,\text{ if }x_{i}\in \left[c_{jli}^{[1]},c_{j,l+1,i}^{[1]}\right],\\
+0,\text{ otherwise}
+\end{rcases}
+\text{ для }g=1,\\
+\frac{x_i-c_{jli}^{[1]}}{c_{j,l+g-1,i}^{[1]}-c_{jli}^{[1]}}\mu_{jli}^{g-1,[1]}\left(x_i\right)+\frac{c_{j,l+g,i}^{[1]}-x_i}{c_{j,l+g,i}^{[1]}-c_{j,l+g,i}^{[1]}}\mu_{j,l+1,i}^{g-1,[1]}\left(x_i\right),\\
+\text{ для }g>1,
+\end{cases}
+\end{equation}
+\medskip
+
+де $\mu_{jli}^{g[1]}\left(x_i\right)$ -- $l$-й сплайн $g$-ого порядку.
+
+Нескладно помітити, що при $g=2$ отримуємо трикутні функції належності \eqref{eq:TriangularMembershipFunctions}.
+
+$B$-сплайни, як і трикутні функції належності, забезпечують розбиття Руспіні, але в загальному випадку вони можуть активувати довільне число функцій належності за межами інтервалу $\left[0,1\right]$, що може стати у нагоді для подальших каскадів. 
+
+Також у якості функцій належності нелінійних синапсів можна використовувати інші структури, такі, як поліноміальні, гармонійні функції, вейвлети, ортогональні функції, тощо. Проте не можна сказати наперед, які з функцій забезпечать кращі результати, тому ідея використання не одного нейрона, а пулу нейронів з різними функціями належності та активації виглядає доречною та перспективною.
+
+\hl{За аналогією} до \eqref{eq:FirstascadeNeoFuzzyNeuronOutputs} визначаємо вихідні сигнали інших каскадів. Так, для другого каскаду можемо записати вихідні сигнали у формі
+
+\begin{equation}
+\hat{y}_j^{[2]}=\sum\limits_{i=1}^n\sum\limits_{l=1}^{h}{w_{jli}^{[2]}\mu_{jli}^{[2]}\left(x_i\right)}+\sum\limits_{l=1}^{h}{w_{j,l,n+1}^{[2]}\mu_{j,l,n+1}^{[2]}}\left(\hat{y}^{*[1]}\right),
+\end{equation}
+\medskip
+
+вихідні сигнали для нейронів $m$-ого каскаду
+
+\begin{equation}
+\hat{y}_j^{[m]}=\sum\limits_{i=1}^n\sum\limits_{l=1}^{h}{w_{jli}^{[m]}\mu_{jli}^{[m]}\left(x_i\right)}+\sum\limits_{p=n+1}^{n+m-1}\sum\limits_{l=1}^{h}{w_{jlp}^{[m]}\mu_{jlp}^{[m]}\left(\hat{y}^{*[p-n]}\right)}.
+\end{equation}
+\medskip
+
+Таким чином, каскадна нейронна мережа з нео-фаззі нейронів, що сформована $m$ каскадами, містить $h\left(\sum\limits_{p=1}^{m-1}p\right)$ параметрів.
+
+Введемо вектор функцій належності для $j$-ого нео-фаззі нейрона $m$-ого каскаду
+
+\begin{equation}
+\begin{aligned}
+\mu_{j}^{[m]}\left(k\right)=\biggl(&\mu_{j11}^{[m]}\left(x_1\left(k\right)\right),\dots,\mu_{jh1}^{[m]}\left(x_1\left(k\right)\right),\mu_{j12}^{[m]}\left(x_2\left(k\right)\right),\\
+&\dots,\mu_{jh2}^{[m]}\left(x_2\left(k\right)\right),\dots,\mu_{jli}^{[m]}\left(x_i\left(k\right)\right),\dots,\mu_{jhn}^{[m]}\left(x_n\left(k\right)\right),\\
+&\dots,\mu_{j1,n+1}^{[m]}\left(\hat{y}^{*[1]}\left(k\right)\right),\dots,\mu_{jh,n+m-1}^{[m]}\left(\hat{y}^{*[m-1]}\left(k\right)\right)\biggr)^T
+\end{aligned}
+\end{equation}
+\medskip
+
+та відповідний вектор синаптичних вагових коефіцієнтів
+
+\begin{equation}
+\begin{aligned}
+w_{j}^{[m]}=\biggl(&w_{j11}^{[m]},\dots,w_{jh1}^{[m]},w_{j12}^{[m]},\dots,w_{jh2}^{[m]},\dots,w_{jli}^{[m]},\\
+&\dots,w_{jhn}^{[m]},w_{j1,n+1}^{[m]},\dots,w_{jh,n+m-1}^{[m]},\biggr)^T.
+\end{aligned}
+\end{equation}
+\medskip
+
+Тоді можемо компактно записати вихідні сигнали для $j$-ого нейрону $m$-ого каскаду
+
+\begin{equation}\label{eq:NFNCascadeOutput}
+\hat{y}_j^{[m]}\left(k\right)=w_j^{[m]T}\mu_j^{[m]}\left(k\right).
+\end{equation}
+\medskip
+
+У такому разі критерій навчання \eqref{eq:RosenblattLearningCriterion} приймає вигляд
+
+\begin{equation}\label{eq:CompactLearningCriterion}
+E_j^{[m]}\left(k\right)=\frac{1}{2}\left(e_j^{m}\left(k\right)\right)^2=\frac{1}{2}\left(y\left(k\right)-w_j^{[m]T}\mu_j^{[m]}\left(k\right)\right),
+\end{equation}
+\medskip
+
+а мінімізувати його можна використавши модифікацію процедури \cite{ref70} для <<плаваючого>> вікна
+
+\begin{equation}\label{eq:NFNSlidingWindowMinimizationSlidingWindow}
+\begin{cases}
+w_j^{[m]}\left(k+1\right)=w_j^{[m]}\left(k\right)+\frac{e_j^{[m]}\left(k+1\right)\mu_j^{[m]}\left(k+1\right)}{r_j^{[m]}\left(k+1\right)},\\
+r_j^{[m]}\left(k+1\right)=r_j^{[m]}\left(k\right)+\left\|\mu_j^{[m]}\left(k+1\right)\right\|^2-\left\|\mu_j^{[m]}\left(k-s\right)\right\|^2,+
+\end{cases}
+\end{equation}
+\medskip
+
+або для випадку, коли $s=1$,
+
+\begin{equation}\label{eq:NFNSlidingWindowMinimization}
+w_j^{[m]}\left(k+1\right)=w_j^{[m]}\left(k\right)+\frac{e_j^{[m]}\left(k+1\right)\mu_j^{[m]}\left(k+1\right)}{\left\|\mu_j^{[m]}\left(k+1\right)\right\|^2},
+\end{equation}
+\medskip
+
+що збігається з одношаговим оптимальним алгоритмом Качмажа-Уідроу-Хоффа.
+
+Вочевидь, замість \eqref{eq:NFNSlidingWindowMinimizationSlidingWindow} можна скористатися іншими алгоритмами, як-от експоненційно зважений рекурентний метод найменших квадратів (EWRLSM), що використовується у DENFIS \cite{ref77}, ETS \cite{ref78} та FLEXFIS \cite{ref79,ref80}. Та варто зауважити, що EWRLSM може бути нестійким при малому коефіцієнті забування.
+
+При використанні критерія навчання з \hl{регуляризуючим параметром} (momentum term) \eqref{eq:RosenblattLearningCriterion} замість \eqref{eq:CompactLearningCriterion} отримуємо остаточний метод навчання нео-фаззі нейрона
+
+\begin{equation}
+\begin{aligned}
+\begin{cases}
+w_j^{[m]}\left(k+1\right)=&w_j^{[m]}\left(k\right)+\frac{\eta e_j^{[m]}\left(k+1\right)\mu_j^{[m]}\left(k+1\right)}{r_j^{[m]}\left(k+1\right)}\\
+&+\frac{\left(1-\eta\right)\left(w_j^{[m]}\left(k\right)-w_j^{[m]}\left(k-1\right)\right)}{r_j^{[m]}\left(k+1\right)},\\
+r_j^{[m]}\left(k+1\right)=&r_j^{[m]}\left(k\right)+\left\|\mu_j^{[m]}\left(k+1\right)|\right\|^2-\left\|\mu_j^{[m]}\left(k-s\right)\right\|^2.
+\end{cases}
+\end{aligned}
+\end{equation}
+\medskip
+
+Варто зробити наголос, що оскільки вихідні сигнали нео-фаззі нейрона лінійно залежать від його синаптичних вагових коефіцієнтів, можна використовувати будь-які методи адаптивної лінійної ідентифікації \cite{ref67} (наприклад, рекурентний метод найменших квадратів, робастні методи, методи, що ігнорують застарілі данні, тощо), що дозволяє обробляти нестаціонарні сигнали в онлайн режимі.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Розширенні нео-фаззі нейрони в якості елементів гібридної каскадної мережі, що еволюціонує}
+\label{sec:ExtendedNeoFuzzyNeuron}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=16cm]{ENFNSynapse.eps}
+\caption{Синапс розширеного нео-фаззі нейрону}
+\label{fig:ENFNSynapse}
+\end{center}
+\end{figure}
+
+Як зазначалося вище, розглядаючи нелінійний синапс нео-фаззі нейрону з позицій нечіткої логіки, нескладно побачити, що він є вельми схожим на шар фаззіфікування таких нейро-фаззі систем як мережі Такаґі-Суґено-Канґа, Дженґа, Ванґа-Менделя, і, фактично реалізує нечітке висновування Такаґі-Суґено нульового порядку \cite{ref83,ref84}. Та задля поліпшення апроксимуючих властивостей таких систем видається доцільним запропонувати удосконалений нелінійний синапс такий, що реалізує нечітке висновування довільного порядку, далі <<розширений нелінійний синапс>> (ENS), та зсинтезувати <<розширений нео-фаззі нейрон>> (ENFN), що містить такі структури замість традиційних нелінійних синапсів $NS_i$. Архітектури розширеного нелінійного синапсу та розширеного нео-фазі нейрону
+наведено на рис.~\ref{fig:ENFNSynapse} та рис.~\ref{fig:ENFN} відповідно.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=14cm]{ENFN.eps}
+\caption{Розширений нео-фаззі нейрон}
+\label{fig:ENFN}
+\end{center}
+\end{figure}
+
+Вводячі нові змінні 
+
+\begin{equation}
+\phi_{li}\left(x_i\right)=\mu_{li}\left(x_i\right)\left(w_{li}^0+w_{li}^1x_i+w_{li}^2x_i^2+\dots+w_{li}^px_i^p\right),
+\end{equation}
+\begin{equation}
+\begin{aligned}
+f_i\left(x_i\right)&=\sum\limits_{l=1}^h\mu_{li}\left(x_i\right)\left(w_{li}^0+w_{li}^1x_i+w_{li}^2x_i^2+\dots+w_{li}^px_i^p\right)\\
+&=w_{li}^0\mu_{li}\left(x_i\right)+w_{li}^1x_i\mu_{1i}\left(x_i\right)+\dots+w_{li}^px_i^p\mu_{1i}\left(x_i\right)\\
+&+w_{2i}^0\mu_{2i}\left(x_i\right)+\dots+w_{2i}^px_i^p\mu_{2i}\left(x_i\right)+\dots+w_{hi}^px_i^p\mu_{hi}\left(x_i\right),
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+w_i=\left(w_{1i}^0,w_{1i}^1,\dots,w_{1i}^p,w_{2i}^0,\dots,w_{2i}^p,\dots,w_{hi}^p \right)^T,
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\tilde{\mu}_i\left(x_i\right)=\biggl(&\mu_{1i}\left(x_i\right),x_i(\mu_{1i}\left(x_i\right),\dots,x_i^p(\mu_{1i}\left(x_i\right),\\
+&\mu_{2i}\left(x_i\right),\dots,x_i^p\mu_{2i}\left(x_i\right),\dots,x_i^p\mu_{hi}\left(x_i\right)\biggr)^T,
+\end{aligned}
+\end{equation}
+\\
+\medskip
+можна представити вихідні сигнали розширеного нео-фаззі нейрона у вигляді 
+
+\begin{equation}
+f_i\left(x_i\right)=w_i^T\tilde{\mu}_i\left(x_i\right),
+\end{equation}
+\begin{equation}
+\begin{aligned}
+\hat{y}&=\sum\limits_{i=1}^{n}{f_i\left(x_i\right)}\\
+&=\sum\limits_{i=1}^{n}{w_i^T\tilde{\mu}\left(x_i\right)}\\
+&={\tilde{w}^T\tilde{\mu}\left(x\right)}.
+\end{aligned}
+\end{equation}
+\medskip
+
+де
+
+\begin{equation}
+\tilde{w}^T=\left(w_1^T,\dots,w_i^T,\dots,w_n^T\right)^T,
+\end{equation}
+
+\begin{equation}
+\tilde{\mu}\left(x\right)=\left(\tilde{\mu}_1^T\left(x_1\right),\dots, \tilde{\mu}_i^T\left(x_i\right),\dots, \tilde{\mu}_n^T\left(x_n\right) \right)^T,
+\end{equation}
+\medskip
+
+Таким чином, ENFN містить $\left(p+1\right)hn$ вагових коефіцієнтів та реалізує нечітке висновування Такаґі-Суґено $p$-ого порядку, а висновування, що його реалізує кожний розширений нелінійний синапс $ENS_i$ можна записати у формі
+
+\begin{equation}
+\begin{aligned}
+\text{IF } x_i \text{ IS } X_{li} \text{ THEN THE OUTPUT IS }\\
+w_{li}^0+w_{li}^1x_i+\dots+w_{li}^px_p,\text{   }l=1,2,\dots,h,
+\end{aligned}
+\end{equation}
+\medskip
+
+що збігається з нечітким висновуванням Такаґі-Суґено $p$-ого порядку.
+
+Коли подати векторний сигнал $x\left(k\right)$ на вхід $ENFN$ першого каскаду, на виході отримуюємо скалярне значення
+
+\begin{equation}
+\hat{y}^{[1]}\left(k\right)=\tilde{w}^{[1]T}\left(k-1\right)\tilde{\mu}^{[1]}\left(x\left(k\right)\right),
+\end{equation}
+\medskip
+
+що відрізняється від виразу \eqref{eq:NFNCascadeOutput} для звичайних $NFN$ тим, що містить у $p+1$ більше параметрів, що корегуються.
+
+Вочевидь, будь-які методи навчання нео-фаззі нейронів підійдуть і для розширених нео-фаззі нейронів. Так, вирази \eqref{eq:NFNSlidingWindowMinimizationSlidingWindow} та \eqref{eq:NFNSlidingWindowMinimization} для $j$-ого нейрону $m$-ого каскаду приймають вигляд 
+
+\begin{equation}\label{eq:ENFNSlidingWindowMinimizationSlidingWindow}
+\begin{cases}
+\tilde{w}_j^{[m]}\left(k+1\right)=\tilde{w}_j^{[m]}\left(k\right)+\frac{e_j^{[m]}\left(k+1\right)\tilde{\mu}_j^{[m]}\left(k+1\right)}{\tilde{r}_j^{[m]}\left(k+1\right)},\\
+\tilde{r}_j^{[m]}\left(k+1\right)=\tilde{r}_j^{[m]}\left(k\right)+\left\|\tilde{\mu}_j^{[m]}\left(k+1\right)\right\|^2-\left\|\tilde{\mu}_j^{[m]}\left(k-s\right)\right\|^2
+\end{cases}
+\end{equation}
+\medskip
+
+та 
+
+\begin{equation}\label{eq:ENFNSlidingWindowMinimization}
+\tilde{w}_j^{[m]}\left(k+1\right)=\tilde{w}_j^{[m]}\left(k\right)+\frac{e_j^{[m]}\left(k+1\right)\tilde{\mu}_j^{[m]}\left(k+1\right)}{\left\|\tilde{\mu}_j^{[m]}\left(k+1\right)\right\|^2}
+\end{equation}
+\medskip
+
+відповідно.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Оптимізація пулу нео-фаззі нейронів}
+\label{sec:NeuronPoolOptimisation}
+
+Вихідні сигнали, згенеровані нейронами пулу кожного з каскадів, можна об'єднати у окремому вузлі-нейроні $GN^{[m]}$, з точністю $\hat{y}^{*[m]}\left(k\right)$, не меншою від точності будь-якого нейрону пулу $\hat{y}_j^{[m]}\left(k\right)$. Це завдання можна вирішити за допомогою підходу ансамблей нейронних мереж.
+Хоча відомі алгоритми не призначені для роботи в онлайн-режимі, варто розглянути методи адаптивного узагальнюючого прогнозування \cite{ref81,ref82}.
+
+Введемо вектор вхідних сигналів для $m$-ого каскаду:
+
+\begin{equation}
+\hat{y}^{[m]}\left(k\right)=\left(\hat{y}_1^{[m]}\left(k\right),\hat{y}_2^{[m]}\left(k\right),\dots,\hat{y}_q^{[m]}\left(k\right)\right)^T;
+\end{equation}
+\medskip
+
+тоді отпимальний вихідний сигнал, що його генерує нейрон $GN^{[m]}$ (що, власне, є адаптивним лінійним асоціатором \cite{ref44,ref45}), можна записати у формі
+
+\begin{equation}
+\hat{y}^{*[m]}\left(k\right)=\sum\limits_{j=1}^{1}{c_j^{[m]}\hat{y}_j^{[m]}\left(k\right)}=c^{[m]T}\hat{y}^{[m]}\left(k\right)
+\end{equation}
+\medskip
+
+з обмеженнями на незміщенність
+
+\begin{equation}\label{eq:GeneralizingNeuronUnbiasenessConstraint}
+\sum\limits_{j=1}^q{c_j^{[m]}}=E^Tc^{[m]}=1,
+\end{equation}
+\medskip
+
+де $c^{[m]}=\left(c_1^{[m]}, c_2^{[m]},\dots,c_q^{[m]}\right)^T$ та $E = \left(1,1,\dots,1\right)^T$ -- $\left(q\times1\right)$-вектори.
+
+Введемо критерій навчання на <<ковзному>> вікні
+
+\begin{equation}
+\begin{aligned}
+E^{[m]}\left(k\right)=&\frac{1}{2}\sum\limits_{\tau=k-s+1}^k{\left(y\left(\tau\right)-\hat{y}^{*[m]}\left(\tau\right)\right)^2}\\
+=&\frac{1}{2}\sum\limits_{\tau=k-s+1}^k{\left(y\left(\tau\right)-c^{[m]T}\hat{y}^{[m]}\left(\tau\right)\right)^2},
+\end{aligned}
+\end{equation}
+\medskip
+
+зважаючи на обмеженяя \eqref{eq:GeneralizingNeuronUnbiasenessConstraint}, функція Лаґранжа матиме вигляд
+
+\begin{equation}\label{eq:PoolOptimizatoinLaGrangeFunction}
+L^{[m]}\left(k\right)=E^{[m]}\left(k\right)-\lambda\left(1-E^Tc^{[m]}\right),
+\end{equation}
+\medskip
+
+де $\lambda$ -- невизначений Лаґранжів множник.
+
+Мінімізуючи \eqref{eq:PoolOptimizatoinLaGrangeFunction} відносно $c^{[m]}$, отримуємо
+
+\begin{equation}\label{eq:SISOGeneralizedOutputPacketMode}
+\begin{cases}
+\hat{y}^{*[m]}\left(k+1\right)=\frac{\hat{y}^{[m]T}\left(k+1\right)P^{[m]}\left(k+1\right)E}{E^TP^{[m]}\left(k+1\right)E},\\
+P^{[m]}\left(k+1\right)=\left(\sum\limits_{\tau=k-s+2}^{k+1}{\hat{y}^{[m]}\left(\tau\right)}\hat{y}^{[m]T}\left(\tau\right)\right)^{-1}
+\end{cases}
+\end{equation}
+\medskip
+
+або у рекурентній формі
+
+\begin{equation}\label{eq:SISOGeneralizedOutputRecurrent}
+\begin{cases}
+\begin{aligned}
+\tilde{P}^{[m]}\left(k+1\right)=&P^{[m]}\left(k\right)-\frac{P^{[m]}\left(k\right)\hat{y}^{[m]}\left(k+1\right)\hat{y}^{[m]T}\left(k+1\right)P^{[m]}\left(k\right)}{1+\hat{y}^{[m]T}\left(k+1\right)P^{[m]}\left(k\right)\hat{y}^{[m]}\left(k+1\right)},\\
+P^{[m]}\left(k+1\right)=&\tilde{P}^{[m]}\left(k+1\right)+\\
++&\frac{\tilde{P}^{[m]}\left(k+1\right)\hat{y}\left(k-s+1\right)\hat{y}^{[m]T}\left(k-s+1\right)\tilde{P}^{[m]}\left(k+1\right)}{1-\hat{y}^{[m]T}\left(k-s+1\right)\tilde{P}^{[m]}\left(k+1\right)\hat{y}^{[m]}\left(k-s+1\right)},\\
+\hat{y}^{*[m]}\left(k+1\right)=&\frac{\hat{y}^{[m]T}\left(k+1\right)P^{[m]}\left(k+1\right)E}{E^TP^{[m]}\left(k+1\right)E}.
+\end{aligned}
+\end{cases}
+\end{equation}
+\medskip
+
+У випадку, коли $s=1$ \eqref{eq:SISOGeneralizedOutputPacketMode} та \eqref{eq:SISOGeneralizedOutputRecurrent} приймають доволі простий вигляд:
+
+\begin{equation}
+\begin{aligned}
+\hat{y}^{*[m]}\left(k+1\right)&=\frac{\hat{y}^{[m]T}\left(k+1\right)\hat{y}^{[m]}\left(k+1\right)}{E^T\hat{y}^{[m]}\left(k+1\right)}=\\
+&=\frac{\left\|\hat{y}^{[m]}\left(k+1\right)\right\|^2}{E^T\hat{y}^{[m]}\left(k+1\right)}=\\
+&=\frac{\sum\limits_{j=1}^q{\left(\hat{y}^{[m]}\left(k+1\right)\right)^2}}{\sum\limits_{j=1}^q{\hat{y}^{[m]}\left(k+1\right)}}.
+\end{aligned}
+\end{equation}
+\medskip
+
+Важливо зазначити, що навчання як нео-фаззі нейронів, так і нейронів-узагальнювачів можна організувати в онлайн-режимі. Таким чином, вагові коефіцієнти нейронів попередніх каскадів (на відміну від CasCorLA) можна не заморожувати, а постійно корегувати. Так само, число каскадів не має бути фіксованим і може змінюватись у часі, що відрізняє пропоновану нейронну мережу від інших відомих каскадних систем.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Висновки до розділу~\ref{ch:CascadedNeoFuzzySystemWithPoolOptimization}}
+
+\begin{enumerate}
+\item Розглянуті існуючі гібрідні системи обчислювального інтелекту, що еволюціонують, та визначені потенційні модифікації, що їх варто привнести аби такі системи можна було застосувати у режимі послідовного надхоження даних на обробку.
+\item Зсинтезована варіація каскадної системи, що еволюціонує, побудована на персептронах Розенблатта, для послідовного обробляння вхідних сигналів, що дозволило сформувати вимоги до вузлів шуканої гібридної системи.
+\item Запропонована архітектура та методи навчання гібридної каскадної системи, що еволюціонує, заснованої на нео-фаззі нейронах. Пропонованій системі притаманні усі переваги нео-фаззі нейронів (інтерпритуємість та прозорість одночасно з вискокими апроксимаційними властивостями), а також, зрештою, вона забезпечує модель адекватної складності для кожного поставленого завдання.
+\item Запропонована архітектура та методи навчання гібридної каскадної нейронної мережі, що еволюціонує, з оптимізацією пулу нейронів у кожному каскаді, що реалізують оптимальний за точністю прогноз нелінійних стохастичних і хаотичних сигналів у онлайн режимі. Варто зазначити, що оптимізіція пулу нейронів дуже доречна саме у разі застосування системи для аналізу даних в онлайн режимі, адже використання узагальнюючих нейронів дозволяє визначати оптимальний нейрон на кожному етапі функціонування системи, який з високою вірогідністю може змінюватися у випадку послідовного обробляння сигналів нестаціонарних об'єктів.
+\item Запропонований розширений нео-фаззі нейрон, який дозволяє реалізовувати нечітке висновуння за Такаґі-Суґено довільного порядку, що має покращені апроксимуючі властивості. Зсинтезована архітекутра гібридної системи, що ґрунтується на розширених нео-фаззі нейронах.
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Багатовимірна каскадна нео-фаззі система, що еволюціонує}
+\label{ch:MIMOEvolvingCascadedSystem}
+
+Задача апроксимації та екстраполяції багатовимірних часових рядів доволі часто виникає у багатьох технічних, медико-біологічних та інших дослідженнях, де якість прийнятих рішень істотно залежить від точності синтезованих прогнозів. У багатьох реальних задачах часові ряди характеризуються високим рівнем нелінійності та нестаціонарності своїх параметрів, наявністю аномальних викидів. Зрозуміло, що традиційні методи аналізу часових рядів, засновані на регресійному, кореляційному та інших подібних підходах, що мають на меті апріорну наявність репрезентативної вибірки спостережень, є неефективними. Альтернативою традиційним статистичним методам може слугувати математичний апарат обчислювального інтелекту, зокрема штучні нейронні мережі та нейро-фаззі-системи \cite{ref44, ref45, ref43, ref46}, завдяки своїм універсальним апроксимувальним властивостям. Водночас з апроксимувальних властивостей зовсім не витікають екстраполюючі, оскільки врахування давньої передісторії для побудови прогнозувальної моделі може погіршити якість прогнозу. У зв'язку з цим під час оброблення нестаціонарних процесів треба відмовитися від процедур навчання, що базуються на зворотному поширенні помилок (багатошарові персептрони, рекурентні нейронні мережі, адаптивні нейромережеві системи нечіткого виведення – ANFIS \cite{ref85}) або методі найменших квадратів (радіально-базисні та функціонально пов’язані нейронні мережі) та скористатися процедурами на основі локальних критеріїв та «короткої» пам’яті типу алгоритма Качмажа-Уідроу-Хоффа. При цьому використані алгоритми навчання мусять забезпечувати не лише високу швидкодію, але й фільтруючі якості для придушення стохастичної «шумової» компоненти в оброблюваному сигналі. У зв’язку з цим синтез спеціалізованих гібридних систем обчислювального інтелекту для розв’язання задач прогнозування істотно нестаціонарних часових рядів за умов невизначеності, що забезпечують разом з високою швидкістю навчання і фільтрацію завад, є досить цікавою та перспективною задачею.
+
+Таким чином, цей розділ присвячено синтезу багатовимірної гібридної системи обчислювального інтелекту, що здатна реалізувати нелінійне відображення $R^n \rightarrow R^g$ у режимі реального часу.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Багатовимірна каскадна система, що еволюціонує, побудована на нео-фаззі нейронах}\label{ch:MIMOEvolvingCascadedSystem}
+\label{sec:MIMOEvolvingCascadedSystemBuiltOnNFNs}
+
+Для вирішеня задачі прогнозування та ідентифікації багатовимірних даних в умовах апріорної і поточної структурної та параметричної невизначеності як ніколи доречні переваги каскадно-кореляційної архітектури, адже системи з такою архітектурою успадковують всі переваги елементів, які використовуються в їх вузлах, а в процесі навчання автоматично підбирається необхідна кількість каскадів для того, щоб отримати модель адекватної складності для вирішення поставленого завдання \cite{ref51, ref55, ref48, ref52, ref53, ref54, ref56, ref57, ref58}. Однак, слід зазначити, що каскадно-кореляційна мережа у формі, що її запропонували С. Фальман і К. Лєб'єр \cite{ref48}, є системою з одним виходом, тобто не здатна реалізувати нелінійне відображення $R^n \rightarrow R^g$. Це досить серйозне обмеження, оскільки більшість практичних завдань містять кілька вихідних сигналів. Тож пропонуймо такі модифікацїї до архітектури каскaдно-кореляційної мережі CasCorLA:   
+\begin{enumerate}
+\item замість елементарних персептронів Розенблата використовувати нео-фаззі нейрони (доцільність такого рішення було детально показано у розділі~\ref{ch:CascadedNeoFuzzySystemWithPoolOptimization}),
+\item кількість нейронів у кожному каскаді відтепер має дорівнювати розмірності вектору вихідного сигналу системи.
+\end{enumerate}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=15cm]{MIMOCcascadeNetworkBuiltOnNFN.eps}
+\caption{Архітектура гібридної MIMO системи, побудованої на нео-фаззі нейронах}
+\label{fig:MIMOCcascadeNetworkBuiltOnNFN}
+\end{center}
+\end{figure}
+
+Схему пропонованої архітектури наведено на рис.~\ref{fig:MIMOCcascadeNetworkBuiltOnNFN}.
+
+Тоді вихідний сигнал системи формується з векторів, що його складають вихідні сигнали кращих нейронів останнього каскаду:
+
+\begin{equation}
+\hat{y}\left(k\right) = \left(\hat{y}_1^{*[m]}\left(k\right), \hat{y}_2^{*[m]}\left(k\right),\dots,\hat{y}_g^{*[m]}\left(k\right)\right)^T,  
+\end{equation}
+\medskip
+
+де $g$ - кількість елементів вихідного вектору даних, що іх треба спрогнозувати чи ідентифікувати.\\
+Для кожного з нео-фаззі нейронів системи в якості функцій належності можна використовувати трикутні конструкції:
+
+\begin{equation}
+\mu_{jli}^{[1]}\left(x_i\right)=
+\begin{cases}
+\frac{x_i-c_{d,l-1,i}^{[1]j}}{c_{dli}^{[1]j}-c_{d,l-1,i}^{[1]j}}\text { якщо } x_i\in\left[c_{d,l-1,i}^{[1]j},c_{dli}^{[1]j}\right],\\
+\frac{c_{d,l+1,i}^{[1]j}-x_i}{c_{d,l+1,i}^{[1]j}-c_{dli}^{[1]j}}\text{ якщо }x_i \in \left[c_{dli}^{[1]j},c_{d,l+1,i}^{[1]j}\right],\\
+0\text { у протилежному випадку},
+\end{cases}
+\end{equation}
+\medskip
+
+кубічні сплайни:
+
+\begin{equation}
+\mu_{jli}^{[1]}\left(x_i\right)=
+\begin{cases}
+\frac{1}{4}\left(2+3\frac{2x_i-c_{dli}^{[1]j}-c_{d,l-1,i}^{[1]j}}{c_{dli1}^{[1]j}-c_{d,l-1,i}^{[1]j}}-\left(\frac{2x_i-c_{dli}^{[1]j}-c_{d,l-1,i}^{[1]j}}{c_{dli}^{[1]j}-c_{d,l-1,i}^{[1]j}}\right)^3\right),\\
+\text{якщо }x\in\left[c_{d,l-1,i}^{[1]j},c_{dli}^{[1]j}\right],\\
+\frac{1}{4}\left(2-3\frac{2x_i-c_{d,l+1,i}^{[1]j}-c_{dli}^{[1]j}}{c_{d,l+1,i}^{[1]j}-c_{dli}^{[1]j}}+\left(\frac{2x_i-c_{d,l+1,i}^{[1]j}-c_{dli}^{[1]j}}{c_{d,l+1,i}^{[1]j}-c_{dli}^{[1]j}}\right)^3\right),\\
+\text{якщо }x\in\left[c_{dli}^{[1]j},c_{d,l+1,i}^{[1]j}\right],\\
+0\text{ у протилежному випадку},
+\end{cases}
+\end{equation}
+
+або $B$-сплайни:
+
+\begin{equation}
+\mu_{jli}^{g[1]}=
+\begin{cases}
+\begin{rcases}
+1\text{ якщо }x_{i}\in \left[c_{dli}^{[1]j},c_{d,l+1,i}^{[1]j}\right],\\
+0\text{ у протилежному випадку}
+\end{rcases}
+\text{ якщо }g=1,\\
+\frac{x_i-c_{dli}^{[1]j}}{c_{d,l+g-1,i}^{[1]j}-c_{dli}^{[1]j}}\mu_{dli}^{g-1,[1]j}\left(x_i\right)+\frac{c_{d,l+g,i}^{[1]j}-x_i}{c_{d,l+g,i}^{[1]j}-c_{d,l+g,i}^{[1]j}}\mu_{d,l+1,i}^{g-1,[1]j}\left(x_i\right),\\
+\text{ якщо }g>1,
+\end{cases}
+\end{equation}
+\medskip
+
+де $\mu_{dli}^{g[1]j}\left(x_i\right)$ -- $l$-й сплайн $g$-ого порядку. Варто зауважити, що всі ці конструкції задовільняють умовам одиничного розбиття Руспіні.
+
+Запишемо вихідний сингнал $j$-ого нео-фаззі нейрону $d$-ого виходу першого каскаду у вигляді
+
+\begin{equation}
+\begin{cases}
+\begin{aligned}
+
+&\hat{y}_d^{[1]j}\left(k\right)=\sum\limits_{i=1}^{n}f_{di}^{[1]j}\left(x_i\left(k\right)\right)=
+\sum\limits_{i=1}^{n}\sum\limits_{l=1}^{h}{w_{dli}^{[1]j}\mu_{dli}^{[1]j}\left(x_i\left(k\right)\right)},\\
+&\text{ЯКЩО }x_i\left(k\right) \in X_{li}^{j}\text{ , ТОДІ ВИХІД }w_{dli}^{[1]j}.
+
+\end{aligned}
+\end{cases}
+\end{equation}
+\medskip
+
+вихідні сигнали нео-фаззі нейронів другого каскаду:
+
+\begin{equation}
+\begin{aligned}
+\hat{y}_d^{[2]j}=&\sum\limits_{i=1}^{n}\sum\limits_{l=1}^{h}{w_{dli}^{[2]j}\mu_{dli}^{[2]j}\left(x_i\right)}+\\
+&\sum\limits_{d=1}^{g}\sum\limits_{l=1}^{h}{w_{dl,n+1}^{[2]j}\mu_{dl,n+1}^{[2]j}\left(\hat{y}_d^{*[1]}\right)}\text{ }\forall\text{ }{d=1,2,\dots,g}
+\end{aligned}
+\end{equation}
+\medskip
+
+вихідні сигнали $m$-ого каскаду:
+
+\begin{equation}
+\begin{aligned}
+\hat{y}_d^{[2]j}=&\sum\limits_{i=1}^{n}\sum\limits_{l=1}^{h}{w_{dli}^{[2]j}\mu_{dli}^{[2]j}\left(x_i\right)}+\\
+&\sum\limits_{d=1}^{g}\sum\limits_{p=n+1}^{n+m-1}\sum\limits_{l=1}^{h}{w_{dlp}^{[m]j}\mu_{dlp}^{[m]j}\left(\hat{y}_d^{*[p-n]}\right)}\text{ }\forall\text{ }{d=1,2,\dots,g}
+\end{aligned}
+\end{equation}
+\medskip
+
+Введемо до розгляду надалі вектор функцій належності $j$-ого нейрону $d$-ого виходу $m$-ого каскаду:
+
+\begin{equation}
+\begin{aligned}
+\mu_{d}^{[m]j}\left(k\right)=\biggl(&\mu_{d11}^{[m]j}\left(x_1\left(k\right)\right),\dots,\mu_{dh1}^{[m]j}\left(x_1\left(k\right)\right),\mu_{d12}^{[m]j}\left(x_2\left(k\right)\right),\\
+&\dots,\mu_{dh2}^{[m]j}\left(x_2\left(k\right)\right),\dots,\mu_{dli}^{[m]j}\left(x_i\left(k\right)\right),\dots,\mu_{dhn}^{[m]j}\left(x_n\left(k\right)\right),\\
+&\dots,\mu_{d1,n+1}^{[m]j}\left(\hat{y}^{*[1]}\left(k\right)\right),\dots,\mu_{dh,n+m-1}^{[m]j}\left(\hat{y}^{*[m-1]}\left(k\right)\right)\biggr)^T
+\end{aligned}
+\end{equation}
+\medskip
+
+та відповідний йому вектор синаптичних вагових коефіцієнтів
+
+\begin{equation}
+\begin{aligned}
+w_{d}^{[m]j}=\biggl(&w_{d11}^{[m]j},\dots,w_{dh1}^{[m]j},w_{d12}^{[m]j},\dots,w_{dh2}^{[m]j},\dots,w_{dli}^{[m]j},\\
+&\dots,w_{dhn}^{[m]j},w_{d1,n+1}^{[m]j},\dots,w_{dh,n+m-1}^{[m]j}\biggr)^T,
+\end{aligned}
+\end{equation}
+\medskip
+
+щоб записати вихідний сигнал системи у компактній формі:
+
+\begin{equation}
+\hat{y}_d^{[m]j}\left(k\right)=\left(w_d^{[m]j}\right)^T\mu_d^{[m]j}\left(k\right).
+\end{equation}
+\medskip
+
+Для навчання нео-фаззі нейронів може бути використаний будь-який з методів адаптивної ідентифікації, що ми пропонували використовувати для навчання вузлів одновимірної нео-фаззі системи у першому розділі. Так корегувати вагові кофіцієнти можна за допомогою експоненційно зваженого рекурентного методу найменших квадратів:
+
+\begin{equation}\label{eq:ExpWeightedRecurrentLeastSquaresLearning}
+\begin{cases}
+w_d^{[m]j}\left(k+1\right)=w_d^{[m]j}\left(k\right)+\\
+\frac{
+P_d^{[m]j}\left(k\right)\left(y^d\left(k+1\right)-\left(w_d^{[m]j\left(k\right)}\right)^T\mu_d^{[m]j}\left(k+1\right)\right)}{\alpha+\left(\mu_d^{[m]j}\left(k+1\right)\right)^{T}P_d^{[m]j}\left(k\right)\mu_d^{[m]j}\left(k+1\right)
+}\mu_d^{[m]j}\left(k+1\right),\\
+P_d^{[m]j}\left(k+1\right)=\frac{1}{\alpha}\left(P_d^{[m]j}\left(k\right)-\frac{P_d^{[m]j}\left(k\right)\mu_d^{[m]j}\left(k+1\right)\left(\mu_d^{[m]j}\left(k+1\right)\right)^{T}P_d^{[m]j}\left(k\right)
+}{\alpha+\left(\mu_d^{[m]j}\left(k+1\right)\right)^{T}P_d^{[m]j}\left(k\right)\mu_d^{[m]j}\left(k+1\right)
+}\right),
+\end{cases}
+\end{equation}
+\medskip
+
+де $y^d\left(k+1\right),d=1,2,\dots,g$ -- зовнішній навчальний сигнал,  
+
+$0<\alpha \leq 1$ -- фактор забування;
+
+або градієнтного методу навчання, що, як зазначалося, відрізняється як згладжувальними, так і слідкуючими властивостями:
+
+\begin{equation}\label{eq:GradientLearning}
+\begin{aligned}
+\begin{cases}
+w_d^{[m]j}\left(k+1\right)&=w_d^{[m]j}\left(k\right)+\frac{y^d\left(k+1\right)-\left(w_d^{[m]j}\left(k\right)\right)^{T}\mu_d^{[m]j}\left(k+1\right)
+}{r_d^{[m]j}\left(k+1\right)}\mu_d^{[m]j}\left(k+1\right),\\
+r_d^{[m]j}\left(k+1\right)&=\alpha r_d^{[m]j}+\left\|\mu_d^{[m]j}\left(k+1\right)\right\|^{2},0\leq \alpha \leq 1.
+\end{cases}
+\end{aligned}
+\end{equation}
+\medskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Оптимізація пулу нео-фаззі нейронів багатовимірної каскадної системи, що еволюціонує}
+
+Оскільки за мету було поставлено синтез такої багатовимірної каскадної системи, що б могла працювати саме в режимі реального часу, було б дуже доречно, якби система могла самостійно визначати найліпшу кількість функцій належності та їх форму, адже ці параметри також можуть змінюватися у часі. Тому у цьому підрозділі пропонується у кожному каскаді збільшити кількість нео-фаззі нейронів до такої, що є кратною (а не дорівнює, як пропоноувалося у попередньому підрозділі) розмірності вектору вихідного сигналу та ввести узагальнюючі нейрони, що для пулу кожного каскаду визначатимуть локально оптимальні вихідні сигнали (тут під <<локально оптимальним вихідними сигналами>> слід розуміти сингали, оптимальні у конкретний поточний момент часу). Таким чином, коли $g$ -- розмірність вихідного векторного сигналу, а $z$ -- кількість відмінних типів нейронів (що відрізняються за кількістю чи характером функцій належності) системи, у пулі першого каскаду знаходиться $zg$ нео-фаззі нейронів та $g$ нейронів-узагальнювачів $GN_d^{[1]}$, пул другого каскаду містить $z\left(g+1\right)$ нейронів та $g+1$ нейронів $GN_d^{[2]}$, останній каскад - $z\left(g+m-1\right)$ нейронів та $g+m-1$ нейронів $GN_d^{[m]}$.
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=16cm]{MIMOCcascadeNetworkBuiltOnNFNOptimized.eps}
+\caption{Архітектура гібридної оптимізованої MIMO системи, побудованої на нео-фаззі нейронах}
+\label{fig:MIMOCcascadeNetworkBuiltOnNFNOptimized}
+\end{center}
+\end{figure}
+
+Схему такої оптимізованої MIMO (Multiple Input Multiple Output) архітектури зображено на рис.~\ref{fig:MIMOCcascadeNetworkBuiltOnNFN}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Метод визначення локально оптимальних вихідних сигналів пулу нео-фаззі нейронів багатовимірної каскадної системи, що еволюціонує}
+
+Вихідні сигнали нейронів пулу кожного каскаду пропонується об'єднати узагальнюючим нейроном $GN^{[m]}$, що його було введено у розділі \ref{sec:NeuronPoolOptimisation}.
+
+Таким чином, у кожному каскаді системи маємо $g$ $GN_d^{[m]}$ елементів, що узагальнюють вихідні сигнали нейронів пулу для кожного елементу вихідного вектору:
+
+\begin{equation}
+\hat{y}^{*[m]}\left(k\right)=\left(\hat{y}_{1}^{[m]}\left(k\right),\hat{y}_{2}^{[m]}\left(k\right),\dots,\hat{y}_{q}^{[m]}\left(k\right)\right)^T;
+\end{equation}
+\medskip
+
+До першого узагальнюючого елементу першого каскаду $GN_1^{[1]}$ подаються сигнали 
+
+\begin{equation}
+\left(\hat{y}_1^{[1]}\left(k\right), \hat{y}_{g+1}^{[1]}\left(k\right),\dots,\hat{y}_{2g+1}^{[1]}\left(t\right),\dots\hat{y}_{\left(z-1\right)\left(g+1\right)}^{[1]}\left(k\right)\right)^T
+\end{equation}
+\medskip
+
+до другого узагальнювача $GN_2^{[1]}$:
+
+\begin{equation}
+\left(\hat{y}_2^{[1]}\left(k\right), \hat{y}_{g+2}^{[1]}\left(k\right),\dots,\hat{y}_{2g+2}^{[1]}\left(t\right),\dots\hat{y}_{\left(z-1\right)\left(g+2\right)}^{[1]}\left(k\right)\right)^T
+\end{equation}
+\medskip
+
+і, нарешті, вектор вхідних сигналів останнього узагальнюючого елементу першого каскаду $GN_{g}^{[1]}$: 
+
+\begin{equation}
+\left(\hat{y}_g^{[1]}\left(k\right), \hat{y}_{2g}^{[1]}\left(k\right),\dots,\hat{y}_{\left(z-1\right)g}^{[1]}\left(k\right)\right)^T.
+\end{equation}
+\medskip
+
+Нагадаємо, що точність вихідного сигналу узагальнюючих елементів має бути не гірщою точності будь-якого сингналу, що узагальнюється (подається на вхід до $GN_d^{[m]}$).
+Рекурентна форма методу навчання <<на ковзному вікні>> елементів $GN_d^{[m]}$ кожного каскаду має вигляд
+
+\begin{equation}\label{eq:GeneralizedOutputRecurrent}
+\begin{cases}
+\begin{aligned}
+\tilde{P}_d^{[m]}\left(k+1\right)=&P_d^{[m]}\left(k\right)-\frac{P_d^{[m]}\left(k\right)\hat{y}_d^{[m]}\left(k+1\right)\hat{y}_d^{[m]T}\left(k+1\right)P_d^{[m]}\left(k\right)}{1+\hat{y}_d^{[m]T}\left(k+1\right)P_d^{[m]}\left(k\right)\hat{y}_d^{[m]}\left(k+1\right)},\\
+P_d^{[m]}\left(k+1\right)=&\tilde{P}_d^{[m]}\left(k+1\right)+\\
+&\frac{\tilde{P}_d^{[m]}\left(k+1\right)\hat{y}_d\left(k-s+1\right)\hat{y}_d^{[m]T}\left(k-s+1\right)\tilde{P}_d^{[m]}\left(k+1\right)}{1-\hat{y}_d^{[m]T}\left(k-s+1\right)\tilde{P}_d^{[m]}\left(k+1\right)\hat{y}_d^{[m]}\left(k-s+1\right)},\\
+\hat{y}_d^{*[m]}\left(k+1\right)=&\frac{\hat{y}_d^{[m]T}\left(k+1\right)P_d^{[m]}\left(k+1\right)E}{E^TP_d^{[m]}\left(k+1\right)E},
+\end{aligned}
+\end{cases}
+\end{equation}
+\medskip
+
+а у випадку, коли $s=1$:
+
+\begin{equation}
+\begin{aligned}
+\hat{y}_d^{*[m]}\left(k+1\right)&=\frac{\hat{y}_d^{[m]T}\left(k+1\right)\hat{y}_d^{[m]}\left(k+1\right)}{E^T\hat{y}_d^{[m]}\left(k+1\right)}\\
+&=\frac{\left\|\hat{y}_d^{[m]}\left(k+1\right)\right\|^2}{E^T\hat{y}_d^{[m]}\left(k+1\right)}\\
+&=\frac{\sum\limits_{j=1}^q{\left(\hat{y}_d^{[m]}\left(k+1\right)\right)^2}}{\sum\limits_{j=1}^q{\hat{y}_d^{[m]}\left(k+1\right)}}.
+\end{aligned}
+\end{equation}
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Багатовимірна каскадна система, що еволюціонує, побудована на багатовимірних нео-фаззі нейронах}
+\label{sec:MIMOEvolvingCascadedSystemBuiltOnMNFNs}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=13cm]{MIMOBuiltOnNFNProblem.eps}
+\caption{Iлюстрація надмірності MIMO системи, побудованої на нео-фаззі нейронах}
+\label{fig:MIMOBuiltOnNFNProblem}
+\end{center}
+\end{figure}
+
+Архітектура багатовимірної каскадної системи, яка ґрунтується на звичайних нео-фаззі нейронах, що її описано у підрозділі \ref{sec:MIMOEvolvingCascadedSystemBuiltOnNFNs}, є надмірною, адже вектор вхідних сигналів $x\left(k\right)$ (для першого каскаду) подається на однотипні нелінійні синапси $NS_{di}^{[1]j}$ нео-фаззі нейронів, кожен з яких на виході генерує сигнал $\hat{y}_d^{[1]j}\left(k\right),d=1,2,\dots,g$. У результаті компоненти вихідного вектора 
+
+\begin{equation}
+\hat{y}^{[1]j}\left(k\right)=\left(\hat{y}_1^{[1]j}\left(k\right), \hat{y}_2^{[1]j}\left(k\right),\dots,\hat{y}_g^{[1]j}\left(k\right)\right)^{T}
+\end{equation}
+\medskip
+
+обчислюються незалежно один від одного, хоча при цьому
+
+\begin{equation}
+\mu_{1il}\left(x_i\left(k\right)\right)=\mu_{2il}\left(x_i\left(k\right)\right)=\mu_{jil}\left(x_i\left(k\right)\right)=\mu_{nil}\left(x_i\left(k\right)\right).
+\end{equation}
+\medskip
+
+Надмірність архітектури, що її наведено на рис.~\ref{fig:MIMOCcascadeNetworkBuiltOnNFN}, проілюстрована на рис.~\ref{fig:MIMOBuiltOnNFNProblem}, де зеленим кольором позначені неодноразово обчислювані тотожні значення функцій належності $\mu_{111}$ та $\mu_{j11}$, червоним кольором -- тотожні $\mu_{12n}$ та $\mu_{j2n}$. Уникнути цього можна, якщо ввести до розгляду багатовимірний нео-фаззі нейрон, що є модифікацією систем, запропонованих у \cite{ref63, ref55}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Багатовимірний нео-фаззі нейрон}
+\label{sec:MultidimentionalNeoFuzzyNeuron}
+Вузлами багатовимірного нео-фаззі нейрону MNFN (cхема наведена на рис.~\ref{fig:MNFN}) є складені нелінійні синапси $MNS_i^{[1]j}$, кожен з яких містить $h$ функцій належності $\mu_{li}^{[1]j}$ та $gh$ настроюваних синаптичних вагових коефіцієнтів, але тільки $hn$ функцій належності, що в $g$ разів менше, ніж у випадку, коли каскад сформований із звичайних нео-фаззі нейронів.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=12cm]{MNFN.eps}
+\caption{Багатовимірний нео-фаззі нейрон}
+\label{fig:MNFN}
+\end{center}
+\end{figure}
+
+Введемо надалі до розгляду $\left(hn \times 1\right)$ - вектор функцій належності
+
+\begin{equation}
+\begin{aligned}
+\mu^{[1]j}\left(k\right)=\biggl(\mu_{11}^{[1]j}\left(x_1\left(k\right)\right),\mu_{21}^{[1]j}\left(x_1\left(k\right)\right),\dots,\mu_{h1}^{[1]j}\left(x_1\left(k\right)\right),\\
+\dots,\mu_{hn}^{[1]j}\left(x_n\left(k\right)\right)\biggr)^{T}
+\end{aligned}
+\end{equation}
+\medskip
+
+та $\left(g \times hn\right)$ - матрицю синаптичних вагових коефіцієнтів
+
+\begin{equation}
+W^{[1]j}=\left(
+\begin{matrix}    w_{111}^{[1]j}&w_{112}^{[1]j}&\dots&w_{1li}^{[1]j}&\dots&w_{1hn}^{[1]j}\\
+ w_{211}^{[1]j}&w_{212}^{[1]j}&\dots&w_{2li}^{[1]j}&\dots&w_{2hn}^{[1]j}\\ 
+    \vdots&\vdots&&\vdots&&\vdots\\    w_{g11}^{[1]j}&w_{g12}^{[1]j}&\dots&w_{gli}^{[1]j}&\dots&w_{ghn}^{[1]j}\\
+\end{matrix}
+\right)
+\end{equation}
+\medskip
+
+і запишемо сигнал на виході $MN_j^{[1]}$ у $k$-й момент часу у вигляді
+
+\begin{equation}
+\hat{y}^{[1]j}\left(k\right)=W^{[1]j}\mu^{[1]j}\left(k\right).
+\end{equation}
+\medskip
+
+Навчаняя багатовимірного нео-фаззі нейрону можна реалізувати за допомогою матричної модифікації експоненційно-зваженого рекурентного методу найменших квадратів \eqref{eq:ExpWeightedRecurrentLeastSquaresLearning} у формі
+
+\begin{equation}
+\begin{aligned}
+\begin{cases}
+W^{[1]j}\left(k+1\right)&=W^{[1]j}\left(k\right)+\\
+&+\frac{\left(y\left(k+1\right)-W^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)\right)
+\left(\mu^{[1]j}\left(k+1\right)\right)^{T}P^{[1]j}\left(k\right)}{\alpha+\left(\mu^{[1]j\left(k+1\right)}\right)^{T}P^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)
+},\\
+P^{[1]j}\left(k+1\right)&=\frac{1}{\alpha}\left(P^{[1]j}\left(k\right)-\frac{P^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)\left(\mu^{[1]j}\left(k+1\right)\right)^{T}P^{[1]j}\left(k\right)
+}{\alpha+\left(\mu^{[1]j}\left(k+1\right)\right)^{T}P^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)
+}\right),\\
+&0 < \alpha \leq 1
+\end{cases}
+\end{aligned}
+\end{equation}
+\medskip
+
+або багатовимірного варіанту методу \eqref{eq:GradientLearning}
+
+\begin{equation}
+\begin{aligned}
+\begin{cases}
+W^{[1]j}\left(k+1\right)&= W^{[1]j}\left(k\right) + \frac{y\left(k+1\right)-W^{[1]j}\left(k\right)\mu^{[1]j}\left(k+1\right)}{r^{[1]j}\left(k+1\right)}\times\\
+&\times\left(\mu^{[1]j}\left(k+1\right)\right)^{T},\\
+r^{[1]j}\left(k+1\right)&=\alpha r^{[1]j}\left(k\right)+\left\|\mu^{[1]j}\left(k+1\right)\right\|^{2},\\
+&0 \leq \alpha \leq 1,
+\end{cases}
+\end{aligned}
+\end{equation}
+\medskip
+
+де $y\left(k+1\right)=\left(y^{1}\left(k+1\right),y^{2}\left(k+1\right),\dots, y^{g}\left(k+1\right)\right)^{T}$.
+
+Аналогічним чином проводиться навчання інших каскадів, при цьому вектор функцій належності $m$-го каскаду $\mu^{[m]j}\left(k+1\right)$ збільшує свою розмірність на $\left(m-1\right)g$ компоненти, що їх утворили виходи попередніх каскадів.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Метод визначення локально оптимального вихідного сигналу пулу багатовимірних нео-фаззі нейронів каскадної системи, що еволюціонує}
+
+У цьому підрозділі запропоновано узагальнюючий нейрон $GMN^{[m]}$ та рекурентний метод його навчання, щоб він об'єднував усі вихідні сигнали нейронів $MNFN^{[m]}$ пулу каскаду у вихідний сигнал
+
+\begin{equation}
+\hat{y}^{*[m]}\left(k\right)=\left(\hat{y}_1^{*[m]}\left(k\right), \hat{y}_2^{*[m]}\left(k\right),\dots, \hat{y}_g^{*[m]}\left(k\right)\right)^{T}
+\end{equation}
+\medskip
+
+з точністю не меншою від точності будь-якого з сигналів $\hat{y}_j^{[m]}\left(k\right)$.
+
+Розв'язати це завдання можна, знову скориставшись апаратом невизначених множників Лагранжа та адаптивного багатовимірного узагальненого прогнозування \cite{ref63}.
+
+Введемо до розгляду вихідний сигнал нейрону $GMN^{[m]}$ у вигляді
+
+\begin{equation}
+\hat{y}^{*[m]}\left(k\right)=\sum\limits_{j=1}^{q}{c_j^{[m]}\hat{y}_j^{[m]}\left(k\right)}=\hat{y}^{[m]}\left(k\right)c^{[m]},
+\end{equation}
+\medskip
+
+де $\hat{y}^{[m]}\left(k\right)=\left(\hat{y}_1^{[m]}\left(k\right), \hat{y}_2^{[m]}\left(k\right),\dots,\hat{y}_q^{[m]}\left(k\right)\right)^{T}$-- $\left(g \times q\right)$-матриця
+
+$c^{[m]}$-- $\left(q \times 1\right)$-вектор коефіцієнтів узагальнення, що відповідають умовам незміщенності
+
+\begin{equation}
+\label{eq:MIMOGeneralizingNeuronUnbiasenessConstraint}
+\sum\limits_{j=1}^{q}{c_j^{[m]}}=E^{T}c^{[m]}=1,
+\end{equation}
+\medskip
+
+$E=\left(1,1,\dots,1\right)^{T}$-- вектор, утворений одиницями.
+
+Введемо критерій навчання
+
+\begin{equation}
+\begin{aligned}
+E^{[m]}\left(k\right)&=\sum\limits_{\tau=1}^k\left\|y\left(\tau\right)-\hat{y}^{[m]}\left(\tau\right)c^{[m]}\right\|^2\\
+&=Tr\left(\left(Y\left(k\right)-\hat{Y}^{[m]}\left(k\right)I\otimes c^{[m]}\right)^{T}\left(Y\left(k\right)-\hat{Y}^{[m]}\left(k\right)I \otimes c^{[m]}\right)\right)
+\end{aligned}
+\end{equation}
+\medskip
+
+де $Y\left(k\right)=\left(y^T\left(1\right), y^T\left(2\right),\dots,y^T\left(k\right)\right)^{T}$-- $\left(k \times s\right)$ матриця спостережень,
+
+\begin{equation}
+\begin{aligned}
+\hat{Y}^{[m]}\left(k\right)=\left(
+\begin{matrix}
+\hat{y}_1^{[m]T}\left(1\right)&\hat{y}_2^{[m]T}\left(1\right)&\dots&\hat{y}_q^{[m]T}\left(1\right)\\
+\hat{y}_1^{[m]T}\left(2\right)&\hat{y}_2^{[m]T}\left(2\right)&\dots&\hat{y}_q^{[m]T}\left(2\right)\\
+\vdots&\vdots&&\vdots\\
+\hat{y}_1^{[m]T}\left(k\right)&\hat{y}_2^{[m]T}\left(k\right)&\dots&\hat{y}_q^{[m]T}\left(k\right)\\
+\end{matrix}
+\right),
+\end{aligned}
+\end{equation}
+\medskip
+
+$I$ -- одинична $\left(g \times g\right)$ матриця,
+
+$\otimes$ -- символ тензорного добутку.
+
+З урахуванням обмежень \eqref{eq:MIMOGeneralizingNeuronUnbiasenessConstraint} запишемо функцію Лагранжа
+
+\begin{equation}
+\begin{aligned}
+L^{[m]}\left(k\right)&=E^{[m]}\left(k\right)+\lambda\left(E^{T}c^{[m]}-1\right)\\
+&=\sum\limits_{\tau=1}^{k}\left\|y\left(\tau\right)-\hat{y}^{[m]}\left(\tau\right)c^{[m]}\right\|^2+\lambda\left(E^Tc^{[m]}-1\right)\\
+&=Tr\left(\left(Y\left(k\right)-\hat{Y}^{[m]}\left(k\right)I\otimes c^{[m]}\right)^T\left(Y\left(k\right)-\hat{Y}^{[m]}\left(k\right)I\otimes c^{[m]}\right)\right)\\
+&+\lambda\left(E^Tc^{[m]}-1\right)\\
+&=Tr\left(V^{[m]T}\left(k\right)V^{[m]}\left(k\right)\right)+\lambda\left(E^Tc^{[m]}-1\right),
+\end{aligned}
+\end{equation}
+\medskip
+
+де $V^{[m]}\left(k\right)=Y\left(k\right)-\hat{Y}^{[m]}\left(k\right)I \otimes c^{[m]}$-- $\left(k \times g\right)$ матриця оновлень.
+
+Розв'язання системи рівнянь Каруша-Куна-Таккера
+
+\begin{equation}
+\begin{cases}
+\nabla_{c^{[m]}}L^{[m]}\left(k\right)=\overrightarrow{0},\\
+\frac{\partial L^{[m]}\left(k\right)}{\partial \lambda}=0
+\end{cases}
+\end{equation}
+\medskip
+
+призводить до очевидного результату
+
+\begin{equation}
+\begin{cases}
+c^{[m]}=\left(R^{[m]}\left(k\right)\right)^{-1}E\left(E^T\left(R^{[m]}\left(k\right)\right)^{-1}\right)^{-1}\\
+\lambda=-2E^T\left(R^{[m]}\left(k\right)\right)^{-1}E,
+\end{cases}
+\end{equation}
+\medskip
+
+де $R^{[m]}\left(k\right)=V^{[m]T}\left(k\right)V^{[m]}\left(k\right)$.
+
+Таким чином, можна організувати оптимальне об'єднання виходів усіх нейронів пулу кожного каскаду. Зрозуміло, що в якості таких нейронів можуть використовуватися не тільки багатовимірні нео-фаззі нейрони, але й будь-які інші конструкції, що реалізують нелінійне відображення \mbox{$R^{n+\left(m-1\right)g}\rightarrow R^g$}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Висновки до розділу~\ref{ch:MIMOEvolvingCascadedSystem}}
+
+\begin{enumerate}
+\item Розглянута задача апроксимації та екстраполяції багатовимірних часових рядів за умови апріорної і поточної структурної та параметричної невизначеності; проаналізовані існуючі гібрідні системи обчислювального інтелекту, що використовуються для вирішення задач прогнозування та індентифікацїї багатовимірних даних у пакетному режимі; сформовані вимоги та обмеження до шуканої гібридної системи, здатної реалізувати нелінійне відображення $R^{n}\rightarrow R^{g}$ у режимі реального часу.
+\item Зсинтезовано каскадну архітектуру системи, що ґрунтується на нео-фаззі нейронах, здатну реалізувати нелінійне відображення $R^{n}\rightarrow R^{g}$ у режимі послідовного обробляння даних.
+\item Запропоновано архітектуру багатовимірного нео-фаззі нейрона та метод його навчання, що забезпечують підвищену швидкість налаштування синаптичних ваг та додаткові згладжуючі властивості.
+\item Запропоновано архітектуру та рекурентний метод навчання багатовимірного узагальнюючого елементу, що в режимі реального часу реалізує оптимальне об'єднання багатовимірних вихідних сигналів нейронів пулу каскаду.
+\item Запропоновано MIMO архітектуру та методи навчання гібридної каскадної нейронної мережі з оптимізацією пулу багатовимірних нейронів у кожному каскаді, що реалізують оптимальний за точністю прогноз нелінійних стохастичних і хаотичних сигналів у онлайн режимі.
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Каскадна нейронна мережа, що еволюціонує, для послідовного нечіткого кластерування потоків даних}
+\label{ch:EvolvingClusteringSystem}
+У цьоому розділі описані архітектура та методи навчання пропонованої каскадної нейро-мережі для нечіткого кластерування, зокрема потоків даних; проведено аналіз існуючих систем, що еволюціонують, для кластерування даних, зокрема нечіткого, і розглянуті особливості та труднощі послідовного кластерування, та описні два підходи, переваги яких поєднує у собі пропонована система: нечітке та ієрархічне кластерування.  
+
+\section{Труднощі та особливості відомих методів кластерування даних}
+
+Завдання кластерування (класифікації без вчителя) досить часто зустрічається в багатьох додатках, пов'язаних з видобутком знань, де у режимі самонавчання необхідно розбити деякий вхідний нерозмічений масив даних на однорідні в прийнятому сенсі групи. Розглянемо деякі iєрархічні та розподільні методи кластерування, адже, як буде показано далі, пропована у цьому розділі самонавчанна система поєднує у собі переваги обох підходів.
+
+Розподільні методи кластерування (чи то жорсткі, чи нечіткі) можна назвати динамічними у тому сенсі, що належність певного образу до певного кластеру (кластерів для нечіткої модифікації) не є постійною. Нездатність методів розподільного кластерування самостійно визначити кількість кластерів у певному сенсі компенсується тим, що знання форми чи розміру кластерів може стати у нагоді на етапі вибору відповідних прототипів та насамперед типу відстані (міри схожості) і суттєво поліпшити кінцеве розбиття вибірки. Але, варто зазначити чутливість таких методів до початкової ініціалізації, шуму і викидів, їх сприйнятливість до локальних мінімумів, адже вони ґрунтуються на оптимізації певної цільової функції. Типові методи розподільного кластерування мають обчислювальну складність $\mathcal{O}\left(N\right)$ для тренувальною вибірки розміру $N$ \cite{ref43}.
+
+Серед методів ієрархічного кластерування виділяють два основних типи: висхідні та спадні методи. Спадні методи працюють за принципом «зверху-вниз»: на початку припускається, що всі образи належать до одного кластеру, який потім розбивається на все більш дрібні кластери. Більш поширеними є висхідні алгоритми, які на початку роботи поміщають кожен об'єкт до окремого кластеру, а потім об'єднують кластери у все більш крупні, доки усі образи не матимуть свій власний кластер. Таким чином будується система вкладених розбиттів. Результати таких алгоритмів зазвичай представляють у вигляді дерева - дендрограми (тут можна провести аналогію між висхідними та спадними методами ієрархічного кластерування та конструктивними і деструктивними системами, що еволюціонують. У цій роботі здебільшого розглядається конструктивний підхід, тому пропонована самонавчанна система є у певному сенсі альтернативою системам висхідного ієрархічного кластерування, що здатна працювати у режимі реального часу).
+
+Для обчислення відстаней між кластерами використовуються такі відстані:
+\begin{itemize}
+\item одинарний зв'язок (відстань найближчого сусіда): відстань між двома кластерами визначається відстанню між двома найбільш близькими об'єктами (найближчими сусідами) у різних кластерах. Результуючі кластери мають тенденцію об'єднуватися в ланцюжки.
+\item  повний зв'язок (відстань найбільш віддалених сусідів): відстані між кластерами визначаються найбільшою відстанню між будь-якими двома об'єктами різних кластерів (тобто найбільш віддаленими сусідами). Цей метод зазвичай працює дуже добре, коли об'єкти походять з окремих груп. Якщо ж кластери мають видовжену форму або їх природний тип є «ланцюжковим» цей метод непридатний.
+\item  незважене попарне середнє: відстань між двома різними кластерами обчислюється як середня відстань між усіма парами об'єктів у них. Метод ефективний, коли об'єкти формують різні групи, проте він працює однаково добре і у випадках протяжних («ланцюжкового» типу) кластерів.
+\item  зважене попарне середнє: метод ідентичний методу незваженого попарного середнього, за винятком того, що при обчисленнях розмір відповідних кластерів (тобто число об'єктів, що містяться в них) використовується у якості вагового коефіцієнту. Тому доцільно використовувати даний метод у випадку нерівних за розміром кластерів.
+\item  незважений центроїдний метод: у цьому методі відстань між двома кластерами визначається як відстань між їх центрами тяжкості.
+\item  зважений центроїдний метод (медіана): цей метод ідентичний попередньому, за винятком того, що при обчисленнях використовуються ваги для обліку різниці між розмірами кластерів. Тому, якщо є або підозрюються значні відмінності в розмірах кластерів, цей метод має перевагу над попереднім
+\end{itemize}
+
+Порівняно з розподільним кластеруванням, методи ієрархічного кластерування легко ідентифікують викиди, не потребують визначеної кількості кластерів та
+нечутливі до початкової ініціалізаціі чи локальних мінімумів. До недоліків варто віднести нездатність методів визначати кластери, що перекривають один інший. Крім того, ієрархічне кластерування є статичним, тобто образи віднесені до певного кластеру на ранніх стадіях не можуть бути пізніше належними іншому, що унеможливлює створення модифікацій методів для послідовного кластерування, на відміну від розподільного кластерування. Методи ієрархічного кластерування здебільшого мають обчислювальну складність принаймні $\mathcal{O}\left(N^2\right)$, що робить їх використання недоцільним для велких наборів даних.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Нечітке послідовне кластерування}
+
+Традиційний підхід до завдання кластерування припускає, що кожне спостереження належить лише одному кластерові, в той час як більш природною видається ситуація, коли кожен вектор-спостереження оброблюваної вибірки можна віднести відразу декільком класам з різними рівнями належності. Така ситуація є предметом розгляду нечіткого кластерного аналізу~\cite{ref21, ref22, ref23, ref24, ref19, ref25}, а для його вирішення широко використовується апарат обчислювального інтелекту [9-12] і, насамперед, нейро-фаззі підхід [13]. При цьому більшість алгоритмів нечіткої кластеризації призначені для роботи в пакетному режимі, коли усі дані, що підлягають обробці, задані апріорно. Вихідною інформацією для такої задачі є вибірка спостережень, сформована з \mbox{$m$-вимірних} векторів ознак \mbox{$x\left(1\right), x\left(2\right),\dots,x\left(1\right),\dot,x\left(N\right)$}, при цьому для зручності чисельної реалізації вихідні дані попередньо деяким чином перетворюються, наприклад, так, щоб всі спостереження належали до гіперкубу~$[-1,1]^n$ або одиничній гіперсфері~$\left\|x\left(k\right)\right\|^2$.
+
+Результатом такого кластерування є розбиття масиву вихідних даних на $M$~кластерів з певним рівнем належності $u_J\left(k\right)$ \mbox{$k$-ого} вхідного образу $x\left(k\right)$ до \mbox{$J$-ого} кластеру \mbox{($J = 1,2,\dots,M$)}. Передбачається, що $N$ та $M$, а також параметри кластерування (в першу чергу, фаззіфікатор) задані апріорі і не змінюються під час обробки даних. Варто зауважити, що існує широкий клас задач динамічного інтелектуального аналізу даних і потоків даних (Dynamik Data Mining, Data Stream Mining) \cite{ref5, ref6, ref27, ref28, ref29, ref30, ref31} у випадку, коли дані надходять у вигляді послідовного потоку в онлайн режимі. Отже, кількість вхідних образів $N$ у цьому випадку не обмежується, а $k$ набуває значення поточного дискретного часу.
+
+Самоорганізовні мапи Кохонена \cite{ref16} добре пристосовані для вирішення завдання кластерування в онлайн режимі. Ці нейронні мережі мають один шар латеральних з'єднань та навчаються за принципами «переможець отримує все» або «переможець отримує більше».
+Самоорганізовні мапи також відомі своєю ефективністю вирішення задачі кластерування класів, що перетинаються. Тому, у зв'язку з дедалі більшою кількістю завдань кластерування потоків даних, з'явилися самонавчанні нейро-фазі гібридні системи, що у деякому сенсі поєднують у собі самоорганізовні мапи Кохонена (SOM) та метод нечітких \mbox{$c$-середніх} Бездека \cite{ref15,ref32,ref33,ref34,ref35,ref36,ref37,ref38,ref39,ref40,ref41,ref42}. Такі гібридні системи володіють обширною функціональністю завдяки використанню спеціальних алгоритмів налаштування, що ґрунтуються на процедурах оптимізації прийнятої цільової функції, але потребують попередньо заданої кількості класетрів та фіксованого значення фаззіфікатору. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Критерії дійсності нечіткого кластерування}
+
+Оскільки коефіціент розбиття залежить лише від значень функції належності, йому властиві деякі недоліки. Коли фаззіфікатор наближається до $1$, індекс дійсності буде однаковим для усіх $c$, коли фаззіфікатор наближається до $\infty$.
+
+Індекс розбиття ентропії PE (Partition Entorpy Index) - ще один критерій дійсності нечіткого кластерування, запропонований \hl{(Bezdek, 1974a, 1981)}, що залежить лише від значень фунції належності
+
+\begin{equation}
+\label{eq:validityIndexPE}
+PE = -\frac{1}{N}\sum^{M}_{l=1}\sum^N_{i=1}{u_{li}\log_a\left(u_{li}\right)}.
+\end{equation}
+\medskip
+
+Індекс ентропії розбиття набуває значень у інтервалі $\left[0,\log_aM\right]$. Що ближче значення $PE$ до $0$, то жорсткіше розбиття вхідних даних. Значення $PE$ близькі до верхньої межі вказують на відсутність будь-якої структури, притаманної набору вхідних даних, або на нездатність методу її виявити. Індекс ентропії розбиття має ті самі недоліки, що і коефіцієнт розбиття. Оптимальній кількості кластерів $M^{*}$ відповідає мінімальне значення~\eqref{eq:validityIndexPE}.
+
+Фукуяма та Суґено запропонували індекс дійсності нечіткого кластерування, залежний як від рівнів належності так і від самих вхідних даних:
+
+\begin{equation}\label{eq:validityIndexFS}
+FS =\sum^{N}_{i=1}\sum^M_{l=1}{u_{li}^\beta\left(\left\|x_i-z_l\right\|^2-\left\|z_l-z\right\|^2\right)},
+\end{equation}
+\medskip
+
+де $z$ та $z_l$~--~ середнє арифметичне усієї виборки та образів віднесених до кластеру $M_l$ відповідо. З визначення \eqref{eq:validityIndexFS} видно, що малі значення FS говорять про компактні добре визначені кластери.
+
+Нечітка множина $i$-ого образу визначається як
+
+\begin{equation}
+\tilde{A_l}=\sum^N_{i=1}\frac{u_{li}}{x_i},l=1,2,\dots,M.
+\end{equation}
+Ступінь, в якій $A_l$ є підмножиною $A_p$ визначається наступним чином
+\begin{equation}\label{eq:validityIndexFSim1}
+\begin{cases}
+S\left(\tilde{A_l},\tilde{A_p}\right)=\frac{U\left(\tilde{A_l}\cap\tilde{A_p}\right)}{U\left(\tilde{A_l}\right)},\\
+U\left(\tilde{A_j}\right)=\sum^N_{i=1}u_{ji}.
+\end{cases}
+\end{equation}
+\medskip
+
+Зважаючи на \eqref{eq:validityIndexFSim1}, можна запропонувати такі варіанти обчислення міри подібності:
+
+\begin{subequations}\label{eq:validityIndexFSim2}
+\begin{align}
+&N_1\left(\tilde{A_l},\tilde{A_p}\right)=\frac{S\left(\tilde{A_l},\tilde{A_p}\right) + S\left(\tilde{A_p},\tilde{A_l}\right)}{2},\\
+&N_2\left(\tilde{A_l},\tilde{A_p}\right)=\min\left(S\left(\tilde{A_l},\tilde{A_p}\right),S\left(\tilde{A_p},\tilde{A_l}\right)\right),\\
+&N_3\left(\tilde{A_l},\tilde{A_p}\right)=S\left(\tilde{A_l}\cup\tilde{A_p},\tilde{A_p}\cap\tilde{A_l}\right).
+\end{align}
+\end{subequations}
+\medskip
+
+Тоді індекс дійсності кластерування, що грунтується на нечіткій подібності, можна визначити як
+
+\begin{equation}
+FSim=\max\limits_{1\leq{l}\leq{M}}\max\limits_{1\leq{p}\leq{M},p\neq{l}}N\left(\tilde{A_l},\tilde{A_p}\right),
+\end{equation}
+\medskip
+
+де міру нечіткої подібності $N\left(\tilde{A_l},\tilde{A_p}\right)$ можна знайти за будь-яким виразом~\eqref{eq:validityIndexFSim2}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Архітектура каскадної мережі, що еволюціонує, для нечіткого кластерування}
+\label{sec:EvolvingSelfLearningSystemArchitecture}
+  
+До нульовго шару системи послідовно передаються дані у формі векторного сигналу $x(k)=(x_{1}(k),x_{2}(k),\dots, x_{1}(k))^{T}$, де $k=1,2,\dots,N,N+1,\dots$~---~індекс поточного дискретного часу. Вхідні сигнали надходять до всіх вузлів системи $N_{j}^{[m]}$, де $j=1,2,\dots,q$ - кількість вузлів у пулі-ансамблі, $m=1,2,\dots$~---~номер каскаду. Вузол кожного каскаду призначений для онлайн кластерування потоку данних і відрізняється від вузлів-сусідів використаним алгоритмом навчання або, у випадку спільного методу кластерування, параметрами алгоритму. Кількість кластерів для кожного каскаду є відомою і дорівнює $m+1$. Елемент~$PC_{j}^{[m]}$ дає оцінку якості кластерування кожного вузла у пулі, а елемент $PC^{*[m]}$ визначає найкращий елемент у пулі кожного каскаду. Елемент системи~$XB^{[m]}$ оцінює загальную якість кластеризації пула, враховуючи прийняту кількість кластерів $m+1$. Таким чином, система розв'язує задачу кластерування нестаціонарного потоку даних в умовах невизначенності щодо кількості кластерів, а також їх вигляду і рівню взаємного перекриття. І, нарешті, вихідний вузол системи~$XB^{*}$, порівнюючи якість кластеризації кожного з каскадів, виділяє найкращий результат~---~кількість кластерів, їх центроїди-прототипи та рівні належності кожного спостереження до кожного з сформованих центроїдів. Незважаючи на удавану громіздкість чисельна реалізація запропонованої архітектури не викликає принципових труднощів завдяки тому, що потік даних, що надоходить до системи, може оброблятися у паралельному режимі вузлами системи $N_{j}^{[m]}$\cite{ref5,ref6}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\section{Адаптивне навчання вузлів каскадної нейро-фаззі системи, що еволюціонує}
+  
+В основі алгоритмів навчання вузлів системи лежать алгоритми нечіткого кластерування, засновані на цільових функціях, такі, що вирішують задачу їх оптимізації при деяких апріорних припущеннях. Найбільш поширеним є ймовірнісний підхід, заснований на мінімізації цільової функції
+  
+\begin{equation}\label{eq:goal_function}
+E\left(u_{jl}^{[m]}\left(k\right),\: c_{jl}^{[m]}\right)=\sum\limits_{k=1}^{N}\sum\limits_{l=1}^{m+1}\left(u_{jl}^{[m]}\left(k\right)\right)^{\beta }\left \| x\left(k\right)-c_{jl}^{[m]} \right \|^2
+\end{equation}
+\medskip
+
+при обмеженнях
+
+\begin{equation}\label{eq:goal function constraints}
+\sum\limits_{l=1}^{m+1}\left(k\right)=1,\quad0\leq \sum\limits_{k=1}^{N}u_{jl}^{[m]}\left(k\right)\leq N
+\end{equation}
+\medskip
+
+де $u_{ij}^{[m]}\left(k\right)\in [0,1]$~---~pівень належності спостереження $x\left(k\right)$ до $l$-ого кластеру у $j$-ому вузлі каскаду $m$,
+
+$c_{jl}^{[m]}$~---~$(n\times1)$~-~вимірній вектор-центроїд $l$-ого кластеру у $j$-ому вузлі каскаду $m$,
+
+$\beta>1$~---~параметр фаззіфікації (фаззіфікатор), що визначає розмитість границь між кластерами,
+
+$k=\overline{1,N}$~---~номер образу ($N$~---~кількість образів у вхідній виборці, що, у рамках класичного подходу Бездека, вважається незмінною та такою, що задана апріорі).
+
+\begin{samepage}
+Вводячи функцію Лагранжа
+
+\begin{equation}
+\begin{aligned}
+L\left(u_{jl}^{[m]}\left(k\right),\, c_{jl}^{[m]},\,\lambda _j^{[m]}\left(k\right)\right)= \sum\limits_{k=1}^{N}\sum\limits_{l=1}^{m+1}\left(u_{jl}^{[m]}\left(k\right)\right)^\beta\left \| x\left(k\right)-c_{jl}^{[m]} \right \|^2+\\
++\sum\limits_{k=1}^{N}\lambda _j^{[m]}\left(k\right)\left ( \sum\limits_{l=1}^{m+1}u_{jl}^{[m]}\left(k\right)-1 \right)
+\end{aligned}
+\end{equation}
+\end{samepage}
+\medskip
+
+(тут $\lambda_j^{[m]}\left(k\right)$~---~невизначений множник Лагранжа) та вирішивши систему рівнянь Каруша-Куна-Таккера, нескладно отримати шукане рішення у вигляді
+
+\begin{equation}\label{eq:generalizedFCM}
+\begin{cases}
+u_{jl}^{[m]}\left(k\right)=\frac{\displaystyle\left(\left \|x\left(k\right)-c_{jl}^{[m]}\right \|^2\right)^{\frac{\scriptstyle1}{\scriptstyle1-\beta}}}{\displaystyle\sum\limits_{l=1}^{m+1}\left(\left\|x\left(k\right)-c_{jl}^{[m]}\right\|^2\right)^{\frac{\scriptstyle1}{\scriptstyle1-\beta}}},\\
+c_{jl}^{[m]}=\frac{\displaystyle\sum\limits_{k=1}^{N}\left(u_{jl}^{[m]}\left(k\right)\right)^{\beta}x\left(k\right)}{\displaystyle\sum\limits_{k=1}^{N}\left(u_{jl}^{[m]}\left(k\right)\right)^{\beta}},\\
+\lambda_{j}^{[m]}\left(k\right)=-\left(\left(\displaystyle\sum_{l=1}^{m+1}\beta\left\|x\left(k\right)-c_{jl}^{[m]}\right\|^2\right)^{\frac{\scriptstyle1}{\scriptstyle1-\beta}}\right)^\frac{\scriptstyle1}{\scriptstyle1-\beta},
+\end{cases}
+\end{equation}
+\medskip
+
+що при $\beta = 2$ збігається з алгоритмом нечітких с-середніх Бездека~(FCM)~\cite{ref13} i приймає форму
+
+\begin{equation}\label{eq:classicFCM}
+\begin{cases}
+u_{jl}^{[m]}\left(k\right)=\frac{\displaystyle\left\|x\left(k\right)-c_{jl}^{[m]}\right\|^{-2}}{\displaystyle\sum_{l=1}^{m+1}\left\|x\left(k\right)-c_{jl}^{[m]}\right\|^{-2}},\\
+c_{jl}^{[m]}=\frac{\displaystyle\sum_{k=1}^{N}\left(u_{jl}^{[m]}\left(k\right)^{2}x\left(k\right)\right)}{\displaystyle\sum\limits_{k=1}^{N}\left(u_{jl}^{[m]}\left(k\right)\right)^{2}}.
+\end{cases}
+\end{equation}
+\medskip
+
+Тут варто відзначити, що вибір фаззіфікатора~$\beta = 2$ в \eqref{eq:classicFCM} не дає жодних переваг порівняно з довільним значенням~$\beta$ у \eqref{eq:generalizedFCM}, у зв'язку з чим пропонується використовувати різні значення параметра фаззіфікації для кожного вузла пулу каскаду, після чого вибирати найкращий результат залежно від прийнятого критерію якості нечіткого кластерування \cite{ref7,ref8,ref9}.
+
+Для послідовної обробки потоку даних, що надходять в online режимі, y~\cite{ref10,ref11} були запропоновані рекурентні алгоритми, в основі яких лежить процедура нелінійного програмування Ерроу-Гурвіца-Удзави~\cite{ref12}. Так, пакетному алгоритмові \eqref{eq:generalizedFCM} відповідає вираз
+
+\begin{equation}\label{eq:recurrentFCM}
+\begin{cases}
+u_{jl}^{[m]}\left(k+1\right)=\frac{\displaystyle\left\|x\left(k+1\right) - c_{jl}^{[m]}\left(k\right)\right\|^{\frac{\scriptstyle1}{\scriptstyle1-\beta}}}{\displaystyle\sum\limits_{l=1}^{m+1}\left\|x\left(k+1\right) - c_{jl}^{[m]}\left(k\right)\right\|^{\frac{\scriptstyle1}{\scriptstyle1-\beta}}},\\
+c_{jl}^{[m]}\left(k+1\right)=c_{jl}^{[m]}\left(k\right)+\eta\left(k+1\right)\left(u_{jl}^{[m]}\left(k+1\right)\right)^{\beta_{\scriptstyle{j}}}\left(x\left(k+1\right)-c_{jl}^{[m]}\left(k\right)\right),
+\end{cases}
+\end{equation}
+\medskip
+
+(тут $\eta\left(k+1\right)$~---~параметр кроку навчання), що є узагальненням алгоритму навчання Чанга-Лі~\cite{ref14} і при $\beta=2$ близьке до ґрадієнтної процедури Парка-Деера~\cite{ref15}.
+
+\begin{equation}
+\begin{cases}
+u_{jl}^{[m]}\left(k+1\right)=\frac{\displaystyle\left\|x\left(k+1\right) - c_{jl}^{[m]}\left(k\right)\right\|^{-2}}{\displaystyle\sum\limits_{l=1}^{m+1}\left\|x\left(k+1\right) - c_{jl}^{[m]}\left(k\right)\right\|^{-2}},\\
+c_{jl}^{[m]}\left(k+1\right)=c_{jl}^{[m]}\left(k\right)+\eta\left(k+1\right)\left(u_{jl}^{[m]}\left(k+1\right)\right)^{2}\left(x\left(k+1\right)-c_{jl}^{[m]}\left(k\right)\right).
+\end{cases}
+\end{equation}
+\medskip
+
+Варто зауважити, що, розглянувши співвідношення~\eqref{eq:recurrentFCM} з позицій навчання Кохоненової самоорганізованої мапи~(SOM)~\cite{ref16}, можна помітити, що множник~$\left(u_{jl}^{[m]}\right)^{\beta_{\scriptstyle{j}}}$ відповідає функції сусідства в правилі навчання на основі принципу «переможецю дістається більше», маючи при цьому дзвонуватий вигляд.
+
+Вочевидь, у випадку, коли $\beta_{j}=1$ та $u_{jl}^{[m]}\left(k\right)\in\left[0,1\right]$, процедура~\eqref{eq:recurrentFCM} збігається з чітким алгоритмом $c$-середніх (HCM), коли ж $\beta_{j}=0$, маємо стандартне правило навчання Кохонена «переможцю дістається все»~\cite{ref16}
+
+\begin{equation}\label{eq:winnerTakesAllKohonenLearningRule}
+c_{jl}^{[m]}\left(k+1\right)=c_{jl}^{[m]}\left(k\right)+\eta\left(k+1\right)\left(x\left(k+1\right)-c_{jl}^{[m]}\left(k\right)\right),
+\end{equation}
+\medskip
+
+запропоноване Каш'япом та Блейдоном~\cite{ref17} у шістдесятих роках минулого століття. Легко побачити, що процедура~\eqref{eq:winnerTakesAllKohonenLearningRule} оптимізує цільову функцію
+
+\begin{equation}
+E\left(c_{jl}^{[m]}\right)=\sum\limits_{k=1}^{N}\left\|x\left(k\right)-c_{jl}^{[m]}\right\|^{2},\quad\sum\limits_{l=1}^{m+1}N_{l}=N,
+\end{equation}
+\medskip
+
+мінімум якої збігається із середнім арифметичним
+
+\begin{equation}\label{eq:arithmeticMean}
+c_{jl}^{[m]}=\frac{1}{N}\sum\limits_{k=1}^{{N}_{\scriptstyle{l}}}x\left(k\right),
+\end{equation}
+\medskip
+
+де $N_{l}$~---~кількість векторів, віднесених до $l$-го кластеру у процесі конкуренції.
+
+Якщо записати~\eqref{eq:arithmeticMean} у рекурентній формі, отримаємо оптимальний алгоритм самонавчання Ципкіна~\cite{ref18}
+
+\begin{equation}
+c_{jl}^{[m]}(k+1) = c_{jl}^{[m]}(k)+\frac{1}{N_{l}(k+1)}\left(x\left(k+1\right)-c_{jl}^{[m]}(k)\right),
+\end{equation}
+\medskip
+
+де $N_{l}\left(k+1\right)$~---~число векторів, віднесених до $l$-го кластеру в $k+1$-й момент реального часу, що є стандартною процедурою стохастичної апроксимації.
+
+У загальному випадку алгоритм навчання~\eqref{eq:recurrentFCM} вузла можна розглядати як правило самонавчання нечіткої модифікації самоорганізовної мапи Кохонена, архітектура якої наведена на рис
+
+TODO:рис
+
+Тут $N_{jl}^{[m]K}$~---~стандартні нейрони Кохонена, пов'язані між собою латеральними зв'язками, що налаштовуються згідно "переможцю дістається більше" правилу навчання на основі другого співвідношення~\eqref{eq:recurrentFCM}. Вузли $N_{jl}^{[m]u}$ обчислюють рівні належності згідно першому співвідношенню~\eqref{eq:recurrentFCM}. Вузли $N_{j}^{[m]}$ кожного з каскадів відрізняються тільки фаззіфікатором алгоритму самонавчання, а вузол кожного наступного каскаду містить додатково один нейрон Кохонена і один елемент для розрахунку рівнів належності.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Керування каскадами самонавчанної нейро-фаззі системи, що еволюціонує}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Якість кластерування кожого вузла системи може бути оцінена за допомогою будь-якого з індексів, що використовуються у задачах нечіткого кластерування \cite{ref19}. Одим за найпростіших та разом з тим найефективніших індексів є так званий «коефіцієнт розбиття», який, власне, є середнім квадратів рівнів належності всіх спостережень до кожного кластеру і має вигляд
+
+\begin{equation}
+\V{PC}_j^{[m]}=\frac{1}{N}\sum\limits_{k=1}^{N}\sum\limits_{l=1}^{m+1}\left(u_{jl}^{[m]}\left(k\right)\right)^{2}.
+\end{equation}
+\medskip
+
+Цей коефіцієнт має ясний фізичний зміст: щокраще виражені кластери, то більше значення $\V{PC}_{j}^{[m]}$ (верхня межа~---~$\V{PC}_{j}^{[m]}=1$), а його мінімум $\V{PC}_{j}^{[m]}=\left(m+1\right)^{-1}$ досягається, якщо дані належать усім кластерам рівномірно, що, вочевидь, є тривіальним рішенням. Для розглянутої нами системи цей коефіцієнт зручний тим, що його легко розрахувати в online режимі 
+
+\begin{equation}\label{eq:reccurentPartitioningCoefficient}
+\V{PC}_{j}^{[m]}\left(k+1\right)=\V{PC}_j^{[m]}(k)+\frac{\displaystyle1}{k+1}\left(\sum\limits_{l=1}^{m+1}\left(u_{jl}^{[m]}\left(k+1\right)\right)^{2}-\V{PC}_j^{[m]}\left(k\right)\right).
+\end{equation}
+\medskip
+
+Розрахунок коефіцієнту розбиття проводиться для кожного вузла системи разом з налаштуванням їх параметрів, тобто співвідношення~\eqref{eq:recurrentFCM} та~\eqref{eq:reccurentPartitioningCoefficient} реалізуються одночасно. На кожному такті навчання вузол~$PC^{*[m]}$ визначає найкращий елемент каскаду, що забезпечує максимальне значення коефіцієнта розбиття у кожний поточний момент $k$, при цьому не виключається ситуація, коли в різні моменти обробки інформації "переможцями" виявляться різні вузли.
+
+Кожен з каскадів розглянутої системи відрізняється від інших числом кластерів, на які розбивається оброблюваний потік даних. Тому якщо вузли $PC_{j}^{[m]}$ і $PC^{*[m]}$ оцінюють якість кластеризації без урахування кількості сформованих класів, то вузли системи, позначені $XB^{[m]}$ та $XB^{*}$, оцінюють результати з урахуванням числа кластерів у кожному каскаді. Одним з таких показників є індекс Ксі-Бені~\cite{ref20}, який для фіксованої вибірки з $N$~спостережень може бути записаний у вигляді
+
+\begin{equation}\label{eq:XieBeniIndex}
+\V{XB}_{j}^{[m]}=\frac{\displaystyle\left(\sum\limits_{k=1}^{N}\sum\limits_{l=1}^{m+1}\left(u_{jl}^{[m]}\left(k\right)\right)^{2}\left\|x\left(k\right)-c_{jl}^{[m]}\right\|^{2}\right)\Big/{N}}{\min\limits_{l\neq{q}}\left\|c_{jl}^{[m]}-c_{jq}^{[m]}\right\|^{2}}=\frac{\displaystyle\V{NXB}_{j}^{[m]}}{\V{DXB}_{j}^{[m]}}
+\end{equation}
+\medskip
+
+Вираз \eqref{eq:XieBeniIndex} також можна записати у рекурентній формі
+
+\begin{samepage}
+\begin{equation}\label{eq:recurrentXieBeniIndex}
+\begin{aligned}
+&\V{XB}_{j}^{[m]}\left(k+1\right)=\frac{\V{NXB}_{j}^{[m]}\left(k+1\right)}{\V{DXB}_{j}^{[m]}\left(k+1\right)}=\\
+&\frac{\displaystyle\V{NXB}_{j}^{[m]}\left(k\right){+}\frac{1}{k{+}1}\left({\sum\limits_{l=1}^{m+1}\left(u_{jl}^{[m]}\left(k{+}1\right)\right)^{2}\left\|x\left({k+}1\right){-}c_{jl}^{[m]}\left(k{+}1\right)\right\|^{2}}{-}\V{NXB}_{j}^{[m]}\left(k\right)\right)}{\displaystyle\min\limits_{l\neq{q}}\left\|c_{jl}^{[m]}\left(k+1\right)-c_{jq}^{[m]}\left(k+1\right)\right\|^{2}},\end{aligned}
+\end{equation}
+\end{samepage}
+\medskip
+
+при цьому рекурентні вирази \eqref{eq:reccurentPartitioningCoefficient} та \eqref{eq:recurrentXieBeniIndex} реалізуються одночасно.
+
+Індекс Ксі-Бені є по суті співвідношенням відхилення всередині кластерів~$\V{NXB}_j^{[m]}$ до величини поділу кластерів~$\V{DXB}_j^{[m]}$. Оптимальному числу кластерів у каскаді відповідає мінімальне значення \eqref{eq:XieBeniIndex} та \eqref{eq:recurrentXieBeniIndex}. Тому процес нарощування каскадів у системі продовжується доки значення індексу не почне збільшуватися. Цей процес контролює вузол архітектури~$\V{XB}^*$.
+
+Варто заувважити, що оскільки вузли кожного каскаду відрізняються тільки значенням фаззифікатору, ефективність роботи кожного каскаду доцільно оцінювати за допомогою розширеного індексу Ксі-Бені~$\V{EXB}$~\cite{ref19}.
+
+\begin{equation}
+\V{EXB}_j^{[m]}=\frac{\displaystyle\left(\sum\limits_{k=1}^{N}\sum\limits_{l=1}^{m+1}\left(u_{jl}^{[m]}\left(k\right)\right)^{\scriptstyle\beta_{\scriptstyle[m]}}\left\|x\left(k\right)-c_{jl}^{[m]}\right\|^{2}\right)\Big/{N}}{\displaystyle\min\limits_{l\neq{q}}\left\|c_{jl}^{[m]}-c_{jq}^{[m]}\right\|^2}=\frac{\V{NEXB_j^{[m]}}}{\V{DEXB_j^{[m]}}}
+\end{equation}
+\medskip
+
+або його рекурентої форми
+
+\begin{samepage}
+\begin{equation}
+\begin{aligned}
+&\V{XB}_{j}^{[m]}\left(k+1\right)=\frac{\V{NXB}_{j}^{[m]}\left(k+1\right)}{\V{DXB}_{j}^{[m]}\left(k+1\right)}=\\
+&\frac{\displaystyle\V{NXB}_{j}^{[m]}\left(k\right){+}\frac{1}{k{+}1}\left({\sum\limits_{l=1}^{m+1}\left(u_{jl}^{[m]}\left(k{+}1\right)\right)^{\beta_{\scriptstyle{[m]}}}\left\|x\left({k+}1\right){-}c_{jl}^{[m]}\left(k{+}1\right)\right\|^{2}{-}\V{NXB}_{j}^{[m]}\left(k\right)}\right)}{\displaystyle\min\limits_{l\neq{q}}\left\|c_{jl}^{[m]}\left(k+1\right)-c_{jq}^{[m]}\left(k+1\right)\right\|^{2}},
+\end{aligned}
+\end{equation}
+\end{samepage}
+\medskip
+
+де $\beta^{[m]}$~---~фаззіфікатор найкращого з вузлів $m$-го каскаду.
+
+Таким чином, процес еволюції пропонованої системи зумовлений максимізуванням поточного значення показника якості кластерування потоку даних, що надходять на обробку в онлайн режимі.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Висновки до розділу~\ref{ch:evolvingClusteringSystem}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+\item Розглянуто завдання нечіткого кластерування у режимі послідовного надходження даних до системи.
+\item Запропоновано метод визначення локально оптимальної кількості кластерів і значення параметру фаззіфікації для послідовного кластерування потоків даних.
+\item Запропоновано архітектуру і метод самонавчання каскадної нейро-фаззі системи, що еволюціонує, для послідовного кластерування потоків даних з автоматичним визначенням оптимальної кількості кластерів. Кожен вузол кожного каскаду системи вирішує завдання кластерування незалежно від інших, що дозволяє організувати паралельну обробку інформації в каскадах, тобто підвищити швидкодію цього процесу. Система не містить жодних порогових параметрів, що задаються суб'єктивно, а процес оцінювання якості її функціонування визначається шляхом відшукання оптимального значення певного індексу дійсності розбиття даних на кластери (їх поточна оцінка також проводиться в режимі реального часу). Відмінною особливістю пропонованої системи є те, що вона самостійно визначає і поточне значення фаззіфікатору, і оптимальну кількість кластерів на кожному етапі обробляння даних.
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Моделювання та практичне застосування розроблених методів та архітектур}%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{ch:Experiments}
+
+Для проведення чисельних експериментів, що наведені у підрозділах~\ref{sec:ENFNExperiments}, \ref{sec:SISOCascadedSystemOnENFNExperiments} та \ref{sec:MIMOCascadedSystemExperiments} було обрано такі критерії оцінки:
+
+\begin{itemize}
+\item RMSE (Root Mean Squared Error, середньоквадратична похибка),
+\item SMAPE (Symmetric Mean Absolute Percentage Error, симетрична абсолютна процентна похибка),
+\end{itemize}
+
+що обчислюються за формулами 
+
+\begin{equation}
+\text{RMSE} = \sqrt{\frac{1}{N}\sum\limits_{k=1}^{N}\left(y\left(k\right)-\hat{y}\left(k\right)\right)},
+\end{equation}
+
+та 
+
+\begin{equation}
+\text{SMAPE} = \frac{1}{N}\sum\limits_{k=1}^{N}\frac{\left|y\left(k\right)-\hat{y}\left(k\right)\right|}{y\left(k\right)+\hat{y}\left(k\right)}
+\end{equation}
+\medskip
+
+відповдіно, де $y$~-- шуканий сигнал, $\hat{y}$~-- вихідний сигнал системи.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Моделювання розширенного нейро-фаззі нейрона}
+\label{sec:ENFNExperiments}
+
+Датасет для першого есперименту (фазовий портрет наведено на рис.~\ref{fig:ENFNDataSetPhasePortrait}) було сгенеровано за формулою
+
+\begin{equation}
+\sin{\bigl(k + \sin\left(2k\right)\bigr)} \textnormal{ для } k \in \left[1, 600\right].
+\end{equation}
+\medskip
+
+Результати експерименту наведено у таблиці нижче, а також проілюстровано залежність точності прогнозу від порядку висновування (рис.~\ref{fig:ENFNErrorFromInferenceOrder}) та кількості фунцій належності (рис.~\ref{fig:ENFNErrorFromNumberOfMembershipFunctions}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{ENFNDataSetPhasePortrait.png}
+\caption{Фазовий портрет штучно сгенерованого датасету}
+\label{fig:ENFNDataSetPhasePortrait}
+\end{center}
+\end{figure}
+
+Отже, як видно з таблиці~\ref{tab:ENFNPredictionAccuracyGeneratedDataSet} та рис.~\ref{fig:ENFNPrediction3IO3MF}, можна зробити висновок, що точність прогнозу розширеного нео-фаззі нейрону вища від точності звичайного нео-фаззі нейрону (ENFN з нульовим порядком висновування).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{ENFNErrorFromInferenceOrder.png}
+\caption{Похибка прогнозу розширенного нео-фаззі нейрону від порядку висновування (для трьох та п'яти функцій належності)}\label{fig:ENFNErrorFromInferenceOrder}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{ENFNErrorFromNumberOfMembershipFunctions.png}
+\caption{Похибка прогнозу розширенного нео-фаззі нейрону від кількості фунцій належності (порядок висновування - 2)}
+\label{fig:ENFNErrorFromNumberOfMembershipFunctions}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{ENFNPrediction3IO3MF.png}
+\caption{Прогноз розширенного нео-фаззі нейрону з 3 трикутними функціями належності, що реалізує нечітке висновування 3-ого порядку (зелена лінія -- шуканий сигнал, синя пунктирна лінія -- прогноз розширенного нео-фаззі нейрону, червона лінія -- похибка; жовтобагряна вертикальна лінія позначає закінчення тренувальної частини датасету)}
+\label{fig:ENFNPrediction3IO3MF}
+\end{center}
+\end{figure}
+
+\begin{table}[H]
+\caption{Точність прогнозу розширенного нео-фаззі нейрону на штучно сгенерованому датасеті} \label{tab:ENFNPredictionAccuracyGeneratedDataSet}
+\centering \small \begin{tabular}{rcc} \hline
+Нечітке висновування 0 порядку \\ \hline
+Функції належності & RMSE & SMAPE \\ \hline
+%2 & 0.0743020867216913 & 3.39992930699002 \\
+3 & 0.07593154138757 & 7.2130842903092 \\ 
+4 & 0.0816015155371995 & 3.74330006151476 \\
+5 & 0.0899940897089563 & 7.28423693259539 \\
+6 & 0.098548606433121 & 4.97414996889677 \\ \hline
+Нечітке висновування I порядку \\ \hline
+Функції належності & RMSE & SMAPE \\ \hline
+%2 & 0.088863162670838 & 2.86925982823229 \\
+3 & 0.107342623622113 & 2.61031587883906 \\ 
+4 & 0.114302161682684 & 2.43845462677015 \\
+5 & 0.121556611017793 & 2.21187746150696 \\
+6 & 0.129922583600673 & 2.3504927587044 \\ \hline
+Нечітке висновування II порядку \\ \hline
+Функції належності & RMSE & SMAPE \\ \hline
+%2 & 0.0949715863284214 & 3.10116527241627 \\
+3 & 0.127570672613453 & 3.21603084937958 \\ 
+4 & 0.121809301731276 & 2.49191939755954 \\
+5 & 0.134120568445479 & 2.74555892364861 \\
+6 & 0.146724724859333 & 2.39716069975922 \\ \hline
+Нечітке висновування III порядку \\ \hline
+Функції належності & RMSE & SMAPE \\ \hline
+%2 & 0.100666657170784 & 3.26456771933306 \\
+3 & 0.130173960343431 & 2.12509843555904 \\ 
+4 & 0.154580667425542 & 2.17237774290269 \\
+5 & 0.139334351692536 & 3.04236918521622 \\
+6 & 0.150497843534837 & 2.43818195954604 \\ \hline
+\end{tabular}
+\end{table}
+
+Для подальшої апробації розширеного нео-фаззі нейрону розглянемо задачу прогнозування хаотичного ряду, що описується диференціальним рівнянням Мекі-Гласса \hl{[147 vik]}:
+
+\begin{equation}
+\label{eq:M}
+y'\left(t\right)=\frac{0.2\left(t-\tau\right)}{1+y^{10}\left(t-\tau\right)}-0.1y\left(t\right),
+\end{equation}
+\medskip
+
+при цьому значення часового ряду в кожній точці обчислене за допомогою методу Рунге-Кутта четвертого порядку. Часовий крок прийнятий рівним $0.1$, початкові умови: $x\left(0\right)=1.2$.
+
+Традиційно завдання прогнозування полягає у визначенні $x\left(t+6\right)$x часового ряду (5.2) з параметром затримки 17 по
+значенням x (t 18), x (t 12), x (t 6) і x (t).  Перед початком обробки отриманий часовий ряд нормувався таким чином, щоб його значення лежали в інтервалі $\left[0, 1\right]$ (область визначення трикутних функцій належності та кубічних сплайнів, що використубться у синапсах розширеного нео-фаззі нейрону. 
+
+\medskip
+\begin{figure}[H]
+\begin{center}
+\includegraphics{ENFNMackeyGlassPredictionsIO3M3.png}
+\caption{Прогнозування хаотичного часового ряду Макі-Гласса розширенним нео-фаззі нейроном з 3 трикутними функціями належності, що реалізує нечітке висновування 3-ого порядку (зелена лінія -- шуканий сигнал, синя пунктирна лінія -- сигнал на виході нейрону, червона лінія -- похибка; жовтобагряна вертикальна лінія позначає закінчення тренувальної частини датасету)}
+\label{fig:ENFNMackeyGlassPredictionsIO3M3}
+\end{center}
+\end{figure}
+
+На рис.\ref{fig:ENFNMackeyGlassPredictionsIO3M3} зображений результат прогнозування розширеного нео-фаззі нейрона з трьома функціями належності, що реалізує нечітке висновування 3-ого порядку. Для порівняння на рис.~\ref{fig:ENFNMackeyGlassPredictionsIO0M3} наведено прогнозування традиційного нео-фаззі нейрону (що реалізує нечітке висновування нульового порядку) з аналогічними функціями належності (3 трикутні функції належності).
+
+\begin{table}[H]
+\caption{Точність прогнозу ряду Мекі-Глассу розширеним нео-фаззі нейроном від порядку висновування та кількості фунцій належності}
+\label{tab:ENFNPredictionAccuracyFromInferenceOrderAndMembershipFunctionsOnMackeyGlassTimeSeries}
+\centering \small \begin{tabular}{rcc} \hline
+Нечітке висновування 0 порядку \\ \hline
+Функції належності & RMSE & SMAPE \\ \hline
+%2 & 0.156093623279716 & 0.302950765207994 \\
+3 & 0.143482904587951 & 0.325353000527264 \\
+4 & 0.106294989490131 & 0.264501060116694 \\
+5 & 0.094578207548207 & 0.259630642224594 \\
+6 & 0.094578207548207 & 0.259630642224594 \\ \hline
+Нечітке висновування I порядку \\ \hline
+Функції належності & RMSE & SMAPE \\ \hline
+%2 & 0.0337893129825338 & 0.108432487493878 \\
+3 & 0.0491962584140483 & 0.136034984261077 \\
+4 & 0.0300830061654526 & 0.0978878141219238 \\
+5 & 0.0312245619190396 & 0.10776716206662 \\
+6 & 0.0277981639612314 & 0.0989376310206592 \\ \hline
+Нечітке висновування II порядку \\ \hline
+Функції належності & RMSE & SMAPE \\ \hline
+%2 & 0.0318577433605903 & 0.0933793821810412 \\
+3 & 0.0227629037042365 & 0.0658002874902031 \\
+4 & 0.0295377560571133 & 0.108260856276106 \\
+5 & 0.0283735498990618 & 0.0946515030316458 \\
+6 & 0.0251818186025806 & 0.0847398989365615 \\ \hline
+Нечітке висновування III порядку \\ \hline
+Функції належності & RMSE & SMAPE \\ \hline
+%2 & 0.0435853909382971 & 0.102398663434075 \\
+3 & 0.0221516072948077 & 0.0622040928066835 \\
+4 & 0.0261638552968437 & 0.0827913036508308 \\
+5 & 0.0274818416982828 & 0.114797690969503 \\
+6 & 0.0237394982902305 & 0.0846415828789446 \\ \hline
+\end{tabular}
+\end{table}
+
+На рис.~\ref{fig:ENFNMackeyGlassIO3M3ErrorFromInferenceOrder} показана залежність похибки від порядку висновування розширенних нео-фаззі нейронів з трьома та п'ятьома дзвонуватими функціями належності.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{ENFNMackeyGlassPredictionsIO0M3.png}
+\caption{Прогнозування хаотичного часового ряду Макі-Гласса традиційним нео-фаззі нейроном з 3 трикутними функціями належності (зелена лінія -- шуканий сигнал, синя пунктирна лінія -- сигнал на виході нейрону, червона лінія -- похибка; жовтобагряна вертикальна лінія позначає закінчення тренувальної частини датасету)}
+\label{fig:ENFNMackeyGlassPredictionsIO0M3}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{ENFNMackeyGlassIO3M3ErrorFromInferenceOrder.png}
+\caption{Похибка прогнозування хаотичного часового ряду Макі-Гласса розширенними нео-фаззі нейронами з 3 та 5 дзвонуватими функціями належності від порядку нечіткого висновування}
+\label{fig:ENFNMackeyGlassIO3M3ErrorFromInferenceOrder}
+\end{center}
+\end{figure}
+
+Як видно з таблиці~\ref{tab:ENFNPredictionAccuracyFromInferenceOrderAndMembershipFunctionsOnMackeyGlassTimeSeries} та рис.~\ref{fig:ENFNMackeyGlassIO3M3ErrorFromInferenceOrder}, розширенний нео-фаззі нейрон, що реалізує нечітке висновування вищого від 0 порядку, прогнозує хаотичний часовий ряд за рівнянням Мекі-Гласса з суттєво вищою точністю ніж традиційний нео-фаззі нейрон.
+
+Також пропонований розширений нео-фаззі нейрон було апробовано на реальному часовому ряді <<Споживання електоренергії у м. Сімферополь за 2007 рік>> (фазовий портрет наведено на рис.~\ref{fig:UkrEnergoPhasePortrait}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{UkrEnergoPhasePortrait.png}
+\caption{Фазовий портрет часового ряду <<Споживання електоренергії у м. Сімферополь за 2007 рік>>}
+\label{fig:UkrEnergoPhasePortrait}
+\end{center}
+\end{figure}
+
+Найліпший прогноз (RMSE $\approx 0.14$, SMAPE $\approx 0.21$) надав нейрон, що реалізує нечітке висновування 1-ого порядку з 6-ма функціями належності (рис.~\ref{fig:ENFNUkrEnergoPredictionIO1M6})
+
+Експеременти, що описані у цьому підрозділі, підтвержують, що розширені нео-фаззі нейрони, які реалізують нечітке висновування довільного порядку, мають підвищену точність прогнозування хаотичних рядів (як штучно сгенерованих, так і реальних) порівняно з традиційними нео-фаззі нейронами (які реалізують нечітке висновування нульового порядку).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{ENFNUkrEnergoPredictionIO1M6.png}
+\caption{Прогнозування часового ряду <<Споживання електоренергії у м. Сімферополь за 2007 рік>> розширеним нео-фаззі нейроном з 6-ма дзвонувати функціями належності, що реалізує нечітке висновування 1-ого порядку (зелена лінія -- шуканий сигнал, синя пунктирна лінія -- сигнал на виході нейрону, червона лінія -- похибка; жовтобагряна вертикальна лінія позначає закінчення тренувальної частини датасету)}
+\label{fig:ENFNUkrEnergoPredictionIO1M6}
+\end{center}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Моделювання гiбридної каскадної нейро-фаззi мережі з розширенними нео-фаззі нейронами та оптимiзацiєю пулу нейронiв}
+\label{sec:SISOCascadedSystemOnENFNExperiments}
+
+Низку експериментів для апробації гiбридної каскадної нейро-фаззi мережі на розширенних нео-фаззі нейронах з оптимiзацiєю пулу нейронiв було проведено на датасетах, що їх надала дослідницька группа <<The Applications of Machine Learning (AML)>> з Університету Aалто, що у Фінлядії (Aalto University School of Science, Espoo, Finland).
+Одним з таких датасетів є часовий ряд <<Споживання електроенергії у Польщі за період з 1990-х років>> (фазовий портрет наведено на рис~\ref{fig:ElectricityDemandPhasePortrait}).
+ 
+\begin{figure}
+\begin{center}
+\includegraphics[width=4in]{ElectricityDemandPhasePortrait.pdf}
+\caption{Фазовий портрет часового ряду Прогнозування часового ряду <<Споживання електроенергії у Польщі за період з 1990-х років>>}
+\label{fig:ElectricityDemandPhasePortrait}
+\end{center}
+\end{figure}
+
+Вихідний сигнал гібридної каскадної нейро-мережі наведено на рис.~\ref{fig:ENFNNet+FuzzyGeneralizerElectricityDemand}, а похибки розширенних нео-фаззі нейронів та нейронів-узагальнювачів для кожного каскаду системи наведно у таблиці~\ref{tab:SimpheropolEnergyConsumptionPredictionAccuracy}.
+
+\begin{figure}
+\begin{center}
+\includegraphics{ENFNNet+FuzzyGeneralizerElectricityDemand.png}
+\caption{Прогнозування часового ряду <<Споживання електоренергії у м. Сімферополь за 2007 рік>> гiбридної каскадної нейро-фаззi мережі з оптимiзацiєю пулу нейронiв (жовтобагряна вертикальна лінія позначає закінчення тренувальної частини датасету)}
+\label{fig:ENFNNet+FuzzyGeneralizerElectricityDemand}
+\end{center}
+\end{figure}
+
+\begin{table}[H]
+\caption{Результати прогнозування часового ряду <<Споживання електоренергії у м. Сімферополь за 2007 рік>> нейронів (зокрема нейронів-узагальнювачів) каскадної нейро-фаззі системи}
+\label{tab:SimpheropolEnergyConsumptionPredictionAccuracy}
+\centering \small \begin{tabular}{lcc}
+Каскад I & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.080830 & 0.39288 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.075014 & 0.036680 \\ 
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.074955 & 0.038170 \\
+Нейрон-узагальнювач I каскаду & 0.059835 & 0.030302 \\ \hline
+Каскад II & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.080835 & 0.039290 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.059837 & 0.036683 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.074966 & 0.038195 \\
+Нейрон-узагальнювач II каскаду & 0.059821 & 0.036683 \\ \hline
+Каскад III & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.080934 & 0.039333 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.059869 & 0.036711 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.75009 & 0.038213 \\
+Нейрон-узагальнювач III каскаду & 0.059869 & 0.030320 \\ \hline
+Каскад IV & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.080892 & 0.039316 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.059869 & 0.030303 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.075034 & 0.038213 \\
+Нейрон-узагальнювач IV каскаду & 0.059849 & 0.030303 \\ \hline
+Нейрон-узагальнювач системи & 0.059821 & 0.030302 \\ \hline
+\end{tabular}
+\end{table}
+
+Фазовий портрет другого датасету <<Коливання рівню  приловоотливної зони>> (Subtidal coastal level of fluctuations) наведено на рис.~\ref{fig:ENFNNet+FuzzyGeneralizerElectricityDemand}, похибки вузлів системи -- у таблиці~ref{tab:SubtidalCoastalLevelOfFluctuationsPredictionAccuracy}.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=4in]{SubtidalCoastalLevelPhasePortrait.pdf}
+\caption{Фазовий портрет часового ряду Прогнозування часового ряду <<Коливання рівню  приловоотливної зони>>}
+\label{fig:SubtidalCoastalLevelPhasePortrait}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics{ENFNNet+FuzzyGeneralizerSubtidalCoastalLevelFlunctuations.pdf}
+{Прогнозування часового ряду <<Коливання рівню  приловоотливної зони>> гiбридної каскадної нейро-фаззi мережі з оптимiзацiєю пулу нейронiв (жовтобагряна вертикальна лінія позначає закінчення тренувальної частини датасету)}
+\label{fig:ENFNNet+FuzzyGeneralizerSubtidalCoastalLevelFlunctuations}
+\end{center}
+\end{figure}
+
+\begin{table}[H]
+\caption{Результати прогнозування часового ряду <<Коливання рівню приловоотливної зони>> нейронів (зокрема нейронів-узагальнювачів) каскадної нейро-фаззі системи}
+\label{tab:SubtidalCoastalLevelOfFluctuationsPredictionAccuracy}
+\centering \small \begin{tabular}{lcc}
+Каскад I & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.110067 & 0.036612 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.105192 & 0.035474 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.103129 & 0.034814 \\
+Нейрон-узагальнювач I каскаду & 0.105598 & 0.035301 \\ \hline
+Каскад II & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.110023 & 0.036593 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.105118 & 0.035457 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.103148 & 0.035818 \\
+Нейрон-узагальнювач II каскаду & 0.102377 & 0.034698 \\ \hline
+Каскад III & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.110013 & 0.036591 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.105126 & 0.035458 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.103155 & 0.034820 \\
+Нейрон-узагальнювач III каскаду & 0.103155 & 0.034820 \\ \hline
+Каскад IV & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.110026 & 0.036594 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.105153 & 0.035464 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.103168 & 0.034822 \\
+Нейрон-узагальнювач IV каскаду & 0.102545 & 0.034083  \\ \hline
+Нейрон-узагальнювач системи & 0.102377 & 0.030302 \\ \hline
+\end{tabular}
+\end{table}
+
+Останній датасет для цієї низки експериментів було взято зі змагань у прогнозуванні часових рядів <<European Symposium on Time Series Prediction 2008>>, фазовий портрет наведено на рис.~\ref{fig:ESTPCompetitionTimeSeriesPhasePortrait}, результат роботи пропонованої системи -- на рис.~\ref{fig:ENFNNetFuzzyGeneralizerESTPCompettionTimeSeries}.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=4in]{ESTPCompetitionTimeSeriesPhasePortrait.pdf}
+\caption{Фазовий портрет часового ряду Прогнозування часового ряду <<ESTP Competition Time Series>>}
+\label{fig:ESTPCompetitionTimeSeriesPhasePortrait}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics{ENFNNetFuzzyGeneralizerESTPCompettionTimeSeries.pdf}
+\caption{Прогнозування часового ряду <<ESTP Competition Time Series>> гiбридної каскадної нейро-фаззi мережі з оптимiзацiєю пулу нейронiв (жовтобагряна вертикальна лінія позначає закінчення тренувальної частини датасету)}
+\label{fig:ENFNNetFuzzyGeneralizerESTPCompettionTimeSeries}
+\end{center}
+\end{figure}
+
+Результати прогнозування нейронів окремих каскадів, нейронів-узагалтнювачів, а також системи в цілому можно побачити у таблиці~\ref{tab:ESTPCompetitionTimeSeriesPredictionAccuracy}.
+
+\begin{table}[H]
+\caption{Результати прогнозування часового ряду <<ESTP Competition Time Series>> окремих нейронів (зокрема нейронів-узагальнювачів) каскадної нейро-фаззі системи}
+\label{tab:ESTPCompetitionTimeSeriesPredictionAccuracy}
+\centering \small \begin{tabular}{lcc}
+Каскад I & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.175623 & 0.062985 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.149139 & 0.056551 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.146186 & 0.054414 \\
+Нейрон-узагальнювач I каскаду  & 0.159002 & 0.055274 \\ \hline
+Каскад II & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.175602 & 0.062942 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.149092 & 0.056487 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.146278 & 0.054415 \\
+Нейрон-узагальнювач II каскаду  & 0.158996 & 0.055264 \\ \hline
+Каскад III & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.175592 & 0.062933  \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.149090 & 0.056487 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.146270 & 0.054415 \\
+Нейрон-узагальнювач III каскаду  & 0.158986 & 0.055262 \\ \hline
+Каскад IV & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.175605 & 0.062947 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.149127 & 0.056487 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.146323 & 0.054419 \\
+Нейрон-узагальнювач IV каскаду  & 0.159015 & 0.055268 \\ \hline
+Нейрон-узагальнювач системи & 0.102377 & 0.030302 \\ \hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Моделювання багатовимірної гiбридної каскадної нейро-фаззi мережі, що еволюціонує, з оптимiзацiєю пулу нейронiв}
+\label{sec:MIMOCascadedSystemExperiments}
+
+В якості тестового датасету для моделювання багатовимірної гiбридної каскадної нейро-фаззi мережі з оптимiзацiєю пулу нейронiв (що ґрунтується на багатовимірних нео-фаззі нейронах, як описано у \hl{linkchapter}) застосовувався багатовимірний ряд, сгенерованих за домогою диференціальних рівнянь моделі Лоренца:
+
+\begin{equation}
+\label{eq:Lorenz}
+\begin{cases}
+\dot{x}=\sigma\left(y-x\right),\\
+\dot{y}=-xz+rx-y,\\
+\dot{z}=xy-bz.
+\end{cases}
+\end{equation}
+\medskip
+
+У моделі Лоренца присутні три невідомих функції, а також кілька невідомих параметрів \hl{[21]}.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{MIMOLorenz3D.pdf}
+\caption{Прогнозування багатовимірного часового ряду гiбридною каскадною нейро-фаззi мережею з оптимiзацiєю пулу нейронiв}
+\label{fig:MIMOLorenz3D}
+\end{center}
+\end{figure}
+
+При плавній зміні параметра динамічна система змінює тип свого аттрактора. Рішення системи рівнянь Лоренца \ref{eq:Lorenz} при значенні параметра $r$, що перевищує біфуркаційних, виглядає майже ідентично випадковому процесу. У певному сенсі, аттрактор Лоренца є стохастичними автоколиваннями, зо підтримуються у динамічній системі за рахунок зовнішнього джерела. 
+
+\begin{table}[H]
+\caption{Результати прогнозування багатовимірного часового ряду нейронами (зокрема нейронами-узагальнювачами) MIMO гiбридної каскадної нейро-фаззi мережі з оптимiзацiєю пулу нейронiв}
+\label{tab:LorenzPredictionAccuracy}
+\centering \small \begin{tabular}{lcc}
+Каскад I & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.132351 & 0.64333 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.106885 & 0.055176 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.118058 & 0.059517 \\
+Нейрон-узагальнювач IV каскаду & 0.106823 & 0.055111 \\ \hline
+Каскад II & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.132370 & 0.064339 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.106840 & 0.55165 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.118059 & 0.059517 \\
+Нейрон-узагальнювач IV каскаду &0.106840 & 0.55165 \\ \hline
+Каскад III & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.132325 & 0.064324 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.106858 & 0.055171 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.118059 & 0.059513 \\
+Нейрон-узагальнювач IV каскаду & 0.106858 & 0.055171 \\ \hline
+Каскад IV & SMAPE & RMSE \\ \hline
+Нейрон I  (3 фунції належності, нечітке висновування III порядку) & 0.132258 & 0.0642449 \\
+Нейрон II  (5 фунцій належності, нечітке висновування IV порядку) & 0.106805 & 0.055144 \\
+Нейрон III (4 фунції належності, нечітке висновування V порядку) & 0.118015 & 0.059424 \\
+Нейрон-узагальнювач IV каскаду & 0.106805 & 0.055144  \\ \hline
+Нейрон-узагальнювач системи & 0.106789 & 0.55105  \\ \hline
+\end{tabular}
+\end{table}
+
+У фазовому просторі дивний аттрактор має топологію деякого клубка траєкторій, в межах якого можна виділити дві області. У кожен момент часу рішення знаходиться в одній з цих областей, причому зміна станів системи в одну або іншу область є абсолютно непередбачуваною. 
+
+Аттрактор Лоренца демонструє ще одну особливість, притаманну \hl{дивним} атракторам - чутливість до початкових умов. Аттрактори, тобто нерухомі точки і граничні цикли, характеризуються тим, що для різних початкових умов сімейства рішень сходилися до одного асимптотичному рішення, тобто різні категорії вийшли з різних точок, які відповідають різним початковим умовам, сходилися при $t \rightarrow \infty$ в одну точку або близькі криві. Тому поведінку звичайних систем, що мають атрактори поблизу нерухомих точок і граничних циклів, на великих часах добре передбачувано. З \hl{дивними} аттракторами все зовсім інакше. Які б близькі початкові умови не вибиралися, при $t \rightarrow \infty$ рішення будуть розходитися, віддаляючись одне від одного в фазовому просторі.Оскільки в реальних задачах початкові умови відомі з деякою погрішністю, абсолютно неможливо вказати поведінку такого аттрактора при досить великому $t$, тому поведінка систем, що описуються дивними аттракторами, є абсолютно непередбачуваною.
+
+Для генерування тестового датасету використовувались такі параметри:
+
+\begin{equation*}
+\begin{aligned}
+r =& 28,\\
+dt =& 0.001;\\
+\end{aligned}
+\end{equation*}
+\medskip
+
+По завершенні експерименту маємо систему з чотирьох (рідше -- трьох) каскадів з трьома багатовимірними нейронами MNFN та одним нейроном-узагальнювачем у кожному каскаді. Результати роботи системи зображені на рис.~\ref{fig:MIMOLorenz3D} та більш детально описані у таблиці~\ref{tab:LorenzPredictionAccuracy}.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{MIMOLorenz.pdf}
+\caption{Прогнозування багатовимірного часового ряду гiбридною каскадною нейро-фаззi мережею з оптимiзацiєю пулу нейронiв}
+\label{fig:MIMOLorenz}
+\end{center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Моделювання самонавчанної нейро-фаззі системи, що еволюціонує}
+\label{sec:SelfLearningCascadedNetworkExperiments}
+
+Одна з основних переваг, притаманних пропонованій самонавчанній нейро-фаззі системі, що еволюціонує, полягає в автоматичному визначенні оптимальної кількості кластерів та значення фаззифікатору на кожному етапі обробляння даних. Першу серію експериментів було проведено на штучно зсинтезованих наборах даних з різним ступенем розмитості та перекриття класів аби дослідити вплив значення параметру фаззіфікації на якість кластерування в режимі реального часу відповідно до обраного критерію дійсності.
+
+\begin{figure}
+\begin{center}
+\includegraphics{clustering01.pdf}
+\caption{Штучно сгенеровані набори даних}
+\label{fig:clustering01}
+\end{center}
+\end{figure}
+
+Кожен з наборів даних, що їх наведено на рис.~\ref{fig:clustering01}, містить 80 спостережень з 2 ознаками (для очності) у кожному спостереженні. Тестові дані були сгенеровані таким чином, аби у першому наборі класи були чітко розподілені (crisp dataset), у другому наборі кластерні границі були дещо розмиті (fuzzy dataset), у третьому випадку класи сильно перетиналися (extra fuzzy dataset). Логічно припустити, що система, яка тестується, обере менше значення параметру фаззіфікації для першого датасету та більше для останнього, де границі класів спостережень є більш розмитими.
+
+Спостереження надходили до нейро-фаззі мережі у послідовному режимі, вагові коефіцієнти нейронів були проініціалізовані, використовуючи пакетну модифікацію обраного алгоритму кластерування на датасеті з довільних двадцятьох спостережень відповідного набору даних (адже система, як і класичний fuzzy c-means, \hl{чутлива до ініціалзації)}. Локально оптимальні кількість кластерів та значення параметру фаззіфікації обумовлювалися максимальним середнім значенням рекурентних коефіцієнту розбиття PC \eqref{eq:reccurentPartitioningCoefficient} та Ксі-Бені індексу \eqref{eq:recurrentXieBeniIndex}: $\max{\frac{PC_j^{[m]} + 1 - XB_j^{[m]}}{2}}$ (у данному випадку використовувалося від'ємне значення Ксі-Бені індексу $1-XB\left(k\right)$, оскільки щоменше $XB_j^{[m]}$, то ліпшим є розбиття даних на кластери). 
+
+Для першого набору даних (crsip dataset), як і передбачалося, оптимальним виявися другий каскад ($m=3$) з трьома кластерами і нейроном-переможцем із найменшим значенням параметру фаззіфікацїї $\beta = 2$ (рис.~\ref{fig:clustering02}). Така конфігурація є оптимальною відповідно до обох використовуваних індексів валідності -- найменше значення Ксі-Бені індексу $XB_j^{[m]}$ та найбільший коефіцієнт розбиття $PC_j^{[m]}$: 
+
+\begin{equation*}
+\begin{aligned}
+PC_1^{[2]}=&0.9009951,\\
+XB_1^{[2]}=&0.03349166.
+\end{aligned}
+\end{equation*}
+\medskip
+
+\begin{table}[t]
+\caption{Індекси валідності кластерування I датасету}
+\label{tab:ClusteringValidityIndiciesDataSetI}
+\centering \small \begin{tabular}{rcccc}
+\hline {Каскад 1 ($m=2$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+0.91758 & 0.7446 & 0.64787 & 0.59236 \\
+Індекс Ксі-Бені &
+0.052129 & 0.061034 & 0.092235 & 0.1294 \\
+%——————————————————————————————————————————% 
+\hline {Каскад 2 ($m=3$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+0.92643 & 0.6609 & 0.50214 & 0.43305 \\
+Індекс Ксі-Бені &
+0.027232 & 0.06872 & 0.17281 & 0.26914 \\
+%——————————————————————————————————————————% 
+\hline {Каскад 3 ($m=4$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+0.87218 & 0.5256 & 0.37605 & 0.31993 \\
+Індекс Ксі-Бені &
+0.15687 & 0.4153 & 0.84699 & 1.1765 \\
+%——————————————————————————————————————————% 
+\hline {Каскад 4 ($m=5$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+0.73909 & 0.45445 & 0.32428 & 0.27063 \\
+Індекс Ксі-Бені &
+0.12985 & 0.30637 & 0.68584 & 1.0551 \\
+\hline
+\end{tabular}
+\end{table}
+
+Лише одне спостереження у цьому датасеті (його позначено багряним квадратом) не належить жодному кластерові з ступінем більшим від $0.6$. Індекси валідності нейронів системи наведені у таблиці~\ref{tab:ClusteringValidityIndiciesDataSetI}.
+
+Для набору даних з середньою вираженістю класів найліпшим виявився нейрон другого каскаду ($m=3$) і фаззіфікатором $\beta=3$ (таблиця 5.2). 
+
+Як показано на рис.~\ref{fig:clustering03}, декілька спостережень у центрі (позначені багряними квадратами) можна віднести до 2 кластерів з відносно високим ступінем належності, проте більшість спостережнь можна чітко розкластеризувати, що ілюструється високим значенням коефіцієнту розбиття, та дуже низьким Ксі-Бені індексом:
+
+\begin{equation*}
+\begin{aligned}
+PC_2^{[2]}=&0.9727868,\\
+XB_2^{[2]}=&0.087474.
+\end{aligned}
+\end{equation*}
+\medskip
+
+\begin{figure}
+\begin{center}
+\includegraphics{clustering03.pdf}
+\caption{Набір даних з нечіткими межами класів (fuzzy dataset)}
+\label{fig:clustering03}
+\end{center}
+\end{figure}
+
+Для набору з найменш чіткими межами класів (таблиця 5.3), система обрала нейроном-переможцем вузол третього каскаду ($m=4$) з високим параметром фаззіфікації $\beta = 4$:
+
+\begin{equation*}
+\begin{aligned}
+PC_3^{[3]}=&0.335525,\\
+XB_3^{[3]}=&0.2128333.
+\end{aligned}
+\end{equation*}
+\medskip
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{clustering002.pdf}
+\caption{Набір даних з чітко вираженими класами (Crisp dataset)}
+\label{fig:clustering02}
+\end{center}
+\end{figure}
+
+\begin{table}[H]
+\caption{Індекси валідності (датасет 2)}
+\label{tab:ClusteringValidityIndiciesDataSetII}
+\centering \small \begin{tabular}{rcccc}
+\hline {Каскад 1 ($m=2$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+0.78414 & 0.58928 & 0.53853 & 0.52239 \\
+Індекс Ксі-Бені &
+0.16668 & 0.30834 & 0.3745 & 0.38723 \\
+%——————————————————————————————————————————% 
+\hline {Каскад 2 ($m=3$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+50084 & 0.71164 & 0.97275 & 0.4191 \\
+Індекс Ксі-Бені &
+0.009751 & 0.031235 & 0.087474 & 0.1323 \\
+%——————————————————————————————————————————% 
+\hline {Каскад 3 ($m=4$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+0.91888 & 0.47532 & 0.32777 & 0.28912 \\
+Індекс Ксі-Бені &
+0.052563 & 0.1757 & 0.27516 & 0.33766 \\
+%——————————————————————————————————————————% 
+\hline {Каскад 4 ($m=5$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+0.85618 & 0.34327 & 0.24778 & 0.22445 \\
+Індекс Ксі-Бені &
+0.048316 & 0.19887 & 0.34307 & 0.41228 \\
+%——————————————————————————————————————————% 
+\hline {Каскад 5 ($m=6$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+0.81295 & 0.30709 & 0.21636 & 0.19214 \\
+Індекс Ксі-Бені &
+0.060896 & 0.19702 & 0.31393 & 0.38668 \\
+\hline
+\end{tabular}
+\end{table}
+
+На рис.~\ref{fig:clustering04} спостереження, для яких ступінь належності до будь-якого кластеру не перевищує $0.6$, позначені багряними квадратами. Як і очікувалося,  для цього набору даних кількість таких спостережень значно вища від попередніх датасетів з більш компактними та <<чіткими>> класами.
+
+\begin{table}
+\centering \small \begin{tabular}{rcccc}
+\hline {Каскад 1 ($m=2$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+0.85094 & 0.71415 & 0.61734 & 0.57085 \\
+Індекс Ксі-Бені &
+0.10584 & 0.11462 & 0.13797 & 0.16101 \\
+%——————————————————————————————————————————% 
+\hline {Каскад 2 ($m=3$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+0.61668 & 0.42848 & 0.37779 & 0.35884 \\
+Індекс Ксі-Бені &
+0.1754 & 0.20364 & 0.22364 & 0.23995 \\
+%——————————————————————————————————————————% 
+\hline {Каскад 3 ($m=4$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+0.33458 & 0.44082 & 0.79405 & 0.29615 \\
+Індекс Ксі-Бені &
+0.20989 & 0.129 & 0.051039 & 0.26282 \\
+%——————————————————————————————————————————% 
+\hline {Каскад 4 ($m=5$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+0.50244 & 0.33067 & 0.26029 & 0.23318 \\
+Індекс Ксі-Бені &
+0.37268 & 0.61417 & 0.79695 & 0.93626 \\
+%——————————————————————————————————————————% 
+\hline {Каскад 5 ($m=6$)} & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+Коефіцієнт розбиття &
+0.53279 & 0.29731 & 0.22648 & 0.19858 \\
+Індекс Ксі-Бені &
+0.27407 & 0.47298 & 0.60569 & 0.70716 \\
+\hline
+\end{tabular}
+\caption{Індекси валідності (датасет 3)}
+\end{table}
+
+Для очності у всіх наведених рисунках кольором позначені не тільки розкластеровані спостереження і центри кластерів, а й задній план (фон) малюнків, що дозволяє візуально визначити, до якого кластеру система віднесла б нові спостереження. Не дивно, що, тоді як для перших двох датасетів важко визначити домінуючий колір, оскільки кластери їх спостережень більш менш компактні та явно виражені, для останнього набору даних домінуючий колір -- сірий, сформований кольорами усіх кластерів, що ілюструє великий ступінь перекриття класів і, відповідно, високе значення оптимального параметру фаззіфікації $\beta$, що обрала система. 
+
+\begin{figure}
+\begin{center}
+\includegraphics{clustering04.pdf}
+\caption{Набір даних з класами, що перетинаються (extra fuzzy dataset)}
+\label{fig:clustering04}
+\end{center}
+\end{figure}
+
+Ця низка експериментів проілюструвала як важливо вірно визначати параметр фаззіфікації, оптимальне значення якого у випадку обробляння даних у послідовному режимі з високою вирогідністю змінюється у часі, а саме здатність визначати оптимальне значення цього параметру в онлайн режимі є відмінною особливістю попропонованої самонавчанної нейро-системи.
+%\setFloatBlockFor{sssec:SelfLearningNetworkArtificialGeneratedExperiments}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Придумати назву2}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\label{sssec:SelfLearningNetworkIris}%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Наступна низка експериментів була проведена на наборі даних <<Іриси Фішера>> (Fisher's Iris data set). 
+
+\begin{figure}
+\begin{center}
+\includegraphics{HierarchialClusteringOfIrisDataset.pdf}
+\caption{Ієрархічне класерування датасету <<Іриси Фішера>>}
+\label{fig:HierarchialClusteringOfIrisDataset}
+\end{center}
+\end{figure}
+
+Це багатовимірний датасет для задачі класифікації, на прикладі якого англійський статистик та біолог Рональд Фішер в 1936 році продемонстрував роботу розробленого ним методу дискримінантного аналізу. Іноді його також називають <<Ірисами Андерсона>> (через те, що дані були зібрані американським ботаніком Едгаром Андерсоном). Цей набір даних став класичним і часто використовується в літературі для ілюстрації роботи різних статистичних алгоритмів.
+
+\begin{figure}
+\begin{center}
+\includegraphics{ClusteredIrisDatasetM3Beta2.pdf}
+\caption{Розкластерований датасет <<Іриси Фішера>> при $m=3$, $\beta = 2$ (Точність кластерування -- 96\%)}
+\label{fig:ClusteredIrisDatasetM3Beta2}
+\end{center}
+\end{figure}
+
+Проте цей датасет рідко використовується у кластерному аналізі, адже межі класів <<Verginica>> та <<Versicolor>> не можна чітко визначити, ґрунтуючись на даних, що їх використовував Фішер (що легко продемонструвати за допомогою ієрархічного кластерування, рис.~\ref{fig:HierarchialClusteringOfIrisDataset}). Саме цим і цікавий для нас цей набір даних: коли класичні методи чіткого кластерного аналізу не справляються з задачею, може стати у нагоді система, що реалізує нечітке кластерування зі змінним параметром фаззифікації та кількістю кластерів. Для більшості методів кластерного аналізу, зокрема для методу нечітких середніх (fuzzy c-means), необхідно заздалегідь задати кількість кластерів, і очевидним рішенням є прийняти $m=3$, адже маємо три класи: Iris Verginica, Iris Versicolor та Iris Setosa (рис.~\ref{fig:ClusteredIrisDatasetM3Beta2}). 
+
+\begin{table}
+\centering \small\begin{tabular}{rcccc}
+& $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+avg & 0.8313073 & 0.8741245 & 0.8709475 & 0.8888124 \\
+min & 0.7859722 & 0.7533766 & 0.6615745 & 0.7656498 \\
+max & 0.8534013 & 0.9166667 & 0.935051 & 0.9604701 \\
+\end{tabular}
+\caption{Точність кластерування при $m=3$}
+\end{table}
+
+Точність кластерування за допомогою методу нечітких середніх за таких умов ($m=3$, $\beta=2$) рідко перевищує $83\%$ (таблиця 5.4). (Оскільки для обраного датасету існують мітки з вірною класифікацією, ефективність кластеризації вимірювалася у відсотках точності щодо еталонного розбиття після дефаззіфікації.) Проте, якщо не обмежувати пропоновану систему у кількості кластерів (система ініціалізується інтервалом допустимих значень $m$ (кількість кластерів) та параметру фаззифікації $\beta$), вельми цікавими є результати кластерування нейронів кожного з каскадів.  
+
+У таблицяі 5.5 наведена точність розбиття даних, коли $m \gg 3$ кластерів відповідно. Варто зазначити, що нейрони у пулі кожного каскаду реалізують метод нечітких середніх зі змінним значення фазифікатору, а отже є чутливими до довільно ініціалізовних цетрах кластерів, тому у таблицях наведені середня, мінімальна та максимальна точності кластерування (після дефаззіфікації).
+
+\begin{table}[H]
+\centering \small\begin{tabular}{rcccc}
+%\hline 
+%$m=6$ & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+%avg & 0.8832960 & 0.9186286 & 0.9044973 & 0.9163232 \\
+%min & 0.8209877 & 0.8521505 & 0.8490079 & 0.8458041 \\
+%max & 0.9489689 & 0.9679570 & 0.9605802 & 0.9790494 \\
+\hline 
+$m=7$ & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+avg & 0.8972948 & 0.9150268 & 0.9242503 & 0.9178207 \\
+min & 0.8536056 & 0.8461905 & 0.8723182 & 0.8600289 \\
+max & 0.9621849 & 0.9736172 & 0.9810146 & 0.9663462 \\
+\hline 
+$m=8$ & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+avg & 0.9065560 & 0.9296311 & 0.9243606 & 0.9248976 \\
+min & 0.8217056 & 0.8562179 & 0.8577202 & 0.8590278 \\
+max & 0.9474588 & 0.9789402 & 0.9848214 & 0.9747899 \\
+\hline 
+$m=9$ & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+avg & 0.9258154 & 0.9282887 & 0.9308971 & 0.9229753 \\
+min & 0.8689921 & 0.8270525 & 0.8684641 & 0.8556390 \\
+max & 0.9849170 & 0.9806397 & 0.9664112 & 0.9748284 \\
+\hline 
+$m=10$ & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+avg & 0.9213191 & 0.9285106 & 0.9332528 & 0.9282907 \\
+min & 0.8663370 & 0.8722271 & 0.8652272 & 0.8766667 \\
+max & 0.9663420 & 0.9838095 & 0.9723656 & 0.9756335 \\
+\hline 
+$m=11$ & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+avg & 0.9295315 & 0.9408977 & 0.9317242 & 0.9295800 \\
+min & 0.8520268 & 0.8964924 & 0.8890781 & 0.8788656 \\
+max & 0.9716166 & 0.9848485 & 0.9704892 & 0.9798627 \\
+\hline 
+$m=12$ & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+avg & 0.9349407 & 0.9433244 & 0.9337934 & 0.9306632 \\
+min & 0.8815133 & 0.8949802 & 0.8798160 & 0.8486111 \\
+max & 0.9795274 & 0.9783497 & 0.9630952 & 0.9772727 \\
+\hline 
+$m=13$ & $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+avg & 0.9420998 & 0.9398127 & 0.9375204 & 0.9357708 \\ 
+min & 0.8823175 & 0.8614025 & 0.8882479 & 0.8828348 \\
+max & 0.9807518 & 0.9788034 & 0.9753452 & 0.9748873 \\
+\end{tabular}
+\caption{Точність кластерування для $m \in [7,13]$, $\beta \in [2,5]$}
+\end{table}
+
+На рис~\ref{fig:IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier} зображено залежність точності кластерування від кількості кластерів. Цікаво, що при, здавалося б, очевидному рішенні обрати кількість кластерів рівною трьом, отримуємо чиненайгіршу точнічть кластерування (при $\beta = 2$) після дефаззіфікації щодо еталонного розбиття (Для порівняння на рис.~\ref{fig:ClusteredIrisDatasetM7Beta5} та рис.~\ref{fig:ClusteredIrisDatasetM14Beta4} наведені розбиття, що їх запропонували нейрони-переможці деяких каскадів, де $m \gg 3$).
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=5.5in]{IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf}
+\caption{Точність кластерування від кількості кластерів та параметру фаззіфіказії}
+\label{fig:IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier}
+\end{center}
+\end{figure}
+
+Цьому легко знайти пояснення, адже метод нечітких $k$-середніх (а саме цей метод у цьому експерименті реалізовують вузли пулів кожного каскаду) добре розпізнає кластери лише гіперсферичної форми. Проте кластер довільної (негіперсферичної) форми, можна розбити на декілька гіперсферичних підкластерів, що й відбувається у каскадах, де $m > 3$, що пропонують розбиття на дрібні кластери. На рисунках \ref{fig:3DClusteredIrisDatasetM7Beta5} та \ref{fig:3DClusteredIrisDatasetM12Beta4} наведені розбиття деяких каскадів, де кількість кластерів більша від кількості класів еталонної вибірки; тут можна побачити, що декілька кластерів, що після дефазифікації будуть віднесені до одного класу, наприклад, Iris Virginica розташовані поруч один з одним, тобто є складовими більшого кластеру негіперсферичної форми.
+
+\begin{figure}
+\begin{center}
+\includegraphics{ClusteredIrisDatasetM7Beta5.pdf}
+\caption{Розкластерований датасет <<Іриси Фішера>> при $m=7$, $\beta=5$ (Точність кластерування $\approx 93\%$)}
+\label{fig:ClusteredIrisDatasetM7Beta5}
+\end{center}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics{ClusteredIrisDatasetM12Beta4.pdf}
+\caption{Розкластерований датасет <<Іриси Фішера>> при $m=12$, $\beta=4$ (Точність кластерування $\approx 96\%$)}
+\label{fig:ClusteredIrisDatasetM14Beta4}
+\end{center}
+\end{figure}
+
+\begin{table}
+\caption{Точність кластерування при $m=14$} \label{tab:ClusteringAccuracyM=14}
+\centering \small\begin{tabular}{rcccc}
+& $\beta=2$ & $\beta=3$ & $\beta=4$ & $\beta=5$ \\ \hline
+avg & 0.9369168 & 0.9448829 & 0.9383179 & 0.9403416 \\
+min & 0.8847819 & 0.8953380 & 0.8787879 & 0.9069805 \\
+max & 0.9731262 & 0.9754579 & 0.9918301 & 0.9762515 \\
+\end{tabular}
+
+\end{table}
+
+Таким чином, видається доречним, навіть у випадку, коли відоме еталонне розбиття датасету, дозволити системі обрати кінцеву кількість кластерів самостійно, особливо у випадку, коли вузли системи реалізують однаковий метод кластерування. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{3DClusteredIrisDatasetM7Beta5.pdf}
+\caption{Розкластерований датасет <<Іриси Фішера>> при $m=7$, $\beta=5$ (Точність кластерування $\approx 93\%$)}
+\label{fig:3DClusteredIrisDatasetM7Beta5}
+\end{center}
+\end{figure}
+
+Варто зауважити, що у цьому випадку для визначення локально оптимального розбиття доцільно використовувати модифіковані індекси валідності, чи такі, що не залжать від відстані цетрів кластері, наприклад ті, що ґрунтуються на щільності (density-based).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{3DClusteredIrisDatasetM12Beta4.pdf}
+\caption{Розкластерований датасет <<Іриси Фішера>> при $m=12$, $\beta=4$ (Точність кластерування $\approx 96\%$)}
+\label{fig:3DClusteredIrisDatasetM12Beta4}
+\end{center}
+\end{figure}
+
+Наступну серію експериментів було проведено на датасеті <<Знання студентів про електричні машини постійного струму>>.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{StudentKnowledgeDataSet.pdf}
+\caption{Датасет <<Знання студентів про електричні машини постійного струму>>}
+\label{fig:StudentKnowledgeDataSet}
+\end{center}
+\end{figure}
+
+Цей датасет було додано до UCI репозиторію у 2013 році, він містить 403 паттерни, кожен з п'ятьма атрибутами:
+
+\begin{enumerate}
+\item STG: кількість часу, що його витратив(витратила) студент(ка) на навчання цільового матеріалу,
+\item SCG: Кількість повторюваннь навчання цільового матеріалу студентом(студенткою),
+\item STR: Кількість часу, що його використав(використала) студент(ка) на навчання матеріалу, пов'язаного з цільовим матеріалом,
+\item LPR: Оцінка, що її отримав(отримала) студент(ка) на іспиті з предмету, пов'язаного з цільовим предметом,
+\item PEG: Оцінка, що її отримав(отримала) студент(ка) на іспиті з цільового предмету,
+\end{enumerate}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{3DStudentKnowledgeDataSet.pdf}
+\caption{Датасет <<Знання студентів про електричні машини постійного струму>>}
+\label{fig:3DStudentKnowledgeDataSet}
+\end{center}
+\end{figure}
+
+Попарні графіки атрибутів наведено на рис.~\ref{fig:StudentKnowledgeDataSet} та у тримірному просторі на рис.~\ref{fig:3DStudentKnowledgeDataSet}.
+
+\begin{figure}
+\begin{center}
+\includegraphics{3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf}
+\caption{Датасет <<Знання студентів про електричні машини постійного струму>>}
+\label{fig:3DClusterizedStudentKnowledgeDataSetM4Beta2}
+\end{center}
+\end{figure}
+
+Для цього експерименту нейрони-узагальнювачі керувалися рекурентним Ксі-Бені Індексом при визначанні локально-оптимального нейрона (з найлішпшим параметром фаззіфікації) та каскаду (з оптимальною кількістю кластерів).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics{ClusterizedStudentKnowledgeDataSetM4Beta2.pdf}
+\caption{Датасет <<Знання студентів про електричні машини постійного струму>>}
+\label{fig:ClusterizedStudentKnowledgeDataSetM4Beta2}
+\end{center}
+\end{figure}
+
+Оптимальне розбиття, що його наведено на рис.\ref{fig:3DClusterizedStudentKnowledgeDataSetM4Beta2} та на рис.\ref{fig:ClusterizedStudentKnowledgeDataSetM4Beta2}, надав другий нейрон третього каскаду з $m=4$, $\beta=2$ з коефіцієнтом Ксі-Бені $0.38155$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Розв’язування практичних задач за допомогою розробленої самонавчанної гібридної каскадної системи, що еволюціонує}
+
+Проблема здорового харчування - одна з найактуальніших у наші дні. Повноцінне харчування передбачає споживання достатньої кількості білків, жирів, вуглеводів, вітамінів, макро- і мікроелементів для нормального функціонування організму в цілому. Багато хвороб шлунково-кишкового тракту «молодіють» - це гастрити, виразкова хвороба шлунка і різні порушення обміну речовин. Фізичне здоров'я, стан імунітету, довголіття, психічна гармонія - все це безпосередньо пов'язано з проблемою здорового харчування людини. Для студентів проблема харчування стоїть особливо гостро. У зв'язку з браком часу у студентів немає можливості дотримуватися правильного режиму прийомів їжі в кількості 3-4 разів. Також характерний в основному сидячий спосіб життя - гіподинамія. У поєднанні з незбалансованим раціоном харчування це згубно впливає на організм і його стан. 
+Звісно, вирішення проблеми здорового харчування потребує комплексного підходу, проте інфомованість - невід'ємна складова правильного підбору раціону здорового харчування. Насьогодні нескладно знайти інформацію щодо рекомендованої денної кількості калорій, білків, жирів та вуглеводів, проте важко дати оцінку конкретому прийому їжі, наприклад, придбаному у їдальні, де немає етикеток з такою інформацією. Мобільний додаток <<Spoon app>> може стати у нагоді, коли користувач прагне бути проінформованим щодо поживності конкретної трапези, роблячи аналіз світлини тарілки з їжею. Вхідними даними мобільного додатку є світлина, що її користувач має зробити таким чином, аби тарілка знаходилася у центрі, а також тип тарілки (звичайна, глибока, дуже глибока) аби на виході додаток мав обґрунтовану кількість калорій та поживність порції, що була зображена на світлині. 
+
+\begin{figure}[H]
+\begin{center}
+\fbox{\includegraphics{SpoonAppClassification.png}}
+\caption{Другий етап аналізу світлини з прийомом їжі мобільним додатком Spoon App (навчаняя з підкріпленням)}
+\label{fig:SpoonAppClassification}
+\end{center}
+\end{figure}
+
+Аналіз світлини можна розбити на декілька етапів: 
+\begin{enumerate}
+\item кластерування даних зображених на світлині (відбувається на стороні клієнту)
+\item ідентифікація окремих складових прийому їжі: класифікація кожного зображення, після розбиття світлини на кластери на першому етапі (відбувається на серверній стороні), визначення типу продукту за допомогою бази даних, що знаходиться на сервері, та подальше визначанні кількості калорій, співвідношення білкі, жирів та вуглеводів.
+\end{enumerate}
+
+\begin{figure}[H]
+\begin{center}
+\fbox{\includegraphics{SpoonAppClustering.png}}
+\caption{Перший етап аналізу світлини з прийомом їжі мобільним додатком Spoon App (кластерування за умови невизначенності щодо кількості кластерів)}
+\label{fig:SpoonAppClustering}
+\end{center}
+\end{figure}
+
+Другий етап у певному сенсі є навчанням з підкріпленням, адже користувачеві пропонується підтвердити чи скорегувати кінцевий результат класифікації, як зображено на рис.~\ref{fig:SpoonAppClassification}. Проте більш цікавим нам видається саме перший етап аналізу світлини, і пропонована гібридна самонавчана система використовується саме на цьому етапі, адже вона краще від інших існуючих систем задовольняє умовам, що їх було висунуто на етапі формування технічних вимог до програмного забеспечення (Software Requirements Specifications):
+
+\begin{itemize}
+\item кластерування має проходити за умови невизначенності щодо кількості кластерів,
+\item оскільки кластерування відбувається на стороні кліенту, важливо мінімізувати обслювальну складність алгоритму, а отже перевага надається методам послідовного кластерування.
+\end{itemize}
+
+По завершенні аналізу на першому етапі мобільний додаток попронує розбиття світлини на $m$ кластерів, як показано на рис.~\ref{fig:SpoonAppClustering}. Варто зауважити, що межі кластерів, що їх визначила самонавчана система, дещо відрізняються від тих, що зображені на рис.~\ref{fig:SpoonAppClustering}, для того, щоб користувачеві було зручніше візуально сприймати розбиття світлини на кластери, пункирні лініїї, що зображуть межі кластерів, на декілька міліметрів віддалені від меж дійсних кластерів, проте на сервер для подальшої класифікації відправляється світлина з розбиттям, що запропонувала система. На цьому етапі користувач може скорегувати розбиттся, перетягнувши пунктирну лінію меж кластерів, чи зовсім видалити пропонований кластер. Хоча навчання з підкріпленням у прямому сенсі, відбувається лише на етапі классифікації (база даних на сервері оновлюються, коли користувач корегує результат класифікації), а на цьому етапі маємо саме навчання без учителя, це все ж таки дає змогу у певному сенсі дати оцінку кластеруванню системи: вважаємо кластерування успішним, якщо користувач не робив жодних змін до пропонованого розбиття, та неуспішним, коли розбиття було скореговане.
+Після бета тестування мобільного додатку маємо наступні результати:
+
+\begin{table}[t]
+\centering  \begin{tabular}{r | c}
+кількість та межі кластерів залишилися незмінними & 608 \\ \hline
+межі кластеров було дещо змінено користувачем, \\проте кількість кластерів залишилась незмінною & 61 \\ \hline
+користувач змінив кількість кластерів \\ та межі пропонованих кластерів & 52 \\ \hline 
+користувач видалив кластер(и), межі інших пропонованих \\ кластерів лишилися незмінні & 29
+\end{tabular}
+\caption{Результати бета тестування першого етапу (кластерування за умови невизначенності щодо кількості кластерів) аналізу світлини мобільним додатком <<Spoon App>>}
+\end{table}
+
+Цікавим видається перебіг подій, коли користувач видалив один кластер, проте залишим межі інших кластерів незмінними, у такому випадку, як зазначалося вище, вважається що кластерування не було успішним. Проте подальший аналіз показав, що у 90\% таких випадків користувач залишив на тарілці неїстівний предмет (виделку, ложку тощо), і хоча система вірно відвела йому окремий кластер, не має сенсу класифікувати його та визначати калорійність цього предмету, тому логічно, що користувач видалив його на цьому етапі. У 10\% випадків, як показав аналіз світлин з початковим кластеруванням, що запропонувала самонавчана система, та світлин після корегування користувачем, користувач свідомо видаляв складову прийому їжі, зазвичай найменш корисну (тітечко, шоколад тощо). Тому видається доцільним ці 4\% світлин також віднести до таких, що були вірно розкластеровані системою (яка, проте, не бере до уваги людський фактор).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Розв’язування практичних задач за допомогою розробленої гібридної каскадної нейро-фаззі мережі, що еволюціонує, з оптимізацією пулу нейронів}
+
+Пропоновану гібридну каскадну нейро-фаззі мережу, що еволюціонує, було використано для вирішення задачі прогнозування витрат нормогодин на ремонті роботи візків вагонів 61-425, 61-181, 47Д та 47К у ТОВ <<Харківський вагонобудівний завод>>. Коректне формування й оптимізація виробничої програми є досить нелегким процесом, але дуже важливим. Незаплановані втрати фінансових або інших ресурсів можуть поставити під загрозу саме існування підприємства. До того ж через велику собівартість одиниці продукції будь-яки накладки у виробництві товару можуть серйозно вдарити по стабільності заводу в цілому. Все це робить оптимізацію виробничої програми першочерговим завданням планового відділу підприємства. \hl{Рома, допиши пожалуйста, про важность ремнота тележек, и особенно важность прогнозирования этого дела}
+
+У таблиці~\ref{tab:TrolleyCarRepairs} наведені типи та послідовність ремонтних робіт для візків вагонів 61-425, 61-181, 47Д та 47К. Для формування вектору вхідних даних були залучені експерти, що надали оцінку складності тому чи іншому типу ремонтних робіт, якщо це необхідно. Вочевидь, складність та тривалість деякіх робіт не залежить від стану візку на момент початку ремонтного циклу, наприклад, виконання <<Сушки атмосферної відремонтованих деталей і складових одиниць візку 0.162-04.20.00: 000 (1) після грунтування>> або <<Випробування гасителів коливання 45.30.045>> займає приблизно однакову кількість нормогодин, а отже не потребує експертної оцінки (якщо такі типи робіт необхідні, оцінка їх складності завжди дорівнює одиниці). Проте витрата нормогодин на більшість типів ремонтих робіт (наприклад, на <<Ремонт деталей підвісок 30.30.025>> чи <<Ремонт важелiв гальмiвної важiльної передачi>>) суттєво варіюється в залежності від характеру та ступеню отриманих пошкоджень і потребує експертної оцінки (оцінка надається в інтервалі $(0, 1]$, де 1 - найвища складність роботи).
+
+Для вирішення поставленого завдання було обрано саме пропоновану гідбридну нейронну мережу, адже важливим аспектом є можливість системи працювати з датасетом, де кількість паттернів нижча від кількості вхідних параметрів. Пропоновану гібридну нейро-фаззі мережу було навчано на тренувальному датасеті з 62-х паттернів, кожен з яких містить 69 атрибутів та, на момент впровадження, перевірено на тестовому датасеті, що містив 20 паттернів. Система продемонструвала високу точність прогнозу: RMSE = 0.08506766, SMAPE = 0.2545574, абсолютна похибка не перевищує 27 нормогодин (при середній витраті у 1150 нормогодин для повного циклу ремонтих робіт та 600 нормогодин для часткового).
+
+\begin{longtable}{|p{2.2cm}|p{7cm}|p{2.2cm}|p{2.2cm}|}
+\caption{Типи ремонтних робіт для візків вагонів 61-425, 61-181, 47Д та 47К}\\\hline
+\label{tab:TrolleyCarRepairs}
+Код\newlineроботи & Назва роботи & Попередні роботи & Подальші роботи\\\hline
+\endfirsthead
+\hline
+Код\newlineроботи &   Назва роботи &   Попередні роботи &   Подальші роботи	\\\hline
+\endhead %
+109.01.001 & 	Розбирання візків 0.162-04.20.00~: 000~(1) &  	&  	109.05.046 103.01.002	\\\hline
+109.01.002 & 	Розбирання візків 0.114-04.10.00~: 000~(1) & 	&	109.05.047 103.01.002 	\\\hline
+109.05.046 &	Попередня дефектація вузлів візку 0.162-04.20.00~: 000~(1) & 	 109.01.001 &  	109.05.047 109.05.049 109.01.004	\\\hline
+109.05.047 & 	Попередня дефектація вузлів візку 0.114-04.10.00~: 000~(1) & 	109.05.046 109.01.002 &  	109.05.050 109.01.004	\\\hline
+109.05.049 & 	Абразивне очищення деталей і вузлів візку 0.162-04.20.00~: 000~(1) & 	109.05.046 &  	109.01.022 109.01.035 109.01.036 109.01.003 	\\\hline
+109.05.050 & 	Абразивне очищення деталей і вузлів візку 0.114-04.10.00~: 000~(1) & 	109.05.047 &  	109.01.022 109.01.035 109.01.036 109.01.003 	\\\hline
+109.01.003 & 	Підготовка шпінтонов для ремонту &  	109.05.049 109.05.050 &  	109.05.051 	\\\hline
+109.05.051 & 	Pемонт шпінтонов &  	109.01.003 &  	109.01.031 109.01.032	\\\hline
+109.01.004 & 	Виготовлення комплекту деталей для ремонту візків &  	109.05.046 109.05.047 109.05.048 &  	109.01.005 109.01.006	\\\hline
+109.01.005 & 	Фарбування виготовлених деталей візку 0.162-04.20.00~: 000~(1) &  	109.01.004 &  	109.05.052	\\\hline
+109.05.052 & 	Сушка атмосферна виготовлених деталей візку 0.162-04.20.00~: 000~(1) &  	109.01.005 &  	109.01.044 109.01.007 109.01.009 	\\\hline
+109.01.006 & 	Фарбування виготовлених деталей візку 0.114-04.10.00~: 000~(1) &  	109.01.004 &  	109.05.053	\\\hline
+109.05.053 & 	Сушка атмосферна виготовлених деталей візку 0.114-04.10.00~: 000~(1) &  	109.01.006 &  	109.01.044 109.01.007 109.01.009 109.01.047 	\\\hline
+109.01.007 & 	Ремонт рами візку 0.162-04.20.00~: 000~(1) &  	109.05.052 109.05.053 109.05.048 &  	109.01.008	\\\hline
+109.01.008 & 	Грунтування рами візку 0.162-04.20.00~: 000~(1) &  	109.01.007 &  	109.05.054	\\\hline
+109.05.054 & 	Сушка атмосферна рами візку 0.162-04.20.00~: 000~(1) &  	109.01.008 &  	109.01.029 109.01.010	\\\hline
+109.01.009 & 	Ремонт рами візку 0.114-04.10.00~: 000~(1) &  	109.05.052 109.05.053 109.05.048 &  	109.01.010	\\\hline
+109.01.010 & 	Грунтування рами візку 0.114-04.10.00~: 000~(1) &  	109.01.009 &  	109.05.055	\\\hline
+109.05.055 & 	Сушка атмосферна рами візку 0.114-10.00~: 000~(1) після грунтування &  	109.01.010 &  	109.01.030 109.01.032	\\\hline
+109.01.044 & 	Ремонт надресорного брусу 3751-Н~(1) &  	109.05.052 109.05.053 109.05.048 &  	109.01.045	\\\hline
+109.01.045 & 	Грунтування надресорного брусу 3751-Н~(1)  &  	109.01.044 &  	109.05.056	\\\hline
+109.05.056 & 	Сушка атмосферна надресорного брусу 3751-Н~(1) після грунтування &  	109.01.045 &  	109.01.046	\\\hline
+109.01.046 & 	Фарбування надресорного брусу 3751-Н~(1) &  	109.05.056 &  	109.05.057	\\\hline
+109.05.057 & 	Фарбування надресорного брусу 3751-Н~(1) &  	109.01.046 &  	109.01.040 109.01.039	\\\hline
+109.01.047 & 	Ремонт надресорного брусу 3751-Н~(2) &  	109.05.052 109.05.053 109.05.048 &  	109.01.048	\\\hline
+109.01.048 & 	Грунтування надресорного брусу 3751-Н~(2)  &  	109.01.047 &  	109.05.058	\\\hline
+109.05.058 & 	Сушка атмосферна надресорного брусу 3751-Н~(2) після грунтування &  	109.01.048 &  	109.01.049	\\\hline
+109.01.049 & 	Фарбування надресорного брусу 3751-Н~(2) &  	109.05.058 &  	109.05.059	\\\hline
+109.05.059 & 	Сушка атмосферна надресорного брусу 3751-Н~(2) після фарбування &  	109.01.049 &  	109.01.041 109.01.039	\\\hline
+109.01.017 & 	Ремонт деталей підвісок 30.30.025 &  	109.05.052 109.05.053 &  	109.01.041 109.01.023 109.01.024  109.01.040	\\\hline
+109.01.018 & 	Ремонт тяги повідця &  	109.05.052 109.05.053 &  	109.01.041 109.01.039 109.01.025 	\\\hline
+109.01.019 & 	Ремонту запобіжного стрижня центрального підвішування &  	109.05.052 109.05.053 & 	109.01.041 109.01.039 109.01.025 	\\\hline 
+109.01.020 & 	Ремонт траверсів &  	109.05.052 109.05.053 & 	109.01.037 109.01.038 109.01.025 109.01.027	\\\hline
+109.01.021 & 	Ремонт тяги 13.41.033 &  	109.05.049 109.05.050 &  	109.01.037 109.01.038 109.01.025 109.01.027	\\\hline
+109.01.022 & 	Ремонт важелів гальмівної важільної передачі~(візків) &  	109.05.049 109.05.050 &  	109.01.037 109.01.038 109.01.025 109.01.027	\\\hline
+109.01.023 & 	Випробування деталей на розтяг 0.162-04.20.00~: 000~(1)  &  	109.01.017 &  	109.01.025 109.01.027	\\\hline
+109.01.024 & 	Випробування деталей на розтяг 0.114-04.10.00~: 000~(1) &  	109.01.017 &  	109.01.025 109.01.027	\\\hline
+109.01.025 & 	Грунтування відремонтованих деталей і складових одиниць візку 0.162-04.20.00~: 000~(1) &  	109.01.023 109.01.017 109.01.018 109.01.019 109.01.020  &  	109.05.060	\\\hline
+109.05.060 & 	Сушка атмосферна відремонтованих деталей і складових одиниць візку 0.162-04.20.00~: 000~(1) після грунтування &  	109.01.025 &  	109.01.026	\\\hline
+109.01.026 & 	Фарбування відремонтованих деталей і складових одиниць візку 0.162-04.20.00~: 000~(1) &  	109.05.060 &  	109.05.061	\\\hline
+109.05.061 & 	Сушка атмосферна відремонтованих деталей і складових одиниць візку 0.162-04.20.00~: 000~(1) після фарбування  &  	109.01.026 &  	109.01.037	\\\hline
+109.01.027 & 	Грунтування відремонтованих деталей і складових одиниць візку 0.114-10.00~: 000~(1) &  	109.01.024  109.01.017 109.01.018 109.01.019 109.01.020 &  	109.05.062	\\\hline
+109.05.062 & 	Сушка атмосферна відремонтованих деталей і складових одиниць візку 0.114-04.10.00~: 000~(1) після грунтування  &  	109.01.027 &  	109.05.057	\\\hline
+109.01.028 & 	Фарбування відремонтованих деталей і складових одиниць візку 0.114-04.10.00~: 000~(1)  &  	109.05.062 &  	109.05.063	\\\hline
+109.05.063 & 	Сушка атмосферна відремонтованих деталей і складових одиниць візку 0.114-04.10.00~: 000~(1) після фарбування  &  	109.01.028 &  	109.01.038	\\\hline
+109.01.029 & 	Установка термодатчиків на візок 0.162-04.20.00~: 000~(1) &  	109.05.054 &  	109.01.033 109.01.039 109.01.040	\\\hline
+109.01.030 & 	Установка термодатчиків на візок 0.114-04.10.00~: 000~(1)  &  	109.05.055 &  	109.01.041 109.01.034 109.01.039	\\\hline
+109.01.031 & 	Установка шпінтонов на рами візків 0.162-04.20.00~: 000~(1)  &  	109.05.051 109.05.054 &  	109.01.033 109.01.037	\\\hline
+109.01.032 & 	Установка шпінтонов на рами візків 0.114-10.00~: 000~(1)  &  	109.05.051  109.05.055 &  	109.01.034 109.01.038	\\\hline
+109.01.033 & 	Фарбування рами візку 0.162-04.20.00~: 000~(1)  &  	109.01.029 109.01.031 &  	109.05.064	\\\hline
+109.05.064 & 	Сушка атмосферна рами візку 0.162-04.20.00~: 000~(1) після фарбування  &  	109.01.033 &  	109.01.037	\\\hline
+109.01.034 & 	Фарбування рами візку 0.114-04.10.00~: 000~(1)  &  	109.01.030 109.01.032 &  	109.05.065	\\\hline
+109.05.065 & 	Сушка атмосферна рами візку 0.114-04.10.00~: 000~(1) після фарбування &  	109.01.034 &  	109.01.038	\\\hline
+109.01.035 & 	Ремонт підвісок башмаків візків  &  	109.05.049 109.05.050 &  	109.01.037 109.01.038	\\\hline
+109.01.036 & 	Ремонт пружин візків  &  	109.05.049 109.05.050 &  	109.01.040 109.01.041 109.01.039	\\\hline
+109.01.037 & 	Збірка і монтаж гальмової важільної передачі візку 0.162-04.20.00~: 000~(1)  &  	109.01.021 109.01.022 109.01.020 109.01.035 109.05.061 109.05.064 109.01.031 &  	109.01.040 109.01.039	\\\hline
+109.01.038 & 	Збірка і монтаж гальмової важільної передачі візку 0.114-04.10.00~: 000~(1)  &  	109.01.021 109.01.022 109.01.020 109.01.035 109.05.063 109.05.065 109.01.032 &  	109.01.041 109.01.039	\\\hline
+109.01.039 & 	Випробування гасителів коливання 45.30.045  &  	109.01.036 109.01.037 109.05.057  &  	109.01.040 109.01.041	\\\hline
+109.01.040 & 	Збірка візку 0.162-04.20.00~: 000~(1)  &  	109.01.036 109.01.037 109.01.039 109.05.057 109.01.017 109.01.018 &  	109.01.043	\\\hline
+109.01.043 & 	Фарбування візку 0.162-04.20.00~: 000~(1) в зборі  &  	109.01.040 &  	109.05.066	\\\hline
+109.05.066 & 	Сушка атмосферна візок 0.162-04.20.00~: 000~(1) в зборі  &  	109.01.043 &  		\\\hline
+109.01.041 & 	Збірка візку 0.114-04.10.00~: 000~(1)  &  	109.01.036 109.01.038 109.01.039 109.01.017 109.01.018  &  	109.01.042	\\\hline
+109.01.042 & 	Фарбування візку 0.114-10.00~: 000~(1) в зборі  &  	109.01.041 &  	109.05.067	\\\hline
+109.05.067 & 	Сушка атмосферна візок 0.114-10.00~: 000~(1) в зборі  &  	109.01.042 &  		\\\hline
+109.05.048 & 	Дефектація візків  &  	109.05.049 109.05.050 &  	109.01.007 109.01.009 109.01.044 109.01.047 109.01.004	\\\hline
+103.01.002 & 	Нове формування пасажирської колісної пари РУ1Ш-950 Б  &  	 109.01.001 109.01.002 &  	103.01.003	\\\hline
+103.01.003 & 	Фарбування колісної пари РУ1Ш-950 ТУ 24.05.816-82~(для вагона мод. 47К)  &  	103.01.002 &  	109.01.040 109.01.041	\\\hline
+
+\end{longtable}
+
+\section*{Висновки до розділу~\ref{ch:Experiments}}
+
+\begin{enumerate}
+\item Виконано програмну реалізацію запропонованого у підрозділі \ref{sec:ExtendedNeoFuzzyNeuron} розширеного нео-фаззі нейрону, який реалiзує нечiтке висновуння за Такаґi\=/Суґено довiльного порядку. Продемонстровано, що розширені нео-фаззі нейрони мають покращенi апроксимуючi властивостi порівняно з традиційними нео-фаззі нейронами. Досліджено залежність точності прогнозування розширеними нео-фаззі нейронами як штучно сгенерованих, так і дійсних хаотичних часових рядів від порядку нечіткого висновування та кількості функцій належності.
+\item Проведено імітаційне моделювання запропонованої у розділі \ref{ch:CascadedNeoFuzzySystemWithPoolOptimization} архiтектури (що ґрунтується на розширених нео-фаззі нейронах) та методів навчання гiбридної каскадної нейронної мережi, що еволюцiонує, з оптимiзацiєю пулу нейронiв у кожному каскадi. Показано що пропоновані нейрони-узагальнювачі реалiзують оптимальний за точнiстю прогноз нелiнiйних стохастичних i хаотичних сигналiв у онлайн режимi.
+\item Виконано програмну реалізацію запропонованого у підрозділі \ref{sec:MultidimentionalNeoFuzzyNeuron} багатовимірного нео-фаззі нейрона.
+\item Змодельовано запропоновану у підрозділі \ref{sec:MIMOEvolvingCascadedSystemBuiltOnMNFNs} MIMO архiтектуру з оптимiзацiєю пулу багатовимiрних нейронiв у кожному каскадi, що реалізує нелінійне відображення $R^n \rightarrow R^g$ у режимі послідовного обробляння даних. Показано, що запропоновані багатовимiрні узагальнюючі елементи в режимi реального часу реалiзують оптимальне об’єднання багатовимiрних вихiдних сигналiв нейронiв пулу каскадів.
+\item Проведено імітаційне моделювання запропонованої у розділі \ref{ch:EvolvingClusteringSystem} архiтектури i методу самонавчання каскадної нейро-фаззi системи, що еволюцiонує, для послiдовного кластерування потокiв даних з автоматичним визначенням оптимальної кiлькостi кластерiв.
+\item Розв’язано практичну задачу нечіткого кластерування світлин для подальшого їх классифікування за умови невизначенності щодо кількості кластерів та рівня їх розмитості за допомогою самонавчанної гібридної системи, що її було запропоновано у підрозділі \ref{sec:EvolvingSelfLearningSystemArchitecture}.
+\item Розв’язано практичну задачу прогнозування витрат нормогодин для ремонтних робіт візків вагонів 61-425, 61-181, 47Д та 47К у ТОВ <<Харківський вагонобудівний завод>> за допомогою каскадної гібридної нейро-мережі, що еволюціонує, та модифікованого методу її навчання, які було запропоновано у підрозділі~\ref{sec:OptimizedCascadedNeuralNetworkArchitecture}.
+\end{enumerate}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Висновки}
+\label{ch:Conclusions}
+
+В дисертаційній роботі представлено результати, що відповідають меті дослідження, вирішена актуальна проблема синтезу нетрадиційних гібридних нейронних мереж зі зростаючою архітектурою, здатних функціювати у режимі послідовного обробляння даних. Отримані результати мають важливе наукове і практичне значення для створення ефективних систем прогнозування, ідентифікування, що функціонують в умовах апріорної і поточної структурної і параметричної невизначеності та послідовного кластерування за умови невизначенності щодо кількості кластерів, їх форми та взаємного перекриття. Проведені дослідження дозволили зробити такі висновки:
+
+\begin{enumerate}
+
+\item Виявлено недоліки існуючих гібридних нейро-фаззі систем: неможливість функціонувати в режимі реального часу і відсутність механізмів структурної адаптації, внаслідок чого такі системи є адаптивними лише з точки зору налаштування своїх параметрів. В результаті аналізу існуючих методів структурної адаптації архітектур традиційних нейронних мереж виділено так званий конструктивний підхід, перевагою якого є значно менша обчислювальна складність (в порівнянні з деструктивним підходом).
+
+\item Запропонований розширений нео-фаззі нейрон, який дозволяє реалізовувати нечітке висновуння за Такаґі-Суґено довільного порядку, і має покращені апроксимуючі властивості.
+
+\item Запропонована архітектура, що ґрунтується на розширених нео-фаззі нейронах, та методи навчання гібридної каскадної нейронної мережі, що еволюціонує, з оптимізацією пулу нейронів у кожному каскаді, які реалізують оптимальний за точністю прогноз нелінійних стохастичних і хаотичних сигналів у онлайн режимі. Варто зазначити, що оптимізіція пулу нейронів дуже доречна саме у разі застосування системи для аналізу даних в онлайн режимі, адже використання узагальнюючих нейронів дозволяє визначати оптимальний нейрон на кожному етапі функціонування системи, який з високою вірогідністю може змінюватися у випадку послідовного обробляння сигналів нестаціонарних об'єктів.
+
+\item Запропоновано архітектуру багатовимірного нео-фаззі нейрона та метод його навчання, що забезпечують підвищену швидкість налаштування синаптичних ваг та додаткові згладжуючі властивості.
+
+\item Запропоновано архітектуру та рекурентний метод навчання багатовимірного узагальнюючого елементу, що в режимі реального часу реалізує оптимальне об'єднання багатовимірних вихідних сигналів нейронів пулу каскаду.
+
+\item Запропоновано MIMO архітектуру та методи навчання гібридної каскадної нейронної мережі з оптимізацією пулу багатовимірних нейронів у кожному каскаді, що реалізують оптимальний за точністю прогноз нелінійних стохастичних і хаотичних сигналів у онлайн режимі.
+
+\item Запропоновано архітектуру і метод самонавчання каскадної нейро-фаззі системи, що еволюціонує, для послідовного кластерування потоків даних з автоматичним визначенням оптимальної кількості кластерів.Пропонована система не містить жодних порогових параметрів, що задаються суб'єктивно, а процес оцінювання якості її функціонування визначається шляхом відшукання оптимального значення певного індексу дійсності розбиття даних на кластери (їх поточна оцінка також проводиться в режимі реального часу). Відмінною особливістю пропонованої системи є те, що вона самостійно визначає і поточне значення фаззіфікатору, і оптимальну кількість кластерів на кожному етапі обробляння даних.
+
+\item Розв’язано практичну задачу нечіткого кластерування світлин для подальшого їх классифікування за умови невизначенності щодо кількості кластерів та рівня їх розмитості за допомогою пропонованої самонавчанної гібридної системи.
+
+\item Розв’язано практичну задачу прогнозування витрат нормогодин для ремонтних робіт візків вагонів 61-425, 61-181, 47Д та 47К у ТОВ <<Харківський вагонобудівний завод>> за допомогою пропонованої каскадної гібридної нейро-мережі, що ґрунтується на розширених нео-фаззі нейронах.
+
+\end{enumerate}
+
 
 \bibliographystyle{ugost2008ns}
 \bibliography{references}	
