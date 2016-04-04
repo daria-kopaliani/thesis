@@ -250,7 +250,7 @@ $l=1,2,\dots,h$ -- кількість синаптичних ваг, а отже і функцій належності $\mu_{
 Таким чином, нелінійний синапс $NS_i$ реалізує нечітке висновування 
 
 \begin{equation}
-\text{ЯКЩО } x_i \text{ У } X_{li} \text{ ТОДІ ВИХІД  } w_{li},
+\text{якщо } x_i \text{ це } X_{li} \text{ тоді вихід} w_{li},
 \end{equation}
 \medskip
 
@@ -265,7 +265,7 @@ $w_{li}$ -- сінглтон (синаптичний ваговий коефіцієнт у консеквенті).
 \begin{equation}\label{eq:FirstascadeNeoFuzzyNeuronOutputs}
 \begin{cases}
 \hat{y}_j^{[1]}\left(k\right)=\sum\limits_{i=1}^n{f_{ji}^{[1]}\left(x\left(k\right)\right)}=\sum\limits_{i=1}^n\sum\limits_{l=1}^h{w_{jli}^{[1]}\mu_{jli}^{[1]}\left(x_i\left(k\right)\right)},\\
-\text{ЯКЩО } x_i \text{ У } X_{li} \text{ ТОДІ ВИХІД } w_{li}
+\text{якщо } x_i \text{ це } X_{li} \text{ тоді вихід} w_{li},
 \end{cases}
 \end{equation}
 \medskip
@@ -313,7 +313,7 @@ f_{jl}^{[1]}\left(x_i\right)=w_{jli}^{[1]}\mu_{jli}^{[1]}\left(x_i\right)+w_{j,l
 \text{якщо }x\in\left[c_{j,l-1,i}^{[1]},c_{jli}^{[1]}\right],\\
 \frac{1}{4}\left(2-3\frac{2x_i-c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}{c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}+\left(\frac{2x_i-c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}{c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}\right)^3\right),\\
 \text{якщо }x\in\left[c_{jli}^{[1]},c_{j,l+1,i}^{[1]}\right],\\
-0,\text{ інакше},
+0,\text{ у протилежному випадку},
 \end{cases}
 \end{equation}
 \medskip
@@ -325,7 +325,7 @@ f_{jl}^{[1]}\left(x_i\right)=w_{jli}^{[1]}\mu_{jli}^{[1]}\left(x_i\right)+w_{j,l
 \begin{cases}
 \begin{rcases}
 1,\text{ якщо }x_{i}\in \left[c_{jli}^{[1]},c_{j,l+1,i}^{[1]}\right],\\
-0,\text{ інакше}
+0,\text{ у протилежному випадку}
 \end{rcases}
 \text{ для }g=1,\\
 \frac{x_i-c_{jli}^{[1]}}{c_{j,l+g-1,i}^{[1]}-c_{jli}^{[1]}}\mu_{jli}^{g-1,[1]}\left(x_i\right)+\frac{c_{j,l+g,i}^{[1]}-x_i}{c_{j,l+g,i}^{[1]}-c_{j,l+g,i}^{[1]}}\mu_{j,l+1,i}^{g-1,[1]}\left(x_i\right),\\
@@ -507,8 +507,8 @@ f_i\left(x_i\right)=w_i^T\tilde{\mu}_i\left(x_i\right),
 
 \begin{equation}
 \begin{aligned}
-\text{ЯКЩО } x_i \text{ У } X_{li} \text{ ТО ВИХІД }\\
-w_{li}^0+w_{li}^1x_i+\dots+w_{li}^px_p,\text{   }l=1,2,\dots,h,
+&\text{якщо } x_i \text{ це } X_{li} \text{ тоді вихід} \\
+&w_{li}^0+w_{li}^1x_i+\dots+w_{li}^px_p,\text{   }l=1,2,\dots,h,
 \end{aligned}
 \end{equation}
 \medskip
