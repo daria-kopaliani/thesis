@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70107" creator="Ipe 7.2.2">
-<info created="D:20160302104857" modified="D:20160307160534" title="test"/>
+<info created="D:20160302104857" modified="D:20160404122112" title="test"/>
 <preamble>%%BeginIpePreamble
   \usepackage{amsfonts}
   \newcommand{\R}{\mathbb{R}}
@@ -395,23 +395,6 @@ h
 </path>
 <text transformations="translations" pos="372 572" stroke="black" type="label" width="0" height="0" depth="0" valign="baseline" size="Large"></text>
 <text matrix="1 0 0 1 -64 -20" transformations="translations" pos="400 548" stroke="black" type="label" width="57.766" height="15.477" depth="5.89" valign="baseline" size="huge">$f_{j2}({x}_2)$</text>
-<group matrix="1 0 0 1 68 -32">
-<text matrix="1 0 0 1 -5.813 2" transformations="translations" pos="352 652" stroke="black" type="label" width="35.626" height="8.895" depth="5.89" valign="baseline" size="huge">$w_{j00}$</text>
-<path matrix="1 0 0 1 4 44" stroke="black">
-336 624 m
-384 624 l
-360 560 l
-336 624 l
-336 624 l
-</path>
-</group>
-<path stroke="black" arrow="normal/normal">
-432 572 m
-432 540 l
-</path>
-<path matrix="1 0 0 1 16 -10" stroke="black" fill="white">
-2 0 0 2 416 688 e
-</path>
 <path matrix="1 0 0 1 -22 -16" stroke="black">
 2 0 0 2 32 744 e
 </path>
@@ -555,12 +538,6 @@ h
 224 656 l
 272 708 l
 </path>
-<path stroke="black">
-432 676 m
-432 636 l
-432 636 l
-</path>
-<text matrix="1 0 0 1 4 -12" transformations="translations" pos="432 688" stroke="black" type="label" width="9.476" height="13.319" depth="0" valign="baseline" size="huge">$1$</text>
 <path stroke="black" arrow="normal/normal">
 293 728 m
 336 728 l

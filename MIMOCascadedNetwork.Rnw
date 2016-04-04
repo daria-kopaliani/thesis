@@ -104,7 +104,7 @@ set_parent('thesis.Rnw')
 \begin{equation}
 \begin{aligned}
 \hat{y}_d^{[2]j}=&\sum\limits_{i=1}^{n}\sum\limits_{l=1}^{h}{w_{dli}^{[2]j}\mu_{dli}^{[2]j}\left(x_i\right)}+\\
-&\sum\limits_{d=1}^{g}\sum\limits_{l=1}^{h}{w_{dl,n+1}^{[2]j}\mu_{dl,n+1}^{[2]j}\left(\hat{y}_d^{*[1]}\right)}\text{ }\forall\text{ }{d=1,2,\dots,g}
+&+\sum\limits_{d=1}^{g}\sum\limits_{l=1}^{h}{w_{dl,n+1}^{[2]j}\mu_{dl,n+1}^{[2]j}\left(\hat{y}_d^{*[1]}\right)}\text{ }\forall\text{ }{d=1,2,\dots,g}
 \end{aligned}
 \end{equation}
 \medskip
@@ -114,7 +114,7 @@ set_parent('thesis.Rnw')
 \begin{equation}
 \begin{aligned}
 \hat{y}_d^{[2]j}=&\sum\limits_{i=1}^{n}\sum\limits_{l=1}^{h}{w_{dli}^{[2]j}\mu_{dli}^{[2]j}\left(x_i\right)}+\\
-&\sum\limits_{d=1}^{g}\sum\limits_{p=n+1}^{n+m-1}\sum\limits_{l=1}^{h}{w_{dlp}^{[m]j}\mu_{dlp}^{[m]j}\left(\hat{y}_d^{*[p-n]}\right)}\text{ }\forall\text{ }{d=1,2,\dots,g}
+&+\sum\limits_{d=1}^{g}\sum\limits_{p=n+1}^{n+m-1}\sum\limits_{l=1}^{h}{w_{dlp}^{[m]j}\mu_{dlp}^{[m]j}\left(\hat{y}_d^{*[p-n]}\right)}\text{ }\forall\text{ }{d=1,2,\dots,g}
 \end{aligned}
 \end{equation}
 \medskip
@@ -152,7 +152,7 @@ w_{d}^{[m]j}=\biggl(&w_{d11}^{[m]j},\dots,w_{dh1}^{[m]j},w_{d12}^{[m]j},\dots,w_
 \begin{equation}\label{eq:ExpWeightedRecurrentLeastSquaresLearning}
 \begin{cases}
 w_d^{[m]j}\left(k+1\right)=w_d^{[m]j}\left(k\right)+\\
-\frac{
++\frac{
 P_d^{[m]j}\left(k\right)\left(y^d\left(k+1\right)-\left(w_d^{[m]j\left(k\right)}\right)^T\mu_d^{[m]j}\left(k+1\right)\right)}{\alpha+\left(\mu_d^{[m]j}\left(k+1\right)\right)^{T}P_d^{[m]j}\left(k\right)\mu_d^{[m]j}\left(k+1\right)
 }\mu_d^{[m]j}\left(k+1\right),\\
 P_d^{[m]j}\left(k+1\right)=\frac{1}{\alpha}\left(P_d^{[m]j}\left(k\right)-\frac{P_d^{[m]j}\left(k\right)\mu_d^{[m]j}\left(k+1\right)\left(\mu_d^{[m]j}\left(k+1\right)\right)^{T}P_d^{[m]j}\left(k\right)

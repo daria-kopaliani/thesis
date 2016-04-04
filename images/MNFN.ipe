@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70107" creator="Ipe 7.2.2">
-<info created="D:20160307222747" modified="D:20160307224428" title="1"/>
+<info created="D:20160307222747" modified="D:20160404122010" title="1"/>
 <preamble>%%BeginIpePreamble
   \usepackage{amsfonts}
   \newcommand{\R}{\mathbb{R}}
@@ -816,19 +816,6 @@ h
 2 0 0 2 48 728 e
 </path>
 <path matrix="1 0 0 1 32 -264" stroke="black" arrow="normal/normal">
-432 572 m
-432 540 l
-</path>
-<path matrix="1 0 0 1 48 -274" stroke="black" fill="white">
-2 0 0 2 416 688 e
-</path>
-<path matrix="1 0 0 1 32 -264" stroke="black">
-432 676 m
-432 636 l
-432 636 l
-</path>
-<text matrix="1 0 0 1 36 -276" transformations="translations" pos="432 688" stroke="black" type="label" width="9.476" height="13.319" depth="0" valign="baseline" size="huge">$1$</text>
-<path matrix="1 0 0 1 32 -264" stroke="black" arrow="normal/normal">
 453 520 m
 528 520 l
 </path>
@@ -839,27 +826,6 @@ h
 20 0 0 20 208 800 e
 </path>
 </group>
-<text matrix="1 0 0 1 94.187 -294" transformations="translations" pos="352 652" stroke="black" type="label" width="37.393" height="8.896" depth="3.1" valign="baseline" size="huge">$w_{n00}$</text>
-<path matrix="1 0 0 1 104 -252" stroke="black">
-336 624 m
-384 624 l
-360 560 l
-336 624 l
-336 624 l
-</path>
-<path matrix="1 0 0 1 32 104" stroke="black" arrow="normal/normal">
-432 572 m
-432 540 l
-</path>
-<path matrix="1 0 0 1 48 94" stroke="black" fill="white">
-2 0 0 2 416 688 e
-</path>
-<path matrix="1 0 0 1 32 104" stroke="black">
-432 676 m
-432 636 l
-432 636 l
-</path>
-<text matrix="1 0 0 1 36 92" transformations="translations" pos="432 688" stroke="black" type="label" width="9.476" height="13.319" depth="0" valign="baseline" size="huge">$1$</text>
 <path matrix="1 0 0 1 32 104" stroke="black" arrow="normal/normal">
 453 520 m
 528 520 l
@@ -871,14 +837,6 @@ h
 20 0 0 20 208 800 e
 </path>
 </group>
-<text matrix="1 0 0 1 94.187 74" transformations="translations" pos="352 652" stroke="black" type="label" width="36.031" height="8.896" depth="3.1" valign="baseline" size="huge">$w_{100}$</text>
-<path matrix="1 0 0 1 104 116" stroke="black">
-336 624 m
-384 624 l
-360 560 l
-336 624 l
-336 624 l
-</path>
 <path stroke="black" arrow="normal/normal">
 356 136 m
 432 136 l

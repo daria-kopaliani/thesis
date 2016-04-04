@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70107" creator="Ipe 7.2.2">
-<info created="D:20160307125131" modified="D:20160307135721" title="4"/>
+<info created="D:20160307125131" modified="D:20160404122556" title="4"/>
 <preamble>%%BeginIpePreamble
   \usepackage{amsfonts}
   \newcommand{\R}{\mathbb{R}}
@@ -385,13 +385,6 @@ h
 </path>
 <text matrix="1 0 0 1 12 -4" transformations="translations" pos="372 572" stroke="black" type="label" width="0" height="0" depth="0" valign="baseline" size="Large"></text>
 <text matrix="1 0 0 1 -52 -24" transformations="translations" pos="400 548" stroke="black" type="label" width="68.961" height="21.457" depth="8.39" valign="baseline" size="huge">$f_{jn}^{[2]}({x}_n^{[2]})$</text>
-<path matrix="1 0 0 1 12 -4" stroke="black" arrow="normal/normal">
-432 572 m
-432 540 l
-</path>
-<path matrix="1 0 0 1 28 -14" stroke="black" fill="white">
-2 0 0 2 416 688 e
-</path>
 <path matrix="1 0 0 1 -10 -7" stroke="black">
 2 0 0 2 32 744 e
 </path>
@@ -495,12 +488,6 @@ h
 224 656 l
 272 708 l
 </path>
-<path matrix="1 0 0 1 12 -4" stroke="black">
-432 676 m
-432 636 l
-432 636 l
-</path>
-<text matrix="1 0 0 1 16 -16" transformations="translations" pos="432 688" stroke="black" type="label" width="9.476" height="13.319" depth="0" valign="baseline" size="huge">$1$</text>
 <path matrix="1 0 0 1 12 -4" stroke="black" arrow="normal/normal">
 293 728 m
 336 728 l
@@ -726,13 +713,5 @@ h
 159.813 343.903 l
 </path>
 <text matrix="1 0 0 1 -4 28" transformations="translations" pos="400 372" stroke="black" type="label" width="0" height="0" depth="0" valign="baseline">$$</text>
-<text matrix="1 0 0 1 77.1155 -39" transformations="translations" pos="352 652" stroke="black" type="label" width="29.769" height="17.882" depth="6.99" valign="baseline" size="LARGE">$w_{j00}^{[2]}$</text>
-<path matrix="1 0 0 1 84 8" stroke="black">
-336 624 m
-384 624 l
-360 560 l
-336 624 l
-336 624 l
-</path>
 </page>
 </ipe>

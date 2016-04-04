@@ -1,0 +1,108 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: SelfLearningCascadedNetwork.aux
+The style file: ugost2008ns.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: references.bib
+Warning--I'm ignoring ref39's extra "booktitle" field
+--line 447 of file references.bib
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishet~al
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishet~al
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishet~al
+Warning--language is not defined: Englishet~al
+Warning--language is not defined: Englishet~al
+Warning--language is not defined: Englishet~al
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishand
+Warning--language is not defined: Russianet~al
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishvvol
+Warning--language is not defined: Englishnr
+Warning--language is not defined: Englishppages
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishvvol
+Warning--language is not defined: Englishnr
+Warning--language is not defined: Englishppages
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishppages
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishppages
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishvvol
+Warning--language is not defined: Englishnr
+Warning--language is not defined: Englishppages
+Warning--language is not defined: Russianand
+Warning--language is not defined: Russianppage
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishvvol
+Warning--language is not defined: Englishnr
+Warning--language is not defined: Englishppages
+Warning--language is not defined: Englishvvol
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishvvol
+Warning--language is not defined: Englishnr
+Warning--language is not defined: Englishppages
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishvvol
+Warning--language is not defined: Englishppages
+Warning--language is not defined: Englishvvol
+Warning--language is not defined: Englishppages
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishvvol
+Warning--language is not defined: Englishnr
+Warning--language is not defined: Englishppages
+Warning--empty journal in ref27
+Warning--language is not defined: Englishvvol
+Warning--language is not defined: Englishppages
+Warning--language is not defined: Englishand
+Warning--language is not defined: Englishvvol
+Warning--language is not defined: Englishppages
+You've used 38 entries,
+            4984 wiz_defined-function locations,
+            1506 strings with 16340 characters,
+and the built_in function-call counts, 25087 in all, are:
+= -- 3131
+> -- 837
+< -- 138
++ -- 284
+- -- 239
+* -- 1879
+:= -- 3196
+add.period$ -- 193
+call.type$ -- 38
+change.case$ -- 0
+chr.to.int$ -- 35
+cite$ -- 39
+duplicate$ -- 1137
+empty$ -- 2102
+format.name$ -- 313
+if$ -- 6134
+int.to.chr$ -- 4
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 247
+num.names$ -- 263
+pop$ -- 406
+preamble$ -- 1
+purify$ -- 186
+quote$ -- 0
+skip$ -- 1111
+stack$ -- 0
+substring$ -- 1194
+swap$ -- 677
+text.length$ -- 36
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 239
+warning$ -- 57
+while$ -- 195
+width$ -- 0
+write$ -- 776
+(There were 58 warnings)

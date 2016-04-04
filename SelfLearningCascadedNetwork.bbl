@@ -1,0 +1,335 @@
+\begin{thebibliography}{}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\selectlanguage{#1}\fi}
+\providecommand*{\href}[2]{{\small #2}}
+\providecommand*{\url}[1]{{\small #1}}
+\providecommand*{\BibUrl}[1]{\url{#1}}
+\providecommand{\BibAnnote}[1]{}
+\providecommand*{\BibEmph}[1]{#1}
+\ProvideTextCommandDefault{\cyrdash}{\hbox to.8em{--\hss--}}
+\providecommand*{\BibDash}{\ifdim\lastskip>0pt\unskip\nobreak\hskip.2em\fi
+\cyrdash\hskip.2em\ignorespaces}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[Abonyi and Feil(2007)]{ref25}\selectlanguageifdefined{english}
+\BibEmph{Abonyi~Janos, Feil~Balazs}. Cluster Analysis for Data Mining and
+  System Identification. \BibDash
+\newblock Birkh\&\#228;user Basel, 2007. \BibDash
+\newblock
+  ISBN:~\href{http://isbndb.com/search-all.html?kw=3764379871}{3764379871}.
+
+\bibitem[Dai et~al.(2006)Dai, Huang, Yeh and
+  Chen]{ref5}\selectlanguageifdefined{English}
+Adaptive Clustering for Multiple Evolving Streams~/ Bi-Ru~Dai, Jen-Wei~Huang,
+  Mi-Yen~Yeh, Ming-Syan~Chen~// \BibEmph{IEEE Trans. Knowl. Data Eng}. \BibDash
+\newblock 2006. \BibDash
+\newblock Vol.~18, no.~9. \BibDash
+\newblock P.~1166--1180. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1109/TKDE.2006.137;
+  http://doi.ieeecomputersociety.org/10.1109/TKDE.2006.137}.
+
+\bibitem[Arrow et~al.(1972)Arrow, Hurwicz and
+  Uzawa]{ref12}\selectlanguageifdefined{English}
+\BibEmph{Arrow~Kenneth~Joseph, Hurwicz~Leonid, Uzawa~Hirofumi}. Studies in
+  linear and non-linear programming. Stanford mathematical studies in the
+  social sciences. \BibDash
+\newblock Stanford,Ca~: Stanford university press, 1972. \BibDash
+\newblock
+  ISBN:~\href{http://isbndb.com/search-all.html?kw=0-8047-0562-3}{0-8047-0562-3}.
+  \BibDash
+\newblock URL: \BibUrl{http://opac.inria.fr/record=b1099343}.
+
+\bibitem[Beringer and
+  H{\"u}llermeier(2006{\natexlab{a}})]{ref6}\selectlanguageifdefined{English}
+\BibEmph{Beringer~J{\"u}rgen, H{\"u}llermeier~Eyke}. Online clustering of
+  parallel data streams~// \BibEmph{Data Knowl. Eng}. \BibDash
+\newblock 2006{\natexlab{a}}. \BibDash
+\newblock Vol.~58, no.~2. \BibDash
+\newblock P.~180--204. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1016/j.datak.2005.05.009}.
+
+\bibitem[Beringer and
+  H{\"u}llermeier(2006{\natexlab{b}})]{ref41}\selectlanguageifdefined{english}
+\BibEmph{Beringer~J{\"u}rgen, H{\"u}llermeier~Eyke}. Online clustering of
+  parallel data streams~// \BibEmph{Data Knowl. Eng}. \BibDash
+\newblock 2006{\natexlab{b}}. \BibDash
+\newblock Vol.~58, no.~2. \BibDash
+\newblock P.~180--204. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1016/j.datak.2005.05.009}.
+
+\bibitem[Bezdek(1981)]{ref21}\selectlanguageifdefined{english}
+\BibEmph{Bezdek~J.C.} Pattern recognition with fuzzy objective function
+  algorithms. \BibDash
+\newblock Kluwer Academic Publishers, 1981.
+
+\bibitem[Bodyanskiy(2005)]{ref39}\selectlanguageifdefined{english}
+\BibEmph{Bodyanskiy~Yevgeniy}. Computational Intelligence Techniques for Data
+  Analysis~// Leipziger Informatik-Tage~/ Ed.\ by\ Klaus~P.~Jantke,
+  Klaus-Peter~F{\"a}hnrich, Wolfgang~S.~Wittig. \BibDash
+\newblock Vol.~72 of \BibEmph{LNI}. \BibDash
+\newblock GI, 2005. \BibDash
+\newblock P.~15--36. \BibDash
+\newblock URL:
+  \BibUrl{http://subs.emis.de/LNI/Proceedings/Proceedings72/article3735.html}.
+
+\bibitem[Bodyanskiy et~al.(2009)Bodyanskiy, Gorshkov and
+  Kolodyazhniy]{ref11}\selectlanguageifdefined{English}
+\BibEmph{Bodyanskiy~Ye., Gorshkov~Ye., Kolodyazhniy~V.} New recursive learning
+  algorithms for fuzzy Kohonen clustering network~// \BibEmph{Proc. 17th Int.
+  Workshop on Nonlinear Dynamics of Electronic Systems}. \BibDash
+\newblock 2009. \BibDash
+\newblock P.~58--61.
+
+\bibitem[Bodyanskiy et~al.(2002)Bodyanskiy, Kolodyazhniy and
+  Stephan]{ref10}\selectlanguageifdefined{English}
+\BibEmph{Bodyanskiy~Ye., Kolodyazhniy~V., Stephan~A.} Recursive fuzzy
+  clustering algorithms~// \BibEmph{Proc. 10th East West Fuzzy Colloquium}.
+  \BibDash
+\newblock 2002. \BibDash
+\newblock P.~276--283.
+
+\bibitem[Chen and Tu(2007)]{ref31}\selectlanguageifdefined{english}
+\BibEmph{Chen~Y., Tu~L.} Density-based clustering for real-time stream data~//
+  Proceedings of the 13th ACM SIGKDD international conference on Knowledge
+  discovery and data mining. \BibDash
+\newblock 2007. \BibDash
+\newblock P.~133--142.
+
+\bibitem[Chung and
+  Lee(1994{\natexlab{a}})]{ref14}\selectlanguageifdefined{English}
+\BibEmph{Chung~Fu~Lai, Lee~Tong}. Fuzzy Competitive Learning~//
+  \href{http://dx.doi.org/10.1016/0893-6080(94)90111-2}{\BibEmph{Neural Netw.}}
+  \BibDash
+\newblock 1994{\natexlab{a}}. \BibDash
+\newblock Vol.~7, no.~3. \BibDash
+\newblock P.~539--551. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1016/0893-6080(94)90111-2}.
+
+\bibitem[Chung and
+  Lee(1994{\natexlab{b}})]{ref35}\selectlanguageifdefined{english}
+\BibEmph{Chung~Fu-Lai, Lee~Tong}. Fuzzy competitive learning~// \BibEmph{Neural
+  Networks}. \BibDash
+\newblock 1994{\natexlab{b}}. \BibDash
+\newblock Vol.~7, no.~3. \BibDash
+\newblock P.~539--551. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1016/0893-6080(94)90111-2}.
+
+\bibitem[Crespo and Weber(2005)]{ref40}\selectlanguageifdefined{english}
+\BibEmph{Crespo~Fernando, Weber~Richard}. A methodology for dynamic data mining
+  based on fuzzy clustering~// \BibEmph{Fuzzy Sets and Systems}. \BibDash
+\newblock 2005. \BibDash
+\newblock Vol. 150, no.~2. \BibDash
+\newblock P.~267--284. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1016/j.fss.2004.03.028}.
+
+\bibitem[Cypkin et~al.(1970)Cypkin, Kaplinskii and
+  Krasnenker]{ref18}\selectlanguageifdefined{Russian}
+\BibEmph{Cypkin~Ja.Z., Kaplinskii~A.~I., Krasnenker~A.~S.} Fundamentals of the
+  theory of learning systems~// \BibEmph{Nauka}. \BibDash
+\newblock 1970. \BibDash
+\newblock P.~252.
+
+\bibitem[Du and Swamy(2013)]{ref43}\selectlanguageifdefined{english}
+\BibEmph{Du~K.L., Swamy~M.N.S.} Neural Networks and Statistical Learning.
+  SpringerLink : B{\"u}cher. \BibDash
+\newblock Springer, 2013. \BibDash
+\newblock
+  ISBN:~\href{http://isbndb.com/search-all.html?kw=9781447155713}{9781447155713}.
+  \BibDash
+\newblock URL: \BibUrl{https://books.google.com.ua/books?id=wzK8BAAAQBAJ}.
+
+\bibitem[H\"{o}ppner et~al.(1999)H\"{o}ppner, Klawonn, Kruse, and
+  Runkler]{ref22}\selectlanguageifdefined{english}
+Fuzzy Cluster Analysis: Methods for Classification, Data Analysis and Image
+  Recognition~/ Frank~H\"{o}ppner, Frank~Klawonn, Rudolf~Kruse, Thomas~Runkler.
+  \BibDash
+\newblock 1. Auflage edition. \BibDash
+\newblock John Wiley \& Sons, 1999. \BibDash
+\newblock
+  ISBN:~\href{http://isbndb.com/search-all.html?kw=0471988642}{0471988642}.
+
+\bibitem[Bezdek et~al.(2005)Bezdek, Keller, Krisnapuram and
+  Pal]{ref13}\selectlanguageifdefined{English}
+Fuzzy models and algorithms for pattern recognition and image processing~/
+  James~C.~Bezdek, James~Keller, Raghu~Krisnapuram, Nikhil~R.~Pal. The
+  Handbooks of fuzzy sets series. \BibDash
+\newblock New York~: Springer, 2005. \BibDash
+\newblock
+  ISBN:~\href{http://isbndb.com/search-all.html?kw=0-387-24515-4}{0-387-24515-4}.
+  \BibDash
+\newblock URL: \BibUrl{http://opac.inria.fr/record=b1102792}.
+
+\bibitem[Gan et~al.(2007)Gan, Ma, and
+  Wu]{ref24}\selectlanguageifdefined{english}
+\BibEmph{Gan~Guojun, Ma~Chaoqun, Wu~Jianhong}. Data Clustering: Theory,
+  Algorithms, and Applications (ASA-SIAM Series on Statistics and Applied
+  Probability). \BibDash
+\newblock SIAM, 2007. \BibDash
+\newblock
+  ISBN:~\href{http://isbndb.com/search-all.html?kw=0898716233}{0898716233}.
+
+\bibitem[Han and Qiao(2010)]{ref32}\selectlanguageifdefined{english}
+\BibEmph{Han~H., Qiao~J.} A self-organizing fuzzy neural network based on a
+  growing-and-pruning algorithm~// \BibEmph{Fuzzy Systems, IEEE Transactions
+  on}. \BibDash
+\newblock 2010. \BibDash
+\newblock Vol.~18, no.~6. \BibDash
+\newblock P.~1129--1143.
+
+\bibitem[Han and Kamber(2006)]{ref29}\selectlanguageifdefined{english}
+\BibEmph{Han~J, Kamber~M}. Mining Stream, Time-Series and Sequence Data~//
+  \BibEmph{Data Mining: Concepts and Techniques}. \BibDash
+\newblock 2006. \BibDash
+\newblock P.~467--489.
+
+\bibitem[Kashyap and Blaydon(1968)]{ref17}\selectlanguageifdefined{English}
+\BibEmph{Kashyap~R.~L., Blaydon~Colin~C.} Estimation of probability density and
+  distribution functions~// \BibEmph{IEEE Transactions on Information Theory}.
+  \BibDash
+\newblock 1968. \BibDash
+\newblock Vol.~14, no.~4. \BibDash
+\newblock P.~549--556. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1109/TIT.1968.1054184}.
+
+\bibitem[Kohonen(2001)]{ref16}\selectlanguageifdefined{English}
+\BibEmph{Kohonen~Teuvo}. Self-organizing maps. \BibDash
+\newblock Springer Science \& Business Media, 2001. \BibDash
+\newblock Vol.~30.
+
+\bibitem[Leng et~al.(2004)Leng, Prasad, and
+  McGinnity]{ref38}\selectlanguageifdefined{english}
+\BibEmph{Leng~Gang, Prasad~Girijesh, McGinnity~T.~Martin}. An on-line algorithm
+  for creating self-organizing fuzzy neural networks~// \BibEmph{Neural
+  Networks}. \BibDash
+\newblock 2004. \BibDash
+\newblock Vol.~17, no.~10. \BibDash
+\newblock P.~1477--1493. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1016/j.neunet.2004.07.009}.
+
+\bibitem[Liu(2013)]{ref28}\selectlanguageifdefined{english}
+\BibEmph{Liu~Ying-Ho}. Stream mining on univariate uncertain data~//
+  \BibEmph{Appl. Intell}. \BibDash
+\newblock 2013. \BibDash
+\newblock Vol.~39, no.~2. \BibDash
+\newblock P.~315--344. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1007/s10489-012-0415-3}.
+
+\bibitem[Oliveira and Pedrycz(2007)]{ref23}\selectlanguageifdefined{english}
+\BibEmph{Oliveira~Jose Valente~de, Pedrycz~Witold}. Advances in Fuzzy
+  Clustering and Its Applications. \BibDash
+\newblock New York, NY, USA~: John Wiley \& Sons, Inc., 2007. \BibDash
+\newblock
+  ISBN:~\href{http://isbndb.com/search-all.html?kw=0470027606}{0470027606}.
+
+\bibitem[Pakhira et~al.(2004)Pakhira, Bandyopadhyay and
+  Maulik]{ref8}\selectlanguageifdefined{English}
+\BibEmph{Pakhira~Malay~K, Bandyopadhyay~Sanghamitra, Maulik~Ujjwal}. Validity
+  index for crisp and fuzzy clusters~// \BibEmph{Pattern recognition}. \BibDash
+\newblock 2004. \BibDash
+\newblock Vol.~37, no.~3. \BibDash
+\newblock P.~487--501.
+
+\bibitem[Park and Dagher(1994)]{ref15}\selectlanguageifdefined{English}
+\BibEmph{Park~Dong~C., Dagher~Issam}. Gradient Based Fuzzy c\_means ({GBFCM})
+  Algorithm~// IEEE International Conference on Neural Networks (ICNN'94).
+  \BibDash
+\newblock Vol.~III. \BibDash
+\newblock Orlando, FL~: IEEE, 1994. \BibDash jun. \BibDash
+\newblock P.~1626--1631. \BibDash
+\newblock Intelligent Computing Research Lab, Department of ECE, FL.
+
+\bibitem[Pedrycz and Rai(2008)]{ref42}\selectlanguageifdefined{english}
+\BibEmph{Pedrycz~Witold, Rai~Partab}. Collaborative clustering with the use of
+  Fuzzy {C}-Means and its quantification~// \BibEmph{Fuzzy Sets and Systems}.
+  \BibDash
+\newblock 2008. \BibDash
+\newblock Vol. 159, no.~18. \BibDash
+\newblock P.~2399--2427. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1016/j.fss.2007.12.030}.
+
+\bibitem[Roubens(1982)]{ref9}\selectlanguageifdefined{English}
+\BibEmph{Roubens~Marc}. Fuzzy clustering algorithms and their cluster
+  validity~// \BibEmph{European Journal of Operational Research}. \BibDash
+\newblock 1982. \BibDash
+\newblock Vol.~10. \BibDash
+\newblock P.~294--301.
+
+\bibitem[Silva and Marques(2012)]{ref30}\selectlanguageifdefined{english}
+\BibEmph{Silva~Bruno, Marques~Nuno}. Neural Network-based Framework for Data
+  Stream Mining.~// STAIRS. \BibDash
+\newblock 2012. \BibDash
+\newblock P.~294--305.
+
+\bibitem[Marqui et~al.(2001)Marqui, Montano, Kochi, and
+  Carazo]{ref37}\selectlanguageifdefined{english}
+Smoothly distributed fuzzy {C}-means: a new self-organizing map~/
+  R.~D.~Pascual~Marqui, A.~D.~Pascual~Montano, K.~Kochi, J.~M.~Carazo~//
+  \BibEmph{Pattern Recognition}. \BibDash
+\newblock 2001. \BibDash
+\newblock Vol.~34, no.~12. \BibDash
+\newblock P.~2395--2402. \BibDash
+\newblock URL:
+  \BibUrl{http://www.sciencedirect.com/science/article/B6V14-43W07HY-B/2/8a783959537578469a5357887f06327b}.
+
+\bibitem[Tsao et~al.(1994)Tsao, Bezdek, and
+  Pal]{ref36}\selectlanguageifdefined{english}
+\BibEmph{Tsao~E. C.~K., Bezdek~J.~C., Pal~N.~R.} Fuzzy Kohonen clustering
+  networks~// \BibEmph{Pattern Recognition}. \BibDash
+\newblock 1994. \BibDash
+\newblock Vol.~27, no.~5. \BibDash
+\newblock P.~757--764. \BibDash
+\newblock URL:
+  \BibUrl{http://www.sciencedirect.com/science/article/B6V14-48MPPXD-1YX/2/cf0e26b7498b3a4f4b7698975495f7f9}.
+
+\bibitem[Vuorimaa(1994{\natexlab{a}})]{ref33}\selectlanguageifdefined{english}
+\BibEmph{Vuorimaa~Petri}. Fuzzy Self--Organizing Map~// \BibEmph{Fuzzy Sets and
+  Systems}. \BibDash
+\newblock 1994{\natexlab{a}}. \BibDash
+\newblock Vol.~66. \BibDash
+\newblock P.~223--231.
+
+\bibitem[Vuorimaa(1994{\natexlab{b}})]{ref34}\selectlanguageifdefined{english}
+\BibEmph{Vuorimaa~P.} Use of the Fuzzy Self-Organizing Map in pattern
+  recognition~// Proceedings of the Third IEEE Conference on Fuzzy Systems.
+  IEEE World Congress on Computational Intelligence~/ Signal Process. Lab. ,
+  Tampere Univ. of Technol. , Finland. \BibDash
+\newblock Vol.~2. \BibDash
+\newblock New York, NY, USA~: IEEE, 1994{\natexlab{b}}. \BibDash
+\newblock P.~798--801.
+
+\bibitem[Wang and Zhang(2007)]{ref7}\selectlanguageifdefined{English}
+\BibEmph{Wang~W, Zhang~Y}. On fuzzy cluster validity indices~//
+  \href{http://dx.doi.org/10.1016/j.fss.2007.03.004}{\BibEmph{Fuzzy Sets and
+  Systems}}. \BibDash
+\newblock 2007. \BibDash oct. \BibDash
+\newblock Vol. 158, no.~19. \BibDash
+\newblock P.~2095--2117.
+
+\bibitem[Wu(2014)]{ref27}\selectlanguageifdefined{English}
+\BibEmph{Wu~Yi}. Network Big Data: {A} Literature Survey on Stream Data Mining.
+  \BibDash
+\newblock 2014. \BibDash
+\newblock Vol.~9. \BibDash
+\newblock P.~2427--2434. \BibDash
+\newblock URL:
+  \BibUrl{http://ojs.academypublisher.com/index.php/jsw/article/view/12381}.
+
+\bibitem[Xie and Beni(1991)]{ref20}\selectlanguageifdefined{english}
+\BibEmph{Xie~Xuanli~Lisa, Beni~Gerardo}. A Validity Measure for Fuzzy
+  Clustering~// \href{http://dx.doi.org/10.1109/34.85677}{\BibEmph{IEEE Trans.
+  Pattern Anal. Mach. Intell.}} \BibDash
+\newblock 1991. \BibDash
+\newblock Vol.~13, no.~8. \BibDash
+\newblock P.~841--847. \BibDash
+\newblock URL: \BibUrl{http://dx.doi.org/10.1109/34.85677}.
+
+\bibitem[Xu and Wunsch(2010)]{ref19}\selectlanguageifdefined{English}
+\BibEmph{Xu~Rui, Wunsch~Donald~C}. Clustering algorithms in biomedical
+  research: a review~// \BibEmph{Biomedical Engineering, IEEE Reviews in}.
+  \BibDash
+\newblock 2010. \BibDash
+\newblock Vol.~3. \BibDash
+\newblock P.~120--154.
+
+\end{thebibliography}

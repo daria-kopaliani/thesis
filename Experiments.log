@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  3 APR 2016 19:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  4 APR 2016 12:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -616,14 +616,14 @@ e
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(56.9055pt, 483.69684pt, 56.90553pt)
+* h-part:(L,W,R)=(71.13188pt, 483.69684pt, 42.67915pt)
 * v-part:(T,H,B)=(56.9055pt, 731.23582pt, 56.90552pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=483.69684pt
 * \textheight=731.23582pt
-* \oddsidemargin=-15.36449pt
-* \evensidemargin=-15.36449pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
 * \topmargin=-54.36449pt
 * \headheight=14.0pt
 * \headsep=25.0pt
@@ -713,6 +713,12 @@ RUE): input
 
 ]
 {\Ukrainian \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 1.
+
+Overfull \hbox (0.22873pt too wide) in paragraph at lines 157--158
+[]\T2A/cmr/m/n/14.4 Датасет для пер-шо-го екс-пе-ри-мен-ту (фа-зо-вий порт-рет 
+на-ве-де-но на рис. 1.1[])
+ []
+
 <images/ENFNDataSetPhasePortrait.png, id=8, 247.1634pt x 229.3368pt>
 File: images/ENFNDataSetPhasePortrait.png Graphic file (type png)
 
@@ -825,12 +831,6 @@ Overfull \hbox (7.4835pt too wide) in paragraph at lines 363--386
 
 [10 <./images/ENFNUkrEnergoPredictionIO1M6.png>] [11 <./images/ElectricityDeman
 dPhasePortrait.pdf> <./images/ENFNNet+FuzzyGeneralizerElectricityDemand.png>]
-Overfull \hbox (15.75388pt too wide) in paragraph at lines 388--389
-\T2A/cmr/m/n/14.4 си-сте-ми -- у та-бли-цi reftab:SubtidalCoastalLevelOfFluctua
-tionsPredictionAccuracy. 
- []
-
-
 <images/SubtidalCoastalLevelPhasePortrait.pdf, id=95, 457.60907pt x 298.58511pt
 >
 File: images/SubtidalCoastalLevelPhasePortrait.pdf Graphic file (type pdf)
@@ -876,7 +876,7 @@ Package pdftex.def Info: images/ENFNNetFuzzyGeneralizerESTPCompettionTimeSeries
 
 Overfull \hbox (36.21419pt too wide) in paragraph at lines 452--453
 []\T2A/cmr/m/n/14.4 Результати про-гно-зу-ва-н-ня ней-ро-нiв окре-мих ка-ска-дi
-в, нейронiв-узагалтнювачiв,
+в, нейронiв-узагальнювачiв,
  []
 
 
@@ -969,9 +969,8 @@ Package pdftex.def Info: images/ClusteredIrisDatasetM3Beta2.pdf used on input l
 ine 771.
 (pdftex.def)             Requested size: 447.6714pt x 435.62643pt.
  [26 <./images/clustering04.pdf>]
-[27 <./images/HierarchialClusteringOfIrisDataset.pdf>] [28 <./images/ClusteredI
-risDatasetM3Beta2.pdf>] [29] [30]
-<images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf, id=290, 5
+[27] [28]
+<images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf, id=274, 5
 05.89pt x 453.54352pt>
 File: images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf Graph
 ic file (type pdf)
@@ -981,7 +980,7 @@ Package pdftex.def Info: images/IrisClusteringEfficiencyFromNumberOfClustersAnd
 Fuzzyfier.pdf used on input line 843.
 (pdftex.def)             Requested size: 397.48499pt x 356.36462pt.
 
-<images/ClusteredIrisDatasetM7Beta5.pdf, id=291, 461.725pt x 461.725pt>
+<images/ClusteredIrisDatasetM7Beta5.pdf, id=275, 461.725pt x 461.725pt>
 File: images/ClusteredIrisDatasetM7Beta5.pdf Graphic file (type pdf)
 
 <use images/ClusteredIrisDatasetM7Beta5.pdf>
@@ -989,50 +988,48 @@ Package pdftex.def Info: images/ClusteredIrisDatasetM7Beta5.pdf used on input l
 ine 853.
 (pdftex.def)             Requested size: 461.72388pt x 461.72388pt.
 
-<images/ClusteredIrisDatasetM12Beta4.pdf, id=292, 461.725pt x 461.725pt>
+<images/ClusteredIrisDatasetM12Beta4.pdf, id=276, 461.725pt x 461.725pt>
 File: images/ClusteredIrisDatasetM12Beta4.pdf Graphic file (type pdf)
 
 <use images/ClusteredIrisDatasetM12Beta4.pdf>
 Package pdftex.def Info: images/ClusteredIrisDatasetM12Beta4.pdf used on input 
 line 862.
 (pdftex.def)             Requested size: 461.72388pt x 461.72388pt.
- [31 <./images/IrisClusteringEfficiencyFromNumberOfClustersAndFuzzyfier.pdf>] [
-32 <./images/ClusteredIrisDatasetM7Beta5.pdf>] [33 <./images/ClusteredIrisDatas
-etM12Beta4.pdf>]
-<images/3DClusteredIrisDatasetM7Beta5.pdf, id=331, 461.725pt x 526.96875pt>
+
+<images/3DClusteredIrisDatasetM7Beta5.pdf, id=277, 461.725pt x 526.96875pt>
 File: images/3DClusteredIrisDatasetM7Beta5.pdf Graphic file (type pdf)
 
 <use images/3DClusteredIrisDatasetM7Beta5.pdf>
 Package pdftex.def Info: images/3DClusteredIrisDatasetM7Beta5.pdf used on input
  line 883.
 (pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
- [34 <./images/3DClusteredIrisDatasetM7Beta5.pdf>]
-<images/3DClusteredIrisDatasetM12Beta4.pdf, id=341, 461.725pt x 526.96875pt>
+ [29]
+<images/3DClusteredIrisDatasetM12Beta4.pdf, id=281, 461.725pt x 526.96875pt>
 File: images/3DClusteredIrisDatasetM12Beta4.pdf Graphic file (type pdf)
 
 <use images/3DClusteredIrisDatasetM12Beta4.pdf>
 Package pdftex.def Info: images/3DClusteredIrisDatasetM12Beta4.pdf used on inpu
 t line 893.
 (pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
-
-<images/StudentKnowledgeDataSet.pdf, id=342, 461.725pt x 526.96875pt>
+ [30 <./images/3DClusteredIrisDatasetM7Beta5.pdf>]
+<images/StudentKnowledgeDataSet.pdf, id=290, 461.725pt x 526.96875pt>
 File: images/StudentKnowledgeDataSet.pdf Graphic file (type pdf)
 
 <use images/StudentKnowledgeDataSet.pdf>
 Package pdftex.def Info: images/StudentKnowledgeDataSet.pdf used on input line 
 903.
 (pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
- [35 <./images/3DClusteredIrisDatasetM12Beta4.pdf>] [36 <./images/StudentKnowle
+ [31 <./images/3DClusteredIrisDatasetM12Beta4.pdf>] [32 <./images/StudentKnowle
 dgeDataSet.pdf>]
-<images/3DStudentKnowledgeDataSet.pdf, id=359, 461.725pt x 490.83376pt>
+<images/3DStudentKnowledgeDataSet.pdf, id=308, 461.725pt x 490.83376pt>
 File: images/3DStudentKnowledgeDataSet.pdf Graphic file (type pdf)
 
 <use images/3DStudentKnowledgeDataSet.pdf>
 Package pdftex.def Info: images/3DStudentKnowledgeDataSet.pdf used on input lin
 e 921.
 (pdftex.def)             Requested size: 461.72388pt x 490.83255pt.
- [37 <./images/3DStudentKnowledgeDataSet.pdf>]
-<images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=369, 461.725pt x 49
+ [33 <./images/3DStudentKnowledgeDataSet.pdf>]
+<images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=317, 461.725pt x 49
 0.83376pt>
 File: images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf Graphic file (type
  pdf)
@@ -1041,7 +1038,7 @@ Package pdftex.def Info: images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf
  used on input line 931.
 (pdftex.def)             Requested size: 461.72388pt x 490.83255pt.
 
-<images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=370, 461.725pt x 526.
+<images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf, id=318, 461.725pt x 526.
 96875pt>
 File: images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf Graphic file (type p
 df)
@@ -1049,141 +1046,58 @@ df)
 Package pdftex.def Info: images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf u
 sed on input line 941.
 (pdftex.def)             Requested size: 461.72388pt x 526.96745pt.
- [38 <./images/3DClusterizedStudentKnowledgeDataSetM4Beta2.pdf>] [39 <./images/
-ClusterizedStudentKnowledgeDataSetM4Beta2.pdf>]
-<images/SpoonAppClassification.png, id=387, 289.08pt x 514.0806pt>
+ [34]
+[35 <./images/ClusterizedStudentKnowledgeDataSetM4Beta2.pdf>]
+<images/SpoonAppClassification.png, id=330, 289.08pt x 514.0806pt>
 File: images/SpoonAppClassification.png Graphic file (type png)
 
 <use images/SpoonAppClassification.png>
 Package pdftex.def Info: images/SpoonAppClassification.png used on input line 9
 58.
 (pdftex.def)             Requested size: 289.07928pt x 514.07935pt.
- [40] [41 <./images/SpoonAppClassification.png>] <images/SpoonAppClustering.png
-, id=395, 289.08pt x 514.0806pt>
+ [36] [37 <./images/SpoonAppClassification.png>] <images/SpoonAppClustering.png
+, id=339, 289.08pt x 514.0806pt>
 File: images/SpoonAppClustering.png Graphic file (type png)
 
 <use images/SpoonAppClustering.png>
 Package pdftex.def Info: images/SpoonAppClustering.png used on input line 972.
 (pdftex.def)             Requested size: 289.07928pt x 514.07935pt.
- [42 <./images/SpoonAppClustering.png>]
-[43] [44] [45]
-Overfull \hbox (1.36967pt too wide) in paragraph at lines 1013--1013
+ [38 <./images/SpoonAppClustering.png>]
+[39]
+Overfull \hbox (5.47987pt too wide) in paragraph at lines 1004--1007
+\T2A/cmr/m/n/14.4 кiв-ський ва-го-но-бу-дiв-ний за-вод>>. Пiд-при-№м-ствам ма-ш
+и-но-бу-дiв-но-го се-кто-ру еко-
+ []
+
+
+Overfull \hbox (3.2631pt too wide) in paragraph at lines 1004--1007
+\T2A/cmr/m/n/14.4 но-мi-ки при-та-ман-не гли-бо-ке ви-ко-ри-ста-н-ня ви-ро-бни-
+чоЁ про-гра-ми в яко-стi основ-
+ []
+
+[40] [41] [42]
+Overfull \hbox (1.36967pt too wide) in paragraph at lines 1021--1021
 []|\T2A/cmr/m/n/14.4 Попереднi
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1013
+Underfull \hbox (badness 10000) in paragraph at lines 1021--1021
 []|\T2A/cmr/m/n/14.4 Подальшi
  []
 
 
-Overfull \hbox (1.36967pt too wide) in paragraph at lines 1016--1016
+Overfull \hbox (1.36967pt too wide) in paragraph at lines 1024--1024
 []|\T2A/cmr/m/n/14.4 Попереднi
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1016
-[]|\T2A/cmr/m/n/14.4 Подальшi
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
-[]|\T2A/cmr/m/n/14.4 Розбирання вiз-кiв 0.162-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
-[]|\T2A/cmr/m/n/14.4 109.05.046
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1019--1019
-[]|\T2A/cmr/m/n/14.4 Розбирання вiз-кiв 0.114-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1019--1019
-[]|\T2A/cmr/m/n/14.4 109.05.047
- []
-
-
-Underfull \hbox (badness 2707) in paragraph at lines 1020--1020
-[]|\T2A/cmr/m/n/14.4 Попередня де-фе-кта-цiя ву-злiв
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1020--1020
-[]|\T2A/cmr/m/n/14.4 109.05.047
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1020--1020
-\T2A/cmr/m/n/14.4 109.05.049
- []
-
-
-Underfull \hbox (badness 2707) in paragraph at lines 1021--1021
-[]|\T2A/cmr/m/n/14.4 Попередня де-фе-кта-цiя ву-злiв
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1021--1021
-[]|\T2A/cmr/m/n/14.4 109.05.046
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1021--1021
-[]|\T2A/cmr/m/n/14.4 109.05.050
- []
-
-
-Underfull \hbox (badness 2818) in paragraph at lines 1022--1022
-[]|\T2A/cmr/m/n/14.4 Абразивне очи-ще-н-ня де-та-лей
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1022--1022
-[]|\T2A/cmr/m/n/14.4 109.01.022
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1022--1022
-\T2A/cmr/m/n/14.4 109.01.035
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1022--1022
-\T2A/cmr/m/n/14.4 109.01.036
- []
-
-
-Underfull \hbox (badness 2818) in paragraph at lines 1023--1023
-[]|\T2A/cmr/m/n/14.4 Абразивне очи-ще-н-ня де-та-лей
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1023--1023
-[]|\T2A/cmr/m/n/14.4 109.01.022
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1023--1023
-\T2A/cmr/m/n/14.4 109.01.035
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1023--1023
-\T2A/cmr/m/n/14.4 109.01.036
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1024--1024
-[]|\T2A/cmr/m/n/14.4 109.05.049
+[]|\T2A/cmr/m/n/14.4 Подальшi
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1025--1025
-[]|\T2A/cmr/m/n/14.4 109.01.031
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1026
+[]|\T2A/cmr/m/n/14.4 Розбирання вiз-кiв 0.162-
  []
 
 
@@ -1192,123 +1106,178 @@ Underfull \hbox (badness 10000) in paragraph at lines 1026--1026
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1026--1026
-\T2A/cmr/m/n/14.4 109.05.047
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1027
+[]|\T2A/cmr/m/n/14.4 Розбирання вiз-кiв 0.114-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1026--1026
-[]|\T2A/cmr/m/n/14.4 109.01.005
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1027
+[]|\T2A/cmr/m/n/14.4 109.05.047
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1028--1028
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ви-го-тов-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1028--1028
-\T2A/cmr/m/n/14.4 ле-них де-та-лей вiз-ку 0.162-
+Underfull \hbox (badness 2707) in paragraph at lines 1028--1028
+[]|\T2A/cmr/m/n/14.4 Попередня де-фе-кта-цiя ву-злiв
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1028--1028
-[]|\T2A/cmr/m/n/14.4 109.01.044
+[]|\T2A/cmr/m/n/14.4 109.05.047
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1028--1028
-\T2A/cmr/m/n/14.4 109.01.007
+\T2A/cmr/m/n/14.4 109.05.049
+ []
+
+
+Underfull \hbox (badness 2707) in paragraph at lines 1029--1029
+[]|\T2A/cmr/m/n/14.4 Попередня де-фе-кта-цiя ву-злiв
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1029
+[]|\T2A/cmr/m/n/14.4 109.05.046
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1029
+[]|\T2A/cmr/m/n/14.4 109.05.050
+ []
+
+
+Underfull \hbox (badness 2818) in paragraph at lines 1030--1030
+[]|\T2A/cmr/m/n/14.4 Абразивне очи-ще-н-ня де-та-лей
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1030--1030
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ви-го-тов-
+[]|\T2A/cmr/m/n/14.4 109.01.022
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1030--1030
-\T2A/cmr/m/n/14.4 ле-них де-та-лей вiз-ку 0.114-
+\T2A/cmr/m/n/14.4 109.01.035
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1030--1030
-[]|\T2A/cmr/m/n/14.4 109.01.044
+\T2A/cmr/m/n/14.4 109.01.036
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1030--1030
-\T2A/cmr/m/n/14.4 109.01.007
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1030--1030
-\T2A/cmr/m/n/14.4 109.01.009
+Underfull \hbox (badness 2818) in paragraph at lines 1031--1031
+[]|\T2A/cmr/m/n/14.4 Абразивне очи-ще-н-ня де-та-лей
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1031--1031
-[]|\T2A/cmr/m/n/14.4 Ремонт ра-ми вiз-ку 0.162-
+[]|\T2A/cmr/m/n/14.4 109.01.022
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1031--1031
-[]|\T2A/cmr/m/n/14.4 109.05.052
+\T2A/cmr/m/n/14.4 109.01.035
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1031--1031
-\T2A/cmr/m/n/14.4 109.05.053
+\T2A/cmr/m/n/14.4 109.01.036
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1032--1032
+[]|\T2A/cmr/m/n/14.4 109.05.049
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1033--1033
-[]|\T2A/cmr/m/n/14.4 109.01.029
+[]|\T2A/cmr/m/n/14.4 109.01.031
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1034--1034
-[]|\T2A/cmr/m/n/14.4 Ремонт ра-ми вiз-ку 0.114-
+[]|\T2A/cmr/m/n/14.4 109.05.046
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1034--1034
-[]|\T2A/cmr/m/n/14.4 109.05.052
+\T2A/cmr/m/n/14.4 109.05.047
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1034--1034
-\T2A/cmr/m/n/14.4 109.05.053
+[]|\T2A/cmr/m/n/14.4 109.01.005
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1036--1036
-[]|\T2A/cmr/m/n/14.4 109.01.030
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ви-го-тов-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1037
-[]|\T2A/cmr/m/n/14.4 Ремонт на-дре-сор-но-го бру-су
+Underfull \hbox (badness 10000) in paragraph at lines 1036--1036
+\T2A/cmr/m/n/14.4 ле-них де-та-лей вiз-ку 0.162-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1037
+Underfull \hbox (badness 10000) in paragraph at lines 1036--1036
+[]|\T2A/cmr/m/n/14.4 109.01.044
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1036--1036
+\T2A/cmr/m/n/14.4 109.01.007
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1038
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ви-го-тов-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1038
+\T2A/cmr/m/n/14.4 ле-них де-та-лей вiз-ку 0.114-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1038
+[]|\T2A/cmr/m/n/14.4 109.01.044
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1038
+\T2A/cmr/m/n/14.4 109.01.007
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1038
+\T2A/cmr/m/n/14.4 109.01.009
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1039
+[]|\T2A/cmr/m/n/14.4 Ремонт ра-ми вiз-ку 0.162-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1039
 []|\T2A/cmr/m/n/14.4 109.05.052
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1037
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1039
 \T2A/cmr/m/n/14.4 109.05.053
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1041--1041
-[]|\T2A/cmr/m/n/14.4 109.01.040
+[]|\T2A/cmr/m/n/14.4 109.01.029
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1042--1042
-[]|\T2A/cmr/m/n/14.4 Ремонт на-дре-сор-но-го бру-су
+[]|\T2A/cmr/m/n/14.4 Ремонт ра-ми вiз-ку 0.114-
  []
 
 
@@ -1322,590 +1291,628 @@ Underfull \hbox (badness 10000) in paragraph at lines 1042--1042
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1046--1046
-[]|\T2A/cmr/m/n/14.4 109.01.041
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-[]|\T2A/cmr/m/n/14.4 Ремонт де-та-лей пiд-вi-сок
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-[]|\T2A/cmr/m/n/14.4 109.05.052
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-[]|\T2A/cmr/m/n/14.4 109.01.041
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-\T2A/cmr/m/n/14.4 109.01.023
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-\T2A/cmr/m/n/14.4 109.01.024
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1048--1048
-[]|\T2A/cmr/m/n/14.4 109.05.052
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1048--1048
-[]|\T2A/cmr/m/n/14.4 109.01.041
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1048--1048
-\T2A/cmr/m/n/14.4 109.01.039
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-[]|\T2A/cmr/m/n/14.4 109.05.052
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-[]|\T2A/cmr/m/n/14.4 109.01.041
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-\T2A/cmr/m/n/14.4 109.01.039
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1050--1050
-[]|\T2A/cmr/m/n/14.4 109.05.052
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1050--1050
-[]|\T2A/cmr/m/n/14.4 109.01.037
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1050--1050
-\T2A/cmr/m/n/14.4 109.01.038
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1050--1050
-\T2A/cmr/m/n/14.4 109.01.025
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
-[]|\T2A/cmr/m/n/14.4 109.05.049
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
-[]|\T2A/cmr/m/n/14.4 109.01.037
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
-\T2A/cmr/m/n/14.4 109.01.038
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
-\T2A/cmr/m/n/14.4 109.01.025
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1052--1052
-[]|\T2A/cmr/m/n/14.4 109.05.049
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1052--1052
-[]|\T2A/cmr/m/n/14.4 109.01.037
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1052--1052
-\T2A/cmr/m/n/14.4 109.01.038
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1052--1052
-\T2A/cmr/m/n/14.4 109.01.025
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1053
-[]|\T2A/cmr/m/n/14.4 109.01.025
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
-[]|\T2A/cmr/m/n/14.4 109.01.025
- []
-
-
-Underfull \hbox (badness 3735) in paragraph at lines 1055--1055
-[]|\T2A/cmr/m/n/14.4 Грунтування вiд-ре-мон-то-ва-них
- []
-
-
-Underfull \hbox (badness 1668) in paragraph at lines 1055--1055
-\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
-[]|\T2A/cmr/m/n/14.4 109.01.023
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
-\T2A/cmr/m/n/14.4 109.01.017
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
-\T2A/cmr/m/n/14.4 109.01.018
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
-\T2A/cmr/m/n/14.4 109.01.019
- []
-
-
-Underfull \hbox (badness 2277) in paragraph at lines 1056--1056
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
- []
-
-
-Underfull \hbox (badness 2142) in paragraph at lines 1056--1056
-\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
-[]|\T2A/cmr/m/n/14.4 Фарбування вiд-ре-мон-то-ва-них
- []
-
-
-Underfull \hbox (badness 1668) in paragraph at lines 1057--1057
-\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
- []
-
-[46] [47]
-Underfull \hbox (badness 2277) in paragraph at lines 1058--1058
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
- []
-
-
-Underfull \hbox (badness 2142) in paragraph at lines 1058--1058
-\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
- []
-
-
-Underfull \hbox (badness 3735) in paragraph at lines 1059--1059
-[]|\T2A/cmr/m/n/14.4 Грунтування вiд-ре-мон-то-ва-них
- []
-
-
-Underfull \hbox (badness 1668) in paragraph at lines 1059--1059
-\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
-[]|\T2A/cmr/m/n/14.4 109.01.024
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
-\T2A/cmr/m/n/14.4 109.01.017
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
-\T2A/cmr/m/n/14.4 109.01.018
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
-\T2A/cmr/m/n/14.4 109.01.019
- []
-
-
-Underfull \hbox (badness 2277) in paragraph at lines 1060--1060
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
- []
-
-
-Underfull \hbox (badness 2142) in paragraph at lines 1060--1060
-\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1061--1061
-[]|\T2A/cmr/m/n/14.4 Фарбування вiд-ре-мон-то-ва-них
- []
-
-
-Underfull \hbox (badness 1668) in paragraph at lines 1061--1061
-\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
- []
-
-
-Underfull \hbox (badness 2277) in paragraph at lines 1062--1062
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
- []
-
-
-Underfull \hbox (badness 2142) in paragraph at lines 1062--1062
-\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1063--1063
-[]|\T2A/cmr/m/n/14.4 109.01.033
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1063--1063
-\T2A/cmr/m/n/14.4 109.01.039
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1064--1064
-[]|\T2A/cmr/m/n/14.4 109.01.041
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1064--1064
-\T2A/cmr/m/n/14.4 109.01.034
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1065--1065
-[]|\T2A/cmr/m/n/14.4 109.05.051
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1065--1065
-[]|\T2A/cmr/m/n/14.4 109.01.033
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1066
-[]|\T2A/cmr/m/n/14.4 109.05.051
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1066
-[]|\T2A/cmr/m/n/14.4 109.01.034
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1067--1067
-[]|\T2A/cmr/m/n/14.4 109.01.029
- []
-
-
-Underfull \hbox (badness 1270) in paragraph at lines 1068--1068
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ра-ми вiз-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1069--1069
+Underfull \hbox (badness 10000) in paragraph at lines 1044--1044
 []|\T2A/cmr/m/n/14.4 109.01.030
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 1070--1070
-[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ра-ми вiз-
+Underfull \hbox (badness 10000) in paragraph at lines 1045--1045
+[]|\T2A/cmr/m/n/14.4 Ремонт на-дре-сор-но-го бру-су
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1071--1071
-[]|\T2A/cmr/m/n/14.4 109.05.049
+Underfull \hbox (badness 10000) in paragraph at lines 1045--1045
+[]|\T2A/cmr/m/n/14.4 109.05.052
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1071--1071
-[]|\T2A/cmr/m/n/14.4 109.01.037
+Underfull \hbox (badness 10000) in paragraph at lines 1045--1045
+\T2A/cmr/m/n/14.4 109.05.053
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1072--1072
-[]|\T2A/cmr/m/n/14.4 109.05.049
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1072--1072
+Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
 []|\T2A/cmr/m/n/14.4 109.01.040
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1072--1072
-\T2A/cmr/m/n/14.4 109.01.041
+Underfull \hbox (badness 10000) in paragraph at lines 1050--1050
+[]|\T2A/cmr/m/n/14.4 Ремонт на-дре-сор-но-го бру-су
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 1073--1073
-\T2A/cmr/m/n/14.4 жiль-ноЁ пе-ре-да-чi вiз-ку 0.162-
+Underfull \hbox (badness 10000) in paragraph at lines 1050--1050
+[]|\T2A/cmr/m/n/14.4 109.05.052
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
-[]|\T2A/cmr/m/n/14.4 109.01.021
+Underfull \hbox (badness 10000) in paragraph at lines 1050--1050
+\T2A/cmr/m/n/14.4 109.05.053
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
-\T2A/cmr/m/n/14.4 109.01.022
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
-\T2A/cmr/m/n/14.4 109.01.020
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
-\T2A/cmr/m/n/14.4 109.01.035
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
-\T2A/cmr/m/n/14.4 109.05.061
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
-\T2A/cmr/m/n/14.4 109.05.064
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
-[]|\T2A/cmr/m/n/14.4 109.01.040
- []
-
-
-Underfull \hbox (badness 1571) in paragraph at lines 1074--1074
-\T2A/cmr/m/n/14.4 жiль-ноЁ пе-ре-да-чi вiз-ку 0.114-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1074
-[]|\T2A/cmr/m/n/14.4 109.01.021
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1074
-\T2A/cmr/m/n/14.4 109.01.022
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1074
-\T2A/cmr/m/n/14.4 109.01.020
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1074
-\T2A/cmr/m/n/14.4 109.01.035
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1074
-\T2A/cmr/m/n/14.4 109.05.063
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1074
-\T2A/cmr/m/n/14.4 109.05.065
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1074
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
 []|\T2A/cmr/m/n/14.4 109.01.041
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
-[]|\T2A/cmr/m/n/14.4 109.01.036
+Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
+[]|\T2A/cmr/m/n/14.4 Ремонт де-та-лей пiд-вi-сок
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
-\T2A/cmr/m/n/14.4 109.01.037
+Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
+[]|\T2A/cmr/m/n/14.4 109.05.052
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
-[]|\T2A/cmr/m/n/14.4 109.01.040
+Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
+[]|\T2A/cmr/m/n/14.4 109.01.041
  []
 
 
-Underfull \hbox (badness 4726) in paragraph at lines 1076--1076
-[]|\T2A/cmr/m/n/14.4 Збiрка вiз-ку 0.162-04.20.00 :
+Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
+\T2A/cmr/m/n/14.4 109.01.023
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1076
-[]|\T2A/cmr/m/n/14.4 109.01.036
+Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
+\T2A/cmr/m/n/14.4 109.01.024
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1076
-\T2A/cmr/m/n/14.4 109.01.037
+Underfull \hbox (badness 10000) in paragraph at lines 1056--1056
+[]|\T2A/cmr/m/n/14.4 109.05.052
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1076
+Underfull \hbox (badness 10000) in paragraph at lines 1056--1056
+[]|\T2A/cmr/m/n/14.4 109.01.041
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1056--1056
 \T2A/cmr/m/n/14.4 109.01.039
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1076
-\T2A/cmr/m/n/14.4 109.05.057
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
+[]|\T2A/cmr/m/n/14.4 109.05.052
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1076
-\T2A/cmr/m/n/14.4 109.01.017
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
+[]|\T2A/cmr/m/n/14.4 109.01.041
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
-[]|\T2A/cmr/m/n/14.4 Фарбування вiз-ку 0.162-
- []
-
-[48] [49]
-Underfull \hbox (badness 4726) in paragraph at lines 1079--1079
-[]|\T2A/cmr/m/n/14.4 Збiрка вiз-ку 0.114-04.10.00 :
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
+\T2A/cmr/m/n/14.4 109.01.039
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1079--1079
-[]|\T2A/cmr/m/n/14.4 109.01.036
+Underfull \hbox (badness 10000) in paragraph at lines 1058--1058
+[]|\T2A/cmr/m/n/14.4 109.05.052
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1079--1079
+Underfull \hbox (badness 10000) in paragraph at lines 1058--1058
+[]|\T2A/cmr/m/n/14.4 109.01.037
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1058--1058
 \T2A/cmr/m/n/14.4 109.01.038
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1079--1079
-\T2A/cmr/m/n/14.4 109.01.039
+Underfull \hbox (badness 10000) in paragraph at lines 1058--1058
+\T2A/cmr/m/n/14.4 109.01.025
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1079--1079
-\T2A/cmr/m/n/14.4 109.01.017
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
 []|\T2A/cmr/m/n/14.4 109.05.049
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
+[]|\T2A/cmr/m/n/14.4 109.01.037
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
+\T2A/cmr/m/n/14.4 109.01.038
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
+\T2A/cmr/m/n/14.4 109.01.025
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1060
+[]|\T2A/cmr/m/n/14.4 109.05.049
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1060
+[]|\T2A/cmr/m/n/14.4 109.01.037
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1060
+\T2A/cmr/m/n/14.4 109.01.038
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1060
+\T2A/cmr/m/n/14.4 109.01.025
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1061--1061
+[]|\T2A/cmr/m/n/14.4 109.01.025
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1062
+[]|\T2A/cmr/m/n/14.4 109.01.025
+ []
+
+
+Underfull \hbox (badness 3735) in paragraph at lines 1063--1063
+[]|\T2A/cmr/m/n/14.4 Грунтування вiд-ре-мон-то-ва-них
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 1063--1063
+\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1063
+[]|\T2A/cmr/m/n/14.4 109.01.023
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1063
+\T2A/cmr/m/n/14.4 109.01.017
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1063
+\T2A/cmr/m/n/14.4 109.01.018
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1063
+\T2A/cmr/m/n/14.4 109.01.019
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 1064--1064
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 1064--1064
+\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1065
+[]|\T2A/cmr/m/n/14.4 Фарбування вiд-ре-мон-то-ва-них
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 1065--1065
+\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
+ []
+
+[43] [44]
+Underfull \hbox (badness 2277) in paragraph at lines 1066--1066
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 1066--1066
+\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
+ []
+
+
+Underfull \hbox (badness 3735) in paragraph at lines 1067--1067
+[]|\T2A/cmr/m/n/14.4 Грунтування вiд-ре-мон-то-ва-них
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 1067--1067
+\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1067
+[]|\T2A/cmr/m/n/14.4 109.01.024
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1067
+\T2A/cmr/m/n/14.4 109.01.017
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1067
+\T2A/cmr/m/n/14.4 109.01.018
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1067
+\T2A/cmr/m/n/14.4 109.01.019
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 1068--1068
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 1068--1068
+\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1069
+[]|\T2A/cmr/m/n/14.4 Фарбування вiд-ре-мон-то-ва-них
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 1069--1069
+\T2A/cmr/m/n/14.4 де-та-лей i скла-до-вих оди-ниць
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 1070--1070
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на вiд-ре-мон-
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 1070--1070
+\T2A/cmr/m/n/14.4 то-ва-них де-та-лей i скла-до-вих
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1071
+[]|\T2A/cmr/m/n/14.4 109.01.033
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1071
+\T2A/cmr/m/n/14.4 109.01.039
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1072--1072
+[]|\T2A/cmr/m/n/14.4 109.01.041
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1072--1072
+\T2A/cmr/m/n/14.4 109.01.034
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
+[]|\T2A/cmr/m/n/14.4 109.05.051
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
+[]|\T2A/cmr/m/n/14.4 109.01.033
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1074
+[]|\T2A/cmr/m/n/14.4 109.05.051
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1074
+[]|\T2A/cmr/m/n/14.4 109.01.034
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
+[]|\T2A/cmr/m/n/14.4 109.01.029
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 1076--1076
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ра-ми вiз-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
+[]|\T2A/cmr/m/n/14.4 109.01.030
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 1078--1078
+[]|\T2A/cmr/m/n/14.4 Сушка атмо-сфер-на ра-ми вiз-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1079--1079
+[]|\T2A/cmr/m/n/14.4 109.05.049
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1079--1079
+[]|\T2A/cmr/m/n/14.4 109.01.037
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1080--1080
+[]|\T2A/cmr/m/n/14.4 109.05.049
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1080--1080
+[]|\T2A/cmr/m/n/14.4 109.01.040
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1080--1080
+\T2A/cmr/m/n/14.4 109.01.041
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 1081--1081
+\T2A/cmr/m/n/14.4 жiль-ноЁ пе-ре-да-чi вiз-ку 0.162-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1081
+[]|\T2A/cmr/m/n/14.4 109.01.021
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1081
+\T2A/cmr/m/n/14.4 109.01.022
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1081
+\T2A/cmr/m/n/14.4 109.01.020
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1081
+\T2A/cmr/m/n/14.4 109.01.035
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1081
+\T2A/cmr/m/n/14.4 109.05.061
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1081
+\T2A/cmr/m/n/14.4 109.05.064
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1081
+[]|\T2A/cmr/m/n/14.4 109.01.040
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 1082--1082
+\T2A/cmr/m/n/14.4 жiль-ноЁ пе-ре-да-чi вiз-ку 0.114-
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
+[]|\T2A/cmr/m/n/14.4 109.01.021
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
+\T2A/cmr/m/n/14.4 109.01.022
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
+\T2A/cmr/m/n/14.4 109.01.020
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
+\T2A/cmr/m/n/14.4 109.01.035
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
+\T2A/cmr/m/n/14.4 109.05.063
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
+\T2A/cmr/m/n/14.4 109.05.065
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
+[]|\T2A/cmr/m/n/14.4 109.01.041
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1083--1083
+[]|\T2A/cmr/m/n/14.4 109.01.036
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1083--1083
+\T2A/cmr/m/n/14.4 109.01.037
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1083--1083
+[]|\T2A/cmr/m/n/14.4 109.01.040
+ []
+
+
+Underfull \hbox (badness 4726) in paragraph at lines 1084--1084
+[]|\T2A/cmr/m/n/14.4 Збiрка вiз-ку 0.162-04.20.00 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1084
+[]|\T2A/cmr/m/n/14.4 109.01.036
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1084
+\T2A/cmr/m/n/14.4 109.01.037
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1084
+\T2A/cmr/m/n/14.4 109.01.039
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1084
+\T2A/cmr/m/n/14.4 109.05.057
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1084
+\T2A/cmr/m/n/14.4 109.01.017
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1085
+[]|\T2A/cmr/m/n/14.4 Фарбування вiз-ку 0.162-
+ []
+
+[45] [46]
+Underfull \hbox (badness 4726) in paragraph at lines 1087--1087
+[]|\T2A/cmr/m/n/14.4 Збiрка вiз-ку 0.114-04.10.00 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
+[]|\T2A/cmr/m/n/14.4 109.01.036
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
+\T2A/cmr/m/n/14.4 109.01.038
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
+\T2A/cmr/m/n/14.4 109.01.039
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
+\T2A/cmr/m/n/14.4 109.01.017
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1090--1090
+[]|\T2A/cmr/m/n/14.4 109.05.049
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1090--1090
 []|\T2A/cmr/m/n/14.4 109.01.007
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
+Underfull \hbox (badness 10000) in paragraph at lines 1090--1090
 \T2A/cmr/m/n/14.4 109.01.009
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
+Underfull \hbox (badness 10000) in paragraph at lines 1090--1090
 \T2A/cmr/m/n/14.4 109.01.044
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
+Underfull \hbox (badness 10000) in paragraph at lines 1090--1090
 \T2A/cmr/m/n/14.4 109.01.047
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1083
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1091
 []|\T2A/cmr/m/n/14.4 Нове фор-му-ва-н-ня па-са-жир-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1083
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1091
 []|\T2A/cmr/m/n/14.4 109.01.001
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1084--1084
+Underfull \hbox (badness 10000) in paragraph at lines 1092--1092
 []|\T2A/cmr/m/n/14.4 Фарбування ко-лi-сноЁ па-ри
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1084--1084
+Underfull \hbox (badness 10000) in paragraph at lines 1092--1092
 []|\T2A/cmr/m/n/14.4 109.01.040
  []
 
-[50] [51] [52] [53]
+[47] [48] [49] [50]
 
-LaTeX Warning: Reference `sec:ExtendedNeoFuzzyNeuron' on page 54 undefined on i
-nput line 1091.
+LaTeX Warning: Reference `sec:ExtendedNeoFuzzyNeuron' on page 51 undefined on i
+nput line 1099.
 
 
-Overfull \hbox (2.52611pt too wide) in paragraph at lines 1091--1092
+Overfull \hbox (2.52611pt too wide) in paragraph at lines 1099--1100
 \T2A/cmr/m/n/14.4 ка- i[]Су- е-но до-вiль-но-го по-ряд-ку. Про-де-мон-стро-ва-н
 о, що роз-ши-ре-нi нео-
  []
 
 
 LaTeX Warning: Reference `ch:CascadedNeoFuzzySystemWithPoolOptimization' on pag
-e 54 undefined on input line 1092.
+e 51 undefined on input line 1100.
 
 
-LaTeX Warning: Reference `sec:MultidimentionalNeoFuzzyNeuron' on page 54 undefi
-ned on input line 1093.
+LaTeX Warning: Reference `sec:MultidimentionalNeoFuzzyNeuron' on page 51 undefi
+ned on input line 1101.
 
 
 LaTeX Warning: Reference `sec:MIMOEvolvingCascadedSystemBuiltOnMNFNs' on page 5
-4 undefined on input line 1094.
+1 undefined on input line 1102.
 
 
-Overfull \hbox (5.09184pt too wide) in paragraph at lines 1094--1095
+Overfull \hbox (5.09184pt too wide) in paragraph at lines 1102--1103
 []\T2A/cmr/m/n/14.4 Змодельовано за-про-по-но-ва-ну у пiд-роз-дi-лi [] MI-MO ар
 -хi-те-кту-ру з опти-
  []
 
-[54]
+[51]
 
-LaTeX Warning: Reference `ch:EvolvingClusteringSystem' on page 55 undefined on 
-input line 1095.
+LaTeX Warning: Reference `ch:EvolvingClusteringSystem' on page 52 undefined on 
+input line 1103.
 
 
 LaTeX Warning: Reference `sec:EvolvingSelfLearningSystemArchitecture' on page 5
-5 undefined on input line 1096.
+2 undefined on input line 1104.
 
 
 LaTeX Warning: Reference `sec:OptimizedCascadedNeuralNetworkArchitecture' on pa
-ge 55 undefined on input line 1097.
-
-
-Overfull \hbox (13.74104pt too wide) in paragraph at lines 1097--1098
-\T2A/cmr/m/n/14.4 кiв-ський ва-го-но-бу-дiв-ний за-вод>> за до-по-мо-гою ка-ска
--дноЁ гi-бри-дноЁ нейро-
- []
+ge 52 undefined on input line 1105.
 
 No file Experiments.bbl.
-[55] (./Experiments.aux)
+[52] [53 <./images/HierarchialClusteringOfIrisDataset.pdf>] [54 <./images/Clust
+eredIrisDatasetM3Beta2.pdf>] [55 <./images/IrisClusteringEfficiencyFromNumberOf
+ClustersAndFuzzyfier.pdf>] [56 <./images/ClusteredIrisDatasetM7Beta5.pdf>]
+[57 <./images/ClusteredIrisDatasetM12Beta4.pdf>] [58 <./images/3DClusterizedStu
+dentKnowledgeDataSetM4Beta2.pdf>] (./Experiments.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1913,7 +1920,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  8559 strings out of 493089
  127799 string characters out of 6134842
- 214061 words of memory out of 5000000
+ 217058 words of memory out of 5000000
  11831 multiletter control sequences out of 15000+600000
  22911 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1937,10 +1944,10 @@ dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2015/texmf-dist/f
 onts/type1/public/cm-super/sftt1440.pfb>
-Output written on Experiments.pdf (55 pages, 4729980 bytes).
+Output written on Experiments.pdf (58 pages, 4731018 bytes).
 PDF statistics:
- 495 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
+ 504 PDF objects out of 1000 (max. 8388607)
+ 343 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

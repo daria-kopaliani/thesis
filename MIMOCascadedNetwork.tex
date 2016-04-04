@@ -212,7 +212,7 @@
 
 &\hat{y}_d^{[1]j}\left(k\right)=\sum\limits_{i=1}^{n}f_{di}^{[1]j}\left(x_i\left(k\right)\right)=
 \sum\limits_{i=1}^{n}\sum\limits_{l=1}^{h}{w_{dli}^{[1]j}\mu_{dli}^{[1]j}\left(x_i\left(k\right)\right)},\\
-&\text{якщо }x_i\left(k\right) \in X_{li}^{j}\text{ , тоді вихід }w_{dli}^{[1]j}.
+&\text{якщо }x_i\left(k\right) \text{ це } X_{li}^{j}\text{ тоді вихід }w_{dli}^{[1]j}.
 
 \end{aligned}
 \end{cases}
@@ -224,7 +224,7 @@
 \begin{equation}
 \begin{aligned}
 \hat{y}_d^{[2]j}=&\sum\limits_{i=1}^{n}\sum\limits_{l=1}^{h}{w_{dli}^{[2]j}\mu_{dli}^{[2]j}\left(x_i\right)}+\\
-&\sum\limits_{d=1}^{g}\sum\limits_{l=1}^{h}{w_{dl,n+1}^{[2]j}\mu_{dl,n+1}^{[2]j}\left(\hat{y}_d^{*[1]}\right)}\text{ }\forall\text{ }{d=1,2,\dots,g}
+&+\sum\limits_{d=1}^{g}\sum\limits_{l=1}^{h}{w_{dl,n+1}^{[2]j}\mu_{dl,n+1}^{[2]j}\left(\hat{y}_d^{*[1]}\right)}\text{ }\forall\text{ }{d=1,2,\dots,g}
 \end{aligned}
 \end{equation}
 \medskip
