@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  3 APR 2016 22:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  5 APR 2016 16:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -531,17 +531,14 @@ LaTeX Warning: Citation `Sha86' on page 12 undefined on input line 697.
 
 [12] [13
 
-]
-No file xampl-thesis.bbl.
-No file xampl-thesis.bbl.
-[14] (./xampl-thesis.aux)
+] (./xampl-thesis.bbl) (./xampl-thesis.bbl) [14] (./xampl-thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4907 strings out of 493089
- 65836 string characters out of 6134842
+ 4911 strings out of 493089
+ 65904 string characters out of 6134842
  143485 words of memory out of 5000000
  8270 multiletter control sequences out of 15000+600000
  16660 words of font info for 40 fonts, out of 8000000 for 9000

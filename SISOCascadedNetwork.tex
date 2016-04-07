@@ -202,8 +202,8 @@ $\gamma_j^{[m]}$ -- параметр посилення.
 
 \begin{equation}
 \begin{aligned}
-&\hat{y}_j^{[m]}=\sigma_j^{[m]}\biggl(\gamma_j^{[m]}\biggl(\sum\limits_{i=0}^n{w_{ji}^{[m]}x_i+w_{j,n+1}^{[m]}\hat{y}^{*[1]}}\\
-&+w_{j,n+2}^{m}\hat{y}^{*[2]}+\dots+w_{j,n+m-1}^{[m]}\hat{y}^{*[m-1]}\biggr)\biggr)\\
+&\hat{y}_j^{[m]}=\sigma_j^{[m]}\biggl(\gamma_j^{[m]}\biggl(\sum\limits_{i=0}^n{w_{ji}^{[m]}x_i+w_{j,n+1}^{[m]}\hat{y}^{*[1]}}+\\
+&+w_{j,n+2}^{m}\hat{y}^{*[2]}+\dots+w_{j,n+m-1}^{[m]}\hat{y}^{*[m-1]}\biggr)\biggr)=\\
 &=\sigma_j^{[m]}\left(\gamma_j^{[m]}\sum\limits_{i=0}^{n+m-1}{w_{ji}^{[m]}x_j^{[m]}}\right)=\sigma_j^{[m]}\left(w_j^{[m]T}x^{[m]}\right),
 \end{aligned}
 \end{equation}
@@ -231,7 +231,7 @@ E_{j}^{[m]}&=\frac{1}{2}\left(e_j^{[m]}\left(k\right)\right)^2=\\
 
 \begin{equation}\label{eq:RosenblattLearningCriterionGradientOptimization}
 \begin{aligned}
-w_j^{[m]}\left(k+1\right)=&w_j^{[m]}+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\gamma_j^{[m]}\hat{y}_j^{[m]}\left(k+1\right)\\
+w_j^{[m]}\left(k+1\right)=&w_j^{[m]}+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\gamma_j^{[m]}\hat{y}_j^{[m]}\left(k+1\right)\times\\
 &\times\left(1-\hat{y}_j^{[m]}\left(k+1\right)\right)x^{[m]}\left(k+1\right)=\\
 =&w_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\gamma_j^{[m]}J_j^{[m]}\left(k+1\right),
 \end{aligned}
@@ -244,7 +244,7 @@ w_j^{[m]}\left(k+1\right)=&w_j^{[m]}+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(
 
 \begin{equation}\label{eq:RosenblattLearningCriterionKrushkeMovellanMinimization}
 \begin{aligned}
-\gamma_j^{[m]}\left(k+1\right)=&\gamma_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\hat{y}_j^{[m]}\left(k+1\right)\\
+\gamma_j^{[m]}\left(k+1\right)=&\gamma_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\hat{y}_j^{[m]}\left(k+1\right)\times\\
 &\times\left(1-\hat{y}_j^{[m]}\left(k+1\right)\right)u_j^{[m]}\left(k+1\right).
 \end{aligned}
 \end{equation}
@@ -265,7 +265,7 @@ w_j^{[m]}\left(k\right) \\
 \dots\\
 \gamma_j^{[m]}\left(k+\right)
 \end{matrix}
-\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\hat{y}_j^{[m]}\left(k+1\right)\\
+\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\hat{y}_j^{[m]}\left(k+1\right)\times\\
 &\times\left(1-\hat{y}_j^{[m]}\left(k+1\right)\right)\left(
 \begin{matrix}
 \gamma_j^{[m]}x^{[m]}\left(k+1\right) \\
@@ -281,7 +281,7 @@ u_j^{[m]}\left(k+1\right)
 
 \begin{equation}
 \begin{aligned}
-\tilde{w}_j^{[m]}\left(k+1\right)&=\tilde{w}_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\hat{y}_j^{[m]}\left(k+1\right)\tilde{x}^{[m]}\left(k+1\right)\\
+\tilde{w}_j^{[m]}\left(k+1\right)&=\tilde{w}_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\hat{y}_j^{[m]}\left(k+1\right)\tilde{x}^{[m]}\left(k+1\right)=\\
 &=\tilde{w}_j^{[m]}\left(k\right)+\eta_j^{[m]}\left(k+1\right)e_j^{[m]}\left(k+1\right)\tilde{J}_j^{[m]}\left(k+1\right).
 \end{aligned}
 \end{equation}
@@ -291,7 +291,7 @@ u_j^{[m]}\left(k+1\right)
 
 \begin{equation}
 \begin{aligned}
-E_j^{[m]}\left(k\right)=&\frac{\eta}{2}\left(e_j^{[m]}\left(k\right)\right)^2\\
+E_j^{[m]}\left(k\right)=&\frac{\eta}{2}\left(e_j^{[m]}\left(k\right)\right)^2+\\
 &+\frac{1-\eta}{2}\left\|\tilde{w}_j^{[m]}\left(k\right)-\tilde{w}_j^{[m]}\left(k-1\right)\right\|^2,0<\eta\leq1.
 \end{aligned}
 \end{equation}
@@ -301,8 +301,8 @@ E_j^{[m]}\left(k\right)=&\frac{\eta}{2}\left(e_j^{[m]}\left(k\right)\right)^2\\
 
 \begin{equation}\label{eq:RosenblattLearningAlgorithm}
 \begin{aligned}
-\tilde{w}_j^{[m]}\left(k+1\right)=&\tilde{w}_j^{[m]}\left(k\right)\\
-&+\eta_j^{[m]}\left(k+1\right)\biggl(\eta e_j^{[m]}\left(k+1\right)\tilde{J}_j^{[m]}\left(k+1\right)\\
+\tilde{w}_j^{[m]}\left(k+1\right)=&\tilde{w}_j^{[m]}\left(k\right)+\\
+&+\eta_j^{[m]}\left(k+1\right)\biggl(\eta e_j^{[m]}\left(k+1\right)\tilde{J}_j^{[m]}\left(k+1\right)+\\
 &+\left(1-\eta\right)\left(\tilde{w}_j^{[m]}\left(k\right)-\tilde{w}_j^{[m]}\left(k+1\right)\right)\biggr),
 \end{aligned}
 \end{equation}
@@ -315,7 +315,7 @@ E_j^{[m]}\left(k\right)=&\frac{\eta}{2}\left(e_j^{[m]}\left(k\right)\right)^2\\
 \begin{equation}
 \begin{aligned}
 \begin{cases}
-\tilde{w}_j^{[m]}\left(k+1\right)=&\tilde{w}_j^{[m]}\left(k\right)+\frac{\eta e_j^{[m]}\left(k+1\right)\tilde{J}_j^{[m]}\left(k+1\right)}{r_j^{[m]}\left(k+1\right)}\\
+\tilde{w}_j^{[m]}\left(k+1\right)=&\tilde{w}_j^{[m]}\left(k\right)+\frac{\eta e_j^{[m]}\left(k+1\right)\tilde{J}_j^{[m]}\left(k+1\right)}{r_j^{[m]}\left(k+1\right)}+\\
 &+\frac{\left(1-\eta\right)\left(\tilde{w}_j^{[m]}\left(k\right)-\tilde{w}_j^{[m]}\left(k-1\right)\right)}{r_j^{[m]}\left(k+1\right)},\\
 r_j^{[m]}\left(k+1\right)=&r_j^{[m]}\left(k\right)+\left\|\tilde{J}_j^{[m]}\left(k+1\right)\right\|^2-\left\|\tilde{J}_j^{[m]}\left(k-s\right)\right\|^2,
 \end{cases}
@@ -370,7 +370,7 @@ $l=1,2,\dots,h$ -- кількість синаптичних ваг, а отже і функцій належності $\mu_{
 Таким чином, нелінійний синапс $NS_i$ реалізує нечітке висновування 
 
 \begin{equation}
-\text{якщо } x_i \text{ це } X_{li} \text{ тоді вихід} w_{li},
+\text{якщо } x_i \text{ це } X_{li} \text{ тоді вихід } w_{li},
 \end{equation}
 \medskip
 
@@ -385,7 +385,7 @@ $w_{li}$ -- сінглтон (синаптичний ваговий коефіцієнт у консеквенті).
 \begin{equation}\label{eq:FirstascadeNeoFuzzyNeuronOutputs}
 \begin{cases}
 \hat{y}_j^{[1]}\left(k\right)=\sum\limits_{i=1}^n{f_{ji}^{[1]}\left(x\left(k\right)\right)}=\sum\limits_{i=1}^n\sum\limits_{l=1}^h{w_{jli}^{[1]}\mu_{jli}^{[1]}\left(x_i\left(k\right)\right)},\\
-\text{якщо } x_i \text{ це } X_{li} \text{ тоді вихід} w_{li},
+\text{якщо } x_i \text{ це } X_{li} \text{ тоді вихід } w_{li},
 \end{cases}
 \end{equation}
 \medskip
@@ -406,7 +406,7 @@ $j$-й нео-фаззі нейрон другого каскаду зображено на рис.~\ref{fig:NFN[2]} згідно
 \begin{cases}
 \frac{x_i-c_{j,l-1,i}^{[1]}}{c_{jli}^{[1]}-c_{j,l-1,i}^{[1]}} \text { if } x_i\in\left[c_{j,l-1,i}^{[1]},c_{jli}^{[1]}\right],\\
 \frac{c_{j,l+1,i}^{[1]}-x_i}{c_{j,l+1,i}^{[1]}-c_{jli}^{[1]}}\text{ if }x_i \in \left[c_{jli}^{[1]},c_{j,l+1,i}^{[1]}\right],\\
-0\text { інакше},
+0\text { у протилежному випадку},
 \end{cases}
 \end{equation}
 \medskip
@@ -518,7 +518,7 @@ E_j^{[m]}\left(k\right)=\frac{1}{2}\left(e_j^{m}\left(k\right)\right)^2=\frac{1}
 \begin{equation}\label{eq:NFNSlidingWindowMinimizationSlidingWindow}
 \begin{cases}
 w_j^{[m]}\left(k+1\right)=w_j^{[m]}\left(k\right)+\frac{e_j^{[m]}\left(k+1\right)\mu_j^{[m]}\left(k+1\right)}{r_j^{[m]}\left(k+1\right)},\\
-r_j^{[m]}\left(k+1\right)=r_j^{[m]}\left(k\right)+\left\|\mu_j^{[m]}\left(k+1\right)\right\|^2-\left\|\mu_j^{[m]}\left(k-s\right)\right\|^2,+
+r_j^{[m]}\left(k+1\right)=r_j^{[m]}\left(k\right)+\left\|\mu_j^{[m]}\left(k+1\right)\right\|^2-\left\|\mu_j^{[m]}\left(k-s\right)\right\|^2
 \end{cases}
 \end{equation}
 \medskip
@@ -539,7 +539,7 @@ w_j^{[m]}\left(k+1\right)=w_j^{[m]}\left(k\right)+\frac{e_j^{[m]}\left(k+1\right
 \begin{equation}
 \begin{aligned}
 \begin{cases}
-w_j^{[m]}\left(k+1\right)=&w_j^{[m]}\left(k\right)+\frac{\eta e_j^{[m]}\left(k+1\right)\mu_j^{[m]}\left(k+1\right)}{r_j^{[m]}\left(k+1\right)}\\
+w_j^{[m]}\left(k+1\right)=&w_j^{[m]}\left(k\right)+\frac{\eta e_j^{[m]}\left(k+1\right)\mu_j^{[m]}\left(k+1\right)}{r_j^{[m]}\left(k+1\right)}+\\
 &+\frac{\left(1-\eta\right)\left(w_j^{[m]}\left(k\right)-w_j^{[m]}\left(k-1\right)\right)}{r_j^{[m]}\left(k+1\right)},\\
 r_j^{[m]}\left(k+1\right)=&r_j^{[m]}\left(k\right)+\left\|\mu_j^{[m]}\left(k+1\right)|\right\|^2-\left\|\mu_j^{[m]}\left(k-s\right)\right\|^2.
 \end{cases}
@@ -547,7 +547,7 @@ r_j^{[m]}\left(k+1\right)=&r_j^{[m]}\left(k\right)+\left\|\mu_j^{[m]}\left(k+1\r
 \end{equation}
 \medskip
 
-Варто зробити наголос, що оскільки вихідні сигнали нео-фаззі нейрона лінійно залежать від його синаптичних вагових коефіцієнтів, можна використовувати будь-які методи адаптивної лінійної ідентифікації \cite{ref67} (наприклад, рекурентний метод найменших квадратів, робастні методи, методи, що ігнорують застарілі данні, тощо), що дозволяє обробляти нестаціонарні сигнали в онлайн режимі.
+Варто наголосити, що оскільки вихідні сигнали нео-фаззі нейрона лінійно залежать від його синаптичних вагових коефіцієнтів, можна використовувати будь-які методи адаптивної лінійної ідентифікації \cite{ref67} (наприклад, рекурентний метод найменших квадратів, робастні методи, методи, що ігнорують застарілі данні, тощо), що дозволяє обробляти нестаціонарні сигнали в онлайн режимі.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -580,8 +580,8 @@ r_j^{[m]}\left(k+1\right)=&r_j^{[m]}\left(k\right)+\left\|\mu_j^{[m]}\left(k+1\r
 \end{equation}
 \begin{equation}
 \begin{aligned}
-f_i\left(x_i\right)&=\sum\limits_{l=1}^h\mu_{li}\left(x_i\right)\left(w_{li}^0+w_{li}^1x_i+w_{li}^2x_i^2+\dots+w_{li}^px_i^p\right)\\
-&=w_{li}^0\mu_{li}\left(x_i\right)+w_{li}^1x_i\mu_{1i}\left(x_i\right)+\dots+w_{li}^px_i^p\mu_{1i}\left(x_i\right)\\
+f_i\left(x_i\right)&=\sum\limits_{l=1}^h\mu_{li}\left(x_i\right)\left(w_{li}^0+w_{li}^1x_i+w_{li}^2x_i^2+\dots+w_{li}^px_i^p\right)=\\
+&=w_{li}^0\mu_{li}\left(x_i\right)+w_{li}^1x_i\mu_{1i}\left(x_i\right)+\dots+w_{li}^px_i^p\mu_{1i}\left(x_i\right)+\\
 &+w_{2i}^0\mu_{2i}\left(x_i\right)+\dots+w_{2i}^px_i^p\mu_{2i}\left(x_i\right)+\dots+w_{hi}^px_i^p\mu_{hi}\left(x_i\right),
 \end{aligned}
 \end{equation}
@@ -598,6 +598,7 @@ w_i=\left(w_{1i}^0,w_{1i}^1,\dots,w_{1i}^p,w_{2i}^0,\dots,w_{2i}^p,\dots,w_{hi}^
 \end{equation}
 \\
 \medskip
+
 можна представити вихідні сигнали розширеного нео-фаззі нейрона у вигляді 
 
 \begin{equation}
@@ -605,8 +606,8 @@ f_i\left(x_i\right)=w_i^T\tilde{\mu}_i\left(x_i\right),
 \end{equation}
 \begin{equation}
 \begin{aligned}
-\hat{y}&=\sum\limits_{i=1}^{n}{f_i\left(x_i\right)}\\
-&=\sum\limits_{i=1}^{n}{w_i^T\tilde{\mu}\left(x_i\right)}\\
+\hat{y}&=\sum\limits_{i=1}^{n}{f_i\left(x_i\right)}=\\
+&=\sum\limits_{i=1}^{n}{w_i^T\tilde{\mu}\left(x_i\right)}=\\
 &={\tilde{w}^T\tilde{\mu}\left(x\right)}.
 \end{aligned}
 \end{equation}
@@ -668,7 +669,7 @@ f_i\left(x_i\right)=w_i^T\tilde{\mu}_i\left(x_i\right),
 \section{Оптимізація пулу нео-фаззі нейронів}
 \label{sec:NeuronPoolOptimisation}
 
-Вихідні сигнали, згенеровані нейронами пулу кожного з каскадів, можна об'єднати у окремому вузлі-нейроні GN$^{[m]}$, з точністю $\hat{y}^{*[m]}\left(k\right)$, не меншою від точності будь-якого нейрону пулу $\hat{y}_j^{[m]}\left(k\right)$. Це завдання можна вирішити за допомогою підходу ансамблей нейронних мереж.
+Вихідні сигнали, згенеровані нейронами пулу кожного з каскадів, можна об'єднати у окремому вузлі-нейроні GN$^{[m]}$, з точністю $\hat{y}^{*[m]}\left(k\right)$, не меншою від точності будь-якого нейрону пулу $\hat{y}_j^{[m]}\left(k\right)$. Це завдання можна вирішити за допомогою підходу ансамблів нейронних мереж.
 Хоча відомі алгоритми не призначені для роботи в онлайн-режимі, варто розглянути методи адаптивного узагальнюючого прогнозування \cite{ref81,ref82}.
 
 Введемо вектор вхідних сигналів для $m$-ого каскаду:
@@ -678,7 +679,7 @@ f_i\left(x_i\right)=w_i^T\tilde{\mu}_i\left(x_i\right),
 \end{equation}
 \medskip
 
-тоді отпимальний вихідний сигнал, що його генерує нейрон $GN^{[m]}$ (що, власне, є адаптивним лінійним асоціатором \cite{ref44,ref45}), можна записати у формі
+тоді оптимальний вихідний сигнал, що його генерує нейрон $GN^{[m]}$ (що, власне, є адаптивним лінійним асоціатором \cite{ref44,ref45}), можна записати у формі
 
 \begin{equation}
 \hat{y}^{*[m]}\left(k\right)=\sum\limits_{j=1}^{1}{c_j^{[m]}\hat{y}_j^{[m]}\left(k\right)}=c^{[m]T}\hat{y}^{[m]}\left(k\right)
@@ -698,7 +699,7 @@ f_i\left(x_i\right)=w_i^T\tilde{\mu}_i\left(x_i\right),
 
 \begin{equation}
 \begin{aligned}
-E^{[m]}\left(k\right)=&\frac{1}{2}\sum\limits_{\tau=k-s+1}^k{\left(y\left(\tau\right)-\hat{y}^{*[m]}\left(\tau\right)\right)^2}\\
+E^{[m]}\left(k\right)=&\frac{1}{2}\sum\limits_{\tau=k-s+1}^k{\left(y\left(\tau\right)-\hat{y}^{*[m]}\left(\tau\right)\right)^2}=\\
 =&\frac{1}{2}\sum\limits_{\tau=k-s+1}^k{\left(y\left(\tau\right)-c^{[m]T}\hat{y}^{[m]}\left(\tau\right)\right)^2},
 \end{aligned}
 \end{equation}
